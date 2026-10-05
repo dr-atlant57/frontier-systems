@@ -1,0 +1,18 @@
+/* FRONTIER SYSTEMS / SHARED RUNTIME v1.0
+   One interface system across all Frontier divisions.
+*/
+(()=>{"use strict";
+const LANG_KEY="frontier-language";
+const supported=["en","ru","zh","ja","ko","de","fr","es","pt","ar","tr","hi"];
+const detect=()=>{try{const s=localStorage.getItem(LANG_KEY);if(s&&supported.includes(s))return s}catch(e){}const n=(navigator.languages||[navigator.language||"en"]).map(x=>x.toLowerCase().split("-")[0]);return n.find(x=>supported.includes(x))||"en"};
+const setLanguage=(lang)=>{if(!supported.includes(lang))lang="en";try{localStorage.setItem(LANG_KEY,lang)}catch(e){}document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";document.dispatchEvent(new CustomEvent("frontier:language",{detail:{lang}}));};
+const setupLanguage=()=>{const current=detect();setLanguage(current);document.querySelectorAll("[data-language-select]").forEach(select=>{select.value=current;select.addEventListener("change",()=>setLanguage(select.value))});};
+const setupReducedMotion=()=>{const media=matchMedia("(prefers-reduced-motion: reduce)");document.documentElement.classList.toggle("reduced-motion",media.matches);media.addEventListener?.("change",e=>document.documentElement.classList.toggle("reduced-motion",e.matches));};
+const setupViewport=()=>{const root=document.documentElement;const sync=()=>{root.style.setProperty("--vw",innerWidth+"px");root.style.setProperty("--vh",innerHeight+"px");root.style.setProperty("--safe-top","env(safe-area-inset-top, 0px)");root.style.setProperty("--safe-bottom","env(safe-area-inset-bottom, 0px)")};sync();addEventListener("resize",sync,{passive:true});};
+const setupAnchorMotion=()=>{document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute("href");if(!id||id==="#")return;const target=document.querySelector(id);if(target){e.preventDefault();target.scrollIntoView({behavior:document.documentElement.classList.contains("reduced-motion")?"auto":"smooth",block:"start"});history.replaceState(null,"",id)}})};
+const setupCommand=()=>{const trigger=document.querySelector("[data-command-trigger]"),panel=document.querySelector("[data-command-panel]");if(!trigger||!panel)return;const open=()=>{panel.hidden=false;document.body.classList.add("command-open");panel.querySelector("input")?.focus()};const close=()=>{panel.hidden=true;document.body.classList.remove("command-open")};trigger.addEventListener("click",open);panel.addEventListener("click",e=>{if(e.target===panel)close()});addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();open()}if(e.key==="Escape"&&!panel.hidden)close()})};
+const setupPointer=()=>{let raf=0,x=innerWidth*.5,y=innerHeight*.4;addEventListener("pointermove",e=>{x=e.clientX;y=e.clientY;if(raf)return;raf=requestAnimationFrame(()=>{document.documentElement.style.setProperty("--pointer-x",x+"px");document.documentElement.style.setProperty("--pointer-y",y+"px");raf=0})},{passive:true})};
+const boot=()=>{setupViewport();setupReducedMotion();setupLanguage();setupAnchorMotion();setupCommand();setupPointer();document.documentElement.dataset.frontierRuntime="1.0"};
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
+window.FrontierRuntime={version:"1.0",supportedLanguages:supported,detectLanguage:detect,setLanguage};
+})();
