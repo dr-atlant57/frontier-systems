@@ -1,0 +1,33 @@
+/* FRONTIER SYSTEMS / DESIGN SYSTEM v1.0 */
+:root{
+--fs-bg:#050608;--fs-surface:#080a0d;--fs-surface-2:#0d1116;--fs-fg:#f5f7fa;--fs-muted:#8d96a3;--fs-line:#202630;
+--fs-accent:#9fd8ff;--fs-success:#9de2b0;--fs-radius:2px;
+--fs-max:1240px;--fs-gutter:clamp(14px,3vw,48px);--fs-section:clamp(90px,10vw,140px);
+--fs-type-display:clamp(3.2rem,10vw,10rem);--fs-type-section:clamp(2.6rem,5vw,5rem);
+--fs-ease:cubic-bezier(.2,.8,.2,1);
+}
+*,*:before,*:after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+body{min-width:320px;overflow-x:hidden}
+img,svg,video,canvas{max-width:100%;height:auto}
+button,a,input,select,textarea{font:inherit}
+button,a{touch-action:manipulation}
+.fs-shell{width:min(var(--fs-max),calc(100% - var(--fs-gutter)*2));margin-inline:auto}
+.fs-section{padding-block:var(--fs-section);border-top:1px solid var(--fs-line)}
+.fs-display{font-size:var(--fs-type-display);line-height:.84;letter-spacing:-.07em}
+.fs-title{font-size:var(--fs-type-section);line-height:.94;letter-spacing:-.055em}
+.fs-muted{color:var(--fs-muted)}
+.fs-grid{display:grid;gap:clamp(24px,5vw,70px)}
+.fs-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fs-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fs-grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.fs-panel{border:1px solid var(--fs-line);background:linear-gradient(145deg,rgba(255,255,255,.025),transparent)}
+.fs-kicker{font-size:.65rem;color:var(--fs-muted);letter-spacing:.2em;text-transform:uppercase}
+.fs-cta{display:inline-flex;min-height:44px;align-items:center;justify-content:center;padding:12px 18px;border:1px solid #63707c;transition:background .25s var(--fs-ease),color .25s var(--fs-ease)}
+.fs-cta:hover{background:var(--fs-fg);color:var(--fs-bg)}
+.fs-focus:focus-visible{outline:2px solid var(--fs-accent);outline-offset:4px}
+@media(max-width:900px){.fs-grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.fs-grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){:root{--fs-gutter:12px;--fs-section:88px}.fs-grid-2,.fs-grid-3,.fs-grid-4{grid-template-columns:1fr}.fs-display{font-size:clamp(3.1rem,17vw,6rem)}.fs-panel{min-width:0}}
+@media(orientation:landscape) and (max-height:560px){:root{--fs-section:70px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}}
+@media(prefers-contrast:more){:root{--fs-line:#59636e;--fs-muted:#b6bec7}.fs-cta{border-width:2px}}
