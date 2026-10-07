@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#060809">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Архитектурное наблюдение ROOT FRONTIER SYSTEMS для Альянса Компаний «Восток‑Запад»: четыре бизнес‑модели, три архитектуры развития и следующий рынок.">
+  <meta property="og:title" content="Восток‑Запад × ROOT FRONTIER SYSTEMS">
+  <meta property="og:description" content="От накопленного инженерного опыта — к собственной платформе, новой архитектуре бизнеса и следующему рынку.">
+  <meta property="og:type" content="website">
+  <title>Восток‑Запад × ROOT FRONTIER SYSTEMS</title>
+  <style>
+    :root{
+      --bg:#060809;
+      --bg2:#090c0e;
+      --panel:#0d1113;
+      --panel2:#11171a;
+      --text:#f2f4ef;
+      --soft:#c2c9c6;
+      --muted:#899390;
+      --dim:#5f6967;
+      --line:#252d2f;
+      --line2:#354044;
+      --ice:#8fd3ff;
+      --terrain:#e7a34c;
+      --signal:#c8e874;
+      --max:1240px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:
+      linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000 0 70%,transparent)}
+    body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:
+      radial-gradient(circle at var(--px,72%) var(--py,18%),rgba(143,211,255,.08),transparent 23%),
+      radial-gradient(circle at 10% 72%,rgba(231,163,76,.045),transparent 28%)}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;color:inherit}
+    button,a{-webkit-tap-highlight-color:transparent}
+    a:focus-visible,button:focus-visible{outline:2px solid var(--ice);outline-offset:5px}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    .progress{position:fixed;left:0;top:0;height:2px;width:var(--progress,0%);background:linear-gradient(90deg,var(--ice),var(--terrain));z-index:100}
+    header{position:fixed;inset:0 0 auto;height:78px;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(6,8,9,.72);backdrop-filter:blur(18px)}
+    nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-size:.7rem;letter-spacing:.17em;font-weight:800;white-space:nowrap}
+    .brand span{color:var(--ice)}
+    .projectTag{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.59rem;letter-spacing:.16em;text-transform:uppercase;margin-left:auto}
+    .projectTag i{width:6px;height:6px;border-radius:50%;background:var(--terrain);box-shadow:0 0 14px rgba(231,163,76,.75)}
+    .navlinks{display:flex;align-items:center;gap:20px;font-size:.6rem;color:#a8b0ad;letter-spacing:.1em;text-transform:uppercase}
+    .navlinks a:hover{color:#fff}
+    .menu{display:none;border:1px solid var(--line2);background:transparent;padding:10px 13px;cursor:pointer;font-size:.65rem;letter-spacing:.12em}
+    .hero{min-height:100svh;display:flex;align-items:center;padding:130px 0 78px;position:relative}
+    .heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+    .kicker{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase}
+    .kicker:before{content:"";width:30px;height:1px;background:var(--terrain)}
+    h1{font-size:clamp(3.9rem,7.6vw,8.3rem);line-height:.84;letter-spacing:-.072em;font-weight:650;margin:30px 0 0;max-width:930px}
+    h1 .line{display:block}
+    h1 .accent{color:var(--terrain)}
+    .heroLead{font-size:clamp(1.08rem,1.55vw,1.32rem);line-height:1.56;color:var(--soft);max-width:760px;margin:35px 0 0}
+    .heroLead strong{color:#fff;font-weight:550}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:48px;padding:0 18px;border:1px solid #59666a;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;transition:.25s}
+    .btn:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+    .btn.primary{border-color:var(--terrain);background:var(--terrain);color:#090a08}
+    .btn.primary:hover{background:#f5b761;border-color:#f5b761}
+    .heroVisual{position:relative;min-height:520px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.025),transparent 55%),var(--bg2);overflow:hidden}
+    .heroVisual:before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(ellipse at 65% 70%,transparent 0 31px,rgba(143,211,255,.055) 32px 33px);opacity:.55;transform:scale(1.5)}
+    .visualTop,.visualBottom{position:absolute;left:22px;right:22px;display:flex;justify-content:space-between;color:var(--dim);font-size:.54rem;letter-spacing:.13em;text-transform:uppercase}
+    .visualTop{top:20px}.visualBottom{bottom:18px}
+    .vehicle{position:absolute;width:116%;left:-9%;top:50%;transform:translateY(-43%);filter:drop-shadow(0 0 35px rgba(143,211,255,.09))}
+    .vehicle .path{stroke-dasharray:8 9;animation:dash 18s linear infinite}
+    @keyframes dash{to{stroke-dashoffset:-300}}
+    .transitionCode{position:absolute;right:24px;top:70px;display:grid;gap:9px;text-align:right}
+    .transitionCode span{font-size:.56rem;color:var(--dim);letter-spacing:.12em}
+    .transitionCode strong{font-size:1.05rem;letter-spacing:.02em;font-weight:500}
+    .transitionCode strong:nth-child(2){color:var(--terrain)}
+    .heroNote{position:absolute;left:24px;bottom:52px;max-width:270px;color:#9ca6a3;font-size:.72rem;line-height:1.58}
+    .heroFoot{display:flex;justify-content:space-between;gap:20px;margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:.56rem;letter-spacing:.13em;text-transform:uppercase}
+    section{padding:120px 0;border-top:1px solid var(--line)}
+    .sectionHead{display:grid;grid-template-columns:160px 1fr;gap:35px;align-items:start;margin-bottom:48px}
+    .sectionNo{color:var(--muted);font-size:.59rem;letter-spacing:.17em;text-transform:uppercase;padding-top:8px}
+    h2{font-size:clamp(2.6rem,5.2vw,5.3rem);line-height:.93;letter-spacing:-.058em;font-weight:520;margin:0;max-width:940px}
+    .statement{font-size:clamp(1.06rem,1.75vw,1.42rem);line-height:1.62;color:#b7c0bd;max-width:850px;margin:0 0 45px 195px}
+    .signalLine{border:1px solid var(--line);padding:30px;display:grid;grid-template-columns:repeat(7,auto);align-items:center;gap:16px;background:linear-gradient(90deg,rgba(143,211,255,.04),transparent 55%,rgba(231,163,76,.035))}
+    .signalLine span{font-size:.7rem;color:#aab3b0;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+    .signalLine b{color:var(--terrain);font-weight:400}
+    .signalLine i{height:1px;min-width:20px;background:#445054}
+    .observations{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);margin-top:26px}
+    .observation{padding:30px;min-height:280px;border-right:1px solid var(--line);position:relative;background:rgba(255,255,255,.012)}
+    .observation:last-child{border-right:0}
+    .tag{font-size:.55rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase}
+    .observation h3,.modelCard h3,.pattern h3{font-size:1.4rem;line-height:1.1;letter-spacing:-.03em;font-weight:500;margin:72px 0 15px}
+    .observation p,.modelCard p,.pattern p{font-size:.88rem;line-height:1.7;color:var(--muted);margin:0}
+    .epistemic{margin-top:20px;color:var(--dim);font-size:.65rem;line-height:1.55;max-width:900px}
+    .transition{display:grid;grid-template-columns:1fr auto 1fr;border:1px solid var(--line);background:var(--line);gap:1px}
+    .state{background:var(--bg2);padding:38px;min-height:350px}
+    .stateLabel{font-size:.57rem;color:var(--muted);letter-spacing:.17em;text-transform:uppercase}
+    .state h3{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1;letter-spacing:-.04em;font-weight:520;margin:52px 0 24px}
+    .state ul{list-style:none;padding:0;margin:0;display:grid;gap:13px;color:#9ca6a3;font-size:.84rem;line-height:1.5}
+    .state li{padding-left:20px;position:relative}.state li:before{content:"";position:absolute;left:0;top:.65em;width:6px;height:1px;background:var(--terrain)}
+    .arrow{background:var(--bg2);display:grid;place-items:center;padding:0 18px;color:var(--terrain);font-size:1.5rem}
+    .rootCallout{margin-top:30px;border-left:2px solid var(--terrain);padding:6px 0 6px 30px}
+    .rootCallout p{font-size:clamp(1.25rem,2.2vw,1.9rem);line-height:1.4;letter-spacing:-.025em;margin:0;max-width:990px}
+    .rootCallout small{display:block;color:var(--muted);font-size:.69rem;line-height:1.6;margin-top:18px;max-width:760px}
+    .modelGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .modelCard{background:var(--bg2);min-height:320px;padding:31px;position:relative;overflow:hidden}
+    .modelCard:after{content:attr(data-index);position:absolute;right:-5px;bottom:-42px;font-size:9rem;line-height:1;color:rgba(255,255,255,.025);font-weight:800;letter-spacing:-.09em}
+    .modelCard h3{margin-top:78px;max-width:420px}
+    .modelCard p{max-width:520px}
+    .fifth{margin-top:1px;border:1px solid var(--line);padding:38px;background:linear-gradient(110deg,rgba(231,163,76,.095),rgba(143,211,255,.025) 62%,transparent);display:grid;grid-template-columns:.7fr 1.3fr;gap:45px;align-items:center}
+    .fifth h3{font-size:clamp(1.8rem,3.5vw,3.3rem);letter-spacing:-.05em;line-height:1;margin:12px 0 0;font-weight:520}
+    .fifth p{color:#b6bfbc;line-height:1.7;margin:0;font-size:.98rem}
+    .cycle{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);margin-top:40px}
+    .cycleStep{min-height:180px;padding:23px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,rgba(143,211,255,.025),transparent)}
+    .cycleStep:last-child{border-right:0}
+    .cycleStep b{font-size:.55rem;letter-spacing:.14em;color:var(--ice)}
+    .cycleStep strong{font-size:.85rem;font-weight:520;line-height:1.35}
+    .cycleStep span{font-size:.65rem;color:var(--dim);line-height:1.45}
+    .architectureBox{border:1px solid var(--line);display:grid;grid-template-columns:310px 1fr;min-height:520px;background:var(--bg2)}
+    .archTabs{border-right:1px solid var(--line);display:flex;flex-direction:column}
+    .archTab{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;text-align:left;padding:25px;cursor:pointer;transition:.25s}
+    .archTab:hover{background:rgba(255,255,255,.025)}
+    .archTab[aria-selected="true"]{background:rgba(231,163,76,.08);box-shadow:inset 2px 0 var(--terrain)}
+    .archTab small{display:block;color:var(--muted);font-size:.52rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:11px}
+    .archTab strong{font-size:.93rem;line-height:1.35;font-weight:520}
+    .archContent{padding:48px;display:flex;flex-direction:column}
+    .archKicker{font-size:.57rem;color:var(--terrain);letter-spacing:.16em;text-transform:uppercase}
+    .archContent h3{font-size:clamp(2.5rem,5vw,5.2rem);line-height:.9;letter-spacing:-.06em;font-weight:520;margin:25px 0}
+    .archThesis{font-size:1.13rem;line-height:1.62;color:#bdc5c2;max-width:760px;margin:0}
+    .archFacts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:auto}
+    .archFact{background:#0a0d0f;padding:22px;min-height:160px}
+    .archFact span{display:block;color:var(--muted);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase}
+    .archFact p{font-size:.78rem;color:#aab3b0;line-height:1.57;margin:28px 0 0}
+    .archNote{display:flex;justify-content:space-between;gap:25px;margin-top:20px;color:var(--dim);font-size:.62rem;line-height:1.55}
+    .archNote b{color:var(--signal);font-weight:500}
+    .marketSequence{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--line);margin:45px 0 28px}
+    .marketStep{min-height:145px;padding:20px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;background:var(--bg2);position:relative}
+    .marketStep:last-child{border-right:0}
+    .marketStep:after{content:"→";position:absolute;right:-7px;top:50%;color:var(--terrain);z-index:2;font-size:.75rem;background:var(--bg2)}
+    .marketStep:last-child:after{display:none}
+    .marketStep b{font-size:.53rem;color:var(--muted);letter-spacing:.13em}
+    .marketStep strong{font-size:.78rem;line-height:1.35;font-weight:520;text-transform:uppercase}
+    .audiences{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .audience{padding:29px;background:var(--bg2);min-height:245px}
+    .audience h3{font-size:1.22rem;margin:54px 0 13px;font-weight:520}
+    .audience p{font-size:.84rem;line-height:1.65;color:var(--muted);margin:0}
+    .patterns{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}
+    .pattern{padding:28px;min-height:320px;border-right:1px solid var(--line);background:rgba(255,255,255,.012)}
+    .pattern:last-child{border-right:0}
+    .pattern .company{font-size:.57rem;color:var(--ice);letter-spacing:.13em;text-transform:uppercase}
+    .pattern h3{margin-top:65px;font-size:1.24rem}
+    .pattern p{font-size:.81rem}
+    .patternFooter{margin-top:24px;color:var(--dim);font-size:.64rem;line-height:1.6}
+    .personal{position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(231,163,76,.075),transparent 52%)}
+    .personal:after{content:"07—08";position:absolute;right:-2vw;bottom:-7vw;font-size:clamp(9rem,27vw,26rem);font-weight:800;letter-spacing:-.1em;color:rgba(255,255,255,.018);line-height:1;pointer-events:none}
+    .personalGrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;position:relative;z-index:1}
+    .personalLead{font-size:clamp(2rem,4vw,4rem);line-height:1.02;letter-spacing:-.05em;margin:0}
+    .story{font-size:clamp(1.02rem,1.6vw,1.27rem);line-height:1.7;color:#bec6c3;margin:0}
+    .story+.story{margin-top:24px}
+    .story strong{color:var(--text);font-weight:520}
+    .fieldQuote{border-left:1px solid var(--terrain);padding-left:22px;margin-top:36px;color:#e1e5df;font-size:1.02rem;line-height:1.6;max-width:690px}
+    .engagement{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+    .engagementIntro h2{font-size:clamp(2.7rem,5vw,5.4rem)}
+    .engagementIntro p{font-size:1rem;line-height:1.7;color:var(--muted);max-width:520px;margin:28px 0 0}
+    .phases{border:1px solid var(--line)}
+    .phase{display:grid;grid-template-columns:80px 1fr;gap:22px;padding:25px;border-bottom:1px solid var(--line);background:var(--bg2)}
+    .phase:last-child{border-bottom:0}
+    .phaseNo{font-size:.58rem;color:var(--terrain);letter-spacing:.13em}
+    .phase h3{font-size:1.08rem;font-weight:520;margin:0 0 8px}
+    .phase p{color:var(--muted);font-size:.82rem;line-height:1.6;margin:0}
+    .deliverables{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+    .deliverable{background:#090c0e;padding:24px;min-height:160px}
+    .deliverable span{font-size:.54rem;color:var(--muted);letter-spacing:.14em}
+    .deliverable strong{display:block;margin-top:35px;font-size:.91rem;line-height:1.45;font-weight:520}
+    .locked{margin-top:28px;padding:25px;border:1px dashed #4d5a5e;display:flex;align-items:center;gap:18px;color:#9aa4a1;font-size:.76rem;line-height:1.6}
+    .locked svg{width:28px;min-width:28px;color:var(--terrain)}
+    .principle{padding:100px 0;background:linear-gradient(180deg,transparent,rgba(143,211,255,.04))}
+    .principleText{font-size:clamp(2.6rem,6vw,6.8rem);line-height:.93;letter-spacing:-.065em;max-width:1120px;margin:0}
+    .principleText span{color:var(--ice)}
+    .principleSub{font-size:1.02rem;line-height:1.7;color:var(--muted);max-width:730px;margin:35px 0 0}
+    .final{min-height:72svh;display:flex;align-items:center}
+    .finalGrid{display:grid;grid-template-columns:1fr .55fr;gap:70px;align-items:end}
+    .final h2{font-size:clamp(3.4rem,8vw,8rem);line-height:.83}
+    .finalAside{border-left:1px solid var(--line2);padding-left:28px}
+    .finalAside p{color:#acb5b2;line-height:1.65;margin:0 0 28px;font-size:.98rem}
+    footer{border-top:1px solid var(--line);padding:55px 0 35px}
+    .footerGrid{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:35px}
+    .footerBrand{font-size:.71rem;letter-spacing:.17em;font-weight:800}
+    footer h3{font-size:.55rem;color:var(--muted);letter-spacing:.15em;margin:0 0 17px;text-transform:uppercase}
+    footer a,footer p{display:block;font-size:.72rem;color:#aab3b0;line-height:1.65;margin:8px 0}
+    .bottom{border-top:1px solid var(--line);margin-top:42px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;color:var(--dim);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media(max-width:1050px){
+      .heroGrid{gap:35px}.heroVisual{min-height:450px}.cycle{grid-template-columns:repeat(3,1fr)}.cycleStep:nth-child(3){border-right:0}.cycleStep:nth-child(n+4){border-top:1px solid var(--line)}
+      .marketSequence{grid-template-columns:repeat(4,1fr)}.marketStep:nth-child(4){border-right:0}.marketStep:nth-child(n+5){border-top:1px solid var(--line)}.marketStep:nth-child(4):after{display:none}
+      .patterns{grid-template-columns:repeat(2,1fr)}.pattern:nth-child(2){border-right:0}.pattern:nth-child(n+3){border-top:1px solid var(--line)}
+    }
+    @media(max-width:860px){
+      .wrap{width:min(100% - 32px,720px)}.projectTag{display:none}.menu{display:block}.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:#090c0e;border-bottom:1px solid var(--line);padding:20px 24px;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}
+      .hero{padding-top:120px}.heroGrid{grid-template-columns:1fr}.heroVisual{min-height:390px;margin-top:15px}.sectionHead{grid-template-columns:1fr;gap:18px}.statement{margin-left:0}.signalLine{grid-template-columns:1fr;gap:11px}.signalLine i{width:1px;height:17px;margin-left:8px}
+      .observations{grid-template-columns:1fr}.observation{border-right:0;border-bottom:1px solid var(--line);min-height:235px}.observation:last-child{border-bottom:0}.observation h3{margin-top:50px}
+      .transition{grid-template-columns:1fr}.arrow{padding:15px;transform:rotate(90deg)}.modelGrid{grid-template-columns:1fr}.fifth,.personalGrid,.engagement,.finalGrid{grid-template-columns:1fr}.fifth{gap:25px}
+      .architectureBox{grid-template-columns:1fr}.archTabs{border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr)}.archTab{border-bottom:0;border-right:1px solid var(--line)}.archTab:last-child{border-right:0}.archTab[aria-selected="true"]{box-shadow:inset 0 2px var(--terrain)}.archContent{min-height:540px}.audiences{grid-template-columns:1fr}.audience{min-height:210px}.personalGrid{gap:35px}.engagement{gap:45px}
+      .footerGrid{grid-template-columns:1fr 1fr}.footerGrid>div:first-child{grid-column:1/-1}
+    }
+    @media(max-width:560px){
+      .wrap{width:calc(100% - 24px)}header{height:calc(68px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top)}.navlinks{top:calc(68px + env(safe-area-inset-top))}.brand{font-size:.62rem}.hero{padding-top:calc(105px + env(safe-area-inset-top));padding-bottom:65px}h1{font-size:clamp(3.4rem,17vw,5.7rem)}.heroLead{font-size:1rem}.actions{display:grid;grid-template-columns:1fr}.btn{width:100%}.heroVisual{min-height:330px}.transitionCode{display:none}.heroNote{font-size:.66rem;max-width:220px}.heroFoot{display:block;line-height:1.7}.heroFoot span{display:block}
+      section{padding:86px 0}h2{font-size:clamp(2.55rem,13vw,4.3rem)}.rootCallout{padding-left:20px}.state{padding:28px}.modelCard{padding:25px;min-height:280px}.modelCard h3{margin-top:60px}.fifth{padding:28px}
+      .cycle{grid-template-columns:1fr 1fr}.cycleStep{min-height:155px}.cycleStep:nth-child(odd){border-right:1px solid var(--line)}.cycleStep:nth-child(even){border-right:0}.cycleStep:nth-child(n+3){border-top:1px solid var(--line)}
+      .archTabs{grid-template-columns:1fr}.archTab{border-right:0;border-bottom:1px solid var(--line)}.archTab:last-child{border-bottom:0}.archContent{padding:28px;min-height:auto}.archContent h3{font-size:2.7rem}.archFacts{grid-template-columns:1fr;margin-top:36px}.archFact{min-height:125px}.archFact p{margin-top:20px}.archNote{display:block}.archNote span{display:block;margin-top:8px}
+      .marketSequence{grid-template-columns:1fr 1fr}.marketStep{min-height:125px}.marketStep:nth-child(even){border-right:0}.marketStep:nth-child(n+3){border-top:1px solid var(--line)}.marketStep:nth-child(4):after{display:block}.marketStep:nth-child(even):after{display:none}.marketStep:last-child{grid-column:1/-1}.marketStep:last-child:after{display:none}
+      .patterns{grid-template-columns:1fr}.pattern{border-right:0;border-top:1px solid var(--line);min-height:275px}.pattern:first-child{border-top:0}.story{font-size:1rem}.phase{grid-template-columns:55px 1fr}.deliverables{grid-template-columns:1fr}.principle{padding:78px 0}.principleText{font-size:clamp(2.7rem,13vw,4.6rem)}.final{min-height:auto}.finalAside{border-left:0;border-top:1px solid var(--line);padding:28px 0 0}.footerGrid{grid-template-columns:1fr}.footerGrid>div:first-child{grid-column:auto}.bottom{display:block;line-height:1.7}.bottom span{display:block}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.vehicle .path{animation:none}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Основная навигация">
+        <a class="brand" href="#top">ROOT FRONTIER <span>SYSTEMS</span></a>
+        <div class="projectTag mono"><i></i> PERSONALIZED SYSTEM VIEW / 001 / EAST–WEST</div>
+        <div class="navlinks" id="navlinks">
+          <a href="#reality">Реальность</a>
+          <a href="#models">4 + 1 модели</a>
+          <a href="#architectures">3 архитектуры</a>
+          <a href="#discovery">Discovery</a>
+          <a href="../">Бюро ↗</a>
+        </div>
+        <button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">МЕНЮ</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div>
+            <div class="kicker">Для Альянса Компаний «Восток‑Запад»</div>
+            <h1>
+              <span class="line">От инженерного</span>
+              <span class="line">опыта — к <span class="accent">собственной</span></span>
+              <span class="line accent">платформе.</span>
+            </h1>
+            <p class="heroLead">Мы исследовали публично наблюдаемую систему «Восток‑Запад» и увидели не отдельную задачу продаж, а <strong>переход от накопленной инженерной компетенции к новой архитектуре бизнеса, продукта и рынка.</strong></p>
+            <div class="actions">
+              <a class="btn primary" href="#reality">Что мы увидели <span>↓</span></a>
+              <a class="btn" href="#architectures">Три архитектуры <span>↘</span></a>
+            </div>
+          </div>
+          <div class="heroVisual" aria-label="Схематическое изображение сочленённой гусеничной платформы">
+            <div class="visualTop mono"><span>FIELD / SYSTEM OBSERVATION</span><span>07.10.2026</span></div>
+            <div class="transitionCode mono"><span>PROJECT ENGINEERING</span><strong>BV‑206</strong><span>PRODUCT PLATFORM</span><strong>МС‑25</strong></div>
+            <svg class="vehicle" viewBox="0 0 760 420" fill="none" aria-hidden="true">
+              <path class="path" d="M0 328c94-32 151-61 229-48 73 12 123 75 221 40 90-32 158-91 310-30" stroke="#344146" stroke-width="2"/>
+              <path d="M81 270h245l46 32-25 54H101l-38-38 18-48Z" stroke="#8fd3ff" stroke-width="3"/>
+              <path d="M112 260 146 176h118l62 94" stroke="#8fd3ff" stroke-width="3"/>
+              <path d="M152 190h96l38 65H130l22-65Z" stroke="#e7a34c" stroke-width="2"/>
+              <path d="M362 305h55" stroke="#e7a34c" stroke-width="5"/>
+              <path d="M417 282h244l40 31-28 50H438l-38-35 17-46Z" stroke="#8fd3ff" stroke-width="3"/>
+              <path d="M445 274 475 205h117l69 77" stroke="#8fd3ff" stroke-width="3"/>
+              <path d="M476 218h101l46 53H454l22-53Z" stroke="#e7a34c" stroke-width="2"/>
+              <g stroke="#8fd3ff" stroke-width="2">
+                <circle cx="125" cy="318" r="22"/><circle cx="181" cy="318" r="22"/><circle cx="237" cy="318" r="22"/><circle cx="293" cy="318" r="22"/>
+                <circle cx="461" cy="326" r="22"/><circle cx="517" cy="326" r="22"/><circle cx="573" cy="326" r="22"/><circle cx="629" cy="326" r="22"/>
+              </g>
+              <path d="M100 347h220M439 355h213" stroke="#e7a34c" stroke-width="3"/>
+              <path d="M365 122v65m-31-32h64" stroke="#59666a"/>
+              <circle cx="365" cy="155" r="61" stroke="#344146"/>
+              <path d="M365 94v122M304 155h122" stroke="#243035"/>
+            </svg>
+            <p class="heroNote">Публичная архитектурная гипотеза. Точные выводы требуют внутренней верификации с собственниками и командой.</p>
+            <div class="visualBottom mono"><span>REALITY → ROOT</span><span>DESIGN → FRONTIER</span></div>
+          </div>
+        </div>
+        <div class="heroFoot mono"><span>Независимое исследование открытых данных</span><span>ROOT FRONTIER SYSTEMS / ARCHITECTURE BUREAU</span></div>
+      </div>
+    </section>
+
+    <section id="reality">
+      <div class="wrap">
+        <div class="sectionHead reveal">
+          <div class="sectionNo mono">01 / РЕАЛЬНОСТЬ</div>
+          <h2>Компания подошла не к задаче «продавать больше». Она подошла к смене собственной природы.</h2>
+        </div>
+        <p class="statement reveal">По нашей рабочей интерпретации, многолетний опыт с BV‑206, производственная и сервисная компетенция, специальные конфигурации, экспедиции и сообщество создали основание для следующего шага: собственного продукта МС‑25. Но новый продукт требует уже другой системы.</p>
+        <div class="signalLine mono reveal" aria-label="Логика перехода">
+          <span>Накопленный опыт</span><i></i><span>Собственный продукт</span><i></i><span>Новые инвестиции</span><i></i><span><b>Новая архитектура бизнеса</b></span>
+        </div>
+        <div class="observations">
+          <article class="observation reveal">
+            <div class="tag mono">Наблюдение / 01</div>
+            <h3>Инженерная база уже существует</h3>
+            <p>Работа с BV‑206, восстановлением, модулями, сервисом и эксплуатацией в сложных условиях сформировала компетенции, которые невозможно быстро скопировать рекламой.</p>
+          </article>
+          <article class="observation reveal">
+            <div class="tag mono">Наблюдение / 02</div>
+            <h3>МС‑25 меняет бизнес‑модель</h3>
+            <p>Собственный серийный продукт требует управления конфигурацией, себестоимостью, испытаниями, доказательствами, каналами и жизненным циклом — не только личных продаж.</p>
+          </article>
+          <article class="observation reveal">
+            <div class="tag mono">Наблюдение / 03</div>
+            <h3>Следующий актив — сама система</h3>
+            <p>Главной ценностью может стать архитектура, связывающая продукт, производство, доказательность, коммерцию, сервис, владельцев и данные в один контур обучения.</p>
+          </article>
+        </div>
+        <p class="epistemic mono reveal">ЭПИСТЕМИЧЕСКАЯ ГРАНИЦА: выше — интерпретация публично наблюдаемых материалов, а не утверждение о внутренних процессах компании.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="sectionHead reveal">
+          <div class="sectionNo mono">02 / ПЕРЕХОД</div>
+          <h2>Не строить отдел продаж поверх неопределённости. Сначала спроектировать систему перехода.</h2>
+        </div>
+        <div class="transition reveal">
+          <article class="state">
+            <div class="stateLabel mono">Накопленная архитектура</div>
+            <h3>Проектная инженерия</h3>
+            <ul>
+              <li>индивидуальные конфигурации и высокий чек;</li>
+              <li>экспертная продажа сложного решения;</li>
+              <li>ценность создаётся под конкретную задачу;</li>
+              <li>сильная зависимость от личного опыта команды;</li>
+              <li>сервис после продажи как отдельная возможность.</li>
+            </ul>
+          </article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <article class="state">
+            <div class="stateLabel mono">Ожидаемая архитектура</div>
+            <h3>Управляемая продуктовая система</h3>
+            <ul>
+              <li>зафиксированное ядро и допустимые варианты;</li>
+              <li>раздельные коммерческие контуры;</li>
+              <li>полевые доказательства и цифровой паспорт;</li>
+              <li>серийная экономика и производственные ворота;</li>
+              <li>сервис, сообщество и данные как часть продукта.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="rootCallout reveal">
+          <p>Понять, как устроена система сейчас, и спроектировать архитектуру под цели собственников.</p>
+          <small>Не подменять исследование обещанием быстрых продаж. Сначала определить, какой бизнес фактически существует, какой должен появиться и какой переход между ними реалистичен.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="models">
+      <div class="wrap">
+        <div class="sectionHead reveal">
+          <div class="sectionNo mono">03 / 4 + 1 МОДЕЛИ</div>
+          <h2>Мы видим внутри «Восток‑Запад» четыре разных бизнеса — и контур пятого.</h2>
+        </div>
+        <p class="statement reveal">У них разные покупатели, циклы сделки, экономика, доказательства и логика масштаба. Одна воронка и один набор показателей будут заставлять эти модели конкурировать за внимание.</p>
+        <div class="modelGrid">
+          <article class="modelCard reveal" data-index="01">
+            <div class="tag mono">BV‑206 / HIGH‑TICKET</div>
+            <h3>Проектные машины</h3>
+            <p>Инженерное решение под конкретную миссию: условия маршрута, полезная нагрузка, модуль, эксплуатация, стоимость простоя и сервис.</p>
+          </article>
+          <article class="modelCard reveal" data-index="02">
+            <div class="tag mono">МС‑25 / SERIAL PRODUCT</div>
+            <h3>Серийная платформа</h3>
+            <p>Повторяемый продукт, управляемая себестоимость, ограниченные конфигурации, сертификация, дилеры и масштабирование производства.</p>
+          </article>
+          <article class="modelCard reveal" data-index="03">
+            <div class="tag mono">LIFECYCLE / RECURRING</div>
+            <h3>Сервис и установленный парк</h3>
+            <p>Запчасти, ремонт, ремоторизация, модернизация, сезонная подготовка, обучение и долгосрочное сопровождение владельцев.</p>
+          </article>
+          <article class="modelCard reveal" data-index="04">
+            <div class="tag mono">SPECIAL / REGULATED</div>
+            <h3>Специализированные решения</h3>
+            <p>Отдельный контур требований, испытаний, партнёров, ответственности и процедуры закупки для особых конфигураций.</p>
+          </article>
+        </div>
+        <div class="fifth reveal">
+          <div>
+            <div class="tag mono">FRONTIER / 05</div>
+            <h3>Платформа вокруг проходимости</h3>
+          </div>
+          <p>Модули, владельцы, дилеры, сервисные партнёры, экспедиции, сообщество и накопленные инженерные знания могут стать единой экосистемой. Тогда компания управляет не только продажей машин, а полным циклом доступа к труднодоступным территориям.</p>
+        </div>
+        <div class="cycle reveal" aria-label="Контур развития продукта">
+          <div class="cycleStep"><b>01</b><strong>Задача клиента</strong><span>Условия и цена недоступности</span></div>
+          <div class="cycleStep"><b>02</b><strong>Конфигурация</strong><span>Платформа, модуль, расчёт</span></div>
+          <div class="cycleStep"><b>03</b><strong>Доказательство</strong><span>Полевой тест и протокол</span></div>
+          <div class="cycleStep"><b>04</b><strong>Контракт</strong><span>Поставка и принятие</span></div>
+          <div class="cycleStep"><b>05</b><strong>Жизненный цикл</strong><span>Сервис, обучение, данные</span></div>
+          <div class="cycleStep"><b>06</b><strong>Следующая версия</strong><span>Обратная связь в продукт</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="architectures">
+      <div class="wrap">
+        <div class="sectionHead reveal">
+          <div class="sectionNo mono">04 / ВЫБОР</div>
+          <h2>Международный опыт указывает не на один ответ, а на три архитектуры развития.</h2>
+        </div>
+        <p class="statement reveal">Это не варианты рекламной кампании. Каждая архитектура по‑разному распределяет капитал, полномочия, продуктовый риск, производство и коммерческую систему.</p>
+        <div class="architectureBox reveal">
+          <div class="archTabs" role="tablist" aria-label="Архитектуры развития">
+            <button class="archTab" id="tab-a" role="tab" aria-selected="false" aria-controls="arch-panel" data-arch="a"><small>Архитектура A</small><strong>Серийная платформа МС‑25</strong></button>
+            <button class="archTab" id="tab-b" role="tab" aria-selected="false" aria-controls="arch-panel" data-arch="b"><small>Архитектура B</small><strong>Инженерный интегратор BV‑206</strong></button>
+            <button class="archTab" id="tab-c" role="tab" aria-selected="true" aria-controls="arch-panel" data-arch="c"><small>Архитектура C</small><strong>Двухконтурная группа</strong></button>
+          </div>
+          <div class="archContent" id="arch-panel" role="tabpanel" aria-live="polite" aria-labelledby="tab-c">
+            <div class="archKicker mono" id="archKicker">C / КАНДИДАТ ДЛЯ ВЕРИФИКАЦИИ</div>
+            <h3 id="archTitle">Два двигателя.<br>Одна основа.</h3>
+            <p class="archThesis" id="archThesis">МС‑25 развивается как самостоятельный серийный продукт, а BV‑206, специальные решения и сервис — как отдельный проектный бизнес. Их соединяет общая производственная, доказательная и сервисная платформа.</p>
+            <div class="archFacts">
+              <div class="archFact"><span>Усиливает</span><p id="archBenefit">Будущий масштаб без отказа от накопленной компетенции и текущего денежного контура.</p></div>
+              <div class="archFact"><span>Требует</span><p id="archNeed">Два P&amp;L, две воронки, ясные полномочия и правила использования общих ресурсов.</p></div>
+              <div class="archFact"><span>Главный риск</span><p id="archRisk">Назвать бизнесы раздельными, но продолжать смешивать приоритеты, затраты и обещания клиентам.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="archNote mono reveal"><b>РАБОЧАЯ ГИПОТЕЗА: C ВЫГЛЯДИТ НАИБОЛЕЕ СБАЛАНСИРОВАННО</b><span>Окончательный выбор возможен только после проверки внутренних данных.</span></div>
+      </div>
+    </section>
+
+    <section id="market">
+      <div class="wrap">
+        <div class="sectionHead reveal">
+          <div class="sectionNo mono">05 / СЛЕДУЮЩИЙ РЫНОК</div>
+          <h2>Не только выйти на существующий рынок. Начать создавать следующий.</h2>
+        </div>
+        <p class="statement reveal">Для МС‑25 нужна архитектура, созданная с самого начала под нынешнюю ситуацию: современное медиапотребление, новый язык техники, практический опыт, сообщество и поколение будущих владельцев.</p>
+        <div class="marketSequence reveal" aria-label="Как формируется рынок">
+          <div class="marketStep"><b>01</b><strong>Реальная машина</strong></div>
+          <div class="marketStep"><b>02</b><strong>Доказательство</strong></div>
+          <div class="marketStep"><b>03</b><strong>Узнаваемый образ</strong></div>
+          <div class="marketStep"><b>04</b><strong>Личный опыт</strong></div>
+          <div class="marketStep"><b>05</b><strong>Сообщество</strong></div>
+          <div class="marketStep"><b>06</b><strong>Желание владеть</strong></div>
+          <div class="marketStep"><b>07</b><strong>Покупка</strong></div>
+        </div>
+        <div class="audiences">
+          <article class="audience reveal"><div class="tag mono">СПРОС / СЕГОДНЯ</div><h3>Решение реальной задачи</h3><p>Предприятия, удалённые хозяйства, экспедиции, спасательные и инфраструктурные команды покупают доступ, грузоподъёмность и снижение стоимости недоступности.</p></article>
+          <article class="audience reveal"><div class="tag mono">ПРЕДПОЧТЕНИЕ / ЗАВТРА</div><h3>Опыт до покупки</h3><p>Тест‑драйвы, аренда, маршруты, экспедиции и пользовательские истории позволяют человеку сначала прожить возможности продукта, а затем принять решение.</p></article>
+          <article class="audience reveal"><div class="tag mono">ПОКОЛЕНИЕ / ДАЛЬШЕ</div><h3>Молодая аудитория</h3><p>Сегодня она наблюдает, изучает и участвует. Завтра становится оператором, инженером, предпринимателем, руководителем хозяйства или владельцем.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="sectionHead reveal">
+          <div class="sectionNo mono">06 / МЕЖДУНАРОДНЫЕ ПАТТЕРНЫ</div>
+          <h2>Мы смотрели не только на продукты. Мы сравнивали архитектуры успешных систем.</h2>
+        </div>
+        <div class="patterns">
+          <article class="pattern reveal"><div class="company mono">BAE HÄGGLUNDS</div><h3>Общее ядро + миссионные варианты</h3><p>Единая платформа, разные применения, совместные программы закупки и поддержка жизненного цикла превращают нишевую машину в долгосрочную систему.</p></article>
+          <article class="pattern reveal"><div class="company mono">ARGO</div><h3>Разные рынки, общая компетенция</h3><p>Recreation, commercial и unmanned‑предложения имеют разный язык и каналы, сохраняя общую инженерную и производственную основу.</p></article>
+          <article class="pattern reveal"><div class="company mono">SHERP</div><h3>Категория через видимое доказательство</h3><p>Выразительная способность продукта становится рынком через полевые демонстрации, отраслевые кейсы, дистрибуцию и культурную узнаваемость.</p></article>
+          <article class="pattern reveal"><div class="company mono">PRINOTH · FAT TRUCK · TUCKER</div><h3>Модульность и жизнь после продажи</h3><p>Каталог конфигураций, запчасти, обучение, сервис и сообщество владельцев расширяют ценность машины далеко за пределы первой сделки.</p></article>
+        </div>
+        <p class="patternFooter mono reveal">BENCHMARK: 8 РЕФЕРЕНСНЫХ СИСТЕМ · ПУБЛИЧНЫЕ МАТЕРИАЛЫ ПРОИЗВОДИТЕЛЕЙ И ОПЕРАТОРОВ · ПОЛНАЯ КАРТА В ЗАКРЫТОМ ДОСЬЕ</p>
+      </div>
+    </section>
+
+    <section class="personal" id="why">
+      <div class="wrap personalGrid">
+        <div class="reveal">
+          <div class="sectionNo mono">07 / ПОЧЕМУ ЭТА СИСТЕМА</div>
+          <p class="personalLead">Иногда профессиональный интерес начинается задолго до профессии.</p>
+        </div>
+        <div class="reveal">
+          <p class="story">Когда мне было семь или восемь лет, отец подарил мне качественный гусеничный вездеход на батарейках. Я строил ему препятствия из домашних тапочек и наблюдал, как он не объезжает их, а проходит поверх. <strong>Этот образ остался со мной на всю жизнь.</strong></p>
+          <p class="story">Позже та же логика стала профессиональной: не обходить сложные системы, а понимать их устройство, находить структурные ограничения и проектировать способность двигаться дальше. Сегодня я владелец архитектурного бюро ROOT FRONTIER SYSTEMS и работаю как системный архитектор.</p>
+          <p class="story">Поэтому «Восток‑Запад» интересен мне не как абстрактная коммерческая задача. Здесь соединяются личная тяга к технике, уважение к накопленной инженерной практике и возможность добавить когнитивный слой — увидеть бизнес целиком и спроектировать его следующую конфигурацию.</p>
+          <div class="fieldQuote">Архитектура такого бизнеса должна рождаться рядом с машиной — в производстве, на маршруте, в разговоре с владельцами и в реальных испытаниях, а не только за рабочим столом.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="discovery">
+      <div class="wrap engagement">
+        <div class="engagementIntro reveal">
+          <div class="sectionNo mono">08 / ПЕРВЫЙ ENGAGEMENT</div>
+          <h2>Architecture Discovery</h2>
+          <p>Мы предлагаем начать не с обещания роста продаж, а с ограниченного по времени исследования, которое превращает публичные гипотезы в проверяемую внутреннюю карту и позволяет собственникам выбрать архитектуру осознанно.</p>
+        </div>
+        <div>
+          <div class="phases reveal">
+            <article class="phase"><div class="phaseNo mono">00</div><div><h3>Verification Room</h3><p>Продукты, юрлица, IP, продажи, маржа, производство, сертификаты, установленный парк, гарантийные случаи и данные CRM.</p></div></article>
+            <article class="phase"><div class="phaseNo mono">01</div><div><h3>Reality &amp; Root Map</h3><p>Карта четырёх бизнес‑контуров, их зависимостей, узких мест, конфликтов ресурсов и неиспользованного потенциала.</p></div></article>
+            <article class="phase"><div class="phaseNo mono">02</div><div><h3>Three Architecture Options</h3><p>Модели A, B и C: экономика, полномочия, продуктовые границы, коммерческая система, риски и условия отказа.</p></div></article>
+            <article class="phase"><div class="phaseNo mono">03</div><div><h3>90‑Day Transition Experiments</h3><p>Самые короткие обратимые эксперименты, показатели и decision gates, которые уменьшают неопределённость до масштабных вложений.</p></div></article>
+          </div>
+          <div class="deliverables reveal">
+            <div class="deliverable"><span class="mono">DOCUMENT / 01</span><strong>International Reference Architecture Review</strong></div>
+            <div class="deliverable"><span class="mono">DOCUMENT / 02</span><strong>East‑West Reality &amp; Root Map</strong></div>
+            <div class="deliverable"><span class="mono">DOCUMENT / 03</span><strong>Three Development Architectures</strong></div>
+            <div class="deliverable"><span class="mono">DOCUMENT / 04</span><strong>Architecture Decision Matrix</strong></div>
+          </div>
+          <div class="locked reveal">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="6" y="14" width="20" height="14" rx="2" stroke="currentColor"/><path d="M10 14V9a6 6 0 0 1 12 0v5" stroke="currentColor"/><circle cx="16" cy="21" r="2" fill="currentColor"/></svg>
+            <span>На первой встрече мы показываем логику и границы трёх вариантов. Полные рабочие схемы, сравнительная модель и дорожные карты раскрываются после соглашения о конфиденциальности и начала сотрудничества.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="principle">
+      <div class="wrap reveal">
+        <p class="principleText">Мы не ищем специалиста под проблему. <span>Мы проектируем архитектуру, в которой решения работают как система.</span></p>
+        <p class="principleSub">Диагностика. Архитектура. Трансформация. От реальных ограничений — через проверяемую модель — к новой границе возможностей бизнеса.</p>
+      </div>
+    </section>
+
+    <section class="final" id="contact">
+      <div class="wrap finalGrid">
+        <div class="reveal">
+          <div class="kicker">Следующий шаг</div>
+          <h2>Сверить наши наблюдения с вашей реальностью.</h2>
+        </div>
+        <div class="finalAside reveal">
+          <p>Если мы правильно почувствовали момент перехода, первая встреча нужна не для презентации готового ответа. Она нужна, чтобы проверить, где наша модель совпадает с реальностью, а где должна быть пересобрана.</p>
+          <a class="btn primary" href="../contact/">Начать разговор <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footerGrid">
+        <div><div class="footerBrand">ROOT FRONTIER SYSTEMS</div><p>Architecture Bureau for Next‑Generation Systems.</p></div>
+        <div><h3>Эта страница</h3><a href="#reality">Реальность</a><a href="#models">4 + 1 модели</a><a href="#architectures">3 архитектуры</a></div>
+        <div><h3>Метод</h3><p>Reality → Root → Research → Design → Frontier</p></div>
+        <div><h3>Дальше</h3><a href="../">Основной сайт ↗</a><a href="../research/">Research ↗</a><a href="../contact/">Contact ↗</a></div>
+      </div>
+      <div class="bottom mono"><span>© 2026 ROOT FRONTIER SYSTEMS</span><span>PERSONALIZED COMPANY LANDING / 001 / EAST–WEST</span></div>
+    </div>
+  </footer>
+
+  <script>
+    (()=>{
+      const menu=document.getElementById('menu');
+      const nav=document.getElementById('navlinks');
+      menu.addEventListener('click',()=>{
+        const open=nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded',String(open));
+        menu.textContent=open?'ЗАКРЫТЬ':'МЕНЮ';
+      });
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='МЕНЮ';
+      }));
+
+      const architectures={
+        a:{
+          kicker:'A / PRODUCT‑FIRST',
+          title:'МС‑25 как<br>серийная платформа.',
+          thesis:'Компания концентрирует капитал и внимание на собственном продукте: фиксирует базовую конфигурацию, подтверждает её полевыми данными и строит ограниченное семейство стандартных вариантов.',
+          benefit:'Наибольший потенциал повторяемости, собственного IP, продуктовой маржи и национального масштаба.',
+          need:'Product management, испытания, сертификация, supplier quality, пилотный парк и подтверждённая unit economics.',
+          risk:'Начать масштабировать продажи и количество версий раньше, чем продукт и производство стали воспроизводимыми.'
+        },
+        b:{
+          kicker:'B / SOLUTIONS‑FIRST',
+          title:'BV‑206 как<br>инженерная система.',
+          thesis:'Компания превращает восстановление, модернизацию, модули и обслуживание BV‑206 в стандартизированные решения для профессиональных заказчиков, а МС‑25 развивает по мере доказанной готовности.',
+          benefit:'Более быстрая монетизация накопленной компетенции, установленного парка и сервисного спроса.',
+          need:'Пакеты работ, прозрачная приёмка, цифровой паспорт, управление проектной маржой, запчасти и SLA.',
+          risk:'Остаться набором уникальных проектов, зависящих от отдельных специалистов и плохо поддающихся масштабу.'
+        },
+        c:{
+          kicker:'C / КАНДИДАТ ДЛЯ ВЕРИФИКАЦИИ',
+          title:'Два двигателя.<br>Одна основа.',
+          thesis:'МС‑25 развивается как самостоятельный серийный продукт, а BV‑206, специальные решения и сервис — как отдельный проектный бизнес. Их соединяет общая производственная, доказательная и сервисная платформа.',
+          benefit:'Будущий масштаб без отказа от накопленной компетенции и текущего денежного контура.',
+          need:'Два P&L, две воронки, ясные полномочия и правила использования общих ресурсов.',
+          risk:'Назвать бизнесы раздельными, но продолжать смешивать приоритеты, затраты и обещания клиентам.'
+        }
+      };
+      const ids={kicker:'archKicker',title:'archTitle',thesis:'archThesis',benefit:'archBenefit',need:'archNeed',risk:'archRisk'};
+      document.querySelectorAll('.archTab').forEach(tab=>tab.addEventListener('click',()=>{
+        const key=tab.dataset.arch,data=architectures[key];
+        document.querySelectorAll('.archTab').forEach(t=>t.setAttribute('aria-selected',String(t===tab)));
+        Object.entries(ids).forEach(([field,id])=>document.getElementById(id).innerHTML=data[field]);
+        document.getElementById('arch-panel').setAttribute('aria-labelledby',tab.id);
+      }));
+
+      const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const reveals=[...document.querySelectorAll('.reveal')];
+      if(reduced){reveals.forEach(el=>el.classList.add('visible'));}
+      else{
+        const io=new IntersectionObserver(entries=>entries.forEach(e=>{
+          if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+        }),{threshold:.09,rootMargin:'0px 0px -45px'});
+        reveals.forEach(el=>io.observe(el));
+      }
+      const update=()=>{
+        const max=document.documentElement.scrollHeight-innerHeight;
+        document.documentElement.style.setProperty('--progress',(max>0?scrollY/max*100:0)+'%');
+      };
+      addEventListener('scroll',update,{passive:true});update();
+      addEventListener('pointermove',e=>{
+        document.documentElement.style.setProperty('--px',(e.clientX/innerWidth*100)+'%');
+        document.documentElement.style.setProperty('--py',(e.clientY/innerHeight*100)+'%');
+      },{passive:true});
+    })();
+  </script>
+</body>
+</html>
