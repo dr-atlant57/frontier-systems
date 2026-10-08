@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#060809">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Начало архитектурного диалога ROOT FRONTIER SYSTEMS с Альянсом Компаний «Восток‑Запад». Сверка публичной модели с внутренней реальностью бизнеса.">
+  <title>Начать разговор — Восток‑Запад × ROOT FRONTIER SYSTEMS</title>
+  <style>
+    :root{
+      --bg:#060809;--bg2:#090c0e;--panel:#0d1113;--text:#f2f4ef;--soft:#c2c9c6;
+      --muted:#899390;--dim:#5f6967;--line:#252d2f;--line2:#354044;
+      --ice:#8fd3ff;--terrain:#e7a34c;--signal:#c8e874;--max:1180px
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000 0 78%,transparent)}
+    body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 83% 17%,rgba(143,211,255,.075),transparent 25%),radial-gradient(circle at 8% 76%,rgba(231,163,76,.05),transparent 28%)}
+    a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}button,a{-webkit-tap-highlight-color:transparent}
+    a:focus-visible,button:focus-visible{outline:2px solid var(--ice);outline-offset:5px}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    .progress{position:fixed;left:0;top:0;height:2px;width:var(--progress,0%);background:linear-gradient(90deg,var(--ice),var(--terrain));z-index:100}
+    header{position:fixed;inset:0 0 auto;height:78px;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(6,8,9,.78);backdrop-filter:blur(18px)}
+    nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;min-width:0}
+    .brand{font-size:.7rem;letter-spacing:.17em;font-weight:800;white-space:nowrap}.brand span{color:var(--ice)}
+    .project{display:flex;align-items:center;gap:10px;margin-left:auto;color:var(--muted);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase}
+    .project i{width:6px;height:6px;border-radius:50%;background:var(--terrain);box-shadow:0 0 14px rgba(231,163,76,.75)}
+    .navlinks{display:flex;align-items:center;gap:20px;color:#a8b0ad;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}.navlinks a:hover{color:#fff}
+    .menu{display:none;border:1px solid var(--line2);background:transparent;padding:10px 13px;cursor:pointer;font-size:.65rem;letter-spacing:.12em}
+    .hero{min-height:100svh;display:flex;align-items:center;padding:132px 0 76px;border-bottom:1px solid var(--line)}
+    .heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}.heroGrid>*{min-width:0}
+    .kicker{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.61rem;letter-spacing:.17em;text-transform:uppercase}.kicker:before{content:"";width:30px;height:1px;background:var(--terrain)}
+    h1{font-size:clamp(4rem,7.8vw,7.7rem);line-height:.85;letter-spacing:-.07em;font-weight:620;margin:31px 0 0;max-width:820px;overflow-wrap:break-word}
+    h1 span{display:block;color:var(--terrain)}
+    .lead{font-size:clamp(1.08rem,1.65vw,1.34rem);line-height:1.62;color:var(--soft);max-width:730px;margin:35px 0 0}.lead strong{color:#fff;font-weight:540}
+    .route{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:35px;color:var(--dim);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase}.route b{color:var(--ice);font-weight:500}.route i{width:24px;height:1px;background:var(--line2)}
+    .btn{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:52px;padding:0 19px;margin-top:34px;border:1px solid var(--terrain);background:var(--terrain);color:#090a08;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;transition:.25s}.btn:hover{background:#f5b761;border-color:#f5b761}
+    .context{position:relative;min-height:480px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.025),transparent 55%),var(--bg2);padding:27px;overflow:hidden}
+    .context:before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(circle at 78% 26%,transparent 0 34px,rgba(143,211,255,.055) 35px 36px);opacity:.55}
+    .context>*{position:relative;z-index:1}.contextTop{display:flex;justify-content:space-between;color:var(--dim);font-size:.53rem;letter-spacing:.13em;text-transform:uppercase}
+    .context h2{font-size:clamp(2rem,3.6vw,3.6rem);line-height:.96;letter-spacing:-.05em;font-weight:520;margin:92px 0 32px;max-width:420px}
+    .context h2 span{color:var(--ice)}
+    .contextLines{border-top:1px solid var(--line)}.contextLine{display:grid;grid-template-columns:55px 1fr;gap:16px;padding:17px 0;border-bottom:1px solid var(--line);font-size:.75rem;line-height:1.5;color:#a9b2af}.contextLine b{color:var(--terrain);font-size:.56rem;letter-spacing:.12em;font-weight:500;padding-top:3px}
+    section{padding:112px 0;border-bottom:1px solid var(--line)}
+    .sectionHead{display:grid;grid-template-columns:155px 1fr;gap:35px;align-items:start;margin-bottom:50px}.sectionHead>*{min-width:0}
+    .sectionNo{color:var(--muted);font-size:.58rem;letter-spacing:.17em;text-transform:uppercase;padding-top:7px}
+    h2{font-size:clamp(2.75rem,5.5vw,5.7rem);line-height:.92;letter-spacing:-.058em;font-weight:520;margin:0;max-width:950px;overflow-wrap:break-word}
+    .questions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border:1px solid var(--line);background:var(--line)}
+    .question{background:var(--bg2);padding:30px;min-height:310px;display:flex;flex-direction:column}
+    .questionNo{color:var(--ice);font-size:.56rem;letter-spacing:.14em}.question h3{font-size:1.45rem;line-height:1.12;letter-spacing:-.035em;font-weight:520;margin:62px 0 16px}.question p{color:var(--muted);font-size:.88rem;line-height:1.7;margin:auto 0 0}
+    .meetingGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}.meetingIntro p{max-width:520px;color:#aeb7b4;font-size:1.02rem;line-height:1.72;margin:30px 0 0}
+    .stages{border:1px solid var(--line)}.stage{display:grid;grid-template-columns:75px 1fr;gap:22px;padding:27px;background:var(--bg2);border-bottom:1px solid var(--line)}.stage:last-child{border-bottom:0}.stage b{color:var(--terrain);font-size:.58rem;letter-spacing:.14em;font-weight:500}.stage h3{font-size:1.08rem;font-weight:520;margin:0 0 9px}.stage p{color:var(--muted);font-size:.83rem;line-height:1.62;margin:0}
+    .entry{background:linear-gradient(115deg,rgba(231,163,76,.07),transparent 48%,rgba(143,211,255,.035))}
+    .entryGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:end}.entryLead{font-size:clamp(2.7rem,5.8vw,6rem);line-height:.92;letter-spacing:-.06em;font-weight:530;margin:0}.entryLead span{color:var(--terrain)}
+    .message{border-left:1px solid var(--terrain);padding-left:27px}.message p{color:#b6bfbc;font-size:1rem;line-height:1.72;margin:0 0 25px}.starter{border:1px solid var(--line2);background:rgba(6,8,9,.72);padding:21px;color:#9ea8a5;font-size:.72rem;line-height:1.8}.starter b{display:block;color:#fff;font-weight:500;margin-bottom:8px}
+    .email{display:block;color:var(--dim);font-size:.62rem;letter-spacing:.09em;margin-top:13px}
+    footer{padding:52px 0 34px}.footerGrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:35px}.footerBrand{font-size:.71rem;letter-spacing:.17em;font-weight:800}footer h3{font-size:.55rem;color:var(--muted);letter-spacing:.15em;margin:0 0 17px;text-transform:uppercase}footer a,footer p{display:block;font-size:.72rem;color:#aab3b0;line-height:1.65;margin:8px 0}.bottom{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;color:var(--dim);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:860px){
+      .wrap{width:min(100% - 32px,720px)}.project{display:none}.menu{display:block}.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:#090c0e;border-bottom:1px solid var(--line);padding:20px 24px;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}
+      .hero{min-height:auto;display:block;padding-top:120px}.heroGrid,.meetingGrid,.entryGrid{grid-template-columns:minmax(0,1fr);gap:45px}.context{min-height:410px}.sectionHead{grid-template-columns:1fr;gap:18px}.questions{grid-template-columns:1fr}.question{min-height:235px}.question h3{margin-top:42px}.footerGrid{grid-template-columns:1fr 1fr}.footerGrid>div:first-child{grid-column:1/-1}
+    }
+    @media(max-width:560px){
+      .wrap{width:calc(100% - 32px)}header{height:calc(68px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top)}nav{gap:10px}.navlinks{top:calc(68px + env(safe-area-inset-top))}.brand{font-size:.58rem;letter-spacing:.12em;max-width:calc(100vw - 112px);overflow:hidden;text-overflow:ellipsis;flex:1 1 auto}.menu{flex:0 0 auto;padding:9px 10px}
+      .hero{padding-top:calc(102px + env(safe-area-inset-top));padding-bottom:58px}.heroGrid{gap:32px}.kicker{font-size:.55rem;line-height:1.55;letter-spacing:.13em}.kicker:before{width:20px;flex:0 0 20px}h1{font-size:clamp(2.9rem,13.4vw,4.2rem);line-height:.89}.lead{font-size:.96rem;margin-top:27px}.route{line-height:1.6}.btn{width:100%;margin-top:27px}.context{min-height:385px;padding:20px}.context h2{font-size:2.45rem;margin-top:70px}.contextLine{grid-template-columns:42px 1fr}
+      section{padding:84px 0}.sectionHead{margin-bottom:36px}h2{font-size:clamp(2.5rem,12vw,4rem)}.question{padding:25px;min-height:225px}.stage{grid-template-columns:46px 1fr;padding:23px 20px}.entryGrid{gap:36px}.entryLead{font-size:clamp(2.6rem,12.5vw,4.3rem)}.message{padding-left:20px}.footerGrid{grid-template-columns:1fr}.footerGrid>div:first-child{grid-column:auto}.bottom{display:block;line-height:1.7}.bottom span{display:block}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Основная навигация">
+        <a class="brand" href="../">ROOT FRONTIER <span>SYSTEMS</span></a>
+        <div class="project mono"><i></i>EAST–WEST / VERIFICATION ENTRY</div>
+        <div class="navlinks" id="navlinks">
+          <a href="../#reality">Что мы увидели</a>
+          <a href="../#architectures">Три архитектуры</a>
+          <a href="#entry">Точка входа</a>
+          <a href="../../">Бюро ↗</a>
+        </div>
+        <button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">МЕНЮ</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap heroGrid">
+        <div>
+          <div class="kicker">Следующий шаг / Восток‑Запад</div>
+          <h1>Сверить модель <span>с реальностью.</span></h1>
+          <p class="lead">Мы уже сделали первую часть работы: собрали публичные сигналы, увидели четыре бизнес‑контура и сформировали три архитектуры развития. Теперь важно не защищать нашу гипотезу, а <strong>проверить её на вашей внутренней реальности.</strong></p>
+          <div class="route mono"><b>PUBLIC MODEL</b><i></i>INTERNAL VERIFICATION<i></i>ARCHITECTURE CHOICE</div>
+          <a class="btn" href="#entry">Перейти к точке входа <span>↓</span></a>
+        </div>
+        <aside class="context" aria-label="Логика первой встречи">
+          <div class="contextTop mono"><span>CONVERSATION / 001</span><span>ROOT → FRONTIER</span></div>
+          <h2>Не презентация ответа. <span>Проверка модели.</span></h2>
+          <div class="contextLines">
+            <div class="contextLine"><b>01</b><span>Что на странице совпало с устройством бизнеса?</span></div>
+            <div class="contextLine"><b>02</b><span>Где публичные данные создали неверную картину?</span></div>
+            <div class="contextLine"><b>03</b><span>Какой переход действительно важен собственникам?</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="sectionHead reveal">
+          <div class="sectionNo mono">01 / СВЕРКА</div>
+          <h2>Для начала достаточно трёх коротких ответов.</h2>
+        </div>
+        <div class="questions">
+          <article class="question reveal"><div class="questionNo mono">ВОПРОС / 01</div><h3>Что мы увидели точно?</h3><p>Какие наблюдения отражают реальность компании настолько точно, что их можно принять как основание дальнейшей работы?</p></article>
+          <article class="question reveal"><div class="questionNo mono">ВОПРОС / 02</div><h3>Где модель расходится с реальностью?</h3><p>Какие связи, ограничения или приоритеты невозможно увидеть снаружи и необходимо пересобрать вместе с собственниками?</p></article>
+          <article class="question reveal"><div class="questionNo mono">ВОПРОС / 03</div><h3>Что нужно проверить первым?</h3><p>Серийную платформу МС‑25, проектный контур BV‑206, двухконтурную группу — или другую конфигурацию, которую покажут внутренние данные?</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap meetingGrid">
+        <div class="meetingIntro reveal">
+          <div class="sectionNo mono">02 / ПЕРВАЯ ВСТРЕЧА</div>
+          <h2>Сначала — общая карта реальности.</h2>
+          <p>Первая встреча не обязывает принимать одну из предложенных архитектур. Её задача — определить, существует ли между нашей моделью и вашим внутренним контекстом достаточное совпадение для Architecture Discovery.</p>
+        </div>
+        <div class="stages reveal">
+          <article class="stage"><b class="mono">01</b><div><h3>Сверяем факты и интерпретации</h3><p>Отделяем то, что подтверждается, от того, что было рабочей гипотезой на основании открытых данных.</p></div></article>
+          <article class="stage"><b class="mono">02</b><div><h3>Уточняем действительное ограничение</h3><p>Определяем, где находится корень задачи: продукт, производство, коммерческая система, управление контурами или сам выбор модели развития.</p></div></article>
+          <article class="stage"><b class="mono">03</b><div><h3>Решаем, нужен ли Discovery</h3><p>Если конфигурация действительно представляет взаимный интерес, фиксируем границы исследования, доступ к данным и следующий проверяемый шаг.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="entry" id="entry">
+      <div class="wrap entryGrid">
+        <p class="entryLead reveal">Можно начать <span>с одной фразы.</span></p>
+        <div class="message reveal">
+          <p>Готовый бриф не нужен. Достаточно отметить, что в исследовании откликнулось и какой вопрос имеет смысл разобрать первым.</p>
+          <div class="starter mono"><b>ТОЧКА ВХОДА</b>На странице совпало: …<br>Требует уточнения: …<br>Первый вопрос для разговора: …</div>
+          <a class="btn" href="mailto:hello@frontier-systems.ai?subject=East-West%20%C3%97%20ROOT%20FRONTIER%20SYSTEMS">Открыть диалог <span>↗</span></a>
+          <span class="email mono">HELLO@FRONTIER-SYSTEMS.AI</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footerGrid">
+        <div><div class="footerBrand">ROOT FRONTIER SYSTEMS</div><p>Architecture Bureau for Next‑Generation Systems.</p></div>
+        <div><h3>Восток‑Запад</h3><a href="../">Исследование</a><a href="../#models">4 + 1 модели</a><a href="../#architectures">3 архитектуры</a></div>
+        <div><h3>Бюро</h3><a href="../../">Основной сайт ↗</a><a href="../../research/">Research ↗</a></div>
+      </div>
+      <div class="bottom mono"><span>© 2026 ROOT FRONTIER SYSTEMS</span><span>PERSONALIZED CONVERSATION ENTRY / EAST–WEST</span></div>
+    </div>
+  </footer>
+
+  <script>
+    (()=>{
+      const menu=document.getElementById('menu');
+      const nav=document.getElementById('navlinks');
+      menu.addEventListener('click',()=>{
+        const open=nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded',String(open));
+        menu.textContent=open?'ЗАКРЫТЬ':'МЕНЮ';
+      });
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+        nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='МЕНЮ';
+      }));
+      const progress=document.querySelector('.progress');
+      const update=()=>{
+        const max=document.documentElement.scrollHeight-innerHeight;
+        progress.style.setProperty('--progress',max>0?`${Math.min(100,scrollY/max*100)}%`:'0%');
+      };
+      addEventListener('scroll',update,{passive:true});update();
+      const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+      const reveals=[...document.querySelectorAll('.reveal')];
+      if(reduced){reveals.forEach(el=>el.classList.add('visible'));}
+      else{
+        const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+          if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
+        }),{threshold:.1,rootMargin:'0px 0px -30px'});
+        reveals.forEach(el=>observer.observe(el));
+      }
+    })();
+  </script>
+</body>
+</html>
