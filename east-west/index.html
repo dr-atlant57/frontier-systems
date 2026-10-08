@@ -97,10 +97,11 @@
     .observation h3,.modelCard h3,.pattern h3{font-size:1.4rem;line-height:1.1;letter-spacing:-.03em;font-weight:500;margin:72px 0 15px}
     .observation p,.modelCard p,.pattern p{font-size:.88rem;line-height:1.7;color:var(--muted);margin:0}
     .epistemic{margin-top:20px;color:var(--dim);font-size:.65rem;line-height:1.55;max-width:900px}
-    .transition{display:grid;grid-template-columns:1fr auto 1fr;border:1px solid var(--line);background:var(--line);gap:1px}
-    .state{background:var(--bg2);padding:38px;min-height:350px}
+    .transition{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);border:1px solid var(--line);background:var(--line);gap:1px}
+    .transition>*{min-width:0}
+    .state{background:var(--bg2);padding:38px;min-width:0;min-height:350px}
     .stateLabel{font-size:.57rem;color:var(--muted);letter-spacing:.17em;text-transform:uppercase}
-    .state h3{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1;letter-spacing:-.04em;font-weight:520;margin:52px 0 24px}
+    .state h3{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1;letter-spacing:-.04em;font-weight:520;margin:52px 0 24px;overflow-wrap:break-word}
     .state ul{list-style:none;padding:0;margin:0;display:grid;gap:13px;color:#9ca6a3;font-size:.84rem;line-height:1.5}
     .state li{padding-left:20px;position:relative}.state li:before{content:"";position:absolute;left:0;top:.65em;width:6px;height:1px;background:var(--terrain)}
     .arrow{background:var(--bg2);display:grid;place-items:center;padding:0 18px;color:var(--terrain);font-size:1.5rem}
@@ -205,13 +206,13 @@
       .wrap{width:min(100% - 32px,720px)}.projectTag{display:none}.menu{display:block}.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:#090c0e;border-bottom:1px solid var(--line);padding:20px 24px;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}
       .hero{padding-top:120px}.heroGrid{grid-template-columns:1fr}.heroVisual{min-height:390px;margin-top:15px}.sectionHead{grid-template-columns:1fr;gap:18px}.statement{margin-left:0}.signalLine{grid-template-columns:1fr;gap:11px}.signalLine i{width:1px;height:17px;margin-left:8px}
       .observations{grid-template-columns:1fr}.observation{border-right:0;border-bottom:1px solid var(--line);min-height:235px}.observation:last-child{border-bottom:0}.observation h3{margin-top:50px}
-      .transition{grid-template-columns:1fr}.arrow{padding:15px;transform:rotate(90deg)}.modelGrid{grid-template-columns:1fr}.fifth,.personalGrid,.engagement,.finalGrid{grid-template-columns:1fr}.fifth{gap:25px}
+      .transition{grid-template-columns:minmax(0,1fr)}.state{width:100%;min-width:0}.arrow{min-height:76px;padding:16px;transform:none;font-size:0;line-height:1}.arrow:before{content:"↓";font-size:2rem}.modelGrid{grid-template-columns:1fr}.fifth,.personalGrid,.engagement,.finalGrid{grid-template-columns:1fr}.fifth{gap:25px}
       .architectureBox{grid-template-columns:1fr}.archTabs{border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr)}.archTab{border-bottom:0;border-right:1px solid var(--line)}.archTab:last-child{border-right:0}.archTab[aria-selected="true"]{box-shadow:inset 0 2px var(--terrain)}.archContent{min-height:540px}.audiences{grid-template-columns:1fr}.audience{min-height:210px}.personalGrid{gap:35px}.engagement{gap:45px}
       .footerGrid{grid-template-columns:1fr 1fr}.footerGrid>div:first-child{grid-column:1/-1}
     }
     @media(max-width:560px){
       .wrap{width:calc(100% - 32px)}header{height:calc(68px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top)}nav{gap:10px}.navlinks{top:calc(68px + env(safe-area-inset-top))}.brand{font-size:.58rem;letter-spacing:.12em;max-width:calc(100vw - 112px);overflow:hidden;text-overflow:ellipsis;flex:1 1 auto}.menu{flex:0 0 auto;padding:9px 10px}.hero{min-height:auto;display:block;padding-top:calc(100px + env(safe-area-inset-top));padding-bottom:54px}.heroGrid{width:100%;gap:28px}.kicker{font-size:.56rem;line-height:1.55;letter-spacing:.13em}.kicker:before{width:20px;flex:0 0 20px}h1{font-size:clamp(2.9rem,14.2vw,4.4rem);line-height:.88;letter-spacing:-.062em;hyphens:auto}.heroLead{font-size:.96rem;margin-top:27px}.actions{display:grid;grid-template-columns:1fr;margin-top:27px}.btn{width:100%}.heroVisual{width:100%;min-height:350px;margin-top:0}.visualTop,.visualBottom{left:12px;right:12px;font-size:.46rem;letter-spacing:.08em}.vehicle{width:108%;left:-4%;top:43%;transform:translateY(-50%)}.transitionCode{display:none}.heroNote{left:12px;right:12px;bottom:43px;max-width:none;padding:9px 11px;border-left:1px solid var(--terrain);background:rgba(6,8,9,.86);font-size:.61rem;line-height:1.45;z-index:2}.heroFoot{display:block;line-height:1.7;margin-top:25px}.heroFoot span{display:block}
-      section{padding:86px 0}h2{font-size:clamp(2.55rem,13vw,4.3rem)}.rootCallout{padding-left:20px}.state{padding:28px}.modelCard{padding:25px;min-height:280px}.modelCard h3{margin-top:60px}.fifth{padding:28px}
+      section{padding:86px 0}h2{font-size:clamp(2.55rem,13vw,4.3rem)}.rootCallout{padding-left:20px}.state{padding:28px 24px}.state h3{font-size:clamp(1.9rem,10vw,2.55rem)}.state li{overflow-wrap:anywhere}.modelCard{padding:25px;min-height:280px}.modelCard h3{margin-top:60px}.fifth{padding:28px}
       .cycle{grid-template-columns:1fr 1fr}.cycleStep{min-height:155px}.cycleStep:nth-child(odd){border-right:1px solid var(--line)}.cycleStep:nth-child(even){border-right:0}.cycleStep:nth-child(n+3){border-top:1px solid var(--line)}
       .archTabs{grid-template-columns:1fr}.archTab{border-right:0;border-bottom:1px solid var(--line)}.archTab:last-child{border-bottom:0}.archContent{padding:28px;min-height:auto}.archContent h3{font-size:2.7rem}.archFacts{grid-template-columns:1fr;margin-top:36px}.archFact{min-height:125px}.archFact p{margin-top:20px}.archNote{display:block}.archNote span{display:block;margin-top:8px}
       .marketSequence{grid-template-columns:1fr 1fr}.marketStep{min-height:125px}.marketStep:nth-child(even){border-right:0}.marketStep:nth-child(n+3){border-top:1px solid var(--line)}.marketStep:nth-child(4):after{display:block}.marketStep:nth-child(even):after{display:none}.marketStep:last-child{grid-column:1/-1}.marketStep:last-child:after{display:none}
@@ -527,7 +528,7 @@
         </div>
         <div class="finalAside reveal">
           <p>Если мы правильно почувствовали момент перехода, первая встреча нужна не для презентации готового ответа. Она нужна, чтобы проверить, где наша модель совпадает с реальностью, а где должна быть пересобрана.</p>
-          <a class="btn primary" href="../contact/">Начать разговор <span>↗</span></a>
+          <a class="btn primary" href="contact/">Начать разговор <span>→</span></a>
         </div>
       </div>
     </section>
@@ -539,7 +540,7 @@
         <div><div class="footerBrand">ROOT FRONTIER SYSTEMS</div><p>Architecture Bureau for Next‑Generation Systems.</p></div>
         <div><h3>Эта страница</h3><a href="#reality">Реальность</a><a href="#models">4 + 1 модели</a><a href="#architectures">3 архитектуры</a></div>
         <div><h3>Метод</h3><p>Reality → Root → Research → Design → Frontier</p></div>
-        <div><h3>Дальше</h3><a href="../">Основной сайт ↗</a><a href="../research/">Research ↗</a><a href="../contact/">Contact ↗</a></div>
+        <div><h3>Дальше</h3><a href="../">Основной сайт ↗</a><a href="../research/">Research ↗</a><a href="contact/">Начать разговор →</a></div>
       </div>
       <div class="bottom mono"><span>© 2026 ROOT FRONTIER SYSTEMS</span><span>PERSONALIZED COMPANY LANDING / 001 / EAST–WEST</span></div>
     </div>
