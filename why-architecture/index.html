@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050608">
+<meta name="description" content="Why architecture matters: compare implementation scenarios, examine documented failures and model the full cost of a digital system with ROOT FRONTIER SYSTEMS.">
+<title>WHY ARCHITECTURE — ROOT FRONTIER SYSTEMS</title>
+<link rel="stylesheet" href="../frontier-system.css">
+<style>
+:root{--v-accent:#94d2fb;--v-surface:#0b1016;--v-line:#29313b;--v-soft:#bdc8d4}
+html{scroll-behavior:smooth}body{min-width:320px}.v-wrap{width:min(1160px,calc(100% - 36px));margin:auto}.v-hero{padding:clamp(145px,18vw,200px) 0 95px;min-height:68svh;display:flex;align-items:center}.v-kicker{color:var(--fs-muted);letter-spacing:.18em;text-transform:uppercase;font-size:.69rem}.v-hero h1{font-size:clamp(3.1rem,9vw,7.8rem);line-height:.92;letter-spacing:-.07em;margin:24px 0}.v-hero h1 em{font-style:normal;color:var(--v-accent)}.v-lead{font-size:clamp(1.07rem,2vw,1.36rem);line-height:1.6;max-width:870px;color:var(--v-soft)}.v-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:31px}.v-button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 19px;border:1px solid #657788;background:transparent;color:inherit;text-decoration:none;cursor:pointer;font-size:.76rem;letter-spacing:.03em}.v-button:hover,.v-button:focus-visible{background:#eaf3fb;color:#08121c;outline-offset:3px}.v-button-secondary{border-color:#303d49;color:var(--fs-muted)}.v-section{border-top:1px solid var(--fs-line);padding:clamp(72px,9vw,115px) 0}.v-section h2{font-size:clamp(2.3rem,5vw,4.5rem);letter-spacing:-.055em;line-height:1.04;margin:18px 0 25px;max-width:920px}.v-intro{font-size:1.06rem;line-height:1.65;color:var(--v-soft);max-width:850px}.v-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:37px}.v-card{border:1px solid var(--v-line);background:var(--v-surface);padding:26px;min-width:0;border-radius:3px}.v-card h3{font-size:1.23rem;letter-spacing:-.02em;margin:12px 0 14px;line-height:1.22}.v-card p{font-size:.91rem;line-height:1.58;color:var(--fs-muted);margin:0}.v-num{font-size:.66rem;letter-spacing:.14em;color:var(--v-accent)}.v-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:36px}.v-step{padding:20px 15px;border:1px solid var(--v-line);background:var(--v-surface);position:relative}.v-step small{display:block;font-size:.68rem;color:var(--v-accent);margin-bottom:25px}.v-step strong{font-size:.99rem;line-height:1.35;display:block}.v-step p{color:var(--fs-muted);font-size:.78rem;line-height:1.5}.v-note{font-size:.8rem;line-height:1.58;color:var(--fs-muted);max-width:940px}.v-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:32px 0}.v-compare>div{border:1px solid var(--v-line);padding:25px;background:var(--v-surface)}.v-compare h3{font-size:1.32rem;margin:0 0 15px}.v-compare ul{padding-left:20px;color:var(--v-soft);line-height:1.75;font-size:.93rem}.v-example{border:1px solid var(--v-line);padding:25px;margin-top:24px;background:linear-gradient(100deg,rgba(96,152,202,.1),transparent)}.v-stat-row{display:flex;gap:20px;flex-wrap:wrap;margin:20px 0}.v-stat{flex:1;min-width:145px;background:var(--v-surface);padding:17px;border:1px solid var(--v-line)}.v-stat b{font-size:clamp(1.8rem,3.1vw,2.7rem);display:block;line-height:1.3}.v-stat span{font-size:.78rem;color:var(--fs-muted)}.v-bartrack{height:10px;border-radius:20px;background:#26323f;overflow:hidden;margin-top:10px}.v-bar{height:100%;background:#8fcaff;transition:width .2s}.v-bar-orange{background:#deac73}.v-filter{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.v-filter button{border:1px solid var(--v-line);padding:10px 15px;background:none;color:var(--fs-muted);cursor:pointer}.v-filter button[aria-pressed="true"]{color:var(--fs-fg);border-color:var(--v-accent);background:rgba(132,196,237,.12)}.v-case[hidden]{display:none!important}.v-label{display:inline-block;margin-bottom:8px;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--v-accent)}.v-case a{display:inline-block;margin-top:18px;font-size:.82rem;text-decoration:underline;text-underline-offset:4px;color:var(--v-accent)}.v-case-source{font-size:.82rem!important;line-height:1.5!important;margin-top:13px!important}.v-calc{margin-top:30px;border:1px solid var(--v-line);padding:clamp(18px,3vw,32px);background:var(--v-surface)}.v-calcgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.v-inputrow{margin:0 0 19px}.v-inputrow label{font-size:.83rem;line-height:1.4;color:var(--v-soft);display:flex;justify-content:space-between;gap:8px;margin-bottom:10px}.v-inputrow output{white-space:nowrap;font-weight:650;color:var(--fs-fg)}.v-inputrow input[type=range]{width:100%;accent-color:#9bd6ff;cursor:pointer}.v-calc h3{margin:12px 0 25px;font-size:1.23rem}.v-calc-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}.v-calc-head select{background:var(--fs-bg);color:var(--fs-fg);border:1px solid var(--v-line);padding:9px}.v-outcome{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}.v-result{padding:19px;border:1px solid var(--v-line);background:rgba(160,200,240,.035)}.v-result strong{font-size:clamp(1.35rem,2.9vw,2.25rem);font-variant-numeric:tabular-nums;display:block;margin:10px 0}.v-result span{font-size:.8rem;color:var(--fs-muted)}.v-delta{border-top:1px solid var(--v-line);margin-top:20px;padding-top:21px}.v-delta strong{font-size:clamp(1.3rem,3.2vw,2.5rem);display:block;margin:8px 0}.v-table-wrap{overflow-x:auto;margin-top:28px}.v-table{width:100%;border-collapse:collapse;min-width:610px;text-align:left}.v-table th,.v-table td{border-bottom:1px solid var(--v-line);padding:15px 12px;vertical-align:top;line-height:1.52;font-size:.88rem}.v-table th{font-size:.73rem;color:var(--v-accent);letter-spacing:.03em}.v-source-link{color:var(--v-accent);text-decoration:underline;text-underline-offset:4px}.v-contact{background:radial-gradient(circle at 80% 10%,rgba(140,205,250,.09),transparent 40%)}.v-contact h2{max-width:1000px}.v-footer{padding:25px 0 45px;border-top:1px solid var(--v-line);font-size:.72rem;color:var(--fs-muted);display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap}.v-smalllink{display:block;margin:12px 0;text-decoration:underline;text-underline-offset:4px}.v-problem-path{padding:24px;border:1px solid var(--v-line);margin-top:26px}.v-problem-path p{margin:.2rem 0 0;color:var(--fs-muted);line-height:1.65}.v-problem-path strong{color:var(--v-accent)}.v-terms{margin-top:25px;border-top:1px solid var(--v-line);padding-top:16px}.v-terms summary{cursor:pointer;color:var(--v-accent);padding:5px 0}.v-terms p{font-size:.81rem;line-height:1.65;color:var(--fs-muted)}
+[data-theme=light]{--v-surface:#fff;--v-line:#cbd5df;--v-soft:#344453;--v-accent:#136d9e}
+[data-theme=light] .v-bartrack{background:#dbe3eb}
+@media(max-width:960px){.v-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v-flow{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.v-hero{padding-top:130px;min-height:auto}.v-grid,.v-flow,.v-calcgrid,.v-compare,.v-outcome{grid-template-columns:1fr}.v-wrap{width:calc(100% - 24px)}.v-stat-row{gap:10px}.v-stat{min-width:calc(50% - 10px)}.v-calc-head{flex-wrap:wrap}.v-hero h1{font-size:clamp(2.8rem,14vw,4.6rem)}}
+@media(prefers-reduced-motion:reduce){.v-bar{transition:none}}
+</style>
+<script src="../frontier-runtime.js" defer></script>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="../index.html">ROOT FRONTIER SYSTEMS</a>
+<div class="nav"><a href="../index.html">Frontier</a><a href="../solutions/">Solutions</a><a href="../cases/">Cases</a><a href="../research/">Research</a><a href="../contact/">Contact</a></div>
+<div class="lang"><select data-language-select aria-label="Language"><option value="en">EN</option><option value="ru">RU</option><option value="zh">中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="de">DE</option><option value="fr">FR</option><option value="es">ES</option><option value="pt">PT</option><option value="ar">AR</option><option value="tr">TR</option><option value="hi">हिन्दी</option></select></div>
+<button class="menu" data-command-trigger aria-label="Open navigation">☰</button>
+</nav></div></header>
+<main>
+<section class="v-hero"><div class="v-wrap">
+<div class="v-kicker">ROOT FRONTIER SYSTEMS / ARCHITECTURE VALUE</div>
+<h1><span data-ru="Цена архитектуры">The cost of architecture</span><br><em data-ru="и цена её отсутствия.">and the cost of its absence.</em></h1>
+<p class="v-lead" data-ru="Отдельный инструмент может работать идеально — и одновременно создавать проблемы для всей организации. Прежде чем инвестировать в разработку, сравните не только цену запуска, но и полную стоимость системы, её риски и способность расти.">An individual tool can work perfectly — and still create problems for the whole organization. Before investing, compare not only launch costs but total system costs, risk and ability to scale.</p>
+<div class="v-actions"><a class="v-button" href="#calculator" data-ru="Рассчитать два сценария ↓">Compare two scenarios ↓</a><a class="v-button v-button-secondary" href="#atlas" data-ru="Исследовать ошибки ↓">Explore failure atlas ↓</a></div>
+</div></section>
+<section class="v-section" id="principle"><div class="v-wrap">
+<div class="v-kicker">01 / WHY ARCHITECTURE</div>
+<h2 data-ru="Не начинайте с инструмента. Начните с результата.">Don't start with the tool. Start with the outcome.</h2>
+<p class="v-intro" data-ru="При строительстве здания никто не оценивает инженерное решение только по стоимости кирпичей. В цифровом предприятии ситуация та же: CRM, AI, интеграции, люди, безопасность и процессы зависят друг от друга. При этом архитектура должна соответствовать масштабу задачи — небольшим проектам не нужна избыточная бюрократия.">We do not judge a building by the price of its bricks alone. A digital enterprise is similar: AI, CRM, integrations, people, security and processes depend on each other. Architecture should fit the task — a small project does not need unnecessary bureaucracy.</p>
+<div class="v-grid">
+<article class="v-card"><span class="v-num">01</span><h3 data-ru="Локальная оптимизация ≠ общий результат">Local optimization ≠ system result</h3><p data-ru="Чат-бот увеличивает поток клиентов, но продажи, исполнение и поддержка не успевают за ростом.">A chatbot increases leads, while sales, delivery and support cannot keep up.</p></article>
+<article class="v-card"><span class="v-num">02</span><h3 data-ru="Подрядчики видят только свои модули">Contractors see their modules</h3><p data-ru="Даже сильные команды могут создать несовместимые части, если никто не проектировал систему целиком.">Even excellent teams can build incompatible parts if no one designed the complete system.</p></article>
+<article class="v-card"><span class="v-num">03</span><h3 data-ru="Ограничения роста появляются позже">Growth constraints emerge later</h3><p data-ru="На старте всё работает. При увеличении нагрузки всплывают дорогие зависимости, переделки и риски.">Everything works at launch. Volume exposes expensive dependencies, rework and risks.</p></article>
+</div></div></section>
+<section class="v-section" id="traceability"><div class="v-wrap">
+<div class="v-kicker">02 / VALUE TRACEABILITY</div>
+<h2 data-ru="От проблемы — к проверяемой цене решения.">From the problem to a defensible price.</h2>
+<p class="v-intro" data-ru="Цена архитектуры должна быть связана с конкретной работой, уменьшением рисков и измеримым результатом. Мы показываем цепочку причин, решений и доказательств.">Architecture fees should connect to defined work, risk reduction and measurable outcomes. We trace causes, decisions and evidence.</p>
+<div class="v-flow">
+<div class="v-step"><small>01</small><strong data-ru="Проблема">Problem</strong><p data-ru="Наблюдаемое ограничение или потеря">Observed loss or constraint</p></div>
+<div class="v-step"><small>02</small><strong data-ru="Первопричина">Root cause</strong><p data-ru="Зависимости, доступы, узкие места">Dependencies, access, bottlenecks</p></div>
+<div class="v-step"><small>03</small><strong data-ru="Архитектура">Architecture</strong><p data-ru="Варианты, требования, интерфейсы">Alternatives, requirements, interfaces</p></div>
+<div class="v-step"><small>04</small><strong data-ru="Проверка">Evidence</strong><p data-ru="Прототипы, тесты, экономические данные">Pilots, tests, financial data</p></div>
+<div class="v-step"><small>05</small><strong data-ru="Стоимость и эффект">Price and effect</strong><p data-ru="Объём работы, риск и подтверждённая ценность">Scope, risk and demonstrated value</p></div>
+</div>
+<div class="v-table-wrap"><table class="v-table">
+<thead><tr><th data-ru="Наблюдаемая проблема">Observed problem</th><th data-ru="Архитектурный контроль">Architecture intervention</th><th data-ru="Как измерять">How to measure</th></tr></thead>
+<tbody>
+<tr><td data-ru="AI даёт заявки быстрее, чем команда их обрабатывает">AI creates leads faster than the team can handle</td><td data-ru="Модель пропускной способности, распределение нагрузки, SLA">Capacity model, workload routing, SLAs</td><td data-ru="Очередь, время ответа, конверсия, возвраты">Backlog, response time, conversion, refunds</td></tr>
+<tr><td data-ru="Разработанные модули не интегрируются">Completed modules fail to integrate</td><td data-ru="Контракты API, совместимые данные, интеграционные тесты">API contracts, data model, integration tests</td><td data-ru="Часы переделок, число дефектов, время запуска">Rework hours, defects, release time</td></tr>
+<tr><td data-ru="Избыточный доступ к чувствительным данным">Unnecessary exposure of sensitive data</td><td data-ru="Минимальные полномочия, мембранное разделение, аудит">Least privilege, membrane segregation, audit</td><td data-ru="Поверхность доступа, нарушения, результаты проверок">Access surface, incidents, test findings</td></tr>
+</tbody></table></div>
+</div></section>
+<section class="v-section" id="scenario"><div class="v-wrap">
+<div class="v-kicker">03 / THE SYSTEM EFFECT</div>
+<h2 data-ru="AI увеличил продажи. Компания перестала справляться.">AI increased demand. The company could not keep up.</h2>
+<p class="v-intro" data-ru="Учебный сценарий, не реальный случай. Допустим, чат-бот и реклама увеличили заявки в четыре раза, но пропускная способность команды почти не изменилась.">Illustrative scenario, not an actual case. A chatbot and marketing quadruple leads while team processing capacity barely changes.</p>
+<div class="v-example">
+<div class="v-stat-row">
+<div class="v-stat"><b>100</b><span data-ru="заявок в неделю до AI">weekly leads before AI</span></div>
+<div class="v-stat"><b>400</b><span data-ru="заявок в неделю после AI">weekly leads after AI</span></div>
+<div class="v-stat"><b>120</b><span data-ru="заявок команда может обработать">weekly processing capacity</span></div>
+<div class="v-stat"><b>280</b><span data-ru="необработанных заявок за неделю">unprocessed leads in one week</span></div>
+</div>
+<p class="v-note" data-ru="Заявки: 400 в неделю. Обработка: 120 в неделю. Предполагается, что каждая заявка требует обработки и мощность неизменна. Очередь растёт на 280 заявок за неделю.">Leads: 400/week. Throughput: 120/week. Every lead requires work and capacity stays fixed. Backlog increases by 280/week.</p>
+<div style="margin-top:20px"><div class="v-note" data-ru="Входящий поток">Incoming load</div><div class="v-bartrack"><div class="v-bar" style="width:100%"></div></div></div>
+<div style="margin-top:12px"><div class="v-note" data-ru="Мощность обработки">Processing capacity</div><div class="v-bartrack"><div class="v-bar v-bar-orange" style="width:30%"></div></div></div>
+</div>
+<div class="v-compare">
+<div><h3 data-ru="Внедрение отдельного инструмента">Tool-first launch</h3><ul><li data-ru="Увеличиваем количество заявок">Increase incoming leads</li><li data-ru="Оцениваем успех по активности бота">Measure chatbot activity</li><li data-ru="Обнаруживаем перегрузку после запуска">Discover overload after launch</li></ul></div>
+<div><h3 data-ru="Системное проектирование">Architecture-led launch</h3><ul><li data-ru="Рассчитываем мощности и зависимости">Model throughput and dependencies</li><li data-ru="Проектируем CRM, людей, маршруты и резерв">Design CRM, staffing, routing and reserves</li><li data-ru="Измеряем заказы, качество и итоговую прибыль">Measure fulfilled orders, quality and profit</li></ul></div>
+</div>
+<p class="v-note" data-ru="Правильный вывод не в том, что AI нужно внедрять медленнее. Нужно заранее согласовать рост одной функции с возможностями остальных.">The lesson is not to slow down AI — it is to coordinate local improvements with the capacity of the whole system.</p>
+</div></section>
+<section class="v-section" id="atlas"><div class="v-wrap">
+<div class="v-kicker">04 / ARCHITECTURE FAILURE & CONSTRAINT ATLAS</div>
+<h2 data-ru="Каталог ошибок, которые дорого обходятся позже.">Failure patterns that become costly later.</h2>
+<p class="v-intro" data-ru="Здесь отдельно представлены подтверждённые события из официальных источников и учебные сценарии. Документированные убытки не означают, что наш подход гарантированно предотвратил бы их.">Documented events link to primary sources; illustrative scenarios are labeled separately. Recorded losses do not prove our approach would have prevented them.</p>
+<div class="v-filter" role="group" aria-label="Filter case studies">
+<button type="button" data-filter="all" aria-pressed="true" data-ru="Все">All</button>
+<button type="button" data-filter="documented" aria-pressed="false" data-ru="Документированные">Documented</button>
+<button type="button" data-filter="model" aria-pressed="false" data-ru="Учебные модели">Illustrative</button>
+</div>
+<div class="v-grid" id="case-list">
+<article class="v-card v-case" data-type="documented"><span class="v-label" data-ru="Документированный случай · 2018">Documented case · 2018</span><h3>TSB Bank — IT migration</h3><p data-ru="Проблемы после миграции вызвали масштабное нарушение банковского обслуживания. FCA и PRA в 2022 году назначили штрафы на £48,65 млн за нарушения управления операционными рисками, включая аутсорсинг.">Post-migration failures disrupted banking services. The FCA and PRA imposed £48.65m in fines in 2022 for operational risk and outsourcing governance failures.</p><p class="v-case-source" data-ru="Вопрос: кто отвечает за целостную устойчивость процесса, если технические части принадлежат разным командам?">Question: who owns end-to-end resilience when different teams own different components?</p><a href="https://www.fca.org.uk/news/press-releases/tsb-fined-48m-operational-resilience-failings" target="_blank" rel="noopener noreferrer" data-ru="Источник: FCA ↗">Source: FCA ↗</a></article>
+<article class="v-card v-case" data-type="documented"><span class="v-label" data-ru="Документированный случай · 2012">Documented case · 2012</span><h3>Knight Capital — automated trading</h3><p data-ru="По данным SEC, сбой программного развёртывания и недостаточные меры контроля привели к нежелательным торговым позициям и потерям более $460 млн приблизительно за 45 минут.">According to the SEC, a software deployment failure and deficient controls led to unwanted trades and a loss exceeding $460m in about 45 minutes.</p><p class="v-case-source" data-ru="Вопрос: какие конструктивные ограничения не позволили бы одиночному сбою быстро масштабировать ущерб?">Question: what architectural controls could limit the blast radius of a single failure?</p><a href="https://www.sec.gov/newsroom/press-releases/2013-222" target="_blank" rel="noopener noreferrer" data-ru="Источник: SEC ↗">Source: SEC ↗</a></article>
+<article class="v-card v-case" data-type="model"><span class="v-label" data-ru="Учебный сценарий">Illustrative scenario</span><h3 data-ru="Пять подрядчиков — одна несогласованная система">Five contractors, one fragmented system</h3><p data-ru="Каждый разработчик успешно создаёт свой модуль, но интерфейсы и модели данных не согласованы. Интеграция требует дорогих переделок.">Each contractor delivers their own module, but interfaces and data schemas were never aligned. Integration requires expensive rework.</p></article>
+<article class="v-card v-case" data-type="model"><span class="v-label" data-ru="Учебный сценарий">Illustrative scenario</span><h3 data-ru="Автоматизация ускорила ошибки">Automation accelerated errors</h3><p data-ru="Процесс автоматизировали без проверки правил принятия решений. Ошибки распространяются быстрее и затрагивают больше клиентов.">An outdated decision process is automated without redesigning its controls. Errors propagate faster to more customers.</p></article>
+<article class="v-card v-case" data-type="model"><span class="v-label" data-ru="Учебный сценарий">Illustrative scenario</span><h3 data-ru="Защищённые серверы, избыточный доступ">Protected servers, excessive access</h3><p data-ru="Серверы защищены, но внешним участникам предоставлено больше исходных сведений, чем требуется для задачи.">Servers are secured, but external participants receive more raw information than their tasks require.</p></article>
+<article class="v-card v-case" data-type="model"><span class="v-label" data-ru="Учебный сценарий">Illustrative scenario</span><h3 data-ru="Рост компании требует полной переделки">Growth triggers a full rebuild</h3><p data-ru="Небольшой продукт растёт, но критические зависимости и единые точки отказа не выдерживают нового масштаба.">A successful product grows beyond unexamined dependencies, creating bottlenecks and single points of failure.</p></article>
+</div></div></section>
+<section class="v-section" id="calculator"><div class="v-wrap">
+<div class="v-kicker">05 / ARCHITECTURE VALUE CALCULATOR</div>
+<h2 data-ru="Сравните полную стоимость двух вариантов.">Compare the full cost of two approaches.</h2>
+<p class="v-intro" data-ru="Настройте исходные данные проекта. Калькулятор сравнивает условный быстрый старт и вариант с архитектурным проектированием с учётом запуска, эксплуатации, переделок и ожидаемых ежегодных потерь от инцидентов. Это инструмент мышления, а не обещание экономии.">Adjust project assumptions. The calculator compares a tool-first approach with architecture-led delivery using upfront costs, recurring costs, expected rework and annual incident exposure. This is a decision aid, not a savings guarantee.</p>
+<div class="v-calc" role="group" aria-label="Architecture value calculator">
+<div class="v-calc-head"><span class="v-kicker" data-ru="Горизонт расчёта">Evaluation horizon</span><label><select id="horizon" aria-label="Years"><option value="1">1 year / 1 год</option><option value="2">2 years / 2 года</option><option value="3" selected>3 years / 3 года</option><option value="4">4 years / 4 года</option><option value="5">5 years / 5 лет</option></select></label></div>
+<div class="v-calcgrid">
+<div><h3 data-ru="A · Быстрый старт без общей архитектуры">A · Tool-first implementation</h3>
+<div class="v-inputrow"><label for="a-start"><span data-ru="Начальные затраты">Upfront cost</span><output id="a-start-out"></output></label><input id="a-start" type="range" min="0" max="10000000" step="100000" value="1500000"></div>
+<div class="v-inputrow"><label for="a-run"><span data-ru="Эксплуатация в год">Annual operating cost</span><output id="a-run-out"></output></label><input id="a-run" type="range" min="0" max="3000000" step="50000" value="500000"></div>
+<div class="v-inputrow"><label for="a-rework"><span data-ru="Ожидаемая разовая переделка">Expected one-off rework</span><output id="a-rework-out"></output></label><input id="a-rework" type="range" min="0" max="5000000" step="100000" value="1800000"></div>
+<div class="v-inputrow"><label for="a-risk"><span data-ru="Вероятность существенного инцидента в год">Annual incident probability</span><output id="a-risk-out"></output></label><input id="a-risk" type="range" min="0" max="100" step="5" value="30"></div></div>
+<div><h3 data-ru="B · Внедрение с архитектурным проектированием">B · Architecture-led delivery</h3>
+<div class="v-inputrow"><label for="b-start"><span data-ru="Начальные затраты, включая архитектуру">Upfront cost, including architecture</span><output id="b-start-out"></output></label><input id="b-start" type="range" min="0" max="10000000" step="100000" value="2300000"></div>
+<div class="v-inputrow"><label for="b-run"><span data-ru="Эксплуатация в год">Annual operating cost</span><output id="b-run-out"></output></label><input id="b-run" type="range" min="0" max="3000000" step="50000" value="300000"></div>
+<div class="v-inputrow"><label for="b-rework"><span data-ru="Ожидаемая разовая переделка">Expected one-off rework</span><output id="b-rework-out"></output></label><input id="b-rework" type="range" min="0" max="5000000" step="100000" value="400000"></div>
+<div class="v-inputrow"><label for="b-risk"><span data-ru="Вероятность существенного инцидента в год">Annual incident probability</span><output id="b-risk-out"></output></label><input id="b-risk" type="range" min="0" max="100" step="5" value="10"></div></div>
+</div>
+<div class="v-inputrow" style="margin-top:10px"><label for="impact"><span data-ru="Стоимость одного существенного инцидента (одинакова в обоих сценариях)">Impact of one material incident (same for both options)</span><output id="impact-out"></output></label><input id="impact" type="range" min="0" max="10000000" step="100000" value="900000"></div>
+<div class="v-outcome" aria-live="polite" aria-atomic="true">
+<div class="v-result"><span data-ru="Ожидаемая стоимость A">Estimated total cost A</span><strong id="a-total"></strong><div class="v-bartrack"><div class="v-bar v-bar-orange" id="a-bar" style="width:100%"></div></div></div>
+<div class="v-result"><span data-ru="Ожидаемая стоимость B">Estimated total cost B</span><strong id="b-total"></strong><div class="v-bartrack"><div class="v-bar" id="b-bar" style="width:100%"></div></div></div>
+</div>
+<div class="v-delta" aria-live="polite"><span class="v-note" id="delta-label"></span><strong id="delta-value"></strong><p class="v-note" id="delta-detail"></p></div>
+<details class="v-terms"><summary data-ru="Формула и ограничения расчёта">Calculation formula and limitations</summary>
+<p data-ru="Ожидаемая стоимость = запуск + (горизонт × эксплуатация в год) + ожидаемые разовые переделки + (горизонт × вероятность инцидента в год × ущерб от одного инцидента). Последний компонент — приближённое ожидаемое значение, не прогноз количества сбоев. Риски и переделки вводятся независимо; не включайте одну и ту же потерю дважды. Все числа демонстрационные, инфляция и дисконтирование не учтены. Для реального проекта требуются данные обеих альтернатив, сценарии рисков и проверка экспертом.">Expected total cost = upfront cost + (years × annual operations) + expected one-off rework + (years × annual incident probability × impact). The final term is an approximate expectation, not a forecast. Avoid double-counting incident losses and rework. All defaults are illustrative; discounting and inflation are excluded. Real projects need validated input data, scenario analysis and expert review.</p></details>
+</div></div></section>
+<section class="v-section v-contact" id="engage"><div class="v-wrap">
+<div class="v-kicker">06 / ARCHITECTURE DISCOVERY</div>
+<h2 data-ru="Хотите понять, где архитектура даст вашему бизнесу результат?">Where could architecture create value for your organization?</h2>
+<p class="v-intro" data-ru="Начнём с бизнес-проблемы. Определим границы исследования, измеримые последствия, проверяемые гипотезы и соразмерную глубину проектирования. Затем можно подготовить архитектуру, ТЗ и независимый подбор исполнителей.">Start with the business problem. Define the scope, measurable effects, testable hypotheses and appropriate depth of design. Then develop the architecture, procurement-ready specifications and an independent delivery plan.</p>
+<a class="v-button" href="../contact/" data-ru="Обсудить архитектурную диагностику →">Discuss an architecture discovery →</a>
+<p class="v-note" style="margin-top:22px" data-ru="Мы не утверждаем, что более дорогой вариант всегда лучше. Цель — найти минимально достаточную и экономически оправданную архитектуру.">A more expensive option is not always better. We seek the smallest architecture that responsibly meets the need.</p>
+</div></section>
+</main>
+<footer class="v-footer v-wrap"><span>© ROOT FRONTIER SYSTEMS · 2026</span><a href="../index.html" data-ru="На главную ↑">Back to main site ↑</a><a href="../contact/" data-ru="Контакты">Contact</a></footer>
+<script>
+(function(){
+  "use strict";
+  var elements=Array.prototype.slice.call(document.querySelectorAll("[data-ru]"));
+  elements.forEach(function(el){el.dataset.english=el.textContent;});
+  function isRu(){return document.documentElement.lang==="ru";}
+  function localize(){elements.forEach(function(el){el.textContent=isRu()?el.dataset.ru:el.dataset.english;});calculate();}
+  var n=function(id){return Number(document.getElementById(id).value)||0;};
+  function money(v){var fmt=new Intl.NumberFormat(isRu()?"ru-RU":"en-US",{maximumFractionDigits:0});return fmt.format(Math.round(v))+(isRu()?" сом":" KGS");}
+  function calculate(){
+    var years=n("horizon"),impact=n("impact");
+    var a=n("a-start")+years*n("a-run")+n("a-rework")+years*n("a-risk")/100*impact;
+    var b=n("b-start")+years*n("b-run")+n("b-rework")+years*n("b-risk")/100*impact;
+    ["a-start","a-run","a-rework","b-start","b-run","b-rework","impact"].forEach(function(id){document.getElementById(id+"-out").textContent=money(n(id));});
+    ["a-risk","b-risk"].forEach(function(id){document.getElementById(id+"-out").textContent=n(id)+"%";});
+    document.getElementById("a-total").textContent=money(a);
+    document.getElementById("b-total").textContent=money(b);
+    var max=Math.max(a,b,1);
+    document.getElementById("a-bar").style.width=(a/max*100).toFixed(1)+"%";
+    document.getElementById("b-bar").style.width=(b/max*100).toFixed(1)+"%";
+    var delta=a-b,ru=isRu();
+    document.getElementById("delta-label").textContent=delta>0?(ru?"В этом сценарии вариант B дешевле":"Option B costs less under these assumptions"):delta<0?(ru?"В этом сценарии вариант A дешевле":"Option A costs less under these assumptions"):(ru?"Стоимость вариантов одинакова":"Both options have the same estimated cost");
+    document.getElementById("delta-value").textContent=money(Math.abs(delta));
+    document.getElementById("delta-detail").textContent=ru?"Разница зависит от введённых предположений — это не доказанная экономия и не предложение цены.":"The difference depends on your assumptions — it is neither verified savings nor a price quotation.";
+  }
+  document.querySelectorAll(".v-calc input,.v-calc select").forEach(function(input){input.addEventListener("input",calculate);input.addEventListener("change",calculate);});
+  document.querySelectorAll("[data-filter]").forEach(function(btn){btn.addEventListener("click",function(){var f=btn.dataset.filter;document.querySelectorAll("[data-filter]").forEach(function(x){x.setAttribute("aria-pressed",String(x===btn));});document.querySelectorAll(".v-case").forEach(function(x){x.hidden=f!=="all"&&x.dataset.type!==f;});});});
+  document.addEventListener("frontier:language",localize);
+  localize();
+})();
+</script>
+</body></html>
