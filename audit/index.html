@@ -109,7 +109,8 @@ $('downloadReport').addEventListener('click',()=>{const file=new Blob(['\ufeff'+
 $('whatsappReport').addEventListener('click',()=>{
 if(!selected.size)return;
 const codes=[...selected.keys()].sort((a,b)=>a-b).map(id=>'#'+id+(selected.get(id)===3?'!':'')).join(', ');
-const text='AI ARCHITECTURE AUDIT — ROOT FRONTIER SYSTEMS\nВыбранные красные флаги: '+codes+'\nВсего: '+selected.size+'.\nПрошу связаться для обсуждения архитектурных решений.';
+const details=[...selected.keys()].slice(0,8).map(id=>'#'+id+' '+flags[id-1].title).join('\n');
+const text='AI ARCHITECTURE AUDIT — ROOT FRONTIER SYSTEMS\nВсего: '+selected.size+' из 48.\nКрасные флаги: '+codes+'\n\nОсновные симптомы:\n'+details+'\n\nПрошу связаться для обсуждения архитектурных решений.';
 window.open('https://wa.me/996998066098?text='+encodeURIComponent(text),'_blank','noopener,noreferrer');
 });
 $('printReport').addEventListener('click',()=>window.print());
