@@ -235,6 +235,29 @@ const t=getVariant(),a=getAuto(),f=chosenFlags(),mod=moduleList(),lines=[
 'Каждый красный флаг становится зелёным только при подтверждённой метрике и акте приёмки.',
 'Нужны уточнения: сроки, бюджет, владельцы данных, API, регуляторика, безопасность, KPI.',
 '',
+'## 9. Company DNA и управление знаниями',
+'Ответы аудита готовности: '+(readiness().map(x=>x.label+': '+x.text).join('; ')||'не предоставлены'),
+'Намерения собственника: '+(isCompany()?(field('ownerIntent')||'уточнить'):'не применяется'),
+'Владельцы корпоративных знаний: '+(isCompany()?(field('contributors')||'уточнить'):'не применяется'),
+'Подтверждённые успешные действия: '+(isCompany()?(field('goldenProcesses')||snapshot.readinessExample||'уточнить'):'не применяется'),
+'Протокол подтверждения знаний: '+(isCompany()?(field('knowledgePolicy')||'уточнить'):'не применяется'),
+'Каждому допущенному к исполнению правилу требуются источник, автор, версия, разрешения, проверка на противоречия и механизм отзыва.',
+'',
+'## 10. Контур размещения и защита корпоративных данных',
+'Выбранное размещение: '+deployments[getDeployment()],
+'Политика внешних моделей: '+externalPolicies[getExternal()],
+'Проверить исходящий трафик, локальное исполнение, владение данными и ключами, резервное копирование, экспорт, переносимость и журналы.',
+...(getDeployment()==='onprem'&&getExternal()==='approved'?['КОНФЛИКТ: локальное размещение с внешними моделями требует формального исключения или запрета исходящих запросов.']:[]),
+'',
+'## 11. Пилот, рост автономности, повторение и масштабирование',
+'Первый рабочий процесс: '+(isCompany()?(field('pilotFlow')||snapshot.readinessExample||'уточнить'):'не применяется'),
+'Исходные измерения и целевой KPI: '+(isCompany()?(field('pilotBaseline')||'уточнить'):'не применяется'),
+'Стоимость, TCO, ROI: '+(isCompany()?(field('pilotEconomy')||'уточнить'):'не применяется'),
+'Условия расширения полномочий: '+(isCompany()?(field('growthGates')||'уточнить'):'не применяется'),
+'План тиражирования: '+(isCompany()?(field('replication')||'уточнить'):'не применяется'),
+'Приёмка: измеренное улучшение, проверка внешних вызовов, отсутствие неразрешённых действий, испытания остановки и восстановления, согласование руководителя.',
+'Непрерывное исполнение 24/7 не означает бесконтрольные действия или гарантированное достижение цели.',
+'',
 'Документ не является готовой технической реализацией или гарантией решения рисков.'
 ];return lines.join('\n');
 }
@@ -244,15 +267,15 @@ $('copy').addEventListener('click',async()=>{try{await navigator.clipboard.write
 $('download').addEventListener('click',()=>{const blob=new Blob(['\ufeff'+reportText()],{type:'text/markdown;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='root-frontier-ai-architecture-brief.md';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);message('ТЗ сохранено на вашем устройстве.');});
 $('print').addEventListener('click',()=>window.print());
 $('sendWhatsApp').addEventListener('click',()=>{
-const t=getVariant(),name=field('project')||types[t],ids=items.map(x=>'#'+x.id+(x.level===3?'!':'')).join(', ');
-const m='AI Architecture Blueprint / ROOT FRONTIER SYSTEMS\nПроект: '+name+'\nТип: '+types[t]+'\nЦель: '+(field('goal')||'требует уточнения')+'\nРиски: '+(ids||'аудит не заполнен')+'\nПрошу обсудить архитектуру и дальнейшие шаги. Полное ТЗ могу приложить отдельно.';
+const m='Здравствуйте! Я сформировал предварительное ТЗ для собственной AI Company / TwinMind на сайте ROOT FRONTIER SYSTEMS. Прошу связаться для обсуждения архитектуры и пилотного проекта. Конфиденциальные сведения предоставлю отдельно через согласованный канал.';
 window.open('https://wa.me/996998066098?text='+encodeURIComponent(m),'_blank','noopener,noreferrer');
 });
 if(snapshot.org) $('project').value=snapshot.org;
 if(snapshot.goal) $('goal').value=snapshot.goal;
 if(snapshot.limits) $('constraints').value=snapshot.limits;
 if(snapshot.measures) $('success').value=snapshot.measures;
-document.querySelectorAll('input,textarea,select').forEach(el=>el.addEventListener(el.type==='radio'||el.type==='checkbox'?'change':'input',render));
+if(snapshot.readinessExample) $('pilotFlow').value=snapshot.readinessExample;
+document.querySelectorAll('input,textarea,select').forEach(el=>el.addEventListener(el.type==='radio'||el.type==='checkbox'||el.tagName==='SELECT'?'change':'input',render));
 render();
 })();
 </script>
