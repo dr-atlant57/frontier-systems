@@ -73,7 +73,7 @@ $('pickedCount').textContent=n;$('progress').style.width=(n/48*100)+'%';
 $('highCount').textContent=[...selected.values()].filter(x=>x===3).length;
 $('mediumCount').textContent=[...selected.values()].filter(x=>x===2).length;
 $('patternCount').textContent=relevant.size;
-['copyReport','downloadReport','printReport','whatsappReport'].forEach(id=>$(id).disabled=n===0);
+['copyReport','downloadReport','printReport','whatsappReport','buildArchitecture'].forEach(id=>$(id).disabled=n===0);
 }
 function report(){
 const chosen=[...selected.keys()].map(id=>flags[id-1]).sort(order);
