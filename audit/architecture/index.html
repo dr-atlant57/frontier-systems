@@ -109,35 +109,44 @@ const catalog=JSON.parse(document.getElementById('catalog').textContent), flags=
 const $=id=>document.getElementById(id);
 const esc=v=>String(v===null||v===undefined?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const snapKey='rfs.aiAudit.v1';
-let snapshot={selected:[],org:'',goal:'',limits:'',measures:''};
+let snapshot={selected:[],org:'',goal:'',limits:'',measures:'',readiness:[],readinessExample:''};
 try{const found=JSON.parse(sessionStorage.getItem(snapKey)||'null');if(found&&Array.isArray(found.selected)){snapshot=found;}}catch(e){}
 const items=snapshot.selected.map(x=>({id:Number(x.id),level:Number(x.level)===3?3:2})).filter(x=>Number.isInteger(x.id)&&x.id>=1&&x.id<=48).filter((x,i,a)=>a.findIndex(y=>y.id===x.id)===i);
-const types={person:'Personal Cognitive Twin',company:'AI Company',hybrid:'TwinMind AI Company'};
+const types={person:'Personal Cognitive Twin',company:'TwinMind AI Company',hybrid:'TwinMind AI Company + Personal Bridge'};
+const deployments={onprem:'On-premise: весь корпоративный контур на инфраструктуре клиента',private:'Выделенный частный контур с техническими и договорными ограничениями',hybrid:'Контролируемый гибрид с изолированным корпоративным ядром'};
+const externalPolicies={deny:'Внешние AI API запрещены',approved:'Только одобренные, журналируемые и фильтруемые внешние вызовы'};
 const autonomy={advisory:'Советник',copilot:'Copilot — действия после согласования',bounded:'Ограниченная автономия'};
 const core={
 person:[['Private Personal Context','Изолированный личный профиль, разрешения на чтение и удаление данных.'],['Intent & Goal Layer','Перевод свободного описания в цели, критерии, ограничения и подтверждённые решения.'],['Personal Knowledge & Memory','Контекст и история с указанием источника, версии и правил хранения.'],['Human Navigation & Representation','Поддержка выбора траекторий, формализация позиции и управление раскрытием.']],
-company:[['Organization Knowledge Model','Единая модель корпоративных объектов, процессов, ролей, источников и границ доступа.'],['Agent Orchestration','Распределение задач между агентами, проверка результатов и обработка исключений.'],['Mission Control','Очередь согласований, аудит действий и контур безопасной остановки.'],['Value Evidence','Показатели стоимости, качества, времени и эффекта на уровне рабочих сценариев.']],
-hybrid:[['Personal Cognitive Twin','Приватный персональный контур намерений, памяти и управления согласием.'],['Organization Digital Twin','Модель ролей, процессов, данных и ограничений компании.'],['Twin-to-Twin Bridge','Передача только согласованного объёма сведений между личным и корпоративным контуром.'],['Mission Control & Orchestration','Агенты, разрешения, утверждения, журнал действий и управление исключениями.'],['Value & Learning Loop','Измерение результатов, обратная связь и контроль изменений архитектуры.']]
+company:[['Owner Intent & Company Constitution','Корпоративная стратегия, правила, запреты и права на принятие решений.'],['Company DNA & Governed Knowledge','Версионируемая память с владельцами знаний, проверкой противоречий и подтверждением.'],['Private Organization Digital Twin','Модель процессов, ролей, активов и интерфейсов с локальной корпоративной памятью.'],['Execution & Pattern Library','Проверенные бизнес-процессы, распределение задач и воспроизведение успешных действий.'],['Mission Control','Наблюдение 24/7, одобрения, журнал, безопасная остановка и восстановление.'],['Growth & Value Evidence','Расширение автономности после тестирования KPI, ROI и стоимости эксплуатации.']],
+hybrid:[['Owner Intent & Company DNA','Подтверждённые цели, процессы, знания руководителей и корпоративные правила.'],['Private Organization Digital Twin','Изолированные корпоративные знания, роли, процессы и ресурсы.'],['Execution & Growth','Библиотека проверенных действий, воспроизводимость и рост полномочий по KPI.'],['Personal Cognitive Twin','Отдельная личная память и персональные разрешения.'],['Twin-to-Twin Bridge','Межконтурная передача только по согласованным политикам и с журналом.'],['Mission Control','Исполнение, утверждения, безопасность, остановка и измерение эффекта.']]
 };
 function getVariant(){return document.querySelector('input[name="systemType"]:checked').value;}
 function getAuto(){return document.querySelector('input[name="autonomy"]:checked').value;}
+function getDeployment(){return document.querySelector('input[name="deployment"]:checked').value;}
+function getExternal(){return document.querySelector('input[name="externalAI"]:checked').value;}
+function isCompany(){return getVariant()!=='person';}
+function readiness(){return Array.isArray(snapshot.readiness)?snapshot.readiness.filter(x=>x&&x.label&&x.text):[];}
 function field(id){return $(id).value.trim();}
 function checked(){return [...document.querySelectorAll('#integrations input:checked')].map(x=>x.value);}
 function chosenFlags(){return items.map(x=>({...flags[x.id-1],level:x.level})).sort((a,b)=>b.level-a.level||a.id-b.id);}
 function usedPatterns(){return [...new Set(chosenFlags().flatMap(x=>x.patterns))];}
 function fmt(v){return esc(v||'Не указано — уточнить на discovery-сессии.');}
 function bullet(v){return '<li>'+esc(v)+'</li>';}
-function moduleList(){return core[getVariant()].map(x=>({name:x[0],desc:x[1],tag:'Базовый контур'})).concat(usedPatterns().map(p=>({name:patterns[p][0],desc:patterns[p][1],tag:p==='OUTSIDE'?'Внешний контур / вне гарантированного покрытия':'Гипотеза по аудиту'})));}
+function moduleList(){return core[getVariant()].map(x=>({name:x[0],desc:x[1],tag:'Базовый контур'})).concat([{name:'Deployment & Egress Control',desc:deployments[getDeployment()]+'; '+externalPolicies[getExternal()]+'. Проверить сетевые политики и изоляцию.',tag:'Проверка инфраструктуры'}]).concat(usedPatterns().map(p=>({name:patterns[p][0],desc:patterns[p][1],tag:p==='OUTSIDE'?'Внешний контур / вне гарантированного покрытия':'Гипотеза по аудиту'})));}
 function render(){
-const f=chosenFlags(), mods=moduleList(), p=usedPatterns(),t=getVariant(),a=getAuto();
+const f=chosenFlags(), mods=moduleList(), p=usedPatterns(),t=getVariant(),a=getAuto(),d=getDeployment(),ex=getExternal();
+document.querySelectorAll('.companyStage').forEach(el=>el.hidden=t==='person');
+const ready=readiness();
+$('readinessBrief').innerHTML=ready.length?'<strong>Готовность компании: '+ready.length+' из 8 ответов</strong><ul>'+ready.map(x=>'<li>'+esc(x.label)+': '+esc(x.text)+'</li>').join('')+'</ul>':'';
 $('riskCount').textContent=f.length;$('sideCount').textContent=f.length;$('sideCritical').textContent=f.filter(x=>x.level===3).length;$('sideModules').textContent=p.length;
 $('sideType').textContent=types[t];$('specSystem').textContent=types[t];$('specFlags').textContent=f.length+' / 48 рисков';$('specAutonomy').textContent=autonomy[a];
-$('sourceTitle').textContent=f.length?'Аудит получен: '+f.length+' признаков':'Аудит пока не пройден';
-$('sourceText').textContent=f.length?'Критичных: '+f.filter(x=>x.level===3).length+'. Исходные ответы перенесены локально из предыдущей страницы.':'Нет локальных результатов аудита. ТЗ получится общим, пока вы не выберете симптомы.';
+$('sourceTitle').textContent=(f.length||ready.length)?'Аудит: '+f.length+' AI-признаков, '+ready.length+' ответов о компании':'Аудит пока не пройден';
+$('sourceText').textContent=(f.length||ready.length)?'Критичных AI-признаков: '+f.filter(x=>x.level===3).length+'. Данные перенесены локально.':'Нет результатов аудита. ТЗ предварительное до интервью и подтверждения источников.';
 $('riskTags').innerHTML=f.map(x=>'<span class="flagtag '+(x.level===3?'critical':'')+'">#'+x.id+' '+(x.level===3?'Критично':'Существенно')+'</span>').join('');
-$('emptyAudit').hidden=f.length>0;
+$('emptyAudit').hidden=f.length>0||ready.length>0;
 $('specContext').innerHTML='<p><strong>Проект:</strong> '+fmt(field('project'))+'</p><p><strong>Заказчики / пользователи:</strong> '+fmt(field('users'))+'</p><p><strong>Целевой результат:</strong> '+fmt(field('goal'))+'</p><p><strong>Приоритетные сценарии:</strong> '+fmt(field('usecases'))+'</p>';
-const b=t==='hybrid'?'Личный и корпоративный контуры разделены. Перенос информации между ними возможен только по явно согласованной политике доступа.':t==='person'?'Персональные сведения не передаются корпоративным агентам без отдельного разрешения.':'Действия агентов ограничены корпоративными ролями, процессами, источниками и правами доступа.';
+const b=t==='hybrid'?'Корпоративный интеллект — ядро; личный двойник остаётся отдельным модулем. Обмен разрешён только по политике доступа.':t==='person'?'Персональные сведения не передаются корпоративным агентам без отдельного разрешения.':'Собственное AI-ядро компании действует в рамках корпоративных ролей, процессов, правил и ограничений.';
 $('specBoundaries').innerHTML='<p>'+esc(b)+'</p><p><strong>Информационные источники:</strong> '+fmt(field('systems'))+'</p><p><strong>Ограничения:</strong> '+fmt(field('constraints'))+'</p>';
 $('specModules').innerHTML=mods.map(m=>'<article class="module"><i>'+esc(m.tag)+'</i><b>'+esc(m.name)+'</b><p>'+esc(m.desc)+'</p></article>').join('');
 $('specTrace').innerHTML=f.length?'<table class="trace"><thead><tr><th>Приоритет / проблема</th><th>Архитектурная гипотеза</th><th>Как подтвердить решение</th></tr></thead><tbody>'+f.map(x=>'<tr><td><b>#'+x.id+' '+(x.level===3?'КРИТИЧНО':'Существенно')+'</b><small>'+esc(x.title)+'</small></td><td>'+esc(x.patterns.map(k=>patterns[k][0]).join('; '))+'</td><td>'+esc(x.metric)+'<small>Задать базу, целевой порог и владельца измерения.</small></td></tr>').join('')+'</tbody></table>':'<div class="empty">Матрица рисков появится после прохождения аудита. <a href="../" style="color:var(--blue)">Вернуться к 48 признакам →</a></div>';
@@ -154,14 +163,20 @@ $('specNonFunctional').innerHTML='<ul>'+[
 'Разделение персональных и корпоративных данных; согласие на раскрытие, удаление и экспорт.',
 'Проверка качества, ошибок и устойчивости к вредоносным инструкциям до доступа к реальным операциям.',
 'Контроль стоимости вычислений, расхода ресурсов и энергопотребления по полезным операциям.',
+'Проверка сетевой изоляции и контроль исходящих вызовов к внешним AI согласно утверждённой политике.',
+'Экспортируемость корпоративной памяти и переносимость процессов без привязки к одному поставщику.',
 'Воспроизводимость ключевых действий, резервное восстановление и безопасный откат.',
 'Соответствие применимому законодательству подтверждается отдельной юридической проверкой.'
 ].map(bullet).join('')+'</ul>';
+const dnaReadiness=ready.length?'<p><strong>Получено из аудита:</strong></p><ul>'+ready.map(x=>'<li>'+esc(x.label)+': '+esc(x.text)+'</li>').join('')+'</ul>':'<p>Ответы о готовности Company DNA не предоставлены; подтвердить при интервью.</p>';
+$('specDNA').innerHTML=isCompany()?dnaReadiness+'<p><strong>Намерения собственника:</strong> '+fmt(field('ownerIntent'))+'</p><p><strong>Руководители и владельцы знаний:</strong> '+fmt(field('contributors'))+'</p><p><strong>Повторяемые успешные действия:</strong> '+fmt(field('goldenProcesses')||snapshot.readinessExample)+'</p><p><strong>Протокол принятия знаний:</strong> '+fmt(field('knowledgePolicy'))+'</p><p>Для каждого правила необходимы источник, автор, версия, согласование, проверка противоречий и возможность отзыва.</p>':'<p>Корпоративный Company DNA не предусмотрен в личном варианте; действует отдельная политика личной памяти.</p>';
+$('specPrivacy').innerHTML='<p><strong>Размещение:</strong> '+esc(deployments[d])+'.</p><p><strong>Внешние модели:</strong> '+esc(externalPolicies[ex])+'.</p><p>Проверить контроль клиента над данными и ключами, право экспорта, сетевой периметр, резервное восстановление, список поставщиков, исходящие соединения и журнал доступа.</p>'+(d==='onprem'&&ex==='approved'?'<p><strong>КОНФЛИКТ:</strong> локальный режим и разрешённые внешние AI-вызовы. До запуска необходимо исключение, явно одобренное руководством, или запрет передачи.</p>':'');
+$('specGrowth').innerHTML=isCompany()?'<p><strong>Первый пилот:</strong> '+fmt(field('pilotFlow')||snapshot.readinessExample)+'</p><p><strong>База и KPI:</strong> '+fmt(field('pilotBaseline'))+'</p><p><strong>Бюджет, TCO, ROI:</strong> '+fmt(field('pilotEconomy'))+'</p><p><strong>Условия расширения полномочий:</strong> '+fmt(field('growthGates'))+'</p><p><strong>Тиражирование:</strong> '+fmt(field('replication'))+'</p><p>Последовательность: наблюдать → советовать → выполнять утверждённые обратимые действия → расширять автономность по процессам только после испытаний. Проверяются отказоустойчивость 24/7, эскалация, остановка и откат.</p>':'<p>Рост корпоративной автономности не применяется к отдельному Personal Cognitive Twin.</p>';
 const phases=[
-['DISCOVER','Диагностика','Подтвердить симптомы и реальные процессы, собрать исходные измерения.'],
-['ARCHITECT','Проект','Сформировать модель данных, интерфейсы, контуры доступа, роли и критерии.'],
-['EXPERIMENT','Ограниченный пилот','Протестировать 1–2 сценария на разрешённых данных и измерить эффект.'],
-['VERIFY','Решение о масштабе','Проверить результат, безопасность, стоимость и решение о следующей фазе.']
+['DISCOVER','Company DNA','Собрать успешные действия и правила руководства, установить владельцев знаний и базовые метрики.'],
+['ARCHITECT','Частное AI-ядро','Спроектировать закрытые данные, модели, исполнителей, политику доступа и пределы автономности.'],
+['EXPERIMENT','Исполнительный пилот','Один контролируемый процесс, сравнение KPI, ошибок, затрат и доли автономных действий.'],
+['VERIFY','Решение о масштабе','После приёмки тиражировать проверенные процессы, испытать остановку, отказоустойчивость и переносимость.']
 ];$('specPhases').innerHTML=phases.map((x,i)=>'<article class="phase"><small>0'+(i+1)+' / '+x[0]+'</small><strong>'+x[1]+'</strong><p>'+x[2]+'</p></article>').join('');
 $('specAcceptance').innerHTML='<p><strong>Желаемые KPI:</strong> '+fmt(field('success'))+'</p><ul>'+[
 'Подтверждены владелец системы, роли участников и границы ответственности.',
@@ -169,7 +184,8 @@ $('specAcceptance').innerHTML='<p><strong>Желаемые KPI:</strong> '+fmt(f
 'Точки человеческого согласования, границы доступа, аудит и остановка испытаны.',
 'Стоимость эксплуатации сравнима с измеренным полезным эффектом.',
 'Описаны исключения, нерешённые риски и причины отказа от масштабирования.',
-'Ключевые вопросы: объём и качество исходных данных; правовые основания обработки; доступ к API; бюджет; сроки; KPI; уровень автономности.'
+'Ключевые вопросы: владельцы корпоративных знаний, подтверждение процессов, доступ к API, бюджет, TCO, ROI, периметр данных, условия роста автономности.',
+'Для расширяемых процессов проверены воспроизводимость, отсутствие несанкционированных действий и восстановление после отказа.'
 ].map(bullet).join('')+'</ul>';
 }
 function reportText(){
