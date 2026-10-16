@@ -106,6 +106,12 @@ return ['ROOT FRONTIER SYSTEMS | AI ARCHITECTURE AUDIT','Дата: '+date,'',...
 function show(s){$('actionMessage').textContent=s;};
 $('copyReport').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary());show('Сводка скопирована.');}catch(e){show('Не удалось скопировать. Используйте скачивание TXT.');}});
 $('downloadReport').addEventListener('click',()=>{const file=new Blob(['\ufeff'+summary()],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(file),a=document.createElement('a');a.href=url;a.download='root-frontier-ai-audit.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);show('TXT-отчёт создан на вашем устройстве.');});
+$('whatsappReport').addEventListener('click',()=>{
+if(!selected.size)return;
+const codes=[...selected.keys()].sort((a,b)=>a-b).map(id=>'#'+id+(selected.get(id)===3?'!':'')).join(', ');
+const text='AI ARCHITECTURE AUDIT — ROOT FRONTIER SYSTEMS\nВыбранные красные флаги: '+codes+'\nВсего: '+selected.size+'.\nПрошу связаться для обсуждения архитектурных решений.';
+window.open('https://wa.me/996998066098?text='+encodeURIComponent(text),'_blank','noopener,noreferrer');
+});
 $('printReport').addEventListener('click',()=>window.print());
 redraw();
 })();
