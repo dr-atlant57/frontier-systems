@@ -113,6 +113,18 @@ const details=[...selected.keys()].slice(0,8).map(id=>'#'+id+' '+flags[id-1].tit
 const text='AI ARCHITECTURE AUDIT — ROOT FRONTIER SYSTEMS\nВсего: '+selected.size+' из 48.\nКрасные флаги: '+codes+'\n\nОсновные симптомы:\n'+details+'\n\nПрошу связаться для обсуждения архитектурных решений.';
 window.open('https://wa.me/996998066098?text='+encodeURIComponent(text),'_blank','noopener,noreferrer');
 });
+$('buildArchitecture').addEventListener('click',()=>{
+if(!selected.size)return;
+const payload={
+selected:[...selected.entries()].map(([id,level])=>({id,level})),
+org:$('org').value.trim(),goal:$('goal').value.trim(),
+limits:$('limits').value.trim(),measures:$('measures').value.trim(),
+savedAt:new Date().toISOString()
+};
+try{sessionStorage.setItem('rfs.aiAudit.v1',JSON.stringify(payload));}
+catch(e){show('Не удалось перенести данные автоматически. Проверьте настройки браузера.');return;}
+window.location.assign('architecture/');
+});
 $('printReport').addEventListener('click',()=>window.print());
 redraw();
 })();
