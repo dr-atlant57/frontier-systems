@@ -1,0 +1,41 @@
+slug,language,query,validation
+ai-pilots-fail-to-scale,en,"AI pilots not scaling",intent-hypothesis
+ai-pilots-fail-to-scale,en,"enterprise AI proof of concept fails",intent-hypothesis
+ai-pilots-fail-to-scale,en,"move AI pilot to production",intent-hypothesis
+ai-pilots-fail-to-scale,en,"AI adoption bottlenecks",intent-hypothesis
+ai-pilots-fail-to-scale,ru,"пилоты ИИ не масштабируются",intent-hypothesis
+ai-pilots-fail-to-scale,ru,"как вывести AI пилот в продакшен",intent-hypothesis
+ai-pilots-fail-to-scale,ru,"проблемы внедрения искусственного интеллекта",intent-hypothesis
+ai-pilots-fail-to-scale,ru,"почему ИИ не дает бизнес результат",intent-hypothesis
+post-merger-systems-fragmented,en,"post merger integration problems",intent-hypothesis
+post-merger-systems-fragmented,en,"unrealized M&A synergies",intent-hypothesis
+post-merger-systems-fragmented,en,"integrate ERP after acquisition",intent-hypothesis
+post-merger-systems-fragmented,en,"private equity portfolio operating model",intent-hypothesis
+post-merger-systems-fragmented,ru,"интеграция после слияния компаний",intent-hypothesis
+post-merger-systems-fragmented,ru,"почему не достигнута синергия M&A",intent-hypothesis
+post-merger-systems-fragmented,ru,"объединение ERP компаний холдинга",intent-hypothesis
+post-merger-systems-fragmented,ru,"разрозненные процессы после поглощения",intent-hypothesis
+key-person-decision-dependency,en,"business depends on founder",intent-hypothesis
+key-person-decision-dependency,en,"knowledge transfer retiring employees",intent-hypothesis
+key-person-decision-dependency,en,"key person dependency risk",intent-hypothesis
+key-person-decision-dependency,en,"capture executive decision knowledge",intent-hypothesis
+key-person-decision-dependency,ru,"бизнес зависит от владельца",intent-hypothesis
+key-person-decision-dependency,ru,"как сохранить знания ключевого сотрудника",intent-hypothesis
+key-person-decision-dependency,ru,"передача управленческих решений",intent-hypothesis
+key-person-decision-dependency,ru,"риски ухода главного эксперта",intent-hypothesis
+fragmented-erp-crm-ai-data,en,"ERP CRM data silos AI",intent-hypothesis
+fragmented-erp-crm-ai-data,en,"enterprise AI data integration",intent-hypothesis
+fragmented-erp-crm-ai-data,en,"knowledge graph enterprise data problems",intent-hypothesis
+fragmented-erp-crm-ai-data,en,"LLM answers inconsistent company data",intent-hypothesis
+fragmented-erp-crm-ai-data,ru,"разрозненные данные ERP и CRM",intent-hypothesis
+fragmented-erp-crm-ai-data,ru,"интеграция корпоративных данных для ИИ",intent-hypothesis
+fragmented-erp-crm-ai-data,ru,"семантический граф знаний компании",intent-hypothesis
+fragmented-erp-crm-ai-data,ru,"ИИ выдаёт противоречивые ответы",intent-hypothesis
+ai-agent-governance-gaps,en,"AI agent governance risks",intent-hypothesis
+ai-agent-governance-gaps,en,"control autonomous AI agents",intent-hypothesis
+ai-agent-governance-gaps,en,"AI approval audit trail",intent-hypothesis
+ai-agent-governance-gaps,en,"accountability agentic AI enterprise",intent-hypothesis
+ai-agent-governance-gaps,ru,"управление автономными ИИ агентами",intent-hypothesis
+ai-agent-governance-gaps,ru,"безопасность агентного ИИ",intent-hypothesis
+ai-agent-governance-gaps,ru,"аудит действий AI агентов",intent-hypothesis
+ai-agent-governance-gaps,ru,"ответственность за ошибки ИИ",intent-hypothesis
