@@ -21,21 +21,22 @@ body:before{content:"";position:fixed;z-index:-1;inset:0;background:radial-gradi
 @media(max-width:900px){.workspace{grid-template-columns:1fr}.sticky{position:static}.sticky .actions{grid-template-columns:repeat(2,1fr)}.spec{margin-top:20px}}
 @media(max-width:630px){.wrap{width:calc(100% - 24px)}header .wrap{min-height:64px}.crumbs{display:none}.hero{padding:43px 0 27px}.panelpad,.specBody{padding:17px}.types{grid-template-columns:1fr}.type{min-height:auto}.fields,.modules,.reportIntro{grid-template-columns:1fr}.checks{grid-template-columns:repeat(2,1fr)}.sticky .actions{grid-template-columns:1fr}.specHead{padding:18px;display:block}.draft{display:inline-block;margin-top:13px}.phasegrid{grid-template-columns:1fr 1fr}.footer{display:block}.footer div{margin-bottom:9px}}
 @media print{body{background:white;color:#161616;color-scheme:light}body:before,header,.hero,.workspace,.footer,.actions{display:none!important}.wrap{width:100%}.spec{border:0;margin:0}.specHead,.specBody{padding:10px 0}.specSection{break-inside:auto;border-color:#bbb}.specSection p,.specSection li{color:#222}.module,.phase,.kpi{background:white;color:#111;border-color:#bbb}.module p,.phase p{color:#333}.reportIntro{grid-template-columns:repeat(3,1fr)}.trace td,.trace th{border-color:#bbb;color:#222}.notice{background:white;color:#222}.draft{background:white;color:#444;border-color:#bbb}}
+.auditreadiness{margin-top:11px;color:var(--muted);font-size:.8rem;line-height:1.55}.auditreadiness strong{color:var(--blue)}.auditreadiness ul{margin:7px 0 0;padding-left:20px}.auditreadiness li{margin:2px 0}.companyStage[hidden]{display:none!important}
 </style>
 </head>
 <body>
 <header><div class="wrap"><a class="brand" href="../../">ROOT <b>FRONTIER</b> SYSTEMS</a><div class="crumbs"><a href="../">AI Audit</a><span>→</span>Architecture Blueprint</div><span class="headstatus">DESIGN / v1.0</span></div></header>
 <main class="wrap">
-<section class="hero"><div class="eyebrow">02 / FROM RED FLAGS TO ARCHITECTURE</div><h1>AI ARCHITECTURE<br><em>BLUEPRINT.</em></h1><p class="lead">Архитектура начинается не с выбора модели или списка функций, а с ваших проблем и целей. Данные аудита переходят в предварительное техническое задание для персонального Cognitive Twin, AI Company или связанной системы TwinMind AI Company.</p><div class="steps"><span><strong>01</strong> Симптомы и риски</span><span><strong>02</strong> Целевая система</span><span><strong>03</strong> Управление и интеграции</span><span><strong>04</strong> ТЗ и критерии приёмки</span></div></section>
+<section class="hero"><div class="eyebrow">02 / FROM RED FLAGS TO ARCHITECTURE</div><h1>AI ARCHITECTURE<br><em>BLUEPRINT.</em></h1><p class="lead">Архитектура начинается с целей собственника и проверенных процессов компании. По результатам аудита мы формируем ТЗ на собственный развивающийся корпоративный интеллект: Company DNA, закрытый контур данных, постепенное делегирование и воспроизводимое исполнение 24/7.</p><div class="steps"><span><strong>01</strong> Симптомы и риски</span><span><strong>02</strong> Целевая система</span><span><strong>03</strong> Управление и интеграции</span><span><strong>04</strong> ТЗ и критерии приёмки</span></div></section>
 <div class="workspace">
 <div>
-<section class="panel panelpad stage" id="scope"><div class="stageHead"><span class="index">01 / AUDIT HANDOFF</span><h2>Какие проблемы должна устранить система?</h2><p class="desc">Мы переносим отмеченные красные флаги и превращаем их в требования, которые можно проверить.</p></div><div class="auditbar"><div><strong id="sourceTitle">Входные данные аудита</strong><p id="sourceText">Загрузка локальных данных…</p></div><b id="riskCount">0</b></div><div class="audititems" id="riskTags"></div><div id="emptyAudit" class="empty" hidden>Аудит не обнаружен в текущей вкладке. Можно заполнить черновик без него, но для персонализированного ТЗ рекомендуем <a href="../" style="color:var(--blue);text-decoration:underline">пройти аудит</a> и нажать «Сформировать ТЗ».</div></section>
+<section class="panel panelpad stage" id="scope"><div class="stageHead"><span class="index">01 / AUDIT HANDOFF</span><h2>Какие проблемы должна устранить система?</h2><p class="desc">Мы переносим отмеченные красные флаги и превращаем их в требования, которые можно проверить.</p></div><div class="auditbar"><div><strong id="sourceTitle">Входные данные аудита</strong><p id="sourceText">Загрузка локальных данных…</p></div><b id="riskCount">0</b></div><div class="audititems" id="riskTags"></div><div id="readinessBrief" class="auditreadiness"></div><div id="emptyAudit" class="empty" hidden>Аудит не обнаружен в этой вкладке. Можно заполнить черновик без него, но для персонализированного ТЗ рекомендуем <a href="../" style="color:var(--blue);text-decoration:underline">пройти аудит</a> и нажать «Сформировать ТЗ».</div></section>
 <section class="panel panelpad stage"><div class="stageHead"><span class="index">02 / SYSTEM DESIGN</span><h2>Какую когнитивную систему проектируем?</h2><p class="desc">Это три разных границы ответственности. Название и состав модулей остаются проектными гипотезами до обследования.</p></div>
 <div class="types">
-<label class="type"><input name="systemType" type="radio" value="person"><strong>Personal Cognitive Twin</strong><small>Индивидуальная память, цели, навигация, ассистент и контроль раскрытия личной информации.</small></label>
-<label class="type"><input name="systemType" type="radio" value="company"><strong>AI Company</strong><small>Роли агентов, процессы, корпоративные знания, контроль, согласование и измерение результата.</small></label>
-<label class="type"><input name="systemType" type="radio" value="hybrid" checked><strong>TwinMind AI Company</strong><small>Личный когнитивный двойник + контур компании + согласованный мост между ними.</small></label>
-</div><p class="hint">Называем TwinMind AI Company рабочим названием целевой архитектуры, а не готовой программной системой.</p></section>
+<label class="type"><input name="systemType" type="radio" value="company" checked><strong>TwinMind AI Company</strong><small>Собственный корпоративный интеллект, который осваивает знания компании и постепенно берёт на себя разрешённые процессы.</small></label>
+<label class="type"><input name="systemType" type="radio" value="hybrid"><strong>Company + Personal Twin</strong><small>Корпоративное ядро TwinMind и отдельный персональный двойник с контролируемым обменом сведениями.</small></label>
+<label class="type"><input name="systemType" type="radio" value="person"><strong>Personal Cognitive Twin</strong><small>Личная память и навигация, не заменяющие корпоративную исполнительную систему.</small></label>
+</div><p class="hint">TwinMind AI Company — рабочее название проектируемого корпоративного продукта. Выбор типа системы не создаёт инфраструктуру и не подключает источники автоматически.</p></section>
 <section class="panel panelpad stage"><div class="stageHead"><span class="index">03 / INTENT & REQUIREMENTS</span><h2>Формализуем желаемый результат</h2><p class="desc">Заполните известное. Если информации нет, в ТЗ появится пометка «Требует уточнения», а не выдуманное требование.</p></div>
 <div class="fields">
 <div class="field"><label class="lbl" for="project">Рабочее название проекта</label><input id="project" maxlength="120" placeholder="Например, TwinMind для Виктора"></div>
@@ -54,8 +55,33 @@ body:before{content:"";position:fixed;z-index:-1;inset:0;background:radial-gradi
 </div><h3>Планируемые интеграции</h3><div class="checks" id="integrations">
 <label><input type="checkbox" value="Документы и базы знаний" checked>Документы</label><label><input type="checkbox" value="Электронная почта">Почта</label><label><input type="checkbox" value="CRM и лиды">CRM</label><label><input type="checkbox" value="Мессенджеры">Мессенджеры</label><label><input type="checkbox" value="Календарь">Календарь</label><label><input type="checkbox" value="ERP и финансы">ERP / финансы</label>
 </div><p class="hint">Даже при ограниченной автономии финансовые операции, права доступа, внешние обязательства и критические изменения требуют отдельных политик и подтверждений. Подключения пока не выполняются.</p></section>
+
+<section class="panel panelpad stage companyStage" id="dnaStage"><div class="stageHead"><span class="index">05 / OWNER INTENT & COMPANY DNA</span><h2>Как вырастет собственный интеллект компании?</h2><p class="desc">Не загружайте секретные документы в анкету. Зафиксируйте участников, процесс и правила накопления подтверждённых знаний.</p></div>
+<div class="fields">
+<div class="field wide"><label class="lbl" for="ownerIntent">Намерения собственника и неприкосновенные принципы</label><textarea id="ownerIntent" maxlength="850" placeholder="Зачем существует компания, каковы её цели, что AI никогда не должен делать?"></textarea></div>
+<div class="field wide"><label class="lbl" for="contributors">Кто передаёт и подтверждает знания?</label><textarea id="contributors" maxlength="700" placeholder="Собственник: стратегия; генеральный: процессы; коммерческий: продажи; финансовый: риски. Укажите владельцев и утверждающих."></textarea></div>
+<div class="field wide"><label class="lbl" for="goldenProcesses">Какие успешные действия повторять 24/7?</label><textarea id="goldenProcesses" maxlength="900" placeholder="Процесс → входные данные → действия → выход → проверенные KPI → исключения."></textarea></div>
+<div class="field wide"><label class="lbl" for="knowledgePolicy">Как знания принимаются в Company DNA?</label><textarea id="knowledgePolicy" maxlength="700" placeholder="Источник, автор, версия, проверка противоречий, утверждение руководителем и отзыв устаревших правил."></textarea></div>
+</div><p class="hint">Company DNA хранит также условия успешности, причины ошибок, версии и доказательства. Противоречивые правила требуют согласования.</p></section>
+<section class="panel panelpad stage" id="privacyStage"><div class="stageHead"><span class="index">06 / PRIVATE INFRASTRUCTURE</span><h2>Где живёт интеллект и куда могут уходить данные?</h2><p class="desc">Локальное размещение необходимо подтвердить сетевыми политиками, испытаниями и правами доступа.</p></div>
+<div class="autonomy">
+<label class="choice"><input type="radio" name="deployment" value="onprem" checked><div><strong>Внутри компании (on-premise)</strong><span>Модели, память и оркестрация у клиента; исходящие внешние вызовы запрещены по умолчанию.</span></div></label>
+<label class="choice"><input type="radio" name="deployment" value="private"><div><strong>Выделенный частный контур</strong><span>Согласованная юрисдикция, отдельная инфраструктура, технические и договорные границы.</span></div></label>
+<label class="choice"><input type="radio" name="deployment" value="hybrid"><div><strong>Контролируемый гибрид</strong><span>Корпоративное ядро защищено, внешние инструменты получают только разрешённый объём данных.</span></div></label></div>
+<h3>Политика внешних AI-моделей</h3><div class="autonomy">
+<label class="choice"><input type="radio" name="externalAI" value="deny" checked><div><strong>Запретить внешние вызовы</strong><span>По умолчанию никаких внешних API с корпоративным контекстом.</span></div></label>
+<label class="choice"><input type="radio" name="externalAI" value="approved"><div><strong>Только явно одобренные вызовы</strong><span>Белый список провайдеров, фильтрация, согласование, журнал и возможность отключения.</span></div></label></div>
+<p class="hint">Если выбран on-premise и разрешены внешние модели, это конфликт требований, который надо согласовать до запуска. Локальное размещение само по себе не гарантирует отсутствие утечек.</p></section>
+<section class="panel panelpad stage companyStage" id="growthStage"><div class="stageHead"><span class="index">07 / EXECUTION & GROWTH</span><h2>Пилот → автономность → масштабирование</h2><p class="desc">Полномочия расширяются после измеримых испытаний отдельно по каждому процессу. Для 24/7 нужны контроль, остановка и восстановление.</p></div>
+<div class="fields">
+<div class="field wide"><label class="lbl" for="pilotFlow">Первый сквозной процесс для пилота</label><textarea id="pilotFlow" maxlength="800" placeholder="Новый лид → проверка → предложение → одобрение → CRM → контроль результата."></textarea></div>
+<div class="field"><label class="lbl" for="pilotBaseline">Исходные показатели и целевые KPI</label><textarea id="pilotBaseline" maxlength="500" placeholder="До: X часов/сделка, Y ошибок; цель: измеримое улучшение и метод сравнения."></textarea></div>
+<div class="field"><label class="lbl" for="pilotEconomy">Бюджет пилота и стоимость владения</label><textarea id="pilotEconomy" maxlength="500" placeholder="Сервер, модели, интеграции, сопровождение, проверки, энергия; ROI."></textarea></div>
+<div class="field wide"><label class="lbl" for="growthGates">Условия повышения автономности</label><textarea id="growthGates" maxlength="700" placeholder="Наблюдение → рекомендации → разрешённые обратимые операции → расширение после KPI, тестов и решения руководства."></textarea></div>
+<div class="field wide"><label class="lbl" for="replication">Что масштабировать после подтверждения?</label><textarea id="replication" maxlength="600" placeholder="Отдел → другие команды → филиалы. Условия применимости, версии процессов, адаптация."></textarea></div>
+</div></section>
 </div>
-<aside class="panel sticky" aria-label="Сводка и действия"><div class="panelpad"><div class="eyebrow">LIVE SPECIFICATION</div><h2 style="font-size:1.25rem;margin:10px 0 16px">Предварительное ТЗ</h2><div class="count"><span id="sideCount">0</span> <small>красных флагов</small></div><div class="miniline"></div><div class="fact"><span>Критичные проблемы</span><b id="sideCritical">0</b></div><div class="fact"><span>Архитектурные направления</span><b id="sideModules">0</b></div><div class="fact"><span>Тип системы</span><b id="sideType">TwinMind AI Company</b></div><div class="fact"><span>Статус</span><b style="color:var(--amber)">Черновик / v0.1</b></div><div class="miniline"></div><div class="actions"><button id="viewSpec" class="btn primary">Смотреть сформированное ТЗ ↓</button><button id="download" class="btn">Скачать ТЗ (.md)</button><button id="copy" class="btn">Скопировать ТЗ</button><button id="print" class="btn">Сохранить PDF / печать</button><button id="sendWhatsApp" class="btn wa">Обсудить ТЗ в WhatsApp ↗</button><a class="btn" href="../">← Вернуться к аудиту</a></div><div id="feedback" class="status" aria-live="polite"></div><p class="hint">Данные анкеты не отправляются на сервер автоматически. Выгрузка и WhatsApp запускаются только вами.</p></div></aside>
+<aside class="panel sticky" aria-label="Сводка и действия"><div class="panelpad"><div class="eyebrow">LIVE SPECIFICATION</div><h2 style="font-size:1.25rem;margin:10px 0 16px">Предварительное ТЗ</h2><div class="count"><span id="sideCount">0</span> <small>красных флагов</small></div><div class="miniline"></div><div class="fact"><span>Критичные проблемы</span><b id="sideCritical">0</b></div><div class="fact"><span>Архитектурные направления</span><b id="sideModules">0</b></div><div class="fact"><span>Тип системы</span><b id="sideType">TwinMind AI Company</b></div><div class="fact"><span>Статус</span><b style="color:var(--amber)">Черновик / v0.1</b></div><div class="miniline"></div><div class="actions"><button id="viewSpec" class="btn primary">Смотреть сформированное ТЗ ↓</button><button id="download" class="btn">Скачать ТЗ (.md)</button><button id="copy" class="btn">Скопировать ТЗ</button><button id="print" class="btn">Сохранить PDF / печать</button><button id="sendWhatsApp" class="btn wa">Обсудить ТЗ в WhatsApp ↗</button><a class="btn" href="../">← Вернуться к аудиту</a></div><div id="feedback" class="status" aria-live="polite"></div><p class="hint">Анкета обрабатывается в браузере. WhatsApp отправляет только запрос на консультацию без содержимого ТЗ; экспорт полного документа — по вашему выбору.</p></div></aside>
 </div>
 <section id="spec" class="panel spec" aria-label="Предварительное техническое задание">
 <div class="specHead"><div><div class="eyebrow">03 / ARCHITECTURE DESIGN BRIEF</div><h2>Техническое задание<br>на целевую AI-архитектуру</h2><p>Создано на основе выбранных симптомов и целей. Это структурированный черновик для discovery-сессии, а не утверждённый договор, смета или доказательство готовности технологии.</p></div><span class="draft">DRAFT / НЕ УТВЕРЖДЕНО</span></div>
@@ -69,6 +95,9 @@ body:before{content:"";position:fixed;z-index:-1;inset:0;background:radial-gradi
 <div class="specSection"><h3>6. Нефункциональные требования и безопасность</h3><div id="specNonFunctional"></div></div>
 <div class="specSection"><h3>7. План проверки архитектурных гипотез</h3><div class="phasegrid" id="specPhases"></div></div>
 <div class="specSection"><h3>8. Критерии приёмки и вопросы к заказчику</h3><div id="specAcceptance"></div><div class="notice"><strong>RED → GREEN означает доказанное изменение, а не обещание:</strong> для каждого выбранного симптома нужно установить базовое значение показателя, целевой порог, владельца проверки и результат испытания. До этого статус требований — «гипотеза / требуется подтверждение».</div></div>
+<div class="specSection"><h3>9. Company DNA и управление знаниями</h3><div id="specDNA"></div></div>
+<div class="specSection"><h3>10. Периметр размещения и защита данных</h3><div id="specPrivacy"></div></div>
+<div class="specSection"><h3>11. План роста, воспроизведения процессов и экономика</h3><div id="specGrowth"></div></div>
 </div></section>
 </main>
 <footer class="wrap footer"><div>ROOT FRONTIER SYSTEMS · Working at the roots of complexity.</div><div><a href="../">AI Architecture Audit</a> · <a href="../../">Главная</a></div></footer>
@@ -80,35 +109,44 @@ const catalog=JSON.parse(document.getElementById('catalog').textContent), flags=
 const $=id=>document.getElementById(id);
 const esc=v=>String(v===null||v===undefined?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const snapKey='rfs.aiAudit.v1';
-let snapshot={selected:[],org:'',goal:'',limits:'',measures:''};
+let snapshot={selected:[],org:'',goal:'',limits:'',measures:'',readiness:[],readinessExample:''};
 try{const found=JSON.parse(sessionStorage.getItem(snapKey)||'null');if(found&&Array.isArray(found.selected)){snapshot=found;}}catch(e){}
 const items=snapshot.selected.map(x=>({id:Number(x.id),level:Number(x.level)===3?3:2})).filter(x=>Number.isInteger(x.id)&&x.id>=1&&x.id<=48).filter((x,i,a)=>a.findIndex(y=>y.id===x.id)===i);
-const types={person:'Personal Cognitive Twin',company:'AI Company',hybrid:'TwinMind AI Company'};
+const types={person:'Personal Cognitive Twin',company:'TwinMind AI Company',hybrid:'TwinMind AI Company + Personal Bridge'};
+const deployments={onprem:'On-premise: весь корпоративный контур на инфраструктуре клиента',private:'Выделенный частный контур с техническими и договорными ограничениями',hybrid:'Контролируемый гибрид с изолированным корпоративным ядром'};
+const externalPolicies={deny:'Внешние AI API запрещены',approved:'Только одобренные, журналируемые и фильтруемые внешние вызовы'};
 const autonomy={advisory:'Советник',copilot:'Copilot — действия после согласования',bounded:'Ограниченная автономия'};
 const core={
 person:[['Private Personal Context','Изолированный личный профиль, разрешения на чтение и удаление данных.'],['Intent & Goal Layer','Перевод свободного описания в цели, критерии, ограничения и подтверждённые решения.'],['Personal Knowledge & Memory','Контекст и история с указанием источника, версии и правил хранения.'],['Human Navigation & Representation','Поддержка выбора траекторий, формализация позиции и управление раскрытием.']],
-company:[['Organization Knowledge Model','Единая модель корпоративных объектов, процессов, ролей, источников и границ доступа.'],['Agent Orchestration','Распределение задач между агентами, проверка результатов и обработка исключений.'],['Mission Control','Очередь согласований, аудит действий и контур безопасной остановки.'],['Value Evidence','Показатели стоимости, качества, времени и эффекта на уровне рабочих сценариев.']],
-hybrid:[['Personal Cognitive Twin','Приватный персональный контур намерений, памяти и управления согласием.'],['Organization Digital Twin','Модель ролей, процессов, данных и ограничений компании.'],['Twin-to-Twin Bridge','Передача только согласованного объёма сведений между личным и корпоративным контуром.'],['Mission Control & Orchestration','Агенты, разрешения, утверждения, журнал действий и управление исключениями.'],['Value & Learning Loop','Измерение результатов, обратная связь и контроль изменений архитектуры.']]
+company:[['Owner Intent & Company Constitution','Корпоративная стратегия, правила, запреты и права на принятие решений.'],['Company DNA & Governed Knowledge','Версионируемая память с владельцами знаний, проверкой противоречий и подтверждением.'],['Private Organization Digital Twin','Модель процессов, ролей, активов и интерфейсов с локальной корпоративной памятью.'],['Execution & Pattern Library','Проверенные бизнес-процессы, распределение задач и воспроизведение успешных действий.'],['Mission Control','Наблюдение 24/7, одобрения, журнал, безопасная остановка и восстановление.'],['Growth & Value Evidence','Расширение автономности после тестирования KPI, ROI и стоимости эксплуатации.']],
+hybrid:[['Owner Intent & Company DNA','Подтверждённые цели, процессы, знания руководителей и корпоративные правила.'],['Private Organization Digital Twin','Изолированные корпоративные знания, роли, процессы и ресурсы.'],['Execution & Growth','Библиотека проверенных действий, воспроизводимость и рост полномочий по KPI.'],['Personal Cognitive Twin','Отдельная личная память и персональные разрешения.'],['Twin-to-Twin Bridge','Межконтурная передача только по согласованным политикам и с журналом.'],['Mission Control','Исполнение, утверждения, безопасность, остановка и измерение эффекта.']]
 };
 function getVariant(){return document.querySelector('input[name="systemType"]:checked').value;}
 function getAuto(){return document.querySelector('input[name="autonomy"]:checked').value;}
+function getDeployment(){return document.querySelector('input[name="deployment"]:checked').value;}
+function getExternal(){return document.querySelector('input[name="externalAI"]:checked').value;}
+function isCompany(){return getVariant()!=='person';}
+function readiness(){return Array.isArray(snapshot.readiness)?snapshot.readiness.filter(x=>x&&x.label&&x.text):[];}
 function field(id){return $(id).value.trim();}
 function checked(){return [...document.querySelectorAll('#integrations input:checked')].map(x=>x.value);}
 function chosenFlags(){return items.map(x=>({...flags[x.id-1],level:x.level})).sort((a,b)=>b.level-a.level||a.id-b.id);}
 function usedPatterns(){return [...new Set(chosenFlags().flatMap(x=>x.patterns))];}
 function fmt(v){return esc(v||'Не указано — уточнить на discovery-сессии.');}
 function bullet(v){return '<li>'+esc(v)+'</li>';}
-function moduleList(){return core[getVariant()].map(x=>({name:x[0],desc:x[1],tag:'Базовый контур'})).concat(usedPatterns().map(p=>({name:patterns[p][0],desc:patterns[p][1],tag:p==='OUTSIDE'?'Внешний контур / вне гарантированного покрытия':'Гипотеза по аудиту'})));}
+function moduleList(){return core[getVariant()].map(x=>({name:x[0],desc:x[1],tag:'Базовый контур'})).concat([{name:'Deployment & Egress Control',desc:deployments[getDeployment()]+'; '+externalPolicies[getExternal()]+'. Проверить сетевые политики и изоляцию.',tag:'Проверка инфраструктуры'}]).concat(usedPatterns().map(p=>({name:patterns[p][0],desc:patterns[p][1],tag:p==='OUTSIDE'?'Внешний контур / вне гарантированного покрытия':'Гипотеза по аудиту'})));}
 function render(){
-const f=chosenFlags(), mods=moduleList(), p=usedPatterns(),t=getVariant(),a=getAuto();
+const f=chosenFlags(), mods=moduleList(), p=usedPatterns(),t=getVariant(),a=getAuto(),d=getDeployment(),ex=getExternal();
+document.querySelectorAll('.companyStage').forEach(el=>el.hidden=t==='person');
+const ready=readiness();
+$('readinessBrief').innerHTML=ready.length?'<strong>Готовность компании: '+ready.length+' из 8 ответов</strong><ul>'+ready.map(x=>'<li>'+esc(x.label)+': '+esc(x.text)+'</li>').join('')+'</ul>':'';
 $('riskCount').textContent=f.length;$('sideCount').textContent=f.length;$('sideCritical').textContent=f.filter(x=>x.level===3).length;$('sideModules').textContent=p.length;
 $('sideType').textContent=types[t];$('specSystem').textContent=types[t];$('specFlags').textContent=f.length+' / 48 рисков';$('specAutonomy').textContent=autonomy[a];
-$('sourceTitle').textContent=f.length?'Аудит получен: '+f.length+' признаков':'Аудит пока не пройден';
-$('sourceText').textContent=f.length?'Критичных: '+f.filter(x=>x.level===3).length+'. Исходные ответы перенесены локально из предыдущей страницы.':'Нет локальных результатов аудита. ТЗ получится общим, пока вы не выберете симптомы.';
+$('sourceTitle').textContent=(f.length||ready.length)?'Аудит: '+f.length+' AI-признаков, '+ready.length+' ответов о компании':'Аудит пока не пройден';
+$('sourceText').textContent=(f.length||ready.length)?'Критичных AI-признаков: '+f.filter(x=>x.level===3).length+'. Данные перенесены локально.':'Нет результатов аудита. ТЗ предварительное до интервью и подтверждения источников.';
 $('riskTags').innerHTML=f.map(x=>'<span class="flagtag '+(x.level===3?'critical':'')+'">#'+x.id+' '+(x.level===3?'Критично':'Существенно')+'</span>').join('');
-$('emptyAudit').hidden=f.length>0;
+$('emptyAudit').hidden=f.length>0||ready.length>0;
 $('specContext').innerHTML='<p><strong>Проект:</strong> '+fmt(field('project'))+'</p><p><strong>Заказчики / пользователи:</strong> '+fmt(field('users'))+'</p><p><strong>Целевой результат:</strong> '+fmt(field('goal'))+'</p><p><strong>Приоритетные сценарии:</strong> '+fmt(field('usecases'))+'</p>';
-const b=t==='hybrid'?'Личный и корпоративный контуры разделены. Перенос информации между ними возможен только по явно согласованной политике доступа.':t==='person'?'Персональные сведения не передаются корпоративным агентам без отдельного разрешения.':'Действия агентов ограничены корпоративными ролями, процессами, источниками и правами доступа.';
+const b=t==='hybrid'?'Корпоративный интеллект — ядро; личный двойник остаётся отдельным модулем. Обмен разрешён только по политике доступа.':t==='person'?'Персональные сведения не передаются корпоративным агентам без отдельного разрешения.':'Собственное AI-ядро компании действует в рамках корпоративных ролей, процессов, правил и ограничений.';
 $('specBoundaries').innerHTML='<p>'+esc(b)+'</p><p><strong>Информационные источники:</strong> '+fmt(field('systems'))+'</p><p><strong>Ограничения:</strong> '+fmt(field('constraints'))+'</p>';
 $('specModules').innerHTML=mods.map(m=>'<article class="module"><i>'+esc(m.tag)+'</i><b>'+esc(m.name)+'</b><p>'+esc(m.desc)+'</p></article>').join('');
 $('specTrace').innerHTML=f.length?'<table class="trace"><thead><tr><th>Приоритет / проблема</th><th>Архитектурная гипотеза</th><th>Как подтвердить решение</th></tr></thead><tbody>'+f.map(x=>'<tr><td><b>#'+x.id+' '+(x.level===3?'КРИТИЧНО':'Существенно')+'</b><small>'+esc(x.title)+'</small></td><td>'+esc(x.patterns.map(k=>patterns[k][0]).join('; '))+'</td><td>'+esc(x.metric)+'<small>Задать базу, целевой порог и владельца измерения.</small></td></tr>').join('')+'</tbody></table>':'<div class="empty">Матрица рисков появится после прохождения аудита. <a href="../" style="color:var(--blue)">Вернуться к 48 признакам →</a></div>';
@@ -125,14 +163,20 @@ $('specNonFunctional').innerHTML='<ul>'+[
 'Разделение персональных и корпоративных данных; согласие на раскрытие, удаление и экспорт.',
 'Проверка качества, ошибок и устойчивости к вредоносным инструкциям до доступа к реальным операциям.',
 'Контроль стоимости вычислений, расхода ресурсов и энергопотребления по полезным операциям.',
+'Проверка сетевой изоляции и контроль исходящих вызовов к внешним AI согласно утверждённой политике.',
+'Экспортируемость корпоративной памяти и переносимость процессов без привязки к одному поставщику.',
 'Воспроизводимость ключевых действий, резервное восстановление и безопасный откат.',
 'Соответствие применимому законодательству подтверждается отдельной юридической проверкой.'
 ].map(bullet).join('')+'</ul>';
+const dnaReadiness=ready.length?'<p><strong>Получено из аудита:</strong></p><ul>'+ready.map(x=>'<li>'+esc(x.label)+': '+esc(x.text)+'</li>').join('')+'</ul>':'<p>Ответы о готовности Company DNA не предоставлены; подтвердить при интервью.</p>';
+$('specDNA').innerHTML=isCompany()?dnaReadiness+'<p><strong>Намерения собственника:</strong> '+fmt(field('ownerIntent'))+'</p><p><strong>Руководители и владельцы знаний:</strong> '+fmt(field('contributors'))+'</p><p><strong>Повторяемые успешные действия:</strong> '+fmt(field('goldenProcesses')||snapshot.readinessExample)+'</p><p><strong>Протокол принятия знаний:</strong> '+fmt(field('knowledgePolicy'))+'</p><p>Для каждого правила необходимы источник, автор, версия, согласование, проверка противоречий и возможность отзыва.</p>':'<p>Корпоративный Company DNA не предусмотрен в личном варианте; действует отдельная политика личной памяти.</p>';
+$('specPrivacy').innerHTML='<p><strong>Размещение:</strong> '+esc(deployments[d])+'.</p><p><strong>Внешние модели:</strong> '+esc(externalPolicies[ex])+'.</p><p>Проверить контроль клиента над данными и ключами, право экспорта, сетевой периметр, резервное восстановление, список поставщиков, исходящие соединения и журнал доступа.</p>'+(d==='onprem'&&ex==='approved'?'<p><strong>КОНФЛИКТ:</strong> локальный режим и разрешённые внешние AI-вызовы. До запуска необходимо исключение, явно одобренное руководством, или запрет передачи.</p>':'');
+$('specGrowth').innerHTML=isCompany()?'<p><strong>Первый пилот:</strong> '+fmt(field('pilotFlow')||snapshot.readinessExample)+'</p><p><strong>База и KPI:</strong> '+fmt(field('pilotBaseline'))+'</p><p><strong>Бюджет, TCO, ROI:</strong> '+fmt(field('pilotEconomy'))+'</p><p><strong>Условия расширения полномочий:</strong> '+fmt(field('growthGates'))+'</p><p><strong>Тиражирование:</strong> '+fmt(field('replication'))+'</p><p>Последовательность: наблюдать → советовать → выполнять утверждённые обратимые действия → расширять автономность по процессам только после испытаний. Проверяются отказоустойчивость 24/7, эскалация, остановка и откат.</p>':'<p>Рост корпоративной автономности не применяется к отдельному Personal Cognitive Twin.</p>';
 const phases=[
-['DISCOVER','Диагностика','Подтвердить симптомы и реальные процессы, собрать исходные измерения.'],
-['ARCHITECT','Проект','Сформировать модель данных, интерфейсы, контуры доступа, роли и критерии.'],
-['EXPERIMENT','Ограниченный пилот','Протестировать 1–2 сценария на разрешённых данных и измерить эффект.'],
-['VERIFY','Решение о масштабе','Проверить результат, безопасность, стоимость и решение о следующей фазе.']
+['DISCOVER','Company DNA','Собрать успешные действия и правила руководства, установить владельцев знаний и базовые метрики.'],
+['ARCHITECT','Частное AI-ядро','Спроектировать закрытые данные, модели, исполнителей, политику доступа и пределы автономности.'],
+['EXPERIMENT','Исполнительный пилот','Один контролируемый процесс, сравнение KPI, ошибок, затрат и доли автономных действий.'],
+['VERIFY','Решение о масштабе','После приёмки тиражировать проверенные процессы, испытать остановку, отказоустойчивость и переносимость.']
 ];$('specPhases').innerHTML=phases.map((x,i)=>'<article class="phase"><small>0'+(i+1)+' / '+x[0]+'</small><strong>'+x[1]+'</strong><p>'+x[2]+'</p></article>').join('');
 $('specAcceptance').innerHTML='<p><strong>Желаемые KPI:</strong> '+fmt(field('success'))+'</p><ul>'+[
 'Подтверждены владелец системы, роли участников и границы ответственности.',
@@ -140,7 +184,8 @@ $('specAcceptance').innerHTML='<p><strong>Желаемые KPI:</strong> '+fmt(f
 'Точки человеческого согласования, границы доступа, аудит и остановка испытаны.',
 'Стоимость эксплуатации сравнима с измеренным полезным эффектом.',
 'Описаны исключения, нерешённые риски и причины отказа от масштабирования.',
-'Ключевые вопросы: объём и качество исходных данных; правовые основания обработки; доступ к API; бюджет; сроки; KPI; уровень автономности.'
+'Ключевые вопросы: владельцы корпоративных знаний, подтверждение процессов, доступ к API, бюджет, TCO, ROI, периметр данных, условия роста автономности.',
+'Для расширяемых процессов проверены воспроизводимость, отсутствие несанкционированных действий и восстановление после отказа.'
 ].map(bullet).join('')+'</ul>';
 }
 function reportText(){
@@ -190,6 +235,29 @@ const t=getVariant(),a=getAuto(),f=chosenFlags(),mod=moduleList(),lines=[
 'Каждый красный флаг становится зелёным только при подтверждённой метрике и акте приёмки.',
 'Нужны уточнения: сроки, бюджет, владельцы данных, API, регуляторика, безопасность, KPI.',
 '',
+'## 9. Company DNA и управление знаниями',
+'Ответы аудита готовности: '+(readiness().map(x=>x.label+': '+x.text).join('; ')||'не предоставлены'),
+'Намерения собственника: '+(isCompany()?(field('ownerIntent')||'уточнить'):'не применяется'),
+'Владельцы корпоративных знаний: '+(isCompany()?(field('contributors')||'уточнить'):'не применяется'),
+'Подтверждённые успешные действия: '+(isCompany()?(field('goldenProcesses')||snapshot.readinessExample||'уточнить'):'не применяется'),
+'Протокол подтверждения знаний: '+(isCompany()?(field('knowledgePolicy')||'уточнить'):'не применяется'),
+'Каждому допущенному к исполнению правилу требуются источник, автор, версия, разрешения, проверка на противоречия и механизм отзыва.',
+'',
+'## 10. Контур размещения и защита корпоративных данных',
+'Выбранное размещение: '+deployments[getDeployment()],
+'Политика внешних моделей: '+externalPolicies[getExternal()],
+'Проверить исходящий трафик, локальное исполнение, владение данными и ключами, резервное копирование, экспорт, переносимость и журналы.',
+...(getDeployment()==='onprem'&&getExternal()==='approved'?['КОНФЛИКТ: локальное размещение с внешними моделями требует формального исключения или запрета исходящих запросов.']:[]),
+'',
+'## 11. Пилот, рост автономности, повторение и масштабирование',
+'Первый рабочий процесс: '+(isCompany()?(field('pilotFlow')||snapshot.readinessExample||'уточнить'):'не применяется'),
+'Исходные измерения и целевой KPI: '+(isCompany()?(field('pilotBaseline')||'уточнить'):'не применяется'),
+'Стоимость, TCO, ROI: '+(isCompany()?(field('pilotEconomy')||'уточнить'):'не применяется'),
+'Условия расширения полномочий: '+(isCompany()?(field('growthGates')||'уточнить'):'не применяется'),
+'План тиражирования: '+(isCompany()?(field('replication')||'уточнить'):'не применяется'),
+'Приёмка: измеренное улучшение, проверка внешних вызовов, отсутствие неразрешённых действий, испытания остановки и восстановления, согласование руководителя.',
+'Непрерывное исполнение 24/7 не означает бесконтрольные действия или гарантированное достижение цели.',
+'',
 'Документ не является готовой технической реализацией или гарантией решения рисков.'
 ];return lines.join('\n');
 }
@@ -199,15 +267,15 @@ $('copy').addEventListener('click',async()=>{try{await navigator.clipboard.write
 $('download').addEventListener('click',()=>{const blob=new Blob(['\ufeff'+reportText()],{type:'text/markdown;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='root-frontier-ai-architecture-brief.md';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);message('ТЗ сохранено на вашем устройстве.');});
 $('print').addEventListener('click',()=>window.print());
 $('sendWhatsApp').addEventListener('click',()=>{
-const t=getVariant(),name=field('project')||types[t],ids=items.map(x=>'#'+x.id+(x.level===3?'!':'')).join(', ');
-const m='AI Architecture Blueprint / ROOT FRONTIER SYSTEMS\nПроект: '+name+'\nТип: '+types[t]+'\nЦель: '+(field('goal')||'требует уточнения')+'\nРиски: '+(ids||'аудит не заполнен')+'\nПрошу обсудить архитектуру и дальнейшие шаги. Полное ТЗ могу приложить отдельно.';
+const m='Здравствуйте! Я сформировал предварительное ТЗ для собственной AI Company / TwinMind на сайте ROOT FRONTIER SYSTEMS. Прошу связаться для обсуждения архитектуры и пилотного проекта. Конфиденциальные сведения предоставлю отдельно через согласованный канал.';
 window.open('https://wa.me/996998066098?text='+encodeURIComponent(m),'_blank','noopener,noreferrer');
 });
 if(snapshot.org) $('project').value=snapshot.org;
 if(snapshot.goal) $('goal').value=snapshot.goal;
 if(snapshot.limits) $('constraints').value=snapshot.limits;
 if(snapshot.measures) $('success').value=snapshot.measures;
-document.querySelectorAll('input,textarea,select').forEach(el=>el.addEventListener(el.type==='radio'||el.type==='checkbox'?'change':'input',render));
+if(snapshot.readinessExample) $('pilotFlow').value=snapshot.readinessExample;
+document.querySelectorAll('input,textarea,select').forEach(el=>el.addEventListener(el.type==='radio'||el.type==='checkbox'||el.tagName==='SELECT'?'change':'input',render));
 render();
 })();
 </script>
