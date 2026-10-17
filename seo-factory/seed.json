@@ -1,0 +1,549 @@
+{
+  "schema": "rfs.problem-intelligence.v1",
+  "status": "editorial-seed",
+  "languages_live": [
+    "en",
+    "ru"
+  ],
+  "languages_planned": [
+    "de",
+    "fr",
+    "es",
+    "pt",
+    "ar",
+    "zh",
+    "ja",
+    "ko",
+    "kk",
+    "ky"
+  ],
+  "search_volume_status": "unverified: intent hypotheses, not Semrush statistics",
+  "editorial_date": "2026-10-17",
+  "issues": [
+    {
+      "slug": "ai-pilots-fail-to-scale",
+      "category": "Enterprise AI",
+      "modules": [
+        "SUPERAGENT",
+        "Architecture Discovery",
+        "Revenue Engine"
+      ],
+      "en": {
+        "title": "Why enterprise AI pilots fail to scale",
+        "tagline": "The demo works. The business still cannot depend on it.",
+        "description": "Diagnose why AI pilots stall before production: integration, ownership, evaluation, governance and measurable business results.",
+        "problem": "A prototype can answer questions in a controlled demonstration. Reliable deployment requires access rights, live data, failure handling, monitoring, business ownership and acceptance criteria. Those are architecture requirements, not just better prompts.",
+        "symptoms": [
+          "Pilots repeatedly succeed in demos but do not become approved workflows.",
+          "Departments maintain incompatible assistants with duplicated costs.",
+          "No owner can link AI output to a verified business metric."
+        ],
+        "causes": [
+          "The pilot optimizes a conversation instead of the complete process.",
+          "Tests omit operational exceptions, permissions and production data.",
+          "Accountability ends when the prototype is handed off."
+        ],
+        "options": [
+          [
+            "Narrow workflow integration",
+            "Connect one bounded task to approved systems; log decisions and exceptions."
+          ],
+          [
+            "Shared agent coordination",
+            "Align permissions, data contracts, traceability and escalation between agents."
+          ],
+          [
+            "Operating model redesign",
+            "Rework roles, hand-offs and process ownership before expanding AI."
+          ]
+        ],
+        "questions": [
+          "Which business action should change, not just which answer improve?",
+          "Which failures must escalate to a human?",
+          "Who approves data access and signs off on outcomes?"
+        ],
+        "metrics": [
+          "Time to verified business action",
+          "Exception and escalation rate",
+          "Cost per accepted outcome including human review"
+        ],
+        "queries": [
+          "AI pilots not scaling",
+          "enterprise AI proof of concept fails",
+          "move AI pilot to production",
+          "AI adoption bottlenecks"
+        ],
+        "buyer": "CEO · COO · CIO · Head of AI",
+        "deliverable": "A bounded pilot architecture with owners, acceptance tests and a scale-or-stop decision."
+      },
+      "ru": {
+        "title": "Почему AI-пилоты не масштабируются в компаниях",
+        "tagline": "Демонстрация работает. Но бизнес ещё не может на неё опереться.",
+        "description": "Почему AI-пилоты не выходят в эксплуатацию: интеграции, ответственность, проверка качества и экономический эффект.",
+        "problem": "Прототип уверенно отвечает на вопросы в демонстрации. Для реальной эксплуатации необходимы права доступа, актуальные данные, обработка ошибок, наблюдаемость, владелец процесса и критерии приёмки. Это задача архитектуры, а не количества промптов.",
+        "symptoms": [
+          "Пилоты впечатляют, но не становятся утверждёнными процессами.",
+          "Отделы создают несовместимых AI-помощников и дублируют расходы.",
+          "Нельзя показать, какой показатель бизнеса изменился."
+        ],
+        "causes": [
+          "Оптимизируется диалог с моделью вместо сквозного процесса.",
+          "Тесты не охватывают исключения, ограничения и реальные данные.",
+          "После демонстрации никто не отвечает за результат."
+        ],
+        "options": [
+          [
+            "Интеграция одного процесса",
+            "Подключить ограниченную задачу к разрешённым системам с журналом решений."
+          ],
+          [
+            "Единый контур AI-агентов",
+            "Согласовать права, данные, трассировку и передачу исключений человеку."
+          ],
+          [
+            "Перепроектирование работы",
+            "Уточнить роли, передачу задач и ответственность до расширения AI."
+          ]
+        ],
+        "questions": [
+          "Какое действие бизнеса должен изменить AI?",
+          "Какие ошибки требуют немедленной передачи человеку?",
+          "Кто разрешает доступ к данным и принимает результат?"
+        ],
+        "metrics": [
+          "Время до проверенного действия",
+          "Доля исключений и эскалаций",
+          "Стоимость принятого результата с учётом проверки"
+        ],
+        "queries": [
+          "пилоты ИИ не масштабируются",
+          "как вывести AI пилот в продакшен",
+          "проблемы внедрения искусственного интеллекта",
+          "почему ИИ не дает бизнес результат"
+        ],
+        "buyer": "CEO · COO · CIO · руководитель AI",
+        "deliverable": "Архитектура одного ограниченного пилота с ответственными, тестами и решением о масштабировании."
+      }
+    },
+    {
+      "slug": "post-merger-systems-fragmented",
+      "category": "M&A / Private Equity",
+      "modules": [
+        "Enterprise Digital Twin",
+        "Twin-to-Twin Delivery",
+        "Architecture Intelligence"
+      ],
+      "en": {
+        "title": "Post-merger systems are fragmented: where synergies disappear",
+        "tagline": "Companies merged on paper. Their operations did not.",
+        "description": "Find the architectural causes of unrealized M&A synergies, disconnected ERP systems, duplicated workflows and slow group reporting.",
+        "problem": "After an acquisition, purchasing, reporting, customer records and decision rights often remain separated. Replacing every system may cost too much; leaving all systems isolated may prevent promised synergies. The useful question is which connections actually create measurable value.",
+        "symptoms": [
+          "Group reporting requires spreadsheet reconciliation and arrives late.",
+          "Shared customers, suppliers and idle resources stay invisible.",
+          "Cross-company meetings multiply without a clear process owner."
+        ],
+        "causes": [
+          "Master data definitions and process boundaries disagree.",
+          "There is no common model of authority or performance.",
+          "Synergy assumptions were never translated into testable operating changes."
+        ],
+        "options": [
+          [
+            "Federated integration",
+            "Connect existing systems through governed interfaces and common entities."
+          ],
+          [
+            "Selective consolidation",
+            "Unify only processes with measurable benefit and feasible migration."
+          ],
+          [
+            "Portfolio coordination twin",
+            "Map dependencies, resources and decisions across portfolio companies."
+          ]
+        ],
+        "questions": [
+          "Which promised synergy is measurable within one quarter?",
+          "Which operations must remain legally or technically independent?",
+          "Who can authorize cross-company process changes?"
+        ],
+        "metrics": [
+          "Time to consolidated reporting",
+          "Verified cost or cycle-time reduction",
+          "Unresolved integration exceptions"
+        ],
+        "queries": [
+          "post merger integration problems",
+          "unrealized M&A synergies",
+          "integrate ERP after acquisition",
+          "private equity portfolio operating model"
+        ],
+        "buyer": "PE operating partner · CFO · Integration Lead",
+        "deliverable": "A comparative integration blueprint and a small validated synergy experiment."
+      },
+      "ru": {
+        "title": "Разрозненные системы после слияния: куда исчезает синергия",
+        "tagline": "Компании объединились юридически, но не операционно.",
+        "description": "Как устранить разрозненность ERP, процессов и данных после M&A и проверить экономический эффект объединения.",
+        "problem": "После поглощения закупки, отчётность, клиентские данные и полномочия часто остаются обособленными. Замена всех систем может быть слишком дорогой, а полная изоляция лишает группу ожидаемой синергии. Нужно определить, какие связи действительно создают измеримую ценность.",
+        "symptoms": [
+          "Групповая отчётность запаздывает и сводится вручную.",
+          "Общие поставщики и свободные мощности не видны между компаниями.",
+          "Совещаний больше, но межкорпоративные процессы без владельца."
+        ],
+        "causes": [
+          "Расходятся значения справочников и границы процессов.",
+          "Нет общей модели полномочий и показателей.",
+          "План синергии не превращён в проверяемые операционные изменения."
+        ],
+        "options": [
+          [
+            "Федеративная интеграция",
+            "Соединить действующие системы управляемыми интерфейсами и общей семантикой."
+          ],
+          [
+            "Выборочная консолидация",
+            "Объединять только процессы с доказуемой выгодой и допустимыми затратами."
+          ],
+          [
+            "Координационный цифровой двойник",
+            "Отобразить зависимости, ресурсы и решения между компаниями."
+          ]
+        ],
+        "questions": [
+          "Какую синергию можно измерить за квартал?",
+          "Какие процессы обязаны оставаться независимыми?",
+          "Кто вправе согласовывать межкорпоративные изменения?"
+        ],
+        "metrics": [
+          "Время формирования сводной отчётности",
+          "Подтверждённая экономия или сокращение цикла",
+          "Неразрешённые ошибки интеграции"
+        ],
+        "queries": [
+          "интеграция после слияния компаний",
+          "почему не достигнута синергия M&A",
+          "объединение ERP компаний холдинга",
+          "разрозненные процессы после поглощения"
+        ],
+        "buyer": "Инвестиционный фонд · CFO · руководитель интеграции",
+        "deliverable": "Сравнительная архитектура интеграции и проверяемый пилот одной синергии."
+      }
+    },
+    {
+      "slug": "key-person-decision-dependency",
+      "category": "Decision Continuity",
+      "modules": [
+        "Decision DNA",
+        "Knowledge Transfer",
+        "TWINMIND"
+      ],
+      "en": {
+        "title": "What if the business depends on one person's decisions?",
+        "tagline": "The expert leaves. The reasoning leaves with them.",
+        "description": "Reduce founder and key-person dependency with verified decision cases, permissions and knowledge transfer — not untested AI impersonation.",
+        "problem": "Instructions document routine actions but often omit why one alternative was chosen over another. When an expert leaves, successors lose the reasoning behind exceptions. A chatbot trained on old material is not automatically a reliable decision-maker.",
+        "symptoms": [
+          "Decisions stop when the founder or senior specialist is absent.",
+          "New employees can follow instructions but fail on exceptions.",
+          "Knowledge repositories capture documents but not decision criteria."
+        ],
+        "causes": [
+          "Tacit reasoning was never elicited or independently validated.",
+          "Delegated authority and risk limits are undefined.",
+          "Knowledge transfer is measured by files collected, not decisions reproduced."
+        ],
+        "options": [
+          [
+            "Decision-case library",
+            "Interview experts and document decisions, rejected options and exceptions."
+          ],
+          [
+            "Validated Decision DNA",
+            "Test decision rules on held-out cases and track uncertainty and drift."
+          ],
+          [
+            "Supervised executive twin",
+            "Recommend permitted actions and refer ambiguous cases to people."
+          ]
+        ],
+        "questions": [
+          "Which decisions depend on a single person today?",
+          "Do you have permission to use the underlying records and chats?",
+          "Which decisions must remain human-only?"
+        ],
+        "metrics": [
+          "Agreement on held-out decision cases",
+          "Time to resolve exceptional cases",
+          "Rate of human escalation"
+        ],
+        "queries": [
+          "business depends on founder",
+          "knowledge transfer retiring employees",
+          "key person dependency risk",
+          "capture executive decision knowledge"
+        ],
+        "buyer": "Owner · COO · Succession Lead",
+        "deliverable": "A verified decision-case library and supervised continuity pilot."
+      },
+      "ru": {
+        "title": "Бизнес зависит от одного человека: как сохранить решения",
+        "tagline": "Уходит эксперт — вместе с ним исчезает логика решений.",
+        "description": "Снижение зависимости от собственника и ключевого эксперта через Decision DNA, проверку решений и передачу знаний.",
+        "problem": "Инструкции описывают привычные действия, но редко сохраняют причины выбора и отклонения альтернатив. После ухода эксперта преемникам недостаёт логики сложных случаев. Чат-бот, обученный на переписках, ещё не становится надёжным руководителем.",
+        "symptoms": [
+          "Без собственника или ведущего специалиста решения останавливаются.",
+          "Сотрудники знают инструкции, но не справляются с исключениями.",
+          "База знаний хранит документы, но не критерии решений."
+        ],
+        "causes": [
+          "Неявные правила не извлекались и не проходили независимую проверку.",
+          "Пределы делегирования не определены.",
+          "Передачу знаний оценивают количеством файлов, а не качеством решений."
+        ],
+        "options": [
+          [
+            "Библиотека управленческих кейсов",
+            "Зафиксировать решения, отклонённые варианты и исключения при участии экспертов."
+          ],
+          [
+            "Проверяемая Decision DNA",
+            "Тестировать правила на независимых случаях и отслеживать неопределённость."
+          ],
+          [
+            "Управленческий двойник под контролем",
+            "Предлагать разрешённые действия, а спорные передавать человеку."
+          ]
+        ],
+        "questions": [
+          "Какие решения сегодня зависят от одного человека?",
+          "Есть ли разрешение на использование переписок и записей?",
+          "Какие решения нельзя делегировать AI?"
+        ],
+        "metrics": [
+          "Совпадение оценок на отложенных кейсах",
+          "Время разрешения исключений",
+          "Доля эскалаций человеку"
+        ],
+        "queries": [
+          "бизнес зависит от владельца",
+          "как сохранить знания ключевого сотрудника",
+          "передача управленческих решений",
+          "риски ухода главного эксперта"
+        ],
+        "buyer": "Собственник · COO · преемник",
+        "deliverable": "Проверенная библиотека решений и ограниченный пилот преемственности."
+      }
+    },
+    {
+      "slug": "fragmented-erp-crm-ai-data",
+      "category": "Data / Semantics",
+      "modules": [
+        "Knowledge Graph",
+        "MATRIX GATE",
+        "SUPERAGENT"
+      ],
+      "en": {
+        "title": "Disconnected ERP, CRM and documents prevent reliable AI",
+        "tagline": "The data exists. No system sees the whole picture.",
+        "description": "How fragmented corporate data, conflicting identifiers and access policies undermine enterprise AI decisions.",
+        "problem": "ERP records, CRM histories and documents may all exist while a cross-department question still needs manual reconciliation. A model connection alone does not repair inconsistent entity definitions, stale records or access limits.",
+        "symptoms": [
+          "The same customer or contract appears under incompatible identifiers.",
+          "Teams reconcile conflicting figures by hand.",
+          "AI answers change with the department's selected data source."
+        ],
+        "causes": [
+          "No governed semantic model or source provenance.",
+          "Interfaces expose fields without explaining business meaning.",
+          "Permissions were designed per application rather than end-to-end decision."
+        ],
+        "options": [
+          [
+            "Semantic knowledge graph",
+            "Model identities, relationships, origins and known conflicts."
+          ],
+          [
+            "Federated access",
+            "Query authorized sources without copying everything to one central store."
+          ],
+          [
+            "Decision-centered data contracts",
+            "Specify required evidence, responsible owners and conflict resolution."
+          ]
+        ],
+        "questions": [
+          "Which question requires the most manual cross-system work?",
+          "Who owns the authoritative definition of each key entity?",
+          "Which data cannot be combined due to contracts or law?"
+        ],
+        "metrics": [
+          "Time to a reconciled answer",
+          "Identifier conflicts per cycle",
+          "Answers with verifiable provenance"
+        ],
+        "queries": [
+          "ERP CRM data silos AI",
+          "enterprise AI data integration",
+          "knowledge graph enterprise data problems",
+          "LLM answers inconsistent company data"
+        ],
+        "buyer": "CIO · CDO · CTO · Operations",
+        "deliverable": "A source-to-decision map and tested cross-system architecture."
+      },
+      "ru": {
+        "title": "Разрозненные ERP, CRM и документы мешают корпоративному AI",
+        "tagline": "Данные существуют, но целостную картину не видит никто.",
+        "description": "Как семантические конфликты, разрозненные данные и права доступа мешают точным ответам корпоративного AI.",
+        "problem": "ERP, CRM и документы могут содержать необходимые сведения, но ответ между отделами по-прежнему приходится сверять вручную. Подключение модели не исправляет разные определения сущностей, устаревшие записи или запреты доступа.",
+        "symptoms": [
+          "Один клиент или договор существует под несовместимыми идентификаторами.",
+          "Отделы вручную сверяют противоречащие цифры.",
+          "Ответ AI зависит от выбранного источника."
+        ],
+        "causes": [
+          "Нет общей семантической модели и прослеживаемости происхождения данных.",
+          "Интерфейсы описывают поля, но не бизнес-смысл.",
+          "Права заданы для приложений, а не для принятия решений."
+        ],
+        "options": [
+          [
+            "Семантический граф знаний",
+            "Описать сущности, связи, источники и известные противоречия."
+          ],
+          [
+            "Федеративный доступ",
+            "Обращаться к разрешённым данным без обязательного общего хранилища."
+          ],
+          [
+            "Контракты данных под решения",
+            "Определить доказательства, владельцев и правила разрешения конфликтов."
+          ]
+        ],
+        "questions": [
+          "Какой вопрос требует самой долгой ручной сверки?",
+          "Кто утверждает значения ключевых сущностей?",
+          "Какие сведения нельзя объединять по закону или договору?"
+        ],
+        "metrics": [
+          "Время получения согласованного ответа",
+          "Число конфликтов идентификаторов",
+          "Доля ответов с проверяемым источником"
+        ],
+        "queries": [
+          "разрозненные данные ERP и CRM",
+          "интеграция корпоративных данных для ИИ",
+          "семантический граф знаний компании",
+          "ИИ выдаёт противоречивые ответы"
+        ],
+        "buyer": "CIO · директор по данным · CTO",
+        "deliverable": "Карта от источника к решению и проверенная межсистемная архитектура."
+      }
+    },
+    {
+      "slug": "ai-agent-governance-gaps",
+      "category": "Agentic AI / Risk",
+      "modules": [
+        "SUPERAGENT",
+        "MATRIX GATE",
+        "Decision Validation"
+      ],
+      "en": {
+        "title": "Who controls autonomous AI agents in the enterprise?",
+        "tagline": "Autonomy without accountability is not a production architecture.",
+        "description": "Establish traceable agent actions, permission limits, independent validation and human escalation before AI workflow deployment.",
+        "problem": "AI agents can call tools, edit records and initiate transactions. If permitted actions and evidence trails are undefined, speed gains can introduce a new source of operational failure. Governance must be embedded in architecture, not added after rollout.",
+        "symptoms": [
+          "Agents act on business systems without consistent approval rules.",
+          "Teams cannot reconstruct why an action occurred.",
+          "Errors repeat across linked agent workflows without escalation."
+        ],
+        "causes": [
+          "Tools were connected before authority and threats were modeled.",
+          "Monitoring measures tokens but not harmful actions or accepted outcomes.",
+          "Rollback, uncertainty and human escalation have no defined owner."
+        ],
+        "options": [
+          [
+            "Risk-tiered permissions",
+            "Categorize actions by reversibility, impact and approval requirement."
+          ],
+          [
+            "Agent control plane",
+            "Unify identity, policy enforcement, audit trails and independent tests."
+          ],
+          [
+            "Staged bounded autonomy",
+            "Begin read-only, then supervised recommendations, then approved actions."
+          ]
+        ],
+        "questions": [
+          "Which actions can alter money, access or external obligations?",
+          "Can every agent action be reconstructed and attributed?",
+          "How will incorrect actions be stopped and reversed?"
+        ],
+        "metrics": [
+          "Auditable actions as share of total",
+          "Blocked unauthorized actions",
+          "Time to detect and resolve incidents"
+        ],
+        "queries": [
+          "AI agent governance risks",
+          "control autonomous AI agents",
+          "AI approval audit trail",
+          "accountability agentic AI enterprise"
+        ],
+        "buyer": "CISO · CIO · Compliance · AI Platform Lead",
+        "deliverable": "A risk-tiered agent architecture with testable controls and escalation."
+      },
+      "ru": {
+        "title": "Кто контролирует автономных AI-агентов в компании?",
+        "tagline": "Автономность без ответственности — не рабочая архитектура.",
+        "description": "Полномочия агентов, доказуемый аудит действий, независимая проверка и передача рискованных решений человеку.",
+        "problem": "AI-агенты способны вызывать инструменты, менять записи и запускать операции. Если полномочия и доказательная трасса не определены, ускорение может превратиться в источник системных ошибок. Контроль нужно проектировать до запуска.",
+        "symptoms": [
+          "Агенты изменяют рабочие системы без единых правил подтверждения.",
+          "Невозможно восстановить основание конкретного действия.",
+          "Ошибки повторяются между агентами без передачи человеку."
+        ],
+        "causes": [
+          "Инструменты подключены раньше модели полномочий и угроз.",
+          "Мониторинг считает токены, но не последствия действий.",
+          "Нет владельца процедуры отката и эскалации."
+        ],
+        "options": [
+          [
+            "Права по классу риска",
+            "Разделить действия по обратимости, последствиям и обязательным согласованиям."
+          ],
+          [
+            "Контур управления агентами",
+            "Объединить идентичности, политики, аудит и независимые испытания."
+          ],
+          [
+            "Поэтапная ограниченная автономность",
+            "Начать с чтения, затем рекомендаций и только потом разрешённых действий."
+          ]
+        ],
+        "questions": [
+          "Какие операции влияют на деньги, доступ или обязательства?",
+          "Можно ли восстановить основание каждого действия агента?",
+          "Как остановить и исправить ошибочную операцию?"
+        ],
+        "metrics": [
+          "Доля действий с аудиторским следом",
+          "Предотвращённые запрещённые действия",
+          "Срок обнаружения и устранения ошибок"
+        ],
+        "queries": [
+          "управление автономными ИИ агентами",
+          "безопасность агентного ИИ",
+          "аудит действий AI агентов",
+          "ответственность за ошибки ИИ"
+        ],
+        "buyer": "CISO · CIO · комплаенс · руководитель AI",
+        "deliverable": "Архитектура контролируемых полномочий с проверяемой эскалацией."
+      }
+    }
+  ]
+}
