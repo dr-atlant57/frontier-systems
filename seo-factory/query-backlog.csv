@@ -39,3 +39,43 @@ ai-agent-governance-gaps,ru,"управление автономными ИИ а
 ai-agent-governance-gaps,ru,"безопасность агентного ИИ",intent-hypothesis
 ai-agent-governance-gaps,ru,"аудит действий AI агентов",intent-hypothesis
 ai-agent-governance-gaps,ru,"ответственность за ошибки ИИ",intent-hypothesis
+unvalidated-investment-thesis,en,"venture studio validate investment thesis",intent-hypothesis
+unvalidated-investment-thesis,en,"alternative architectures before MVP investment",intent-hypothesis
+unvalidated-investment-thesis,en,"how to test startup thesis before funding",intent-hypothesis
+unvalidated-investment-thesis,en,"venture architecture lab investor",intent-hypothesis
+unvalidated-investment-thesis,ru,"проверка инвестиционной гипотезы",intent-hypothesis
+unvalidated-investment-thesis,ru,"венчурная студия разработка архитектуры",intent-hypothesis
+unvalidated-investment-thesis,ru,"архитектура решения до MVP",intent-hypothesis
+unvalidated-investment-thesis,ru,"как проверить стартап до крупных инвестиций",intent-hypothesis
+operational-handoffs-lose-decisions,en,"cross functional handoff problems",intent-hypothesis
+operational-handoffs-lose-decisions,en,"enterprise workflow coordination bottlenecks",intent-hypothesis
+operational-handoffs-lose-decisions,en,"AI creates more work between departments",intent-hypothesis
+operational-handoffs-lose-decisions,en,"decision ownership across teams",intent-hypothesis
+operational-handoffs-lose-decisions,ru,"задачи теряются между отделами",intent-hypothesis
+operational-handoffs-lose-decisions,ru,"несинхронность бизнес процессов компании",intent-hypothesis
+operational-handoffs-lose-decisions,ru,"узкие места межфункционального взаимодействия",intent-hypothesis
+operational-handoffs-lose-decisions,ru,"ИИ ускоряет хаос в организации",intent-hypothesis
+ai-compute-cost-without-value,en,"AI cost per business outcome",intent-hypothesis
+ai-compute-cost-without-value,en,"LLM inference costs out of control",intent-hypothesis
+ai-compute-cost-without-value,en,"GPU infrastructure ROI enterprise AI",intent-hypothesis
+ai-compute-cost-without-value,en,"AI token cost optimization architecture",intent-hypothesis
+ai-compute-cost-without-value,ru,"расходы токенов ИИ в компании",intent-hypothesis
+ai-compute-cost-without-value,ru,"стоимость AI на бизнес результат",intent-hypothesis
+ai-compute-cost-without-value,ru,"окупаемость GPU сервера для бизнеса",intent-hypothesis
+ai-compute-cost-without-value,ru,"энергоэффективная инфраструктура AI",intent-hypothesis
+legacy-platform-lock-in,en,"enterprise vendor lock in migration strategy",intent-hypothesis
+legacy-platform-lock-in,en,"legacy ERP modernization without replacement",intent-hypothesis
+legacy-platform-lock-in,en,"AI integration with legacy systems",intent-hypothesis
+legacy-platform-lock-in,en,"gradual migration critical systems",intent-hypothesis
+legacy-platform-lock-in,ru,"зависимость от вендора ERP",intent-hypothesis
+legacy-platform-lock-in,ru,"модернизация старых систем без замены",intent-hypothesis
+legacy-platform-lock-in,ru,"как интегрировать AI в старое ПО",intent-hypothesis
+legacy-platform-lock-in,ru,"постепенная миграция корпоративных систем",intent-hypothesis
+fragmented-resilience-incident-response,en,"backup works but disaster recovery fails",intent-hypothesis
+fragmented-resilience-incident-response,en,"business continuity IT dependencies",intent-hypothesis
+fragmented-resilience-incident-response,en,"ransomware recovery readiness architecture",intent-hypothesis
+fragmented-resilience-incident-response,en,"enterprise resilience operational recovery",intent-hypothesis
+fragmented-resilience-incident-response,ru,"бэкап есть но бизнес не восстанавливается",intent-hypothesis
+fragmented-resilience-incident-response,ru,"проверка аварийного восстановления компании",intent-hypothesis
+fragmented-resilience-incident-response,ru,"устойчивость ИТ инфраструктуры предприятия",intent-hypothesis
+fragmented-resilience-incident-response,ru,"согласование резервных систем и процессов",intent-hypothesis

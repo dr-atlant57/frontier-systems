@@ -133,7 +133,7 @@ const catalog=JSON.parse(document.getElementById('catalog').textContent), flags=
 const $=id=>document.getElementById(id);
 const esc=v=>String(v===null||v===undefined?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const snapKey='rfs.aiAudit.v1';
-let snapshot={selected:[],org:'',goal:'',limits:'',measures:'',readiness:[],readinessExample:''};
+let snapshot={selected:[],org:'',goal:'',limits:'',measures:'',readiness:[],readinessExample:'',sourceProblem:null,impactRange:'',budgetRange:''};
 try{const found=JSON.parse(sessionStorage.getItem(snapKey)||'null');if(found&&Array.isArray(found.selected)){snapshot=found;}}catch(e){}
 const items=snapshot.selected.map(x=>({id:Number(x.id),level:Number(x.level)===3?3:2})).filter(x=>Number.isInteger(x.id)&&x.id>=1&&x.id<=48).filter((x,i,a)=>a.findIndex(y=>y.id===x.id)===i);
 const types={person:'Personal Cognitive Twin',company:'TwinMind AI Company',hybrid:'TwinMind AI Company + Personal Bridge'};
@@ -267,6 +267,10 @@ const t=getVariant(),a=getAuto(),f=chosenFlags(),mod=moduleList(),lines=[
 '',
 'Статус: черновик / гипотезы до проверки. Дата: '+new Date().toLocaleDateString('ru-RU'),
 'Источник: ROOT FRONTIER SYSTEMS / AI Architecture Audit',
+'Входная проблемная гипотеза: '+(snapshot.sourceProblem?.title||'не указана'),
+'Самооценка экономической ценности: '+({"under100k":"До $100 тыс.","100k-1m":"$100 тыс. — $1 млн","1m-10m":"$1–10 млн","over10m":"Более $10 млн"}[snapshot.impactRange]||'не определена'),
+'Предполагаемый бюджет клиента: '+({"under20k":"До $20 тыс.","20k-100k":"$20–100 тыс.","100k-500k":"$100–500 тыс.","over500k":"Более $500 тыс."}[snapshot.budgetRange]||'не определён'),
+'Оценки предварительные; не являются подтверждённым эффектом, ценой или обязательством.',
 '',
 '## 1. Назначение',
 'Тип системы: '+types[t],
