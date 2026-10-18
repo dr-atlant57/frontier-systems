@@ -18,7 +18,7 @@
     "ky"
   ],
   "search_volume_status": "unverified: intent hypotheses, not Semrush statistics",
-  "editorial_date": "2026-10-17",
+  "editorial_date": "2026-10-18",
   "issues": [
     {
       "slug": "ai-pilots-fail-to-scale",
@@ -543,6 +543,531 @@
         ],
         "buyer": "CISO · CIO · комплаенс · руководитель AI",
         "deliverable": "Архитектура контролируемых полномочий с проверяемой эскалацией."
+      }
+    },
+    {
+      "slug": "unvalidated-investment-thesis",
+      "category": "Venture Architecture",
+      "modules": [
+        "Architecture Discovery",
+        "Venture Studio",
+        "Validation Engine"
+      ],
+      "en": {
+        "title": "Capital is available, but the venture thesis has no tested architecture",
+        "tagline": "An investment hypothesis is not yet an investable operating system.",
+        "description": "How investors and venture builders can compare solution architectures, experiments, economics and kill criteria before funding an MVP.",
+        "problem": "An investor sees a large unmet need and has capital to commit, but lacks a team and evidence about which solution mechanism will work. A single persuasive pitch may hide architecture risk. Competing hypotheses reveal different costs, integration requirements and routes to adoption before the investor commits to a full build.",
+        "symptoms": [
+          "The opportunity sounds attractive but assumptions about customers remain implicit.",
+          "Technical plans start from a preferred product rather than observed failure mechanisms.",
+          "The team cannot name which experimental result would stop the investment."
+        ],
+        "causes": [
+          "Market demand, technical feasibility and unit economics are conflated.",
+          "Alternative routes to the outcome have not been compared on common criteria.",
+          "An incentive to begin development dominates the incentive to invalidate the thesis."
+        ],
+        "options": [
+          [
+            "Architecture tournament",
+            "Develop competing architectures and score them against measurable constraints."
+          ],
+          [
+            "Stage-gated validation",
+            "Fund the highest-risk assumption first and release further capital only after evidence."
+          ],
+          [
+            "Asset recombination venture",
+            "Check whether existing infrastructure and capabilities can be combined instead of built anew."
+          ]
+        ],
+        "questions": [
+          "Who has demonstrated urgency and authority to pay?",
+          "What evidence could falsify the core commercial hypothesis?",
+          "Which critical assumption can be tested without building the whole company?"
+        ],
+        "metrics": [
+          "Cost and time per decisive test",
+          "Evidence of willingness to pay",
+          "Variance between forecast and measured unit economics"
+        ],
+        "queries": [
+          "venture studio validate investment thesis",
+          "alternative architectures before MVP investment",
+          "how to test startup thesis before funding",
+          "venture architecture lab investor"
+        ],
+        "buyer": "Venture capital · Family office · CVC · Venture builder",
+        "deliverable": "A comparative architecture dossier and staged experimental investment plan."
+      },
+      "ru": {
+        "title": "Есть инвестиционная гипотеза, но нет проверенной архитектуры решения",
+        "tagline": "Инвестиционная гипотеза ещё не равна работающей бизнес-системе.",
+        "description": "Как сравнить архитектуры и проверить ключевые допущения до крупных вложений в MVP и создание компании.",
+        "problem": "Инвестор видит неудовлетворённую потребность и располагает капиталом, но ещё не знает, какой механизм решения сработает. Одна убедительная презентация может скрывать архитектурные риски. Несколько конкурирующих гипотез позволяют сравнить экономику, интеграции и способы выхода на рынок до полномасштабной разработки.",
+        "symptoms": [
+          "Возможность выглядит привлекательной, но допущения о покупателях не зафиксированы.",
+          "Технический план начинается с любимого продукта, а не с механизма проблемы.",
+          "Команда не может назвать результат эксперимента, после которого инвестицию следует остановить."
+        ],
+        "causes": [
+          "Спрос, техническая реализуемость и экономика смешаны в одну гипотезу.",
+          "Альтернативы не сопоставлены по единым критериям.",
+          "Стремление начать разработку перевешивает необходимость проверить ошибочность идеи."
+        ],
+        "options": [
+          [
+            "Конкурс архитектур",
+            "Создать конкурирующие архитектуры и оценить их по измеримым ограничениям."
+          ],
+          [
+            "Поэтапная экспериментальная проверка",
+            "Сначала финансировать проверку наиболее рискованного допущения."
+          ],
+          [
+            "Новая комбинация существующих активов",
+            "Проверить, можно ли использовать уже имеющиеся ресурсы вместо разработки с нуля."
+          ]
+        ],
+        "questions": [
+          "Кто реально подтверждает потребность и право оплачивать решение?",
+          "Какое наблюдение способно опровергнуть коммерческую гипотезу?",
+          "Что можно проверить без создания целой компании?"
+        ],
+        "metrics": [
+          "Стоимость и длительность решающего эксперимента",
+          "Подтверждённая готовность платить",
+          "Расхождение прогнозной и измеренной экономики"
+        ],
+        "queries": [
+          "проверка инвестиционной гипотезы",
+          "венчурная студия разработка архитектуры",
+          "архитектура решения до MVP",
+          "как проверить стартап до крупных инвестиций"
+        ],
+        "buyer": "Венчурный фонд · Family Office · CVC · Venture Builder",
+        "deliverable": "Сравнительное архитектурное досье и поэтапный план экспериментального финансирования."
+      }
+    },
+    {
+      "slug": "operational-handoffs-lose-decisions",
+      "category": "Organizational Intelligence",
+      "modules": [
+        "Role Navigation",
+        "Enterprise Digital Twin",
+        "SUPERAGENT"
+      ],
+      "en": {
+        "title": "Decisions vanish between teams even when every department is busy",
+        "tagline": "Every function is active. The end-to-end result is missing.",
+        "description": "Map broken hand-offs, decision rights and invisible queues across functions before adding more AI agents or dashboards.",
+        "problem": "Sales, finance, operations and delivery teams can individually hit activity targets while customer outcomes stall. Each system optimizes its own queue; shared exceptions and decisions fall between organizational boundaries. A new assistant may accelerate one queue while increasing downstream rework.",
+        "symptoms": [
+          "The same request is repeatedly re-entered or reapproved between departments.",
+          "Teams disagree about who owns stalled decisions.",
+          "More automated messages generate more coordination work, not faster delivery."
+        ],
+        "causes": [
+          "Responsibilities are defined by departments instead of end-to-end outcomes.",
+          "No shared record of decision state, evidence and accountable owner.",
+          "Escalation and exception pathways differ between teams and tools."
+        ],
+        "options": [
+          [
+            "Decision-state ledger",
+            "Provide a traceable state, owner and next action for every cross-team case."
+          ],
+          [
+            "Role-aware coordination",
+            "Route tasks across functions according to verified authority and availability."
+          ],
+          [
+            "Process digital twin",
+            "Model queues, delays and dependencies before changing work distribution."
+          ]
+        ],
+        "questions": [
+          "Where does a request wait without a named owner?",
+          "Which cross-team decision has the highest cost of delay?",
+          "Can an observer reconstruct the status of one real case end to end?"
+        ],
+        "metrics": [
+          "End-to-end cycle time",
+          "Handoffs per accepted outcome",
+          "Age of unresolved exceptions"
+        ],
+        "queries": [
+          "cross functional handoff problems",
+          "enterprise workflow coordination bottlenecks",
+          "AI creates more work between departments",
+          "decision ownership across teams"
+        ],
+        "buyer": "COO · Transformation Lead · Operations Director",
+        "deliverable": "A measured hand-off map and one tested coordination change."
+      },
+      "ru": {
+        "title": "Решения теряются между отделами: почему занятость не даёт результата",
+        "tagline": "Каждый отдел работает. Сквозной результат застревает.",
+        "description": "Как обнаружить потерянные передачи задач, неопределённые полномочия и очереди между подразделениями.",
+        "problem": "Продажи, финансы, производство и исполнители могут выполнять собственные планы активности, но клиентский результат задерживается. Каждая система оптимизирует свою очередь, а исключения оказываются между границами отделов. Новый AI-помощник может ускорить один этап и увеличить переделки на следующем.",
+        "symptoms": [
+          "Одну заявку несколько раз повторно вводят или согласовывают разные отделы.",
+          "Никто не отвечает за зависшее межфункциональное решение.",
+          "Автоматических сообщений становится больше, а срок исполнения не сокращается."
+        ],
+        "causes": [
+          "Ответственность закреплена по отделам, а не за сквозной результат.",
+          "Нет единого состояния задачи, основания решения и владельца.",
+          "Маршруты нестандартных случаев не согласованы между командами."
+        ],
+        "options": [
+          [
+            "Журнал состояния решений",
+            "Фиксировать состояние, владельца и следующий шаг каждого межотдельного случая."
+          ],
+          [
+            "Координация по ролям",
+            "Направлять задачи по проверенным полномочиям и доступности."
+          ],
+          [
+            "Цифровой двойник процесса",
+            "Моделировать очереди и зависимости до изменения распределения работы."
+          ]
+        ],
+        "questions": [
+          "Где заявка ждёт без конкретного ответственного?",
+          "Какое межотдельное решение создаёт наибольшие потери от ожидания?",
+          "Можно ли восстановить историю одной заявки от начала до конца?"
+        ],
+        "metrics": [
+          "Сквозная длительность процесса",
+          "Число передач на принятый результат",
+          "Возраст неразрешённых исключений"
+        ],
+        "queries": [
+          "задачи теряются между отделами",
+          "несинхронность бизнес процессов компании",
+          "узкие места межфункционального взаимодействия",
+          "ИИ ускоряет хаос в организации"
+        ],
+        "buyer": "COO · директор по трансформации · операционный директор",
+        "deliverable": "Карта реальных передач и проверенный эксперимент по координации."
+      }
+    },
+    {
+      "slug": "ai-compute-cost-without-value",
+      "category": "AI Economics / Infrastructure",
+      "modules": [
+        "ARCHI Compute",
+        "Energy & Carbon Efficiency",
+        "SUPERAGENT"
+      ],
+      "en": {
+        "title": "AI infrastructure costs keep rising while business value stays unclear",
+        "tagline": "More tokens and GPUs do not guarantee more accepted outcomes.",
+        "description": "Evaluate AI compute, inference, energy and human review costs per verified result instead of optimizing only unit token price.",
+        "problem": "AI deployment adds model subscriptions, API calls, orchestration, storage and human verification. A cheaper model can produce more expensive mistakes; a more capable model may be uneconomic for routine work. The architectural unit of account should be the accepted business outcome.",
+        "symptoms": [
+          "Token and infrastructure spending increases without a corresponding benefit metric.",
+          "Different teams provision overlapping model services and monitoring.",
+          "Fallbacks and human rework make cheap inference unexpectedly expensive."
+        ],
+        "causes": [
+          "Decisions are optimized for benchmarks or cost per token, not total outcome cost.",
+          "Workload routing and measurement are fragmented.",
+          "Energy use and idle hardware capacity are invisible in project economics."
+        ],
+        "options": [
+          [
+            "Task-based routing",
+            "Match model capability to risk and difficulty of each task."
+          ],
+          [
+            "End-to-end outcome accounting",
+            "Measure inference, orchestration, review and exception costs together."
+          ],
+          [
+            "Heterogeneous deployment",
+            "Compare cloud, edge and private compute against utilization, security and lifecycle cost."
+          ]
+        ],
+        "questions": [
+          "What is the cost per independently accepted business outcome?",
+          "Which tasks require a stronger model, and which can be simpler?",
+          "What utilization and energy assumptions underpin the hardware plan?"
+        ],
+        "metrics": [
+          "Total cost per accepted outcome",
+          "Human rework time",
+          "Compute utilization and energy per successful task"
+        ],
+        "queries": [
+          "AI cost per business outcome",
+          "LLM inference costs out of control",
+          "GPU infrastructure ROI enterprise AI",
+          "AI token cost optimization architecture"
+        ],
+        "buyer": "CFO · CTO · AI Infrastructure Lead",
+        "deliverable": "A measured workload-cost model and controlled optimization experiment."
+      },
+      "ru": {
+        "title": "Расходы на AI и Compute растут, а экономический результат непонятен",
+        "tagline": "Больше токенов и GPU не означает больше принятых результатов.",
+        "description": "Как оценивать стоимость моделей, вычислений, электроэнергии и человеческой проверки на единицу результата.",
+        "problem": "Внедрение AI добавляет подписки, API, оркестрацию, хранение и человеческую проверку. Дешёвая модель иногда создаёт дорогие ошибки, а самая мощная может быть невыгодна для рутинных задач. Главная единица архитектурного расчёта — подтверждённый результат процесса.",
+        "symptoms": [
+          "Затраты на модели и инфраструктуру растут без связанного показателя выгоды.",
+          "Отделы независимо закупают похожие сервисы и мониторинг.",
+          "Повторные проверки и ручная переделка уничтожают экономию на инференсе."
+        ],
+        "causes": [
+          "Оптимизируется цена токена, а не стоимость результата с ошибками и проверкой.",
+          "Маршрутизация задач и учёт расходов фрагментированы.",
+          "Энергопотребление и простой оборудования не учитываются в экономике."
+        ],
+        "options": [
+          [
+            "Маршрутизация по сложности",
+            "Подбирать модель по риску и сложности задачи."
+          ],
+          [
+            "Сквозной учёт стоимости результата",
+            "Измерять вычисления, оркестрацию, проверку и исключения вместе."
+          ],
+          [
+            "Гетерогенная инфраструктура",
+            "Сравнивать облако, edge и частные мощности по загрузке, рискам и стоимости владения."
+          ]
+        ],
+        "questions": [
+          "Сколько реально стоит один независимо принятый результат?",
+          "Каким задачам нужна дорогая модель, а каким достаточно простой?",
+          "Как обоснованы загрузка и энергопотребление планируемого оборудования?"
+        ],
+        "metrics": [
+          "Полная стоимость принятого результата",
+          "Время ручной переделки",
+          "Загрузка Compute и энергия на успешную операцию"
+        ],
+        "queries": [
+          "расходы токенов ИИ в компании",
+          "стоимость AI на бизнес результат",
+          "окупаемость GPU сервера для бизнеса",
+          "энергоэффективная инфраструктура AI"
+        ],
+        "buyer": "CFO · CTO · руководитель AI-инфраструктуры",
+        "deliverable": "Измеренная модель стоимости процессов и эксперимент по оптимизации."
+      }
+    },
+    {
+      "slug": "legacy-platform-lock-in",
+      "category": "Technology Strategy",
+      "modules": [
+        "Architecture Intelligence",
+        "MATRIX GATE",
+        "Integration Fabric"
+      ],
+      "en": {
+        "title": "Vendor lock-in stops enterprise transformation before it starts",
+        "tagline": "A critical business process should not be trapped inside one vendor's roadmap.",
+        "description": "Compare incremental decoupling, semantic interfaces and safe migration from legacy software without assuming a disruptive full replacement.",
+        "problem": "An organization depends on a legacy product for contracts, reporting or operations. New capabilities demand expensive custom integrations, while migration threatens continuity. Replacing everything may introduce more risk than it removes; doing nothing can entrench dependence.",
+        "symptoms": [
+          "A new workflow requires long supplier change requests and expensive customization.",
+          "Exports exist but business meanings and rules are not portable.",
+          "Management delays innovation because a core migration feels all-or-nothing."
+        ],
+        "causes": [
+          "Business rules are embedded in a proprietary implementation.",
+          "Data and process contracts are undocumented.",
+          "Migration success is defined as cutover, not sustained correctness."
+        ],
+        "options": [
+          [
+            "Strangler migration",
+            "Gradually replace selected features behind stable interfaces."
+          ],
+          [
+            "Semantic adapter layer",
+            "Separate business entities and permission rules from proprietary formats."
+          ],
+          [
+            "Dual-run verification",
+            "Compare legacy and new outcomes on the same authorized cases before cutover."
+          ]
+        ],
+        "questions": [
+          "Which critical business rule exists only inside the vendor system?",
+          "What functionality can be decoupled without changing the system of record?",
+          "How will output equivalence and rollback be demonstrated?"
+        ],
+        "metrics": [
+          "Time and cost to introduce a new workflow",
+          "Share of rules documented independently",
+          "Mismatch rate during parallel runs"
+        ],
+        "queries": [
+          "enterprise vendor lock in migration strategy",
+          "legacy ERP modernization without replacement",
+          "AI integration with legacy systems",
+          "gradual migration critical systems"
+        ],
+        "buyer": "CIO · CTO · Enterprise Architect",
+        "deliverable": "A staged decoupling architecture and reversible migration experiment."
+      },
+      "ru": {
+        "title": "Зависимость от одного вендора тормозит развитие компании",
+        "tagline": "Критический процесс не должен зависеть только от планов поставщика.",
+        "description": "Как уменьшить vendor lock-in, выделить правила бизнеса из устаревшей системы и модернизироваться без опасной тотальной замены.",
+        "problem": "Компания зависит от одной платформы для договоров, учёта или операций. Новая функция требует дорогой доработки поставщика, а миграция угрожает непрерывности. Полная замена может создать больше рисков, чем устранит; бездействие закрепляет зависимость.",
+        "symptoms": [
+          "Новый процесс требует долгих заявок вендору и дорогих изменений.",
+          "Данные можно выгрузить, но правила и смысл полей непереносимы.",
+          "Руководство откладывает инновации из-за риска тотального перехода."
+        ],
+        "causes": [
+          "Бизнес-правила зашиты в закрытую реализацию поставщика.",
+          "Контракты данных и процессов не описаны независимо.",
+          "Успех миграции считают датой переключения, а не доказанной корректностью."
+        ],
+        "options": [
+          [
+            "Постепенное выделение функций",
+            "Поэтапно заменять отдельные возможности за стабильными интерфейсами."
+          ],
+          [
+            "Семантические адаптеры",
+            "Отделить бизнес-сущности и права от проприетарных форматов."
+          ],
+          [
+            "Параллельная проверка",
+            "Сравнивать результаты старой и новой систем до переключения."
+          ]
+        ],
+        "questions": [
+          "Какое критическое правило известно только системе поставщика?",
+          "Какую функцию можно выделить без смены главного источника данных?",
+          "Как будут доказаны равнозначность результатов и возможность отката?"
+        ],
+        "metrics": [
+          "Время и цена новой функции",
+          "Доля независимо описанных правил",
+          "Частота расхождений при параллельной работе"
+        ],
+        "queries": [
+          "зависимость от вендора ERP",
+          "модернизация старых систем без замены",
+          "как интегрировать AI в старое ПО",
+          "постепенная миграция корпоративных систем"
+        ],
+        "buyer": "CIO · CTO · архитектор предприятия",
+        "deliverable": "Поэтапная архитектура снижения зависимости и обратимый миграционный эксперимент."
+      }
+    },
+    {
+      "slug": "fragmented-resilience-incident-response",
+      "category": "Resilience / Continuity",
+      "modules": [
+        "Resilience Architecture",
+        "Operational Twin",
+        "SUPERAGENT"
+      ],
+      "en": {
+        "title": "A company has backups but cannot demonstrate business recovery",
+        "tagline": "Recovery is a coordinated business process, not a storage checkbox.",
+        "description": "Design continuity across data, suppliers, roles and applications: verify recovery time, dependencies and decision ownership with realistic exercises.",
+        "problem": "Backups and disaster recovery tooling may be in place, yet a failure across suppliers, applications and people can still stop delivery. Restoring one database is not the same as restoring a complete business service and proving its integrity.",
+        "symptoms": [
+          "Technical teams report successful backups but end-to-end recovery has not been rehearsed.",
+          "Critical service dependencies are distributed across undocumented systems.",
+          "During incidents, authority for customer communication and recovery priorities is unclear."
+        ],
+        "causes": [
+          "Recovery objectives exist at system level, not business-service level.",
+          "Dependencies and third-party obligations are not mapped.",
+          "Exercises test isolated restores without business acceptance checks."
+        ],
+        "options": [
+          [
+            "Business-service dependency map",
+            "Trace critical outcomes through systems, people and providers."
+          ],
+          [
+            "Recovery choreography",
+            "Define ordered technical and organizational recovery with clear decision rights."
+          ],
+          [
+            "Controlled failure experiments",
+            "Test realistic scenarios and measure restored service acceptance."
+          ]
+        ],
+        "questions": [
+          "Which customer-facing outcome must recover first?",
+          "Can the team prove service integrity after a technical restore?",
+          "Who can authorize failover and communicate to stakeholders?"
+        ],
+        "metrics": [
+          "Verified end-to-end recovery time",
+          "Share of critical dependencies exercised",
+          "Business acceptance failures after restore"
+        ],
+        "queries": [
+          "backup works but disaster recovery fails",
+          "business continuity IT dependencies",
+          "ransomware recovery readiness architecture",
+          "enterprise resilience operational recovery"
+        ],
+        "buyer": "CIO · CISO · COO · Resilience Lead",
+        "deliverable": "A business-service recovery dependency model and one measured exercise."
+      },
+      "ru": {
+        "title": "Резервные копии есть, но восстановление бизнеса не проверено",
+        "tagline": "Восстановление — сквозной процесс, а не галочка о наличии бэкапа.",
+        "description": "Архитектура устойчивости: зависимости систем и людей, проверка времени восстановления и готовности бизнес-процессов.",
+        "problem": "Резервные копии и инструменты аварийного восстановления могут быть настроены, но сбой между поставщиками, приложениями и командами всё равно остановит услуги. Вернуть одну базу данных недостаточно: нужно восстановить целый бизнес-сервис и подтвердить его корректность.",
+        "symptoms": [
+          "Резервное копирование успешно, но сквозное восстановление ни разу не репетировали.",
+          "Критические зависимости распределены по плохо описанным системам.",
+          "Во время инцидента непонятно, кто выбирает приоритеты и общается с клиентами."
+        ],
+        "causes": [
+          "Цели восстановления определены для серверов, а не для бизнес-услуг.",
+          "Зависимости и обязательства внешних подрядчиков не сопоставлены.",
+          "Учения проверяют отдельный restore, но не приёмку бизнесом."
+        ],
+        "options": [
+          [
+            "Граф зависимостей бизнес-сервиса",
+            "Связать важные результаты с системами, людьми и поставщиками."
+          ],
+          [
+            "Сценарий последовательного восстановления",
+            "Определить порядок технологических и организационных действий с полномочиями."
+          ],
+          [
+            "Контролируемые испытания сбоев",
+            "Проверить реалистичные сценарии и приёмку восстановленной услуги."
+          ]
+        ],
+        "questions": [
+          "Какая клиентская функция должна восстановиться первой?",
+          "Можно ли доказать корректность услуги после технического восстановления?",
+          "Кто разрешает переключение и уведомляет заинтересованные стороны?"
+        ],
+        "metrics": [
+          "Подтверждённое время восстановления сервиса",
+          "Доля проверенных критических зависимостей",
+          "Ошибки приёмки после восстановления"
+        ],
+        "queries": [
+          "бэкап есть но бизнес не восстанавливается",
+          "проверка аварийного восстановления компании",
+          "устойчивость ИТ инфраструктуры предприятия",
+          "согласование резервных систем и процессов"
+        ],
+        "buyer": "CIO · CISO · COO · руководитель устойчивости",
+        "deliverable": "Граф зависимостей бизнес-услуги и одно измеренное испытание восстановления."
       }
     }
   ]

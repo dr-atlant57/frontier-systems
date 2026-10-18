@@ -21,3 +21,10 @@ Pick **one relevant dossier**, one grounded investment/operating pain, and a spe
 
 ## Russian short framing
 Мы ищем системные разрывы между ресурсами компании и экономическим результатом, сравниваем несколько архитектурных способов устранения проблемы и предлагаем проверяемый эксперимент до крупных вложений. Выберите проблему в Атласе, ознакомьтесь с нашими альтернативами и обсудите финансируемую архитектурную диагностику.
+
+## New architecture entry points (October 2026)
+- Investment thesis validation → https://rootfrontier.systems/problems/en/unvalidated-investment-thesis/
+- Cross-team decision gaps → https://rootfrontier.systems/problems/en/operational-handoffs-lose-decisions/
+- AI compute economics → https://rootfrontier.systems/problems/en/ai-compute-cost-without-value/
+- Legacy vendor lock-in → https://rootfrontier.systems/problems/en/legacy-platform-lock-in/
+- Business continuity recovery gaps → https://rootfrontier.systems/problems/en/fragmented-resilience-incident-response/

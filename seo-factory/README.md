@@ -2,7 +2,7 @@
 Updated October 18, 2026.
 
 ## Included
-- Five independently written EN/RU problem dossiers and two localized indexes.
+- Ten independently written EN/RU problem dossiers and two localized indexes.
 - Deterministic Node generator: `node seo-factory/run.mjs`; canonical, hreflang, sitemap and query backlog.
 - All dossier CTA links now preserve a known, non-sensitive problem slug: `/audit/?problem=<slug>`.
 - The existing 48-flag audit presents a **human-confirmed** suggested subset for that problem. No flag is auto-selected.
