@@ -5486,30 +5486,30 @@
       "from": "problem:bank-core-modernization-without-disruption",
       "to": "problem:legacy-platform-lock-in",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Legacy constraints make safe functional decoupling an alternative to full replacement.",
+        "ru": "Ограничения унаследованных систем делают выделение функций альтернативой полной замене."
       }
     },
     {
       "from": "problem:bank-core-modernization-without-disruption",
       "to": "problem:fragmented-resilience-incident-response",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Continuous banking services require tested recovery across system boundaries.",
+        "ru": "Непрерывность банковских операций требует испытаний восстановления между системами."
       }
     },
     {
       "from": "problem:bank-core-modernization-without-disruption",
       "to": "problem:ai-agent-governance-gaps",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Transaction-capable AI must use bounded authority and independent validation.",
+        "ru": "AI с доступом к операциям должен иметь ограниченные полномочия и независимую проверку."
       }
     },
     {
@@ -5636,30 +5636,30 @@
       "from": "problem:outsourced-accounting-data-exposure",
       "to": "problem:fragmented-erp-crm-ai-data",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Data minimization depends on shared semantics and source provenance.",
+        "ru": "Минимизация раскрытия зависит от семантики и происхождения данных."
       }
     },
     {
       "from": "problem:outsourced-accounting-data-exposure",
       "to": "problem:ai-agent-governance-gaps",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "External preparers need auditable permissions and accountability.",
+        "ru": "Внешним исполнителям необходимы аудируемые полномочия и ответственность."
       }
     },
     {
       "from": "problem:outsourced-accounting-data-exposure",
       "to": "problem:legacy-platform-lock-in",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Proprietary accounting exports can block lawful granular access.",
+        "ru": "Закрытые бухгалтерские выгрузки могут мешать законному выборочному доступу."
       }
     },
     {
@@ -5786,30 +5786,30 @@
       "from": "problem:supplier-delivery-status-blindspots",
       "to": "problem:operational-handoffs-lose-decisions",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Cross-company milestones suffer from missing task ownership and hand-offs.",
+        "ru": "Межкорпоративные этапы страдают из-за неопределённой передачи задач."
       }
     },
     {
       "from": "problem:supplier-delivery-status-blindspots",
       "to": "problem:fragmented-erp-crm-ai-data",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Supplier passports require compatible identifiers and reliable source data.",
+        "ru": "Паспорта поставщиков требуют согласованных идентификаторов и проверяемых источников."
       }
     },
     {
       "from": "problem:supplier-delivery-status-blindspots",
       "to": "problem:post-merger-systems-fragmented",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Acquired supplier networks may expose portfolio-level coordination opportunities.",
+        "ru": "Объединённые сети поставщиков могут открыть возможности координации портфеля."
       }
     },
     {
@@ -5936,30 +5936,30 @@
       "from": "problem:building-energy-losses-unverified",
       "to": "problem:ai-compute-cost-without-value",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Energy and operating cost should be measured against verified outcomes.",
+        "ru": "Энергию и затраты надо оценивать в пересчёте на подтверждённый результат."
       }
     },
     {
       "from": "problem:building-energy-losses-unverified",
       "to": "problem:fragmented-resilience-incident-response",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "A physical fault can interrupt service; inspection and safe recovery are linked.",
+        "ru": "Физический дефект может нарушить сервис, поэтому диагностика и восстановление связаны."
       }
     },
     {
       "from": "problem:building-energy-losses-unverified",
       "to": "problem:supplier-delivery-status-blindspots",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Verified interventions need qualified contractors with traceable work states.",
+        "ru": "Проверенные исправления требуют квалифицированных подрядчиков и прослеживаемого исполнения."
       }
     },
     {
@@ -6086,30 +6086,30 @@
       "from": "problem:tourism-booking-confirmation-failures",
       "to": "problem:supplier-delivery-status-blindspots",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Guest service recovery resembles evidence-based supplier delivery tracking.",
+        "ru": "Восстановление туристической услуги требует проверки статусов поставщика."
       }
     },
     {
       "from": "problem:tourism-booking-confirmation-failures",
       "to": "problem:operational-handoffs-lose-decisions",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Booking exceptions need explicit ownership across hosts, agents and guests.",
+        "ru": "Срывы бронирований требуют владельца процесса между хостом, агентом и гостем."
       }
     },
     {
       "from": "problem:tourism-booking-confirmation-failures",
       "to": "problem:ai-agent-governance-gaps",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Cross-party digital assistants need bounded mandates for rebooking and refunds.",
+        "ru": "Межсторонние агенты должны иметь ограниченные полномочия на замены и возвраты."
       }
     },
     {
@@ -6236,30 +6236,30 @@
       "from": "problem:ai-leads-outpace-sales-operations",
       "to": "problem:operational-handoffs-lose-decisions",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Higher demand exposes fragmented sales-to-delivery hand-offs.",
+        "ru": "Рост спроса выявляет разрывы между продажами и исполнением."
       }
     },
     {
       "from": "problem:ai-leads-outpace-sales-operations",
       "to": "problem:ai-pilots-fail-to-scale",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "A locally successful AI pilot can worsen the end-to-end commercial process.",
+        "ru": "Успешный локальный AI-пилот может ухудшить сквозной коммерческий процесс."
       }
     },
     {
       "from": "problem:ai-leads-outpace-sales-operations",
       "to": "problem:fragmented-erp-crm-ai-data",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Qualification depends on reliable customer, contract and capacity data.",
+        "ru": "Квалификация спроса зависит от надёжных данных клиента и загрузки."
       }
     },
     {
@@ -6386,30 +6386,30 @@
       "from": "problem:workforce-ai-role-uncertainty",
       "to": "problem:key-person-decision-dependency",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Preserving expert knowledge is part of responsible role transition.",
+        "ru": "Сохранение экспертных решений входит в ответственное изменение ролей."
       }
     },
     {
       "from": "problem:workforce-ai-role-uncertainty",
       "to": "problem:ai-pilots-fail-to-scale",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "AI adoption needs new responsibilities and success criteria, not just a pilot.",
+        "ru": "Внедрение AI требует новых обязанностей и критериев, а не только пилота."
       }
     },
     {
       "from": "problem:workforce-ai-role-uncertainty",
       "to": "problem:operational-handoffs-lose-decisions",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Ambiguous task boundaries amplify conflict during organizational change.",
+        "ru": "Размытые границы задач усиливают конфликты при трансформации."
       }
     },
     {
@@ -6536,30 +6536,30 @@
       "from": "problem:multilingual-enterprise-context-loss",
       "to": "problem:fragmented-erp-crm-ai-data",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Inconsistent entity meanings become harder to resolve across languages.",
+        "ru": "Несогласованные значения сущностей сложнее исправить между языками."
       }
     },
     {
       "from": "problem:multilingual-enterprise-context-loss",
       "to": "problem:key-person-decision-dependency",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Expert decision logic must survive translation with preserved provenance.",
+        "ru": "Экспертная логика должна сохраняться при переводе вместе с источниками."
       }
     },
     {
       "from": "problem:multilingual-enterprise-context-loss",
       "to": "problem:operational-handoffs-lose-decisions",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Translated agreements still need an accountable next-action owner.",
+        "ru": "Переведённые договорённости требуют ответственного исполнителя следующего шага."
       }
     },
     {
@@ -6686,30 +6686,30 @@
       "from": "problem:private-equity-portfolio-invisible-synergies",
       "to": "problem:post-merger-systems-fragmented",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "M&A operational integration is one route to portfolio-level value.",
+        "ru": "Операционная интеграция M&A — один из путей создания стоимости портфеля."
       }
     },
     {
       "from": "problem:private-equity-portfolio-invisible-synergies",
       "to": "problem:supplier-delivery-status-blindspots",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Verified cross-company supplier capabilities can reveal shared-service opportunities.",
+        "ru": "Проверенные компетенции поставщиков могут раскрыть возможности общих сервисов."
       }
     },
     {
       "from": "problem:private-equity-portfolio-invisible-synergies",
       "to": "problem:unvalidated-investment-thesis",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Synergy claims should be compared as testable investment hypotheses.",
+        "ru": "Гипотезы синергии необходимо сравнивать как проверяемые инвестиционные предположения."
       }
     },
     {
@@ -6836,30 +6836,30 @@
       "from": "problem:cross-company-ai-trust-boundaries",
       "to": "problem:supplier-delivery-status-blindspots",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "requires-capability",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Contractor coordination provides real business scenarios for inter-agent protocols.",
+        "ru": "Координация подрядчиков даёт реальные сценарии межагентных протоколов."
       }
     },
     {
       "from": "problem:cross-company-ai-trust-boundaries",
       "to": "problem:ai-agent-governance-gaps",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "shares-control-boundary",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Autonomous permissions and audit trails are required across organizational boundaries.",
+        "ru": "На межкорпоративной границе необходимы полномочия и журналы действий."
       }
     },
     {
       "from": "problem:cross-company-ai-trust-boundaries",
       "to": "problem:outsourced-accounting-data-exposure",
       "type": "SEMANTIC_RELATION",
-      "relation": "architectural-dependency",
+      "relation": "reuses-validation-pattern",
       "rationale": {
-        "en": "These problems share a system boundary or a capability to validate before implementation.",
-        "ru": "Эти проблемы связаны границей систем или компетенцией, требующей проверки до внедрения."
+        "en": "Least-privilege data exchange requires lawful access and provenance controls.",
+        "ru": "Передача минимальных данных требует законного доступа и прослеживаемости."
       }
     }
   ]

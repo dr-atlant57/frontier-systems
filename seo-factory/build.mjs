@@ -94,6 +94,7 @@ export function build(data){
  const lines=["slug,language,query,validation"];
  for(const p of data.issues)for(const l of ["en","ru"])for(const q of p[l].queries)lines.push([p.slug,l,'"'+q.replace(/"/g,'""')+'"',"intent-hypothesis"].join(","));
  files["seo-factory/query-backlog.csv"]=lines.join("\n")+"\n";
+ files["seo-factory/audit-source-map.json"]=JSON.stringify(Object.fromEntries(data.issues.map(p=>[p.slug,{title:p.ru.title,group:p.category,returnUrl:"/problems/ru/"+p.slug+"/",suggestions:p.suggestedAuditFlags||[]}])),null,2)+"\n";
  files["problems/graph.json"]=JSON.stringify(knowledgeGraph(data),null,2)+"\n";
  return files;
 }
