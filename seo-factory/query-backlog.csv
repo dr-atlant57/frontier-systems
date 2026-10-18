@@ -79,3 +79,83 @@ fragmented-resilience-incident-response,ru,"бэкап есть но бизне�
 fragmented-resilience-incident-response,ru,"проверка аварийного восстановления компании",intent-hypothesis
 fragmented-resilience-incident-response,ru,"устойчивость ИТ инфраструктуры предприятия",intent-hypothesis
 fragmented-resilience-incident-response,ru,"согласование резервных систем и процессов",intent-hypothesis
+bank-core-modernization-without-disruption,en,"core banking modernization without downtime",intent-hypothesis
+bank-core-modernization-without-disruption,en,"bank core replacement risk",intent-hypothesis
+bank-core-modernization-without-disruption,en,"legacy banking systems integration AI",intent-hypothesis
+bank-core-modernization-without-disruption,en,"banking platform phased migration",intent-hypothesis
+bank-core-modernization-without-disruption,ru,"модернизация банковского ядра без остановки",intent-hypothesis
+bank-core-modernization-without-disruption,ru,"риск замены core banking",intent-hypothesis
+bank-core-modernization-without-disruption,ru,"интеграция старых банковских систем с ИИ",intent-hypothesis
+bank-core-modernization-without-disruption,ru,"поэтапная миграция банковских систем",intent-hypothesis
+outsourced-accounting-data-exposure,en,"outsourced accounting data privacy",intent-hypothesis
+outsourced-accounting-data-exposure,en,"accounting contractors sensitive company data",intent-hypothesis
+outsourced-accounting-data-exposure,en,"privacy preserving accounting workflow",intent-hypothesis
+outsourced-accounting-data-exposure,en,"audit trail outsourced bookkeeping",intent-hypothesis
+outsourced-accounting-data-exposure,ru,"конфиденциальность бухгалтерского аутсорсинга",intent-hypothesis
+outsourced-accounting-data-exposure,ru,"бухгалтер на удалёнке доступ к данным",intent-hypothesis
+outsourced-accounting-data-exposure,ru,"защита данных клиентов бухгалтерской компании",intent-hypothesis
+outsourced-accounting-data-exposure,ru,"разделение обязанностей бухгалтеров",intent-hypothesis
+supplier-delivery-status-blindspots,en,"supplier capacity visibility software",intent-hypothesis
+supplier-delivery-status-blindspots,en,"contractor status tracking across companies",intent-hypothesis
+supplier-delivery-status-blindspots,en,"B2B delivery coordination problems",intent-hypothesis
+supplier-delivery-status-blindspots,en,"supplier network capability mapping",intent-hypothesis
+supplier-delivery-status-blindspots,ru,"нет информации о загрузке подрядчиков",intent-hypothesis
+supplier-delivery-status-blindspots,ru,"как контролировать исполнение подрядных работ",intent-hypothesis
+supplier-delivery-status-blindspots,ru,"сеть проверенных поставщиков и исполнителей",intent-hypothesis
+supplier-delivery-status-blindspots,ru,"согласование статусов между компаниями",intent-hypothesis
+building-energy-losses-unverified,en,"energy loss audit no savings verified",intent-hypothesis
+building-energy-losses-unverified,en,"thermography maintenance repair verification",intent-hypothesis
+building-energy-losses-unverified,en,"industrial electricity loss monitoring",intent-hypothesis
+building-energy-losses-unverified,en,"measuring energy savings after repair",intent-hypothesis
+building-energy-losses-unverified,ru,"тепловизионное обследование экономия не подтверждена",intent-hypothesis
+building-energy-losses-unverified,ru,"сокращение потерь электричества на предприятии",intent-hypothesis
+building-energy-losses-unverified,ru,"энергоаудит после ремонта проверка",intent-hypothesis
+building-energy-losses-unverified,ru,"мониторинг энергопотерь и ремонт",intent-hypothesis
+tourism-booking-confirmation-failures,en,"hotel booking confirmed room not available",intent-hypothesis
+tourism-booking-confirmation-failures,en,"tourism service failure replacement process",intent-hypothesis
+tourism-booking-confirmation-failures,en,"travel host confirmation system",intent-hypothesis
+tourism-booking-confirmation-failures,en,"tourist complaint resolution platform",intent-hypothesis
+tourism-booking-confirmation-failures,ru,"забронировано но гостиница не предоставила номер",intent-hypothesis
+tourism-booking-confirmation-failures,ru,"срыв туристических услуг компенсация",intent-hypothesis
+tourism-booking-confirmation-failures,ru,"система подтверждения брони у хостов",intent-hypothesis
+tourism-booking-confirmation-failures,ru,"решение проблем туристов в поездке",intent-hypothesis
+ai-leads-outpace-sales-operations,en,"AI lead generation too many low quality leads",intent-hypothesis
+ai-leads-outpace-sales-operations,en,"sales leads overwhelm operations",intent-hypothesis
+ai-leads-outpace-sales-operations,en,"lead volume increases but revenue not",intent-hypothesis
+ai-leads-outpace-sales-operations,en,"sales automation order fulfillment bottleneck",intent-hypothesis
+ai-leads-outpace-sales-operations,ru,"лидов стало больше продаж не стало",intent-hypothesis
+ai-leads-outpace-sales-operations,ru,"AI лидогенерация не приносит выручку",intent-hypothesis
+ai-leads-outpace-sales-operations,ru,"отдел продаж не успевает обрабатывать заявки",intent-hypothesis
+ai-leads-outpace-sales-operations,ru,"узкое место CRM между продажами и исполнением",intent-hypothesis
+workforce-ai-role-uncertainty,en,"employee resistance to AI adoption",intent-hypothesis
+workforce-ai-role-uncertainty,en,"AI workforce role redesign",intent-hypothesis
+workforce-ai-role-uncertainty,en,"workers afraid of AI replacement enterprise",intent-hypothesis
+workforce-ai-role-uncertainty,en,"human centered AI transformation",intent-hypothesis
+workforce-ai-role-uncertainty,ru,"сотрудники сопротивляются внедрению ИИ",intent-hypothesis
+workforce-ai-role-uncertainty,ru,"страх сокращений из за искусственного интеллекта",intent-hypothesis
+workforce-ai-role-uncertainty,ru,"изменение ролей сотрудников при AI",intent-hypothesis
+workforce-ai-role-uncertainty,ru,"как внедрить ИИ без сопротивления команды",intent-hypothesis
+multilingual-enterprise-context-loss,en,"multilingual team communication lost context",intent-hypothesis
+multilingual-enterprise-context-loss,en,"AI translation business decision risk",intent-hypothesis
+multilingual-enterprise-context-loss,en,"enterprise multilingual knowledge management",intent-hypothesis
+multilingual-enterprise-context-loss,en,"cross border meetings agreement translation",intent-hypothesis
+multilingual-enterprise-context-loss,ru,"ИИ перевод теряет контекст переговоров",intent-hypothesis
+multilingual-enterprise-context-loss,ru,"ошибки перевода международной команды",intent-hypothesis
+multilingual-enterprise-context-loss,ru,"многоязычный корпоративный граф знаний",intent-hypothesis
+multilingual-enterprise-context-loss,ru,"фиксирование решений многоязычных встреч",intent-hypothesis
+private-equity-portfolio-invisible-synergies,en,"private equity portfolio synergies unrealized",intent-hypothesis
+private-equity-portfolio-invisible-synergies,en,"operating partner portfolio visibility",intent-hypothesis
+private-equity-portfolio-invisible-synergies,en,"cross portfolio procurement synergies",intent-hypothesis
+private-equity-portfolio-invisible-synergies,en,"PE value creation operating model",intent-hypothesis
+private-equity-portfolio-invisible-synergies,ru,"неиспользованная синергия компаний холдинга",intent-hypothesis
+private-equity-portfolio-invisible-synergies,ru,"эффект объединения портфеля предприятий",intent-hypothesis
+private-equity-portfolio-invisible-synergies,ru,"private equity рост стоимости активов",intent-hypothesis
+private-equity-portfolio-invisible-synergies,ru,"общие закупки разных компаний",intent-hypothesis
+cross-company-ai-trust-boundaries,en,"AI agents across companies security",intent-hypothesis
+cross-company-ai-trust-boundaries,en,"agent to agent business protocol trust",intent-hypothesis
+cross-company-ai-trust-boundaries,en,"enterprise AI agents supplier negotiation governance",intent-hypothesis
+cross-company-ai-trust-boundaries,en,"cross company AI data sharing controls",intent-hypothesis
+cross-company-ai-trust-boundaries,ru,"агенты ИИ между компаниями безопасность",intent-hypothesis
+cross-company-ai-trust-boundaries,ru,"межкорпоративный обмен AI агентами",intent-hypothesis
+cross-company-ai-trust-boundaries,ru,"полномочия ИИ на переговорах",intent-hypothesis
+cross-company-ai-trust-boundaries,ru,"как связать AI агентов поставщика и клиента",intent-hypothesis

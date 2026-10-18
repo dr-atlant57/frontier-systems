@@ -1,18 +1,20 @@
-# ROOT FRONTIER — Semantic Problem Intelligence Factory
-Updated: 2026-10-18.
+# ROOT FRONTIER — Semantic SEO Content Factory
 
-## Current assets
-- 10 unique problem clusters, each with EN/RU static research pages (20 topical URLs)
-- 80 unverified search-intent hypotheses, reciprocal localized links and sitemap
-- Audit handoff: selected topic slug -> human-confirmed red flags -> client estimated impact/budget -> Architecture Blueprint
-- Project Lab selectable 12-capability portfolio
-- **Typed semantic graph:** `/problems/graph.json` generated from editorial `seo-factory/seed.json`. Nodes include problem, symptom, hypothesized cause, architecture alternative, metric, capability, proposed deliverable and unvalidated search intent.
-- Explicit typed, editorially reviewed relations between problems; used to render contextual related pages instead of arbitrary neighbors.
+## October 18, 2026 release
+- **20 independent problem clusters** with fully authored EN and RU dossiers (**40 topical URLs**)
+- **160 search-intent hypotheses**, not measured keyword demand
+- Five browseable content areas: Enterprise AI & Operations, Capital / M&A, Human & Knowledge, Technology & Resilience, and Industry Architecture
+- Typed semantic graph at `/problems/graph.json` with related-problem links, architecture paths, symptom hypotheses, capabilities and acceptance metrics
+- Every article connects to `/audit/?problem=<slug>` and existing Audit → Blueprint
+- Suggested flag lists are presented for **explicit human selection**; impact and budget estimates remain voluntary client-side inputs
+- Individual architecture modules and their maturity status are in `/project-lab/`
 
-## Generate
-`node seo-factory/run.mjs` (Node 20+), then commit generated files. The generator is deterministic for the same seed.
+## Routine
+- Canonical source `seo-factory/seed.json`; regenerate static content with `node seo-factory/run.mjs` (Node 20+)
+- Update the embedded `const sourceMap` in `audit/index.html` from `seo-factory/audit-source-map.json` on adding issues (see sync script)
+- Check links, semantic graph node/edge integrity, translation quality and substantive difference between problem dossiers
+- Do not translate bulk pages to other locales until local search intent is examined and text is reviewed
+- Submit updated sitemap in Search Console; monitor indexing, qualified Audit visits, Blueprint starts and paid deals
 
-## Editorial and safety gates
-Only public, nonconfidential general hypotheses are in this graph. The graph is **not** a validated causal model or a statement about a particular enterprise. Every root-cause hypothesis needs evidence from authorized sources and experiments before client-specific use. Do not conflate query hypotheses with measured keyword volume, budget ranges with purchase commitments, or a prototype with ROI.
-
-Before producing other languages, research the localized search intent and conduct expert review. Search indexing and qualified leads need monitoring after deployment.
+## Evidence discipline
+All causes and solutions are research hypotheses until validated on authorized client evidence. Do not use case-study claims without rights or proof. Financial benefit estimates and budgets are visitor-supplied signals, never confirmed ROI or contracts. Do not attempt to monetize index volume alone.
