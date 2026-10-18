@@ -199,7 +199,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;font-size:.79rem;col
 <div class="field wide"><label for="problem" data-en="Main task *">Главная задача *</label><textarea name="problem" id="problem" minlength="10" maxlength="900" required placeholder="Что не работает сейчас и какого результата вы хотите добиться?" data-en-placeholder="What is not working and what result would matter?"></textarea></div>
 </div>
 <button class="button form-action" type="submit" data-en="Continue to WhatsApp →">Продолжить в WhatsApp →</button>
-<p class="form-footnote" data-en="Your answers stay in this browser until you choose to send the prepared message in WhatsApp. There is no automatic form submission or server-side lead storage.">Ответы остаются в браузере, пока вы сами не отправите подготовленное сообщение через WhatsApp. Автоматической передачи данных и серверного хранения заявок нет.</p>
+<p class="form-footnote" data-en="Pressing Continue opens WhatsApp with your text: WhatsApp may receive the text when the link opens, while the recipient receives it only after you press Send. This website does not store the form.">Нажатие кнопки откроет WhatsApp с текстом заявки: сервис WhatsApp может получить текст уже при открытии ссылки, а адресат — после вашего нажатия «Отправить». Наш сайт не сохраняет ответы.</p>
 <div class="handoff" id="handoff" hidden aria-live="polite"><p data-en="WhatsApp should open with your request. Please press Send there. If it did not open, use this link.">WhatsApp должен открыться с вашей заявкой. Нажмите «Отправить» в самом WhatsApp. Если окно не открылось, воспользуйтесь ссылкой:</p><a id="openWhatsApp" href="#" target="_blank" rel="noopener noreferrer" data-en="Open the prepared message ↗">Открыть подготовленное сообщение ↗</a></div>
 </form>
 </div>
@@ -239,7 +239,8 @@ document.title=lang==="en"?"Enterprise AI Architecture — ROOT FRONTIER SYSTEMS
 buttons.ru.addEventListener("click",function(){setLanguage("ru")});
 buttons.en.addEventListener("click",function(){setLanguage("en")});
 var query=new URLSearchParams(location.search);
-var initial=query.get("lang")==="en"||(!query.has("lang")&&((localStorage.getItem("frontier-language")||navigator.language||"ru").toLowerCase().startsWith("en")))?"en":"ru";
+var storedLanguage="";try{storedLanguage=localStorage.getItem("frontier-language")||""}catch(e){};
+var initial=query.get("lang")==="en"||(!query.has("lang")&&((storedLanguage||navigator.language||"ru").toLowerCase().startsWith("en")))?"en":"ru";
 setLanguage(initial);
 var form=document.getElementById("leadForm");
 form.addEventListener("submit",function(event){
@@ -263,8 +264,8 @@ var url="https://wa.me/996998066098?text="+encodeURIComponent(message);
 document.getElementById("openWhatsApp").href=url;
 document.getElementById("handoff").hidden=false;
 if(Array.isArray(window.dataLayer))window.dataLayer.push({event:"rfs_lead_handoff",lead_channel:"whatsapp",lead_offer:"enterprise_ai"});
-var popup=window.open(url,"_blank","noopener,noreferrer");
-if(!popup){document.getElementById("openWhatsApp").focus()}
+window.open(url,"_blank","noopener,noreferrer");
+document.getElementById("openWhatsApp").focus();
 });
 })();
 </script>
