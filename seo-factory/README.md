@@ -1,16 +1,18 @@
-# ROOT FRONTIER — SEO Semantic Problem Factory
-Updated October 18, 2026.
+# ROOT FRONTIER — Semantic Problem Intelligence Factory
+Updated: 2026-10-18.
 
-## Included
-- Ten independently written EN/RU problem dossiers and two localized indexes.
-- Deterministic Node generator: `node seo-factory/run.mjs`; canonical, hreflang, sitemap and query backlog.
-- All dossier CTA links now preserve a known, non-sensitive problem slug: `/audit/?problem=<slug>`.
-- The existing 48-flag audit presents a **human-confirmed** suggested subset for that problem. No flag is auto-selected.
-- Optional self-assessed economic impact and budget ranges in the audit, kept locally in sessionStorage and exported to the Architecture Blueprint markdown.
-- No automatic server collection, no auto-price quote, no inferred verified ROI.
+## Current assets
+- 10 unique problem clusters, each with EN/RU static research pages (20 topical URLs)
+- 80 unverified search-intent hypotheses, reciprocal localized links and sitemap
+- Audit handoff: selected topic slug -> human-confirmed red flags -> client estimated impact/budget -> Architecture Blueprint
+- Project Lab selectable 12-capability portfolio
+- **Typed semantic graph:** `/problems/graph.json` generated from editorial `seo-factory/seed.json`. Nodes include problem, symptom, hypothesized cause, architecture alternative, metric, capability, proposed deliverable and unvalidated search intent.
+- Explicit typed, editorially reviewed relations between problems; used to render contextual related pages instead of arbitrary neighbors.
 
-## Next
-1. Publish, smoke-test EN/RU links and audit→blueprint transition.
-2. Connect qualified consented contacts to Revenue Engine with explicit submit action.
-3. Verify actual keyword demand and organic pages with Google Search Console.
-4. Extend only well-evidenced, distinct problem clusters; research and review each translation before creating locale URLs.
+## Generate
+`node seo-factory/run.mjs` (Node 20+), then commit generated files. The generator is deterministic for the same seed.
+
+## Editorial and safety gates
+Only public, nonconfidential general hypotheses are in this graph. The graph is **not** a validated causal model or a statement about a particular enterprise. Every root-cause hypothesis needs evidence from authorized sources and experiments before client-specific use. Do not conflate query hypotheses with measured keyword volume, budget ranges with purchase commitments, or a prototype with ROI.
+
+Before producing other languages, research the localized search intent and conduct expert review. Search indexing and qualified leads need monitoring after deployment.

@@ -123,7 +123,41 @@
         ],
         "buyer": "CEO · COO · CIO · руководитель AI",
         "deliverable": "Архитектура одного ограниченного пилота с ответственными, тестами и решением о масштабировании."
-      }
+      },
+      "related": [
+        {
+          "to": "fragmented-erp-crm-ai-data",
+          "type": "requires-data-coherence",
+          "rationale": {
+            "en": "Reliable AI workflows depend on consistent enterprise context.",
+            "ru": "Надёжные AI-процессы требуют согласованных корпоративных данных."
+          }
+        },
+        {
+          "to": "ai-agent-governance-gaps",
+          "type": "requires-control",
+          "rationale": {
+            "en": "Moving to production requires explicit agent authority.",
+            "ru": "Эксплуатация требует определённых полномочий агентов."
+          }
+        },
+        {
+          "to": "operational-handoffs-lose-decisions",
+          "type": "requires-process-redesign",
+          "rationale": {
+            "en": "Scaling a pilot may expose broken organizational hand-offs.",
+            "ru": "Масштабирование пилота может выявить разрывы между отделами."
+          }
+        },
+        {
+          "to": "ai-compute-cost-without-value",
+          "type": "affects-unit-economics",
+          "rationale": {
+            "en": "Accepted business outcomes must be measured against full inference and review cost.",
+            "ru": "Результат необходимо сопоставлять с полной стоимостью моделей и проверки."
+          }
+        }
+      ]
     },
     {
       "slug": "post-merger-systems-fragmented",
@@ -228,7 +262,33 @@
         ],
         "buyer": "Инвестиционный фонд · CFO · руководитель интеграции",
         "deliverable": "Сравнительная архитектура интеграции и проверяемый пилот одной синергии."
-      }
+      },
+      "related": [
+        {
+          "to": "fragmented-erp-crm-ai-data",
+          "type": "shares-data-fragmentation",
+          "rationale": {
+            "en": "Group integration depends on common entity meanings.",
+            "ru": "Интеграция компаний требует общих значений сущностей."
+          }
+        },
+        {
+          "to": "operational-handoffs-lose-decisions",
+          "type": "shares-process-boundaries",
+          "rationale": {
+            "en": "Acquired companies often lack shared process ownership.",
+            "ru": "После поглощений часто отсутствуют владельцы сквозных процессов."
+          }
+        },
+        {
+          "to": "legacy-platform-lock-in",
+          "type": "affected-by-legacy-dependency",
+          "rationale": {
+            "en": "Legacy platforms constrain post-merger unification choices.",
+            "ru": "Зависимость от наследуемых платформ ограничивает выбор интеграции."
+          }
+        }
+      ]
     },
     {
       "slug": "key-person-decision-dependency",
@@ -333,7 +393,33 @@
         ],
         "buyer": "Собственник · COO · преемник",
         "deliverable": "Проверенная библиотека решений и ограниченный пилот преемственности."
-      }
+      },
+      "related": [
+        {
+          "to": "operational-handoffs-lose-decisions",
+          "type": "requires-decision-ownership",
+          "rationale": {
+            "en": "Tacit expertise often masks unclear decision ownership.",
+            "ru": "Неявная экспертиза может маскировать отсутствие ясных полномочий."
+          }
+        },
+        {
+          "to": "fragmented-erp-crm-ai-data",
+          "type": "requires-evidence-provenance",
+          "rationale": {
+            "en": "Verified decision transfer depends on traceable permitted records.",
+            "ru": "Проверяемая передача решений требует прослеживаемых разрешённых источников."
+          }
+        },
+        {
+          "to": "ai-agent-governance-gaps",
+          "type": "requires-bounded-autonomy",
+          "rationale": {
+            "en": "Delegation requires permission limits and human review.",
+            "ru": "Передача задач AI требует ограничений и контроля человека."
+          }
+        }
+      ]
     },
     {
       "slug": "fragmented-erp-crm-ai-data",
@@ -438,7 +524,33 @@
         ],
         "buyer": "CIO · директор по данным · CTO",
         "deliverable": "Карта от источника к решению и проверенная межсистемная архитектура."
-      }
+      },
+      "related": [
+        {
+          "to": "legacy-platform-lock-in",
+          "type": "shares-semantic-constraints",
+          "rationale": {
+            "en": "Proprietary data representations can block common meaning.",
+            "ru": "Закрытые форматы данных могут мешать формированию общей семантики."
+          }
+        },
+        {
+          "to": "post-merger-systems-fragmented",
+          "type": "enables-integration",
+          "rationale": {
+            "en": "An entity graph can support cross-company interoperability.",
+            "ru": "Граф сущностей может поддерживать межкорпоративную совместимость."
+          }
+        },
+        {
+          "to": "ai-pilots-fail-to-scale",
+          "type": "blocks-production-ai",
+          "rationale": {
+            "en": "Fragmented records can undermine production AI reliability.",
+            "ru": "Разрозненные записи снижают надёжность промышленного AI."
+          }
+        }
+      ]
     },
     {
       "slug": "ai-agent-governance-gaps",
@@ -543,7 +655,33 @@
         ],
         "buyer": "CISO · CIO · комплаенс · руководитель AI",
         "deliverable": "Архитектура контролируемых полномочий с проверяемой эскалацией."
-      }
+      },
+      "related": [
+        {
+          "to": "fragmented-resilience-incident-response",
+          "type": "requires-recovery-path",
+          "rationale": {
+            "en": "Agent actions need detection, rollback and recovery procedures.",
+            "ru": "Действия агентов требуют обнаружения ошибок, отката и восстановления."
+          }
+        },
+        {
+          "to": "ai-pilots-fail-to-scale",
+          "type": "affects-scale-readiness",
+          "rationale": {
+            "en": "Undefined agent authority blocks responsible scale-up.",
+            "ru": "Неопределённые полномочия мешают ответственному масштабированию."
+          }
+        },
+        {
+          "to": "ai-compute-cost-without-value",
+          "type": "introduces-control-cost",
+          "rationale": {
+            "en": "Audit and verification contribute to the full cost of accepted outcomes.",
+            "ru": "Аудит и проверка входят в полную стоимость принятого результата."
+          }
+        }
+      ]
     },
     {
       "slug": "unvalidated-investment-thesis",
@@ -648,7 +786,33 @@
         ],
         "buyer": "Венчурный фонд · Family Office · CVC · Venture Builder",
         "deliverable": "Сравнительное архитектурное досье и поэтапный план экспериментального финансирования."
-      }
+      },
+      "related": [
+        {
+          "to": "ai-pilots-fail-to-scale",
+          "type": "requires-stage-gates",
+          "rationale": {
+            "en": "Early product evidence does not prove a scalable operating process.",
+            "ru": "Ранняя демонстрация не доказывает масштабируемость процесса."
+          }
+        },
+        {
+          "to": "ai-compute-cost-without-value",
+          "type": "requires-unit-economics",
+          "rationale": {
+            "en": "Investment decisions should include full delivery cost.",
+            "ru": "Инвестиционное решение требует расчёта полной стоимости исполнения."
+          }
+        },
+        {
+          "to": "post-merger-systems-fragmented",
+          "type": "may-recombine-assets",
+          "rationale": {
+            "en": "Existing portfolio assets can form alternative venture configurations.",
+            "ru": "Существующие активы портфеля могут стать основой новой компании."
+          }
+        }
+      ]
     },
     {
       "slug": "operational-handoffs-lose-decisions",
@@ -753,7 +917,33 @@
         ],
         "buyer": "COO · директор по трансформации · операционный директор",
         "deliverable": "Карта реальных передач и проверенный эксперимент по координации."
-      }
+      },
+      "related": [
+        {
+          "to": "post-merger-systems-fragmented",
+          "type": "amplified-by-merger",
+          "rationale": {
+            "en": "M&A integration creates new boundaries for task hand-offs.",
+            "ru": "Слияния создают новые границы передачи задач."
+          }
+        },
+        {
+          "to": "key-person-decision-dependency",
+          "type": "shares-human-knowledge-risk",
+          "rationale": {
+            "en": "Undocumented expert rules can cause cross-team delays.",
+            "ru": "Неформализованные правила экспертов задерживают межотдельные решения."
+          }
+        },
+        {
+          "to": "ai-pilots-fail-to-scale",
+          "type": "affects-adoption",
+          "rationale": {
+            "en": "Automating local tasks cannot fix an incoherent end-to-end process.",
+            "ru": "Автоматизация отдельных задач не исправляет несогласованный сквозной процесс."
+          }
+        }
+      ]
     },
     {
       "slug": "ai-compute-cost-without-value",
@@ -858,7 +1048,33 @@
         ],
         "buyer": "CFO · CTO · руководитель AI-инфраструктуры",
         "deliverable": "Измеренная модель стоимости процессов и эксперимент по оптимизации."
-      }
+      },
+      "related": [
+        {
+          "to": "ai-pilots-fail-to-scale",
+          "type": "affects-commercial-viability",
+          "rationale": {
+            "en": "Production scale requires accepted-outcome economics.",
+            "ru": "Масштабирование требует экономики проверенного результата."
+          }
+        },
+        {
+          "to": "ai-agent-governance-gaps",
+          "type": "requires-governed-efficiency",
+          "rationale": {
+            "en": "Reducing cost must not bypass required controls.",
+            "ru": "Оптимизация затрат не должна обходить необходимые ограничения."
+          }
+        },
+        {
+          "to": "unvalidated-investment-thesis",
+          "type": "affects-investment-case",
+          "rationale": {
+            "en": "Compute operating expenses change the venture feasibility case.",
+            "ru": "Эксплуатационные расходы Compute влияют на инвестиционную реализуемость."
+          }
+        }
+      ]
     },
     {
       "slug": "legacy-platform-lock-in",
@@ -963,7 +1179,33 @@
         ],
         "buyer": "CIO · CTO · архитектор предприятия",
         "deliverable": "Поэтапная архитектура снижения зависимости и обратимый миграционный эксперимент."
-      }
+      },
+      "related": [
+        {
+          "to": "fragmented-erp-crm-ai-data",
+          "type": "causes-integration-friction",
+          "rationale": {
+            "en": "Proprietary interfaces can prevent reusable data contracts.",
+            "ru": "Закрытые интерфейсы мешают универсальным контрактам данных."
+          }
+        },
+        {
+          "to": "post-merger-systems-fragmented",
+          "type": "slows-merger-integration",
+          "rationale": {
+            "en": "Dependence on inherited systems delays cross-company integration.",
+            "ru": "Зависимость от наследуемых систем тормозит объединение компаний."
+          }
+        },
+        {
+          "to": "fragmented-resilience-incident-response",
+          "type": "affects-recovery",
+          "rationale": {
+            "en": "Opaque dependencies complicate safe restoration.",
+            "ru": "Непрозрачные зависимости осложняют безопасное восстановление."
+          }
+        }
+      ]
     },
     {
       "slug": "fragmented-resilience-incident-response",
@@ -1068,7 +1310,33 @@
         ],
         "buyer": "CIO · CISO · COO · руководитель устойчивости",
         "deliverable": "Граф зависимостей бизнес-услуги и одно измеренное испытание восстановления."
-      }
+      },
+      "related": [
+        {
+          "to": "legacy-platform-lock-in",
+          "type": "shares-operational-dependency",
+          "rationale": {
+            "en": "Recovery plans must account for inherited vendor and service limitations.",
+            "ru": "Планы восстановления должны учитывать ограничения унаследованных систем."
+          }
+        },
+        {
+          "to": "ai-agent-governance-gaps",
+          "type": "needs-safe-shutdown",
+          "rationale": {
+            "en": "Autonomous tools require traceable stop and recovery paths.",
+            "ru": "Автономные инструменты требуют проверяемой остановки и восстановления."
+          }
+        },
+        {
+          "to": "operational-handoffs-lose-decisions",
+          "type": "requires-coordination",
+          "rationale": {
+            "en": "Restoring business services requires coordinated roles, not only backups.",
+            "ru": "Восстановление услуг требует координации ролей, а не только резервных копий."
+          }
+        }
+      ]
     }
   ]
 }

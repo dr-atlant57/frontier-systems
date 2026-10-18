@@ -15,7 +15,7 @@ function bullets(items){return '<ul>'+items.map(s=>'<li>'+esc(s)+'</li>').join("
 function topicPage(data,index,lang){
  const p=data.issues[index],d=p[lang],t=text[lang],other=lang==="en"?"ru":"en",path="/problems/"+lang+"/"+p.slug+"/";
  const optionCards=d.options.map((op,i)=>'<article class="option"><span class="eyebrow">0'+(i+1)+'</span><h3>'+esc(op[0])+'</h3><p>'+esc(op[1])+'</p></article>').join("");
- const related=data.issues.filter(x=>x.slug!==p.slug).slice(0,4).map(x=>'<a class="related" href="/problems/'+lang+'/'+x.slug+'/"><small>'+esc(x.category)+'</small><strong>'+esc(x[lang].title)+' ↗</strong></a>').join("");
+ const related=(p.related||[]).map(r=>data.issues.find(x=>x.slug===r.to)).filter(Boolean).slice(0,4).map(x=>'<a class="related" href="/problems/'+lang+'/'+x.slug+'/"><small>'+esc(x.category)+'</small><strong>'+esc(x[lang].title)+' ↗</strong></a>').join("");
  const body='<div class="eyebrow">ROOT FRONTIER / '+esc(p.category)+'</div><p class="breadcrumb"><a href="/problems/'+lang+'/">'+esc(t.back)+'</a> / '+esc(p.category)+'</p>'+
  '<section class="hero"><p class="eyebrow">'+esc(t.status)+'</p><h1>'+esc(d.title)+'</h1><p class="lead">'+esc(d.tagline)+'</p><p class="overview">'+esc(d.problem)+'</p><div class="buttons"><a class="primary" href="/audit/?problem='+encodeURIComponent(p.slug)+'">'+esc(t.audit)+' ↗</a><a class="ghost" href="/contact/">'+esc(t.discuss)+' ↗</a></div><small>'+esc(t.notes)+'</small><p class="language"><a href="/problems/'+other+'/'+p.slug+'/">'+esc(t.lang)+' ↗</a></p></section>'+
  '<section class="columns"><article class="panel"><h2>'+esc(t.sym)+'</h2>'+bullets(d.symptoms)+'</article><article class="panel"><h2>'+esc(t.cause)+'</h2>'+bullets(d.causes)+'</article></section>'+
@@ -39,8 +39,28 @@ function sitemap(data){
  let rows=[["/",null],["/audit/",null],["/audit/architecture/",null],["/project-lab/",null],["/problems/",null]];
  for(const l of ["en","ru"])rows.push(["/problems/"+l+"/",null]);
  for(const p of data.issues)for(const l of ["en","ru"])rows.push(["/problems/"+l+"/"+p.slug+"/",p.slug]);
- return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+rows.map(([path,slug])=>'<url><loc>'+absolute(path)+'</loc><lastmod>2026-10-17</lastmod>'+(!slug?'':["en","ru"].map(l=>'<xhtml:link rel="alternate" hreflang="'+l+'" href="'+absolute("/problems/"+l+"/"+slug+"/")+'"/>').join(""))+'</url>').join("\n")+'\n</urlset>\n';
+ return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+rows.map(([path,slug])=>'<url><loc>'+absolute(path)+'</loc><lastmod>'+esc(data.editorial_date||"2026-10-18")+'</lastmod>'+(!slug?'':["en","ru"].map(l=>'<xhtml:link rel="alternate" hreflang="'+l+'" href="'+absolute("/problems/"+l+"/"+slug+"/")+'"/>').join(""))+'</url>').join("\n")+'\n</urlset>\n';
 }
+
+function knowledgeGraph(data){
+ const nodes=[],edges=[],seen=new Set();
+ const node=(id,type,properties)=>{if(seen.has(id))return;seen.add(id);nodes.push({id,type,...properties});};
+ const edge=(from,to,type,meta={})=>edges.push({from,to,type,...meta});
+ for(const p of data.issues){
+  const id="problem:"+p.slug;
+  node(id,"problem",{status:"editorial-hypothesis",category:p.category,url:"/problems/en/"+p.slug+"/",label:{en:p.en.title,ru:p.ru.title}});
+  for(let i=0;i<p.en.causes.length;i++){const n="cause:"+p.slug+":"+i;node(n,"hypothesized-cause",{label:{en:p.en.causes[i],ru:p.ru.causes[i]}});edge(id,n,"MAY_HAVE_CAUSE");}
+  for(let i=0;i<p.en.symptoms.length;i++){const n="symptom:"+p.slug+":"+i;node(n,"symptom",{label:{en:p.en.symptoms[i],ru:p.ru.symptoms[i]}});edge(id,n,"MAY_SHOW_SYMPTOM");}
+  for(let i=0;i<p.en.options.length;i++){const n="solution-option:"+p.slug+":"+i;node(n,"architecture-alternative",{label:{en:p.en.options[i][0],ru:p.ru.options[i][0]},explanation:{en:p.en.options[i][1],ru:p.ru.options[i][1]}});edge(id,n,"MAY_BE_ADDRESSED_BY");}
+  for(let i=0;i<p.en.metrics.length;i++){const n="metric:"+p.slug+":"+i;node(n,"validation-metric",{label:{en:p.en.metrics[i],ru:p.ru.metrics[i]}});edge(id,n,"SHOULD_BE_TESTED_USING");}
+  for(const m of p.modules){const n="module:"+m.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");node(n,"capability",{name:m});edge(id,n,"MAY_USE_CAPABILITY");}
+  const out="outcome:"+p.slug;node(out,"proposed-discovery-deliverable",{label:{en:p.en.deliverable,ru:p.ru.deliverable}});edge(id,out,"PROPOSES_DISCOVERY_OUTPUT");
+  for(const lang of ["en","ru"])for(let i=0;i<p[lang].queries.length;i++){const n="intent:"+p.slug+":"+lang+":"+i;node(n,"unvalidated-search-intent",{lang,text:p[lang].queries[i],validation:"not-volume-verified"});edge(n,id,"DESCRIBES_POSSIBLE_NEED");}
+  for(const r of p.related||[])edge(id,"problem:"+r.to,"SEMANTIC_RELATION",{relation:r.type,rationale:r.rationale});
+ }
+ return {schema:"rfs.architecture-problem-graph.v1",editorialDate:data.editorial_date,validation:"hypothesis-graph; not verified enterprise facts or search volumes",nodeCount:nodes.length,edgeCount:edges.length,nodes,edges};
+}
+
 export function build(data){
  if(!data.issues?.length)throw Error("Missing issues");
  const files={},used=new Set();
@@ -61,5 +81,6 @@ export function build(data){
  const lines=["slug,language,query,validation"];
  for(const p of data.issues)for(const l of ["en","ru"])for(const q of p[l].queries)lines.push([p.slug,l,'"'+q.replace(/"/g,'""')+'"',"intent-hypothesis"].join(","));
  files["seo-factory/query-backlog.csv"]=lines.join("\n")+"\n";
+ files["problems/graph.json"]=JSON.stringify(knowledgeGraph(data),null,2)+"\n";
  return files;
 }
