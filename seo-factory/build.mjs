@@ -26,10 +26,23 @@ function topicPage(data,index,lang){
  '<section class="section"><h2>'+esc(t.related)+'</h2><div class="related-grid">'+related+'</div></section>';
  return frame(lang,d.title,d.description,path,p.slug,body);
 }
+const LENSES=[
+{id:"enterprise",en:"Enterprise AI & Operations",ru:"Корпоративный AI и операции"},
+{id:"capital",en:"Capital, Investment & M&A",ru:"Капитал, инвестиции и M&A"},
+{id:"human",en:"Human Systems & Knowledge",ru:"Люди, знания и роли"},
+{id:"integrations",en:"Technology, Trust & Resilience",ru:"Технологии, доверие и устойчивость"},
+{id:"industry",en:"Industry Architecture",ru:"Отраслевые архитектуры"}
+];
 function indexPage(data,lang){
  const t=text[lang],other=lang==="en"?"ru":"en",path="/problems/"+lang+"/";
- const items=data.issues.map(p=>'<article class="item"><div class="eyebrow">'+esc(p.category)+'</div><h2><a href="/problems/'+lang+'/'+p.slug+'/">'+esc(p[lang].title)+' ↗</a></h2><p>'+esc(p[lang].description)+'</p><small>'+esc(p.modules.join(" · "))+'</small></article>').join("");
- const body='<div class="eyebrow">ROOT FRONTIER / PROBLEM INTELLIGENCE</div><section class="hero"><h1>'+esc(t.atlas)+'</h1><p class="lead">'+esc(t.intro)+'</p><div class="buttons"><a class="primary" href="/audit/">'+esc(t.audit)+' ↗</a><a class="ghost" href="/project-lab/">'+esc(t.portfolio)+' ↗</a></div><p class="language"><a href="/problems/'+other+'/">'+esc(t.lang)+' ↗</a></p></section><section class="items">'+items+'</section><p class="fine">'+esc(t.methodBody)+'</p>';
+ const nav='<nav class="lens-nav" aria-label="'+(lang==="ru"?"Направления проблем":"Problem areas")+'">'+LENSES.map(l=>'<a href="#lens-'+l.id+'">'+esc(l[lang])+' ↗</a>').join("")+'</nav>';
+ const groups=LENSES.map(l=>{
+ const issues=data.issues.filter(p=>p.lane===l.id);
+ if(!issues.length)return "";
+ const items=issues.map(p=>'<article class="item"><div class="eyebrow">'+esc(p.category)+'</div><h3><a href="/problems/'+lang+'/'+p.slug+'/">'+esc(p[lang].title)+' ↗</a></h3><p>'+esc(p[lang].description)+'</p><small>'+esc(p.modules.join(" · "))+'</small></article>').join("");
+ return '<section class="lens-section" id="lens-'+l.id+'"><h2>'+esc(l[lang])+' <small>'+issues.length+'</small></h2><div class="items">'+items+'</div></section>';
+ }).join("");
+ const body='<div class="eyebrow">ROOT FRONTIER / PROBLEM INTELLIGENCE</div><section class="hero"><h1>'+esc(t.atlas)+'</h1><p class="lead">'+esc(t.intro)+'</p><div class="buttons"><a class="primary" href="/audit/">'+esc(t.audit)+' ↗</a><a class="ghost" href="/project-lab/">'+esc(t.portfolio)+' ↗</a></div><p class="language"><a href="/problems/'+other+'/">'+esc(t.lang)+' ↗</a></p></section>'+nav+groups+'<p class="fine">'+esc(t.methodBody)+'</p>';
  return frame(lang,t.atlas,t.intro,path,null,body);
 }
 function gateway(){
@@ -81,6 +94,7 @@ export function build(data){
  const lines=["slug,language,query,validation"];
  for(const p of data.issues)for(const l of ["en","ru"])for(const q of p[l].queries)lines.push([p.slug,l,'"'+q.replace(/"/g,'""')+'"',"intent-hypothesis"].join(","));
  files["seo-factory/query-backlog.csv"]=lines.join("\n")+"\n";
+ files["seo-factory/audit-source-map.json"]=JSON.stringify(Object.fromEntries(data.issues.map(p=>[p.slug,{title:p.ru.title,group:p.category,returnUrl:"/problems/ru/"+p.slug+"/",suggestions:p.suggestedAuditFlags||[]}])),null,2)+"\n";
  files["problems/graph.json"]=JSON.stringify(knowledgeGraph(data),null,2)+"\n";
  return files;
 }

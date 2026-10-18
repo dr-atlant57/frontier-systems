@@ -2,8 +2,8 @@
   "schema": "rfs.architecture-problem-graph.v1",
   "editorialDate": "2026-10-18",
   "validation": "hypothesis-graph; not verified enterprise facts or search volumes",
-  "nodeCount": 240,
-  "edgeCount": 271,
+  "nodeCount": 477,
+  "edgeCount": 541,
   "nodes": [
     {
       "id": "problem:ai-pilots-fail-to-scale",
@@ -1934,6 +1934,1921 @@
       "lang": "ru",
       "text": "согласование резервных систем и процессов",
       "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:bank-core-modernization-without-disruption",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Banking Architecture",
+      "url": "/problems/en/bank-core-modernization-without-disruption/",
+      "label": {
+        "en": "Modernizing a bank core without disrupting critical operations",
+        "ru": "Модернизация банковского ядра без остановки критических операций"
+      }
+    },
+    {
+      "id": "cause:bank-core-modernization-without-disruption:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Business logic, customer state and product rules are embedded in proprietary code.",
+        "ru": "Бизнес-логика, состояния счетов и продуктовые правила закреплены в закрытой реализации."
+      }
+    },
+    {
+      "id": "cause:bank-core-modernization-without-disruption:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Testing proves individual API responses but not complete business consistency.",
+        "ru": "Тесты проверяют отдельные API, но не сквозную корректность операций."
+      }
+    },
+    {
+      "id": "cause:bank-core-modernization-without-disruption:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Rollback and dual-run reconciliation have not been designed into the transition.",
+        "ru": "Откат и параллельная сверка не спроектированы как часть перехода."
+      }
+    },
+    {
+      "id": "symptom:bank-core-modernization-without-disruption:0",
+      "type": "symptom",
+      "label": {
+        "en": "New banking products require repeated changes to tightly coupled core code.",
+        "ru": "Новый банковский продукт требует изменений в тесно связанном коде ядра."
+      }
+    },
+    {
+      "id": "symptom:bank-core-modernization-without-disruption:1",
+      "type": "symptom",
+      "label": {
+        "en": "Teams maintain parallel spreadsheets because integration contracts are unclear.",
+        "ru": "Отделы ведут параллельные таблицы из-за неопределённых правил интеграции."
+      }
+    },
+    {
+      "id": "symptom:bank-core-modernization-without-disruption:2",
+      "type": "symptom",
+      "label": {
+        "en": "A migration plan lists applications, but not the business outcomes that must stay correct.",
+        "ru": "План миграции перечисляет приложения, но не обязательные бизнес-инварианты."
+      }
+    },
+    {
+      "id": "solution-option:bank-core-modernization-without-disruption:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Capability-by-capability decoupling",
+        "ru": "Выделение отдельных функций"
+      },
+      "explanation": {
+        "en": "Expose a narrow domain through stable contracts while keeping the existing system authoritative.",
+        "ru": "Вынести ограниченную предметную область за стабильный интерфейс, сохранив действующий источник учёта."
+      }
+    },
+    {
+      "id": "solution-option:bank-core-modernization-without-disruption:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Shadow-mode validation",
+        "ru": "Независимый теневой расчёт"
+      },
+      "explanation": {
+        "en": "Run proposed calculations in parallel and compare them against authorized real cases without posting transactions.",
+        "ru": "Сопоставлять результаты новой модели с разрешёнными реальными примерами без исполнения операций."
+      }
+    },
+    {
+      "id": "solution-option:bank-core-modernization-without-disruption:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Staged core transition",
+        "ru": "Поэтапная миграция ядра"
+      },
+      "explanation": {
+        "en": "Move one bounded product or service after reconciliation and documented recovery rehearsal.",
+        "ru": "Переводить ограниченный продукт после сверок и испытаний восстановления."
+      }
+    },
+    {
+      "id": "metric:bank-core-modernization-without-disruption:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Mismatch rate on representative dual-run cases",
+        "ru": "Частота расхождений на параллельных испытаниях"
+      }
+    },
+    {
+      "id": "metric:bank-core-modernization-without-disruption:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to ship one compliant product change",
+        "ru": "Время запуска нормативно корректного изменения"
+      }
+    },
+    {
+      "id": "metric:bank-core-modernization-without-disruption:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Service disruption and recovery time in controlled tests",
+        "ru": "Перерыв сервиса и восстановление в тестах"
+      }
+    },
+    {
+      "id": "module:banking-architecture-r-d-lab",
+      "type": "capability",
+      "name": "Banking Architecture R&D Lab"
+    },
+    {
+      "id": "outcome:bank-core-modernization-without-disruption",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A domain boundary map and reversible pilot with acceptance and reconciliation tests.",
+        "ru": "Карта границ банковских функций и обратимый пилот с критериями сверки."
+      }
+    },
+    {
+      "id": "intent:bank-core-modernization-without-disruption:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "core banking modernization without downtime",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:bank-core-modernization-without-disruption:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "bank core replacement risk",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:bank-core-modernization-without-disruption:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "legacy banking systems integration AI",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:bank-core-modernization-without-disruption:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "banking platform phased migration",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:bank-core-modernization-without-disruption:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "модернизация банковского ядра без остановки",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:bank-core-modernization-without-disruption:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "риск замены core banking",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:bank-core-modernization-without-disruption:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "интеграция старых банковских систем с ИИ",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:bank-core-modernization-without-disruption:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "поэтапная миграция банковских систем",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:outsourced-accounting-data-exposure",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Accounting / Privacy",
+      "url": "/problems/en/outsourced-accounting-data-exposure/",
+      "label": {
+        "en": "Outsourced accounting creates unnecessary access to sensitive company data",
+        "ru": "Бухгалтерский аутсорсинг раскрывает лишние данные компании"
+      }
+    },
+    {
+      "id": "cause:outsourced-accounting-data-exposure:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Task boundaries are not reflected in data access policies.",
+        "ru": "Полномочия не соответствуют границам конкретной задачи."
+      }
+    },
+    {
+      "id": "cause:outsourced-accounting-data-exposure:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "De-identification is attempted without preservation of accounting validity.",
+        "ru": "Маскирование применяют без проверки правовой и бухгалтерской корректности."
+      }
+    },
+    {
+      "id": "cause:outsourced-accounting-data-exposure:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "A single export path merges operational, financial and private information.",
+        "ru": "В одной выгрузке смешаны операционные, финансовые и персональные сведения."
+      }
+    },
+    {
+      "id": "symptom:outsourced-accounting-data-exposure:0",
+      "type": "symptom",
+      "label": {
+        "en": "Outside specialists receive full exports when they only need one task scope.",
+        "ru": "Подрядчику отправляют всю бухгалтерскую базу ради одной операции."
+      }
+    },
+    {
+      "id": "symptom:outsourced-accounting-data-exposure:1",
+      "type": "symptom",
+      "label": {
+        "en": "Sensitive supplier prices and commercial relationships appear in unnecessary work files.",
+        "ru": "Коммерчески чувствительные условия раскрываются в рабочих выгрузках."
+      }
+    },
+    {
+      "id": "symptom:outsourced-accounting-data-exposure:2",
+      "type": "symptom",
+      "label": {
+        "en": "Managers cannot reconstruct who handled which records or approved final entries.",
+        "ru": "Невозможно восстановить, кто обработал записи и кто их подтвердил."
+      }
+    },
+    {
+      "id": "solution-option:outsourced-accounting-data-exposure:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Role-scoped task packages",
+        "ru": "Задания с минимальными доступами"
+      },
+      "explanation": {
+        "en": "Expose only the minimum legally sufficient records required for a defined assignment.",
+        "ru": "Передавать только законодательно достаточные сведения для конкретного поручения."
+      }
+    },
+    {
+      "id": "solution-option:outsourced-accounting-data-exposure:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Controlled transformation gateway",
+        "ru": "Контролируемый шлюз преобразования"
+      },
+      "explanation": {
+        "en": "Use reversible mappings under strict control only where lawful and traceable.",
+        "ru": "Применять обратимое сопоставление данных лишь там, где это законно и прослеживаемо."
+      }
+    },
+    {
+      "id": "solution-option:outsourced-accounting-data-exposure:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Dual verification and provenance",
+        "ru": "Раздельная подготовка и проверка"
+      },
+      "explanation": {
+        "en": "Separate preparation, validation and statutory reporting with independent audit logs.",
+        "ru": "Развести обработку, независимую валидацию и обязательную отчётность с журналами."
+      }
+    },
+    {
+      "id": "metric:outsourced-accounting-data-exposure:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Sensitive fields exposed per authorized task",
+        "ru": "Объём раскрытых чувствительных данных на задание"
+      }
+    },
+    {
+      "id": "metric:outsourced-accounting-data-exposure:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Errors caught before financial posting",
+        "ru": "Ошибки, обнаруженные до отражения в учёте"
+      }
+    },
+    {
+      "id": "metric:outsourced-accounting-data-exposure:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Audit reconstruction coverage",
+        "ru": "Полнота восстановления аудиторской истории"
+      }
+    },
+    {
+      "id": "module:knowledge-provenance",
+      "type": "capability",
+      "name": "Knowledge Provenance"
+    },
+    {
+      "id": "module:professional-services-exchange",
+      "type": "capability",
+      "name": "Professional Services Exchange"
+    },
+    {
+      "id": "outcome:outsourced-accounting-data-exposure",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A lawful access-and-task architecture with audit and accuracy testing.",
+        "ru": "Законная модель доступа и разделения задач с испытаниями корректности и аудита."
+      }
+    },
+    {
+      "id": "intent:outsourced-accounting-data-exposure:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "outsourced accounting data privacy",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:outsourced-accounting-data-exposure:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "accounting contractors sensitive company data",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:outsourced-accounting-data-exposure:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "privacy preserving accounting workflow",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:outsourced-accounting-data-exposure:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "audit trail outsourced bookkeeping",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:outsourced-accounting-data-exposure:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "конфиденциальность бухгалтерского аутсорсинга",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:outsourced-accounting-data-exposure:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "бухгалтер на удалёнке доступ к данным",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:outsourced-accounting-data-exposure:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "защита данных клиентов бухгалтерской компании",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:outsourced-accounting-data-exposure:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "разделение обязанностей бухгалтеров",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:supplier-delivery-status-blindspots",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Supply Chain / B2B",
+      "url": "/problems/en/supplier-delivery-status-blindspots/",
+      "label": {
+        "en": "Suppliers are available but delivery capacity remains invisible",
+        "ru": "Поставщики есть, но реальная готовность исполнителей не видна"
+      }
+    },
+    {
+      "id": "cause:supplier-delivery-status-blindspots:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Capabilities, resources and capacity are stored in disconnected formats.",
+        "ru": "Навыки, ресурсы и загрузка описаны в несовместимых форматах."
+      }
+    },
+    {
+      "id": "cause:supplier-delivery-status-blindspots:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Order status is reported manually and does not distinguish evidence from promise.",
+        "ru": "Статусы передаются вручную и не отличают обещание от доказательства."
+      }
+    },
+    {
+      "id": "cause:supplier-delivery-status-blindspots:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Escalation ownership between customer and contractor is not explicit.",
+        "ru": "Не определён ответственный за эскалацию между компаниями."
+      }
+    },
+    {
+      "id": "symptom:supplier-delivery-status-blindspots:0",
+      "type": "symptom",
+      "label": {
+        "en": "Teams repeatedly request availability from the same suppliers.",
+        "ru": "О доступности одних и тех же исполнителей спрашивают многократно."
+      }
+    },
+    {
+      "id": "symptom:supplier-delivery-status-blindspots:1",
+      "type": "symptom",
+      "label": {
+        "en": "Procurement commits before a delivery dependency has been verified.",
+        "ru": "Заказ размещён до проверки критического ресурса подрядчика."
+      }
+    },
+    {
+      "id": "symptom:supplier-delivery-status-blindspots:2",
+      "type": "symptom",
+      "label": {
+        "en": "The customer learns about a missed milestone only after its deadline.",
+        "ru": "Заказчик узнаёт о срыве этапа после установленного срока."
+      }
+    },
+    {
+      "id": "solution-option:supplier-delivery-status-blindspots:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Verified supplier capability passports",
+        "ru": "Паспорт подтверждённых возможностей"
+      },
+      "explanation": {
+        "en": "Separate claimed skills, evidence, geography and actual capacity.",
+        "ru": "Разделить заявленные компетенции, доказательства, географию и реальную мощность."
+      }
+    },
+    {
+      "id": "solution-option:supplier-delivery-status-blindspots:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Shared delivery-state protocol",
+        "ru": "Общий протокол исполнения"
+      },
+      "explanation": {
+        "en": "Use agreed milestones, proofs, exception types and permissions between organizations.",
+        "ru": "Согласовать этапы, подтверждения, типы исключений и права участников."
+      }
+    },
+    {
+      "id": "solution-option:supplier-delivery-status-blindspots:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Cross-company coordination agents",
+        "ru": "Межкорпоративные агенты координации"
+      },
+      "explanation": {
+        "en": "Automate permitted status checks while routing changes and disputes to accountable people.",
+        "ru": "Автоматизировать разрешённые запросы статусов с передачей споров человеку."
+      }
+    },
+    {
+      "id": "metric:supplier-delivery-status-blindspots:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time from request to verified supplier match",
+        "ru": "Время подбора проверенного исполнителя"
+      }
+    },
+    {
+      "id": "metric:supplier-delivery-status-blindspots:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Milestones supported by evidence",
+        "ru": "Доля подтверждённых этапов"
+      }
+    },
+    {
+      "id": "metric:supplier-delivery-status-blindspots:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Delay detection lead time",
+        "ru": "Время упреждающего обнаружения срыва"
+      }
+    },
+    {
+      "id": "module:cide",
+      "type": "capability",
+      "name": "CIDE"
+    },
+    {
+      "id": "outcome:supplier-delivery-status-blindspots",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A supplier-state ontology and one traceable cross-company delivery pilot.",
+        "ru": "Онтология статусов подрядчика и один прослеживаемый межкорпоративный пилот."
+      }
+    },
+    {
+      "id": "intent:supplier-delivery-status-blindspots:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "supplier capacity visibility software",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:supplier-delivery-status-blindspots:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "contractor status tracking across companies",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:supplier-delivery-status-blindspots:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "B2B delivery coordination problems",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:supplier-delivery-status-blindspots:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "supplier network capability mapping",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:supplier-delivery-status-blindspots:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "нет информации о загрузке подрядчиков",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:supplier-delivery-status-blindspots:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "как контролировать исполнение подрядных работ",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:supplier-delivery-status-blindspots:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "сеть проверенных поставщиков и исполнителей",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:supplier-delivery-status-blindspots:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "согласование статусов между компаниями",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:building-energy-losses-unverified",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Energy / Asset Operations",
+      "url": "/problems/en/building-energy-losses-unverified/",
+      "label": {
+        "en": "Energy losses are detected but savings are never verified",
+        "ru": "Энергопотери выявлены, но экономия после ремонта не подтверждена"
+      }
+    },
+    {
+      "id": "cause:building-energy-losses-unverified:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Diagnosis, maintenance and verification use disconnected work orders.",
+        "ru": "Диагностика, ремонт и верификация работают в разных системах."
+      }
+    },
+    {
+      "id": "cause:building-energy-losses-unverified:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Readings lack comparable load, weather or operating conditions.",
+        "ru": "Измерения проводятся при несопоставимой нагрузке и условиях."
+      }
+    },
+    {
+      "id": "cause:building-energy-losses-unverified:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Work is ranked by visual anomaly rather than verified risk and savings opportunity.",
+        "ru": "Приоритет определяется яркостью изображения, а не подтверждённым риском и эффектом."
+      }
+    },
+    {
+      "id": "symptom:building-energy-losses-unverified:0",
+      "type": "symptom",
+      "label": {
+        "en": "Inspections produce many heat maps with no prioritized repair plan.",
+        "ru": "Проверки создают много тепловых карт без приоритизированного плана исправления."
+      }
+    },
+    {
+      "id": "symptom:building-energy-losses-unverified:1",
+      "type": "symptom",
+      "label": {
+        "en": "Repair orders close without comparable after-measurements.",
+        "ru": "Заявки закрываются без контрольного измерения."
+      }
+    },
+    {
+      "id": "symptom:building-energy-losses-unverified:2",
+      "type": "symptom",
+      "label": {
+        "en": "Management sees estimated savings but cannot separate actual improvement from seasonal effects.",
+        "ru": "Заявленную экономию нельзя отделить от влияния погоды и изменения нагрузки."
+      }
+    },
+    {
+      "id": "solution-option:building-energy-losses-unverified:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Measurement-to-action registry",
+        "ru": "Реестр «измерение → действие»"
+      },
+      "explanation": {
+        "en": "Tie each finding to asset identity, suspected mechanism and authorized work order.",
+        "ru": "Связать находку с активом, возможным механизмом потери и разрешённой заявкой."
+      }
+    },
+    {
+      "id": "solution-option:building-energy-losses-unverified:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Qualified repair and reinspection",
+        "ru": "Квалифицированный ремонт и повторный осмотр"
+      },
+      "explanation": {
+        "en": "Dispatch trained specialists and repeat measurements in comparable conditions.",
+        "ru": "Направить специалистов и повторить измерения при сопоставимых условиях."
+      }
+    },
+    {
+      "id": "solution-option:building-energy-losses-unverified:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Savings verification architecture",
+        "ru": "Протокол проверки экономии"
+      },
+      "explanation": {
+        "en": "Use appropriate baselines and uncertainty ranges to calculate net change.",
+        "ru": "Согласовать исходную линию, погрешность и расчёт чистого изменения."
+      }
+    },
+    {
+      "id": "metric:building-energy-losses-unverified:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Findings closed with verified measurements",
+        "ru": "Доля дефектов с подтверждением после вмешательства"
+      }
+    },
+    {
+      "id": "metric:building-energy-losses-unverified:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Net energy reduction against adjusted baseline",
+        "ru": "Чистое снижение энергопотребления к нормализованной базе"
+      }
+    },
+    {
+      "id": "metric:building-energy-losses-unverified:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Cost per validated intervention",
+        "ru": "Стоимость проверенного исправления"
+      }
+    },
+    {
+      "id": "module:energy-loss-intelligence",
+      "type": "capability",
+      "name": "Energy Loss Intelligence"
+    },
+    {
+      "id": "module:single-visit-repair-verification",
+      "type": "capability",
+      "name": "Single-Visit Repair & Verification"
+    },
+    {
+      "id": "outcome:building-energy-losses-unverified",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A traceable inspection-to-repair protocol with baseline and verification plan.",
+        "ru": "Протокол от диагностики к ремонту с базой измерений и верификацией результата."
+      }
+    },
+    {
+      "id": "intent:building-energy-losses-unverified:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "energy loss audit no savings verified",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:building-energy-losses-unverified:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "thermography maintenance repair verification",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:building-energy-losses-unverified:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "industrial electricity loss monitoring",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:building-energy-losses-unverified:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "measuring energy savings after repair",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:building-energy-losses-unverified:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "тепловизионное обследование экономия не подтверждена",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:building-energy-losses-unverified:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "сокращение потерь электричества на предприятии",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:building-energy-losses-unverified:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "энергоаудит после ремонта проверка",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:building-energy-losses-unverified:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "мониторинг энергопотерь и ремонт",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:tourism-booking-confirmation-failures",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Travel / Service Networks",
+      "url": "/problems/en/tourism-booking-confirmation-failures/",
+      "label": {
+        "en": "A tourist has a reservation but the service is not actually ready",
+        "ru": "Бронь подтверждена, но услуга для туриста не готова"
+      }
+    },
+    {
+      "id": "cause:tourism-booking-confirmation-failures:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Confirmation statuses have no shared meaning across participants.",
+        "ru": "Статус «подтверждено» означает разное для разных участников."
+      }
+    },
+    {
+      "id": "cause:tourism-booking-confirmation-failures:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Changes are not acknowledged by all affected parties.",
+        "ru": "Изменения не подтверждаются всеми затронутыми сторонами."
+      }
+    },
+    {
+      "id": "cause:tourism-booking-confirmation-failures:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Responsibility for replacement, compensation and evidence is unclear.",
+        "ru": "Не определены ответственность за замену, компенсацию и доказательства."
+      }
+    },
+    {
+      "id": "symptom:tourism-booking-confirmation-failures:0",
+      "type": "symptom",
+      "label": {
+        "en": "Guests discover an unavailable room or transfer after arrival.",
+        "ru": "По прибытии обнаруживается, что номер или трансфер недоступен."
+      }
+    },
+    {
+      "id": "symptom:tourism-booking-confirmation-failures:1",
+      "type": "symptom",
+      "label": {
+        "en": "Hosts cannot quickly propose an acceptable substitute with clear terms.",
+        "ru": "Хост не может быстро предложить замену на понятных условиях."
+      }
+    },
+    {
+      "id": "symptom:tourism-booking-confirmation-failures:2",
+      "type": "symptom",
+      "label": {
+        "en": "Refund and complaint histories disappear across chats and providers.",
+        "ru": "История возвратов и претензий теряется между чатами."
+      }
+    },
+    {
+      "id": "solution-option:tourism-booking-confirmation-failures:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Verified service passport",
+        "ru": "Проверяемый паспорт услуги"
+      },
+      "explanation": {
+        "en": "Track provider identity, service conditions, availability and confirmation evidence.",
+        "ru": "Фиксировать поставщика, условия, доступность и свидетельства подтверждения."
+      }
+    },
+    {
+      "id": "solution-option:tourism-booking-confirmation-failures:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Two-sided confirmation protocol",
+        "ru": "Двусторонний протокол бронирования"
+      },
+      "explanation": {
+        "en": "Require clear status changes and time-bound acknowledgements.",
+        "ru": "Установить переходы статусов и сроки подтверждений."
+      }
+    },
+    {
+      "id": "solution-option:tourism-booking-confirmation-failures:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Assisted service recovery",
+        "ru": "Помощь при срыве услуги"
+      },
+      "explanation": {
+        "en": "Offer lawful, consented alternatives and escalate unresolved disputes to humans.",
+        "ru": "Предлагать законные альтернативы с согласия гостя и передавать споры человеку."
+      }
+    },
+    {
+      "id": "metric:tourism-booking-confirmation-failures:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Bookings fulfilled as explicitly confirmed",
+        "ru": "Доля услуг исполненных согласно подтверждению"
+      }
+    },
+    {
+      "id": "metric:tourism-booking-confirmation-failures:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to resolve a failed service",
+        "ru": "Время разрешения срыва"
+      }
+    },
+    {
+      "id": "metric:tourism-booking-confirmation-failures:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Share of alternatives accepted with informed consent",
+        "ru": "Доля замен, добровольно принятых гостем"
+      }
+    },
+    {
+      "id": "module:tourism-os",
+      "type": "capability",
+      "name": "Tourism OS"
+    },
+    {
+      "id": "module:host-tourist-twins",
+      "type": "capability",
+      "name": "Host & Tourist Twins"
+    },
+    {
+      "id": "module:service-recovery",
+      "type": "capability",
+      "name": "Service Recovery"
+    },
+    {
+      "id": "outcome:tourism-booking-confirmation-failures",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A verified booking-state model and one measured multi-party service recovery pilot.",
+        "ru": "Модель подтверждения и проверенный пилот согласованной замены услуги."
+      }
+    },
+    {
+      "id": "intent:tourism-booking-confirmation-failures:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "hotel booking confirmed room not available",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:tourism-booking-confirmation-failures:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "tourism service failure replacement process",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:tourism-booking-confirmation-failures:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "travel host confirmation system",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:tourism-booking-confirmation-failures:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "tourist complaint resolution platform",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:tourism-booking-confirmation-failures:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "забронировано но гостиница не предоставила номер",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:tourism-booking-confirmation-failures:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "срыв туристических услуг компенсация",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:tourism-booking-confirmation-failures:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "система подтверждения брони у хостов",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:tourism-booking-confirmation-failures:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "решение проблем туристов в поездке",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:ai-leads-outpace-sales-operations",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Revenue Operations",
+      "url": "/problems/en/ai-leads-outpace-sales-operations/",
+      "label": {
+        "en": "AI creates more sales leads than a company can actually serve",
+        "ru": "AI приводит больше лидов, чем компания способна обработать"
+      }
+    },
+    {
+      "id": "cause:ai-leads-outpace-sales-operations:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Marketing optimization stops at click, reply or lead count.",
+        "ru": "Маркетинг оптимизируется по кликам и контактам, а не по сделкам."
+      }
+    },
+    {
+      "id": "cause:ai-leads-outpace-sales-operations:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Capability, pricing and availability are not available during qualification.",
+        "ru": "Загрузка, маржа и полномочия недоступны во время квалификации."
+      }
+    },
+    {
+      "id": "cause:ai-leads-outpace-sales-operations:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "There is no traceable hand-off from opportunity to delivery and acceptance.",
+        "ru": "Переход от заявки к исполнению не имеет прослеживаемого владельца."
+      }
+    },
+    {
+      "id": "symptom:ai-leads-outpace-sales-operations:0",
+      "type": "symptom",
+      "label": {
+        "en": "Contact volume rises but qualified opportunities or profit do not.",
+        "ru": "Контактов больше, а квалифицированных сделок и прибыли нет."
+      }
+    },
+    {
+      "id": "symptom:ai-leads-outpace-sales-operations:1",
+      "type": "symptom",
+      "label": {
+        "en": "Sales promises delivery dates that operations have not confirmed.",
+        "ru": "Продажи обещают сроки без подтверждения исполнителей."
+      }
+    },
+    {
+      "id": "symptom:ai-leads-outpace-sales-operations:2",
+      "type": "symptom",
+      "label": {
+        "en": "Staff spend more time researching irrelevant leads than closing viable work.",
+        "ru": "Команда тратит время на нецелевые запросы вместо реальных заказов."
+      }
+    },
+    {
+      "id": "solution-option:ai-leads-outpace-sales-operations:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Opportunity quality scoring",
+        "ru": "Оценка качества возможностей"
+      },
+      "explanation": {
+        "en": "Rank demand using explicitly validated signals and responsible human review.",
+        "ru": "Ранжировать спрос по проверяемым признакам с человеческим контролем."
+      }
+    },
+    {
+      "id": "solution-option:ai-leads-outpace-sales-operations:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Capacity-aware quotation",
+        "ru": "Предложение с учётом мощности"
+      },
+      "explanation": {
+        "en": "Check deliverability, margins and approval rights before committing.",
+        "ru": "Проверять исполнимость, маржу и права согласования до обещаний."
+      }
+    },
+    {
+      "id": "solution-option:ai-leads-outpace-sales-operations:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "End-to-end revenue twin",
+        "ru": "Цифровой двойник выручки"
+      },
+      "explanation": {
+        "en": "Track a candidate from first demand signal through contract, delivery and repeat sale.",
+        "ru": "Отслеживать путь от сигнала спроса до договора, поставки и повторного заказа."
+      }
+    },
+    {
+      "id": "metric:ai-leads-outpace-sales-operations:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Contribution margin per qualified lead",
+        "ru": "Маржинальный доход на квалифицированный запрос"
+      }
+    },
+    {
+      "id": "metric:ai-leads-outpace-sales-operations:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Lead-to-paid-contract conversion",
+        "ru": "Конверсия лида в оплаченный договор"
+      }
+    },
+    {
+      "id": "metric:ai-leads-outpace-sales-operations:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time and rework per accepted proposal",
+        "ru": "Время и переделки на принятое предложение"
+      }
+    },
+    {
+      "id": "outcome:ai-leads-outpace-sales-operations",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A revenue-to-delivery bottleneck map and tested qualification-to-proposal pilot.",
+        "ru": "Карта потерь от спроса до исполнения и проверенный пилот квалификации."
+      }
+    },
+    {
+      "id": "intent:ai-leads-outpace-sales-operations:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI lead generation too many low quality leads",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-leads-outpace-sales-operations:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "sales leads overwhelm operations",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-leads-outpace-sales-operations:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "lead volume increases but revenue not",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-leads-outpace-sales-operations:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "sales automation order fulfillment bottleneck",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-leads-outpace-sales-operations:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "лидов стало больше продаж не стало",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-leads-outpace-sales-operations:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "AI лидогенерация не приносит выручку",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-leads-outpace-sales-operations:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "отдел продаж не успевает обрабатывать заявки",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-leads-outpace-sales-operations:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "узкое место CRM между продажами и исполнением",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:workforce-ai-role-uncertainty",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Human / Organization",
+      "url": "/problems/en/workforce-ai-role-uncertainty/",
+      "label": {
+        "en": "Employees fear AI because nobody can explain their future role",
+        "ru": "Сотрудники боятся AI, потому что не понимают будущую роль"
+      }
+    },
+    {
+      "id": "cause:workforce-ai-role-uncertainty:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Technology decisions are separated from organizational design.",
+        "ru": "Технологические решения отделены от организационной архитектуры."
+      }
+    },
+    {
+      "id": "cause:workforce-ai-role-uncertainty:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Tasks are automated without mapping the remaining judgment and exception work.",
+        "ru": "Автоматизируют задачи, не описав остаточные решения и исключения."
+      }
+    },
+    {
+      "id": "cause:workforce-ai-role-uncertainty:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Benefits, retraining and change responsibilities were not discussed transparently.",
+        "ru": "Переобучение, распределение выгод и право оспаривать ошибки не согласованы."
+      }
+    },
+    {
+      "id": "symptom:workforce-ai-role-uncertainty:0",
+      "type": "symptom",
+      "label": {
+        "en": "Employees avoid approved tools or keep parallel shadow processes.",
+        "ru": "Сотрудники избегают утверждённых инструментов или создают теневые процессы."
+      }
+    },
+    {
+      "id": "symptom:workforce-ai-role-uncertainty:1",
+      "type": "symptom",
+      "label": {
+        "en": "New AI tasks are added without training time or role clarification.",
+        "ru": "AI-задачи добавлены без времени на обучение и изменения роли."
+      }
+    },
+    {
+      "id": "symptom:workforce-ai-role-uncertainty:2",
+      "type": "symptom",
+      "label": {
+        "en": "Managers cannot describe how performance and accountability will change.",
+        "ru": "Руководители не могут объяснить новые правила ответственности и оценки."
+      }
+    },
+    {
+      "id": "solution-option:workforce-ai-role-uncertainty:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Task and role transition map",
+        "ru": "Карта трансформации ролей"
+      },
+      "explanation": {
+        "en": "Decompose work into automatable actions, protected decisions and emerging capabilities.",
+        "ru": "Разложить работу на автоматизируемые действия, решения человека и новые компетенции."
+      }
+    },
+    {
+      "id": "solution-option:workforce-ai-role-uncertainty:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Co-designed adaptation pilot",
+        "ru": "Пилот совместного изменения"
+      },
+      "explanation": {
+        "en": "Let affected teams test process changes and define useful training.",
+        "ru": "Вовлечь команды в эксперименты и определить реальное обучение."
+      }
+    },
+    {
+      "id": "solution-option:workforce-ai-role-uncertainty:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Transparent decision governance",
+        "ru": "Прозрачные правила контроля"
+      },
+      "explanation": {
+        "en": "Publish authority, evaluation and grievance routes before widening automation.",
+        "ru": "Опубликовать полномочия, критерии оценки и механизм разбора спорных ситуаций."
+      }
+    },
+    {
+      "id": "metric:workforce-ai-role-uncertainty:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to competence on redesigned tasks",
+        "ru": "Срок освоения новой деятельности"
+      }
+    },
+    {
+      "id": "metric:workforce-ai-role-uncertainty:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Exception resolution quality",
+        "ru": "Качество разрешения исключений"
+      }
+    },
+    {
+      "id": "metric:workforce-ai-role-uncertainty:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Reported role clarity and tool adoption",
+        "ru": "Ясность роли и использование инструмента"
+      }
+    },
+    {
+      "id": "module:aris-home",
+      "type": "capability",
+      "name": "ARIS HOME"
+    },
+    {
+      "id": "module:system-awareness",
+      "type": "capability",
+      "name": "System Awareness"
+    },
+    {
+      "id": "outcome:workforce-ai-role-uncertainty",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A role-transition architecture with a consented, measurable team pilot.",
+        "ru": "Архитектура изменения ролей и измеримый командный пилот."
+      }
+    },
+    {
+      "id": "intent:workforce-ai-role-uncertainty:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "employee resistance to AI adoption",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:workforce-ai-role-uncertainty:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI workforce role redesign",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:workforce-ai-role-uncertainty:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "workers afraid of AI replacement enterprise",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:workforce-ai-role-uncertainty:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "human centered AI transformation",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:workforce-ai-role-uncertainty:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "сотрудники сопротивляются внедрению ИИ",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:workforce-ai-role-uncertainty:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "страх сокращений из за искусственного интеллекта",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:workforce-ai-role-uncertainty:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "изменение ролей сотрудников при AI",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:workforce-ai-role-uncertainty:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "как внедрить ИИ без сопротивления команды",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:multilingual-enterprise-context-loss",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Multilingual / Enterprise",
+      "url": "/problems/en/multilingual-enterprise-context-loss/",
+      "label": {
+        "en": "International teams lose decisions in translation and hand-offs",
+        "ru": "Международные команды теряют смысл решений при переводе"
+      }
+    },
+    {
+      "id": "cause:multilingual-enterprise-context-loss:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Translation is separated from the process and decision ontology.",
+        "ru": "Перевод отделён от онтологии процесса и решения."
+      }
+    },
+    {
+      "id": "cause:multilingual-enterprise-context-loss:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Authority and document versions are not represented in communications.",
+        "ru": "Полномочия и версии документов не связаны с коммуникацией."
+      }
+    },
+    {
+      "id": "cause:multilingual-enterprise-context-loss:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "No bilingual verification exists for critical obligations and exceptions.",
+        "ru": "Для критических условий нет двуязычной независимой проверки."
+      }
+    },
+    {
+      "id": "symptom:multilingual-enterprise-context-loss:0",
+      "type": "symptom",
+      "label": {
+        "en": "Commercial commitments differ between translated versions of the same discussion.",
+        "ru": "В разных языковых версиях разговора расходятся коммерческие обязательства."
+      }
+    },
+    {
+      "id": "symptom:multilingual-enterprise-context-loss:1",
+      "type": "symptom",
+      "label": {
+        "en": "Industry terminology changes meaning between teams and documents.",
+        "ru": "Отраслевой термин меняет смысл между документами и командами."
+      }
+    },
+    {
+      "id": "symptom:multilingual-enterprise-context-loss:2",
+      "type": "symptom",
+      "label": {
+        "en": "Decisions are repeated because nobody has a canonical agreed record.",
+        "ru": "Одни решения принимаются повторно, потому что нет согласованной записи."
+      }
+    },
+    {
+      "id": "solution-option:multilingual-enterprise-context-loss:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Domain-specific multilingual terminology",
+        "ru": "Отраслевая многоязычная терминология"
+      },
+      "explanation": {
+        "en": "Create approved terms and context-specific definitions with source provenance.",
+        "ru": "Утвердить контекстные определения терминов и происхождение источников."
+      }
+    },
+    {
+      "id": "solution-option:multilingual-enterprise-context-loss:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Decision record with language variants",
+        "ru": "Единая запись решения с переводами"
+      },
+      "explanation": {
+        "en": "Record the decision, evidence, owner and reviewed translations as linked versions.",
+        "ru": "Связать решение, доказательства, владельца и проверенные языковые версии."
+      }
+    },
+    {
+      "id": "solution-option:multilingual-enterprise-context-loss:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Human-supervised executive copilot",
+        "ru": "Контролируемый Executive Copilot"
+      },
+      "explanation": {
+        "en": "Assist live meetings but require explicit approval for legal or financial commitments.",
+        "ru": "Помогать на встречах, но требовать подтверждения юридических и финансовых обязательств."
+      }
+    },
+    {
+      "id": "metric:multilingual-enterprise-context-loss:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Conflicting interpretations per decision cycle",
+        "ru": "Частота противоречивых интерпретаций"
+      }
+    },
+    {
+      "id": "metric:multilingual-enterprise-context-loss:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to produce approved bilingual records",
+        "ru": "Срок подготовки утверждённой двуязычной записи"
+      }
+    },
+    {
+      "id": "metric:multilingual-enterprise-context-loss:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Rate of corrections to high-risk translated terms",
+        "ru": "Частота исправления рискованных терминов"
+      }
+    },
+    {
+      "id": "module:semantic-presence-engine",
+      "type": "capability",
+      "name": "Semantic Presence Engine"
+    },
+    {
+      "id": "module:multilingual-executive-twin",
+      "type": "capability",
+      "name": "Multilingual Executive Twin"
+    },
+    {
+      "id": "outcome:multilingual-enterprise-context-loss",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A controlled multilingual decision protocol and a measured collaboration pilot.",
+        "ru": "Проверяемый многоязычный протокол принятия решений и измеримый пилот сотрудничества."
+      }
+    },
+    {
+      "id": "intent:multilingual-enterprise-context-loss:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "multilingual team communication lost context",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:multilingual-enterprise-context-loss:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI translation business decision risk",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:multilingual-enterprise-context-loss:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "enterprise multilingual knowledge management",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:multilingual-enterprise-context-loss:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "cross border meetings agreement translation",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:multilingual-enterprise-context-loss:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "ИИ перевод теряет контекст переговоров",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:multilingual-enterprise-context-loss:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "ошибки перевода международной команды",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:multilingual-enterprise-context-loss:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "многоязычный корпоративный граф знаний",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:multilingual-enterprise-context-loss:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "фиксирование решений многоязычных встреч",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:private-equity-portfolio-invisible-synergies",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Private Equity / Portfolio",
+      "url": "/problems/en/private-equity-portfolio-invisible-synergies/",
+      "label": {
+        "en": "A private equity portfolio has synergies nobody can quantify",
+        "ru": "В портфеле компаний есть синергия, но её никто не умеет измерять"
+      }
+    },
+    {
+      "id": "cause:private-equity-portfolio-invisible-synergies:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Cross-company assets and capabilities have no shared taxonomy.",
+        "ru": "Активы и компетенции компаний не описаны общей таксономией."
+      }
+    },
+    {
+      "id": "cause:private-equity-portfolio-invisible-synergies:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Financial reporting does not expose process-level dependencies.",
+        "ru": "Финансовые отчёты скрывают зависимости реальных процессов."
+      }
+    },
+    {
+      "id": "cause:private-equity-portfolio-invisible-synergies:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "No experimental framework ranks synergies by effort, consent and verified impact.",
+        "ru": "Нет экспериментов для сравнения синергий по затратам, правам и эффекту."
+      }
+    },
+    {
+      "id": "symptom:private-equity-portfolio-invisible-synergies:0",
+      "type": "symptom",
+      "label": {
+        "en": "Management presents theoretical portfolio synergies without operational baselines.",
+        "ru": "Руководство обещает синергию без операционной базы измерений."
+      }
+    },
+    {
+      "id": "symptom:private-equity-portfolio-invisible-synergies:1",
+      "type": "symptom",
+      "label": {
+        "en": "Portfolio companies separately buy overlapping services and capabilities.",
+        "ru": "Компании по отдельности покупают одинаковые ресурсы и сервисы."
+      }
+    },
+    {
+      "id": "symptom:private-equity-portfolio-invisible-synergies:2",
+      "type": "symptom",
+      "label": {
+        "en": "Investment committees cannot distinguish attainable coordination gains from speculative savings.",
+        "ru": "Инвесткомитет не отделяет достижимую экономию от теоретической."
+      }
+    },
+    {
+      "id": "solution-option:private-equity-portfolio-invisible-synergies:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Portfolio capability graph",
+        "ru": "Граф компетенций портфеля"
+      },
+      "explanation": {
+        "en": "Model facilities, assets, customers, skills and constraints with appropriate access rights.",
+        "ru": "Сопоставить активы, ресурсы и ограничения с законными правилами доступа."
+      }
+    },
+    {
+      "id": "solution-option:private-equity-portfolio-invisible-synergies:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Synergy experiment portfolio",
+        "ru": "Портфель экспериментов синергии"
+      },
+      "explanation": {
+        "en": "Prioritize narrow cross-company tests before permanent consolidation.",
+        "ru": "Проверять конкретные межкорпоративные действия до постоянной консолидации."
+      }
+    },
+    {
+      "id": "solution-option:private-equity-portfolio-invisible-synergies:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Shared service coordination layer",
+        "ru": "Контур общих сервисов"
+      },
+      "explanation": {
+        "en": "Deploy reusable workflows only after local acceptance and measurable benefit.",
+        "ru": "Повторять доказанные процессы после согласования с локальными командами."
+      }
+    },
+    {
+      "id": "metric:private-equity-portfolio-invisible-synergies:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Verified cross-portfolio savings or revenue",
+        "ru": "Подтверждённая экономия или выручка между компаниями"
+      }
+    },
+    {
+      "id": "metric:private-equity-portfolio-invisible-synergies:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to test a new cross-company service",
+        "ru": "Срок испытания общей функции"
+      }
+    },
+    {
+      "id": "metric:private-equity-portfolio-invisible-synergies:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Local operational performance after coordination",
+        "ru": "Локальные показатели после внедрения"
+      }
+    },
+    {
+      "id": "module:portfolio-digital-twin",
+      "type": "capability",
+      "name": "Portfolio Digital Twin"
+    },
+    {
+      "id": "module:venture-architecture",
+      "type": "capability",
+      "name": "Venture Architecture"
+    },
+    {
+      "id": "outcome:private-equity-portfolio-invisible-synergies",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A portfolio opportunity graph and prioritized value-creation experiments.",
+        "ru": "Граф инвестиционных возможностей портфеля и приоритетные эксперименты создания стоимости."
+      }
+    },
+    {
+      "id": "intent:private-equity-portfolio-invisible-synergies:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "private equity portfolio synergies unrealized",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:private-equity-portfolio-invisible-synergies:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "operating partner portfolio visibility",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:private-equity-portfolio-invisible-synergies:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "cross portfolio procurement synergies",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:private-equity-portfolio-invisible-synergies:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "PE value creation operating model",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:private-equity-portfolio-invisible-synergies:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "неиспользованная синергия компаний холдинга",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:private-equity-portfolio-invisible-synergies:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "эффект объединения портфеля предприятий",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:private-equity-portfolio-invisible-synergies:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "private equity рост стоимости активов",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:private-equity-portfolio-invisible-synergies:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "общие закупки разных компаний",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:cross-company-ai-trust-boundaries",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Multi-Enterprise AI / Security",
+      "url": "/problems/en/cross-company-ai-trust-boundaries/",
+      "label": {
+        "en": "AI agents from different companies cannot safely coordinate",
+        "ru": "AI-агенты разных компаний не могут безопасно взаимодействовать"
+      }
+    },
+    {
+      "id": "cause:cross-company-ai-trust-boundaries:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Agent identity is confused with authority to act for an organization.",
+        "ru": "Идентичность агента принимают за право действовать от лица компании."
+      }
+    },
+    {
+      "id": "cause:cross-company-ai-trust-boundaries:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Data-sharing policies are not tied to individual contract tasks.",
+        "ru": "Политики передачи данных не связаны с конкретной договорной задачей."
+      }
+    },
+    {
+      "id": "cause:cross-company-ai-trust-boundaries:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "The boundary between suggestion, negotiation and binding commitment is undefined.",
+        "ru": "Не обозначена граница между советом, переговорами и обязательством."
+      }
+    },
+    {
+      "id": "symptom:cross-company-ai-trust-boundaries:0",
+      "type": "symptom",
+      "label": {
+        "en": "Agents propose delivery or price commitments without evidence of authority.",
+        "ru": "Агенты обсуждают цену и сроки без доказательств полномочий."
+      }
+    },
+    {
+      "id": "symptom:cross-company-ai-trust-boundaries:1",
+      "type": "symptom",
+      "label": {
+        "en": "Sensitive customer or supplier data is copied into external agent conversations.",
+        "ru": "Данные клиентов и поставщиков попадают во внешние диалоги агентов."
+      }
+    },
+    {
+      "id": "symptom:cross-company-ai-trust-boundaries:2",
+      "type": "symptom",
+      "label": {
+        "en": "Participants cannot reconstruct which side approved an automated transaction.",
+        "ru": "Стороны не могут восстановить, кто утвердил автоматизированную операцию."
+      }
+    },
+    {
+      "id": "solution-option:cross-company-ai-trust-boundaries:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Verifiable agent representation",
+        "ru": "Проверяемое представительство агента"
+      },
+      "explanation": {
+        "en": "Bind agent identity to a bounded organizational mandate and expiry.",
+        "ru": "Связать идентичность с ограниченным мандатом компании и сроком действия."
+      }
+    },
+    {
+      "id": "solution-option:cross-company-ai-trust-boundaries:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Policy-mediated exchange",
+        "ru": "Обмен через политики доступа"
+      },
+      "explanation": {
+        "en": "Share only task-required claims and evidence under agreed policies.",
+        "ru": "Передавать только необходимые для задачи сведения и доказательства."
+      }
+    },
+    {
+      "id": "solution-option:cross-company-ai-trust-boundaries:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Human-confirmed execution",
+        "ru": "Исполнение с подтверждением человека"
+      },
+      "explanation": {
+        "en": "Allow automated preparation while people approve obligations at defined thresholds.",
+        "ru": "Автоматизировать подготовку, но утверждать обязательства по установленным порогам."
+      }
+    },
+    {
+      "id": "metric:cross-company-ai-trust-boundaries:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Actions carrying verified authorization",
+        "ru": "Доля действий с проверенными полномочиями"
+      }
+    },
+    {
+      "id": "metric:cross-company-ai-trust-boundaries:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Disclosure incidents per exchange",
+        "ru": "Инциденты раскрытия на обмен"
+      }
+    },
+    {
+      "id": "metric:cross-company-ai-trust-boundaries:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "End-to-end agreed transaction trace coverage",
+        "ru": "Полнота общей трассы согласованных сделок"
+      }
+    },
+    {
+      "id": "module:twin-to-twin-commerce",
+      "type": "capability",
+      "name": "Twin-to-Twin Commerce"
+    },
+    {
+      "id": "module:agent-governance",
+      "type": "capability",
+      "name": "Agent Governance"
+    },
+    {
+      "id": "outcome:cross-company-ai-trust-boundaries",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A bounded inter-company agent protocol and audited negotiation pilot.",
+        "ru": "Ограниченный протокол межкорпоративных агентов и проверенный переговорный пилот."
+      }
+    },
+    {
+      "id": "intent:cross-company-ai-trust-boundaries:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI agents across companies security",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:cross-company-ai-trust-boundaries:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "agent to agent business protocol trust",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:cross-company-ai-trust-boundaries:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "enterprise AI agents supplier negotiation governance",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:cross-company-ai-trust-boundaries:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "cross company AI data sharing controls",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:cross-company-ai-trust-boundaries:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "агенты ИИ между компаниями безопасность",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:cross-company-ai-trust-boundaries:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "межкорпоративный обмен AI агентами",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:cross-company-ai-trust-boundaries:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "полномочия ИИ на переговорах",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:cross-company-ai-trust-boundaries:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "как связать AI агентов поставщика и клиента",
+      "validation": "not-volume-verified"
     }
   ],
   "edges": [
@@ -3445,6 +5360,1506 @@
       "rationale": {
         "en": "Restoring business services requires coordinated roles, not only backups.",
         "ru": "Восстановление услуг требует координации ролей, а не только резервных копий."
+      }
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "cause:bank-core-modernization-without-disruption:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "cause:bank-core-modernization-without-disruption:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "cause:bank-core-modernization-without-disruption:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "symptom:bank-core-modernization-without-disruption:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "symptom:bank-core-modernization-without-disruption:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "symptom:bank-core-modernization-without-disruption:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "solution-option:bank-core-modernization-without-disruption:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "solution-option:bank-core-modernization-without-disruption:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "solution-option:bank-core-modernization-without-disruption:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "metric:bank-core-modernization-without-disruption:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "metric:bank-core-modernization-without-disruption:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "metric:bank-core-modernization-without-disruption:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "module:banking-architecture-r-d-lab",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "module:architecture-intelligence",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "module:resilience-architecture",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "outcome:bank-core-modernization-without-disruption",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:bank-core-modernization-without-disruption:en:0",
+      "to": "problem:bank-core-modernization-without-disruption",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:bank-core-modernization-without-disruption:en:1",
+      "to": "problem:bank-core-modernization-without-disruption",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:bank-core-modernization-without-disruption:en:2",
+      "to": "problem:bank-core-modernization-without-disruption",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:bank-core-modernization-without-disruption:en:3",
+      "to": "problem:bank-core-modernization-without-disruption",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:bank-core-modernization-without-disruption:ru:0",
+      "to": "problem:bank-core-modernization-without-disruption",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:bank-core-modernization-without-disruption:ru:1",
+      "to": "problem:bank-core-modernization-without-disruption",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:bank-core-modernization-without-disruption:ru:2",
+      "to": "problem:bank-core-modernization-without-disruption",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:bank-core-modernization-without-disruption:ru:3",
+      "to": "problem:bank-core-modernization-without-disruption",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "Legacy constraints make safe functional decoupling an alternative to full replacement.",
+        "ru": "Ограничения унаследованных систем делают выделение функций альтернативой полной замене."
+      }
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "Continuous banking services require tested recovery across system boundaries.",
+        "ru": "Непрерывность банковских операций требует испытаний восстановления между системами."
+      }
+    },
+    {
+      "from": "problem:bank-core-modernization-without-disruption",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Transaction-capable AI must use bounded authority and independent validation.",
+        "ru": "AI с доступом к операциям должен иметь ограниченные полномочия и независимую проверку."
+      }
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "cause:outsourced-accounting-data-exposure:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "cause:outsourced-accounting-data-exposure:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "cause:outsourced-accounting-data-exposure:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "symptom:outsourced-accounting-data-exposure:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "symptom:outsourced-accounting-data-exposure:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "symptom:outsourced-accounting-data-exposure:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "solution-option:outsourced-accounting-data-exposure:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "solution-option:outsourced-accounting-data-exposure:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "solution-option:outsourced-accounting-data-exposure:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "metric:outsourced-accounting-data-exposure:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "metric:outsourced-accounting-data-exposure:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "metric:outsourced-accounting-data-exposure:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "module:matrix-gate",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "module:knowledge-provenance",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "module:professional-services-exchange",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "outcome:outsourced-accounting-data-exposure",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:outsourced-accounting-data-exposure:en:0",
+      "to": "problem:outsourced-accounting-data-exposure",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:outsourced-accounting-data-exposure:en:1",
+      "to": "problem:outsourced-accounting-data-exposure",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:outsourced-accounting-data-exposure:en:2",
+      "to": "problem:outsourced-accounting-data-exposure",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:outsourced-accounting-data-exposure:en:3",
+      "to": "problem:outsourced-accounting-data-exposure",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:outsourced-accounting-data-exposure:ru:0",
+      "to": "problem:outsourced-accounting-data-exposure",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:outsourced-accounting-data-exposure:ru:1",
+      "to": "problem:outsourced-accounting-data-exposure",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:outsourced-accounting-data-exposure:ru:2",
+      "to": "problem:outsourced-accounting-data-exposure",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:outsourced-accounting-data-exposure:ru:3",
+      "to": "problem:outsourced-accounting-data-exposure",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "Data minimization depends on shared semantics and source provenance.",
+        "ru": "Минимизация раскрытия зависит от семантики и происхождения данных."
+      }
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "External preparers need auditable permissions and accountability.",
+        "ru": "Внешним исполнителям необходимы аудируемые полномочия и ответственность."
+      }
+    },
+    {
+      "from": "problem:outsourced-accounting-data-exposure",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Proprietary accounting exports can block lawful granular access.",
+        "ru": "Закрытые бухгалтерские выгрузки могут мешать законному выборочному доступу."
+      }
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "cause:supplier-delivery-status-blindspots:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "cause:supplier-delivery-status-blindspots:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "cause:supplier-delivery-status-blindspots:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "symptom:supplier-delivery-status-blindspots:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "symptom:supplier-delivery-status-blindspots:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "symptom:supplier-delivery-status-blindspots:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "solution-option:supplier-delivery-status-blindspots:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "solution-option:supplier-delivery-status-blindspots:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "solution-option:supplier-delivery-status-blindspots:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "metric:supplier-delivery-status-blindspots:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "metric:supplier-delivery-status-blindspots:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "metric:supplier-delivery-status-blindspots:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "module:cide",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "module:twin-to-twin-delivery",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "module:superagent",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "outcome:supplier-delivery-status-blindspots",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:supplier-delivery-status-blindspots:en:0",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:supplier-delivery-status-blindspots:en:1",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:supplier-delivery-status-blindspots:en:2",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:supplier-delivery-status-blindspots:en:3",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:supplier-delivery-status-blindspots:ru:0",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:supplier-delivery-status-blindspots:ru:1",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:supplier-delivery-status-blindspots:ru:2",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:supplier-delivery-status-blindspots:ru:3",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "Cross-company milestones suffer from missing task ownership and hand-offs.",
+        "ru": "Межкорпоративные этапы страдают из-за неопределённой передачи задач."
+      }
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "Supplier passports require compatible identifiers and reliable source data.",
+        "ru": "Паспорта поставщиков требуют согласованных идентификаторов и проверяемых источников."
+      }
+    },
+    {
+      "from": "problem:supplier-delivery-status-blindspots",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Acquired supplier networks may expose portfolio-level coordination opportunities.",
+        "ru": "Объединённые сети поставщиков могут открыть возможности координации портфеля."
+      }
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "cause:building-energy-losses-unverified:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "cause:building-energy-losses-unverified:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "cause:building-energy-losses-unverified:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "symptom:building-energy-losses-unverified:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "symptom:building-energy-losses-unverified:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "symptom:building-energy-losses-unverified:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "solution-option:building-energy-losses-unverified:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "solution-option:building-energy-losses-unverified:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "solution-option:building-energy-losses-unverified:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "metric:building-energy-losses-unverified:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "metric:building-energy-losses-unverified:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "metric:building-energy-losses-unverified:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "module:energy-loss-intelligence",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "module:single-visit-repair-verification",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "module:energy-carbon-efficiency",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "outcome:building-energy-losses-unverified",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:building-energy-losses-unverified:en:0",
+      "to": "problem:building-energy-losses-unverified",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:building-energy-losses-unverified:en:1",
+      "to": "problem:building-energy-losses-unverified",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:building-energy-losses-unverified:en:2",
+      "to": "problem:building-energy-losses-unverified",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:building-energy-losses-unverified:en:3",
+      "to": "problem:building-energy-losses-unverified",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:building-energy-losses-unverified:ru:0",
+      "to": "problem:building-energy-losses-unverified",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:building-energy-losses-unverified:ru:1",
+      "to": "problem:building-energy-losses-unverified",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:building-energy-losses-unverified:ru:2",
+      "to": "problem:building-energy-losses-unverified",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:building-energy-losses-unverified:ru:3",
+      "to": "problem:building-energy-losses-unverified",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "Energy and operating cost should be measured against verified outcomes.",
+        "ru": "Энергию и затраты надо оценивать в пересчёте на подтверждённый результат."
+      }
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "A physical fault can interrupt service; inspection and safe recovery are linked.",
+        "ru": "Физический дефект может нарушить сервис, поэтому диагностика и восстановление связаны."
+      }
+    },
+    {
+      "from": "problem:building-energy-losses-unverified",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Verified interventions need qualified contractors with traceable work states.",
+        "ru": "Проверенные исправления требуют квалифицированных подрядчиков и прослеживаемого исполнения."
+      }
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "cause:tourism-booking-confirmation-failures:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "cause:tourism-booking-confirmation-failures:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "cause:tourism-booking-confirmation-failures:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "symptom:tourism-booking-confirmation-failures:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "symptom:tourism-booking-confirmation-failures:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "symptom:tourism-booking-confirmation-failures:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "solution-option:tourism-booking-confirmation-failures:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "solution-option:tourism-booking-confirmation-failures:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "solution-option:tourism-booking-confirmation-failures:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "metric:tourism-booking-confirmation-failures:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "metric:tourism-booking-confirmation-failures:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "metric:tourism-booking-confirmation-failures:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "module:tourism-os",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "module:host-tourist-twins",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "module:service-recovery",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "outcome:tourism-booking-confirmation-failures",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:tourism-booking-confirmation-failures:en:0",
+      "to": "problem:tourism-booking-confirmation-failures",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:tourism-booking-confirmation-failures:en:1",
+      "to": "problem:tourism-booking-confirmation-failures",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:tourism-booking-confirmation-failures:en:2",
+      "to": "problem:tourism-booking-confirmation-failures",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:tourism-booking-confirmation-failures:en:3",
+      "to": "problem:tourism-booking-confirmation-failures",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:tourism-booking-confirmation-failures:ru:0",
+      "to": "problem:tourism-booking-confirmation-failures",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:tourism-booking-confirmation-failures:ru:1",
+      "to": "problem:tourism-booking-confirmation-failures",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:tourism-booking-confirmation-failures:ru:2",
+      "to": "problem:tourism-booking-confirmation-failures",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:tourism-booking-confirmation-failures:ru:3",
+      "to": "problem:tourism-booking-confirmation-failures",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "Guest service recovery resembles evidence-based supplier delivery tracking.",
+        "ru": "Восстановление туристической услуги требует проверки статусов поставщика."
+      }
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "Booking exceptions need explicit ownership across hosts, agents and guests.",
+        "ru": "Срывы бронирований требуют владельца процесса между хостом, агентом и гостем."
+      }
+    },
+    {
+      "from": "problem:tourism-booking-confirmation-failures",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Cross-party digital assistants need bounded mandates for rebooking and refunds.",
+        "ru": "Межсторонние агенты должны иметь ограниченные полномочия на замены и возвраты."
+      }
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "cause:ai-leads-outpace-sales-operations:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "cause:ai-leads-outpace-sales-operations:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "cause:ai-leads-outpace-sales-operations:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "symptom:ai-leads-outpace-sales-operations:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "symptom:ai-leads-outpace-sales-operations:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "symptom:ai-leads-outpace-sales-operations:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "solution-option:ai-leads-outpace-sales-operations:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "solution-option:ai-leads-outpace-sales-operations:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "solution-option:ai-leads-outpace-sales-operations:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "metric:ai-leads-outpace-sales-operations:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "metric:ai-leads-outpace-sales-operations:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "metric:ai-leads-outpace-sales-operations:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "module:revenue-engine",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "module:enterprise-digital-twin",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "module:architecture-discovery",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "outcome:ai-leads-outpace-sales-operations",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:ai-leads-outpace-sales-operations:en:0",
+      "to": "problem:ai-leads-outpace-sales-operations",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-leads-outpace-sales-operations:en:1",
+      "to": "problem:ai-leads-outpace-sales-operations",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-leads-outpace-sales-operations:en:2",
+      "to": "problem:ai-leads-outpace-sales-operations",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-leads-outpace-sales-operations:en:3",
+      "to": "problem:ai-leads-outpace-sales-operations",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-leads-outpace-sales-operations:ru:0",
+      "to": "problem:ai-leads-outpace-sales-operations",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-leads-outpace-sales-operations:ru:1",
+      "to": "problem:ai-leads-outpace-sales-operations",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-leads-outpace-sales-operations:ru:2",
+      "to": "problem:ai-leads-outpace-sales-operations",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-leads-outpace-sales-operations:ru:3",
+      "to": "problem:ai-leads-outpace-sales-operations",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "Higher demand exposes fragmented sales-to-delivery hand-offs.",
+        "ru": "Рост спроса выявляет разрывы между продажами и исполнением."
+      }
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "A locally successful AI pilot can worsen the end-to-end commercial process.",
+        "ru": "Успешный локальный AI-пилот может ухудшить сквозной коммерческий процесс."
+      }
+    },
+    {
+      "from": "problem:ai-leads-outpace-sales-operations",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Qualification depends on reliable customer, contract and capacity data.",
+        "ru": "Квалификация спроса зависит от надёжных данных клиента и загрузки."
+      }
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "cause:workforce-ai-role-uncertainty:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "cause:workforce-ai-role-uncertainty:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "cause:workforce-ai-role-uncertainty:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "symptom:workforce-ai-role-uncertainty:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "symptom:workforce-ai-role-uncertainty:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "symptom:workforce-ai-role-uncertainty:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "solution-option:workforce-ai-role-uncertainty:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "solution-option:workforce-ai-role-uncertainty:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "solution-option:workforce-ai-role-uncertainty:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "metric:workforce-ai-role-uncertainty:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "metric:workforce-ai-role-uncertainty:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "metric:workforce-ai-role-uncertainty:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "module:role-navigation",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "module:aris-home",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "module:system-awareness",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "outcome:workforce-ai-role-uncertainty",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:workforce-ai-role-uncertainty:en:0",
+      "to": "problem:workforce-ai-role-uncertainty",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:workforce-ai-role-uncertainty:en:1",
+      "to": "problem:workforce-ai-role-uncertainty",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:workforce-ai-role-uncertainty:en:2",
+      "to": "problem:workforce-ai-role-uncertainty",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:workforce-ai-role-uncertainty:en:3",
+      "to": "problem:workforce-ai-role-uncertainty",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:workforce-ai-role-uncertainty:ru:0",
+      "to": "problem:workforce-ai-role-uncertainty",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:workforce-ai-role-uncertainty:ru:1",
+      "to": "problem:workforce-ai-role-uncertainty",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:workforce-ai-role-uncertainty:ru:2",
+      "to": "problem:workforce-ai-role-uncertainty",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:workforce-ai-role-uncertainty:ru:3",
+      "to": "problem:workforce-ai-role-uncertainty",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "problem:key-person-decision-dependency",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "Preserving expert knowledge is part of responsible role transition.",
+        "ru": "Сохранение экспертных решений входит в ответственное изменение ролей."
+      }
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "AI adoption needs new responsibilities and success criteria, not just a pilot.",
+        "ru": "Внедрение AI требует новых обязанностей и критериев, а не только пилота."
+      }
+    },
+    {
+      "from": "problem:workforce-ai-role-uncertainty",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Ambiguous task boundaries amplify conflict during organizational change.",
+        "ru": "Размытые границы задач усиливают конфликты при трансформации."
+      }
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "cause:multilingual-enterprise-context-loss:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "cause:multilingual-enterprise-context-loss:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "cause:multilingual-enterprise-context-loss:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "symptom:multilingual-enterprise-context-loss:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "symptom:multilingual-enterprise-context-loss:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "symptom:multilingual-enterprise-context-loss:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "solution-option:multilingual-enterprise-context-loss:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "solution-option:multilingual-enterprise-context-loss:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "solution-option:multilingual-enterprise-context-loss:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "metric:multilingual-enterprise-context-loss:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "metric:multilingual-enterprise-context-loss:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "metric:multilingual-enterprise-context-loss:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "module:semantic-presence-engine",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "module:knowledge-graph",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "module:multilingual-executive-twin",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "outcome:multilingual-enterprise-context-loss",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:multilingual-enterprise-context-loss:en:0",
+      "to": "problem:multilingual-enterprise-context-loss",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:multilingual-enterprise-context-loss:en:1",
+      "to": "problem:multilingual-enterprise-context-loss",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:multilingual-enterprise-context-loss:en:2",
+      "to": "problem:multilingual-enterprise-context-loss",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:multilingual-enterprise-context-loss:en:3",
+      "to": "problem:multilingual-enterprise-context-loss",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:multilingual-enterprise-context-loss:ru:0",
+      "to": "problem:multilingual-enterprise-context-loss",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:multilingual-enterprise-context-loss:ru:1",
+      "to": "problem:multilingual-enterprise-context-loss",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:multilingual-enterprise-context-loss:ru:2",
+      "to": "problem:multilingual-enterprise-context-loss",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:multilingual-enterprise-context-loss:ru:3",
+      "to": "problem:multilingual-enterprise-context-loss",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "Inconsistent entity meanings become harder to resolve across languages.",
+        "ru": "Несогласованные значения сущностей сложнее исправить между языками."
+      }
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "problem:key-person-decision-dependency",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "Expert decision logic must survive translation with preserved provenance.",
+        "ru": "Экспертная логика должна сохраняться при переводе вместе с источниками."
+      }
+    },
+    {
+      "from": "problem:multilingual-enterprise-context-loss",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Translated agreements still need an accountable next-action owner.",
+        "ru": "Переведённые договорённости требуют ответственного исполнителя следующего шага."
+      }
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "cause:private-equity-portfolio-invisible-synergies:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "cause:private-equity-portfolio-invisible-synergies:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "cause:private-equity-portfolio-invisible-synergies:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "symptom:private-equity-portfolio-invisible-synergies:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "symptom:private-equity-portfolio-invisible-synergies:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "symptom:private-equity-portfolio-invisible-synergies:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "solution-option:private-equity-portfolio-invisible-synergies:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "solution-option:private-equity-portfolio-invisible-synergies:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "solution-option:private-equity-portfolio-invisible-synergies:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "metric:private-equity-portfolio-invisible-synergies:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "metric:private-equity-portfolio-invisible-synergies:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "metric:private-equity-portfolio-invisible-synergies:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "module:portfolio-digital-twin",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "module:venture-architecture",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "module:cide",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "outcome:private-equity-portfolio-invisible-synergies",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:private-equity-portfolio-invisible-synergies:en:0",
+      "to": "problem:private-equity-portfolio-invisible-synergies",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:private-equity-portfolio-invisible-synergies:en:1",
+      "to": "problem:private-equity-portfolio-invisible-synergies",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:private-equity-portfolio-invisible-synergies:en:2",
+      "to": "problem:private-equity-portfolio-invisible-synergies",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:private-equity-portfolio-invisible-synergies:en:3",
+      "to": "problem:private-equity-portfolio-invisible-synergies",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:private-equity-portfolio-invisible-synergies:ru:0",
+      "to": "problem:private-equity-portfolio-invisible-synergies",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:private-equity-portfolio-invisible-synergies:ru:1",
+      "to": "problem:private-equity-portfolio-invisible-synergies",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:private-equity-portfolio-invisible-synergies:ru:2",
+      "to": "problem:private-equity-portfolio-invisible-synergies",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:private-equity-portfolio-invisible-synergies:ru:3",
+      "to": "problem:private-equity-portfolio-invisible-synergies",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "M&A operational integration is one route to portfolio-level value.",
+        "ru": "Операционная интеграция M&A — один из путей создания стоимости портфеля."
+      }
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "Verified cross-company supplier capabilities can reveal shared-service opportunities.",
+        "ru": "Проверенные компетенции поставщиков могут раскрыть возможности общих сервисов."
+      }
+    },
+    {
+      "from": "problem:private-equity-portfolio-invisible-synergies",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Synergy claims should be compared as testable investment hypotheses.",
+        "ru": "Гипотезы синергии необходимо сравнивать как проверяемые инвестиционные предположения."
+      }
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "cause:cross-company-ai-trust-boundaries:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "cause:cross-company-ai-trust-boundaries:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "cause:cross-company-ai-trust-boundaries:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "symptom:cross-company-ai-trust-boundaries:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "symptom:cross-company-ai-trust-boundaries:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "symptom:cross-company-ai-trust-boundaries:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "solution-option:cross-company-ai-trust-boundaries:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "solution-option:cross-company-ai-trust-boundaries:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "solution-option:cross-company-ai-trust-boundaries:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "metric:cross-company-ai-trust-boundaries:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "metric:cross-company-ai-trust-boundaries:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "metric:cross-company-ai-trust-boundaries:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "module:twin-to-twin-commerce",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "module:matrix-gate",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "module:agent-governance",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "outcome:cross-company-ai-trust-boundaries",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:cross-company-ai-trust-boundaries:en:0",
+      "to": "problem:cross-company-ai-trust-boundaries",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:cross-company-ai-trust-boundaries:en:1",
+      "to": "problem:cross-company-ai-trust-boundaries",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:cross-company-ai-trust-boundaries:en:2",
+      "to": "problem:cross-company-ai-trust-boundaries",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:cross-company-ai-trust-boundaries:en:3",
+      "to": "problem:cross-company-ai-trust-boundaries",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:cross-company-ai-trust-boundaries:ru:0",
+      "to": "problem:cross-company-ai-trust-boundaries",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:cross-company-ai-trust-boundaries:ru:1",
+      "to": "problem:cross-company-ai-trust-boundaries",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:cross-company-ai-trust-boundaries:ru:2",
+      "to": "problem:cross-company-ai-trust-boundaries",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:cross-company-ai-trust-boundaries:ru:3",
+      "to": "problem:cross-company-ai-trust-boundaries",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "problem:supplier-delivery-status-blindspots",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-capability",
+      "rationale": {
+        "en": "Contractor coordination provides real business scenarios for inter-agent protocols.",
+        "ru": "Координация подрядчиков даёт реальные сценарии межагентных протоколов."
+      }
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-control-boundary",
+      "rationale": {
+        "en": "Autonomous permissions and audit trails are required across organizational boundaries.",
+        "ru": "На межкорпоративной границе необходимы полномочия и журналы действий."
+      }
+    },
+    {
+      "from": "problem:cross-company-ai-trust-boundaries",
+      "to": "problem:outsourced-accounting-data-exposure",
+      "type": "SEMANTIC_RELATION",
+      "relation": "reuses-validation-pattern",
+      "rationale": {
+        "en": "Least-privilege data exchange requires lawful access and provenance controls.",
+        "ru": "Передача минимальных данных требует законного доступа и прослеживаемости."
       }
     }
   ]

@@ -1,0 +1,587 @@
+[
+  {
+    "slug": "ai-leads-outpace-sales-operations",
+    "category": "Revenue Operations",
+    "modules": [
+      "Revenue Engine",
+      "Enterprise Digital Twin",
+      "Architecture Discovery"
+    ],
+    "flags": [
+      19,
+      20,
+      21,
+      24,
+      25
+    ],
+    "related": [
+      "operational-handoffs-lose-decisions",
+      "ai-pilots-fail-to-scale",
+      "fragmented-erp-crm-ai-data"
+    ],
+    "en": {
+      "title": "AI creates more sales leads than a company can actually serve",
+      "tagline": "More demand is not growth when delivery capacity stays unchanged.",
+      "description": "Reconcile AI lead generation, qualification, pricing, operational capacity and actual revenue instead of optimizing contact volume.",
+      "problem": "AI-driven content and outreach can increase inbound demand without strengthening qualification, proposal approval, delivery capacity or cash collection. CRM dashboards then report growth in activity while accepted orders stall. A useful system must connect lead quality and contract economics to the whole order-to-cash chain.",
+      "symptoms": [
+        "Contact volume rises but qualified opportunities or profit do not.",
+        "Sales promises delivery dates that operations have not confirmed.",
+        "Staff spend more time researching irrelevant leads than closing viable work."
+      ],
+      "causes": [
+        "Marketing optimization stops at click, reply or lead count.",
+        "Capability, pricing and availability are not available during qualification.",
+        "There is no traceable hand-off from opportunity to delivery and acceptance."
+      ],
+      "options": [
+        [
+          "Opportunity quality scoring",
+          "Rank demand using explicitly validated signals and responsible human review."
+        ],
+        [
+          "Capacity-aware quotation",
+          "Check deliverability, margins and approval rights before committing."
+        ],
+        [
+          "End-to-end revenue twin",
+          "Track a candidate from first demand signal through contract, delivery and repeat sale."
+        ]
+      ],
+      "questions": [
+        "What share of leads becomes a paid, profitable job?",
+        "Which promise fails most often between sales and delivery?",
+        "Who can approve price, delivery scope and legal commitments?"
+      ],
+      "metrics": [
+        "Contribution margin per qualified lead",
+        "Lead-to-paid-contract conversion",
+        "Time and rework per accepted proposal"
+      ],
+      "queries": [
+        "AI lead generation too many low quality leads",
+        "sales leads overwhelm operations",
+        "lead volume increases but revenue not",
+        "sales automation order fulfillment bottleneck"
+      ],
+      "buyer": "CEO · CRO · Sales Ops · COO",
+      "deliverable": "A revenue-to-delivery bottleneck map and tested qualification-to-proposal pilot."
+    },
+    "ru": {
+      "title": "AI приводит больше лидов, чем компания способна обработать",
+      "tagline": "Рост обращений — ещё не рост бизнеса, если исполнение не готово.",
+      "description": "Согласование AI-лидогенерации, квалификации, цен, операционных мощностей и реальной выручки.",
+      "problem": "AI-контент и рассылки увеличивают поток обращений, но квалификация, утверждение предложений, производственные мощности и оплата остаются прежними. Отчёты CRM показывают активность, а число прибыльных заказов почти не меняется. Нужна сквозная архитектура от качества лида до оплаченного результата.",
+      "symptoms": [
+        "Контактов больше, а квалифицированных сделок и прибыли нет.",
+        "Продажи обещают сроки без подтверждения исполнителей.",
+        "Команда тратит время на нецелевые запросы вместо реальных заказов."
+      ],
+      "causes": [
+        "Маркетинг оптимизируется по кликам и контактам, а не по сделкам.",
+        "Загрузка, маржа и полномочия недоступны во время квалификации.",
+        "Переход от заявки к исполнению не имеет прослеживаемого владельца."
+      ],
+      "options": [
+        [
+          "Оценка качества возможностей",
+          "Ранжировать спрос по проверяемым признакам с человеческим контролем."
+        ],
+        [
+          "Предложение с учётом мощности",
+          "Проверять исполнимость, маржу и права согласования до обещаний."
+        ],
+        [
+          "Цифровой двойник выручки",
+          "Отслеживать путь от сигнала спроса до договора, поставки и повторного заказа."
+        ]
+      ],
+      "questions": [
+        "Какая доля обращений превращается в прибыльный оплаченный заказ?",
+        "Где чаще всего нарушается обещание между продажами и исполнением?",
+        "Кто вправе подтвердить цену, срок и договорные обязательства?"
+      ],
+      "metrics": [
+        "Маржинальный доход на квалифицированный запрос",
+        "Конверсия лида в оплаченный договор",
+        "Время и переделки на принятое предложение"
+      ],
+      "queries": [
+        "лидов стало больше продаж не стало",
+        "AI лидогенерация не приносит выручку",
+        "отдел продаж не успевает обрабатывать заявки",
+        "узкое место CRM между продажами и исполнением"
+      ],
+      "buyer": "CEO · коммерческий директор · директор продаж · COO",
+      "deliverable": "Карта потерь от спроса до исполнения и проверенный пилот квалификации."
+    }
+  },
+  {
+    "slug": "workforce-ai-role-uncertainty",
+    "category": "Human / Organization",
+    "modules": [
+      "ROLE NAVIGATION",
+      "ARIS HOME",
+      "System Awareness"
+    ],
+    "flags": [
+      1,
+      3,
+      4,
+      5,
+      22,
+      23
+    ],
+    "related": [
+      "key-person-decision-dependency",
+      "ai-pilots-fail-to-scale",
+      "operational-handoffs-lose-decisions"
+    ],
+    "en": {
+      "title": "Employees fear AI because nobody can explain their future role",
+      "tagline": "Technology adoption fails when the human trajectory remains undefined.",
+      "description": "Use role maps, task decomposition, capability development and transparent governance when AI changes work.",
+      "problem": "A company may deploy AI successfully in technical terms while creating uncertainty about roles, learning and evaluation. Workers reasonably fear losing status, income or autonomy when executives cannot explain which tasks change and what new responsibility becomes possible. Blanket productivity targets often deepen distrust.",
+      "symptoms": [
+        "Employees avoid approved tools or keep parallel shadow processes.",
+        "New AI tasks are added without training time or role clarification.",
+        "Managers cannot describe how performance and accountability will change."
+      ],
+      "causes": [
+        "Technology decisions are separated from organizational design.",
+        "Tasks are automated without mapping the remaining judgment and exception work.",
+        "Benefits, retraining and change responsibilities were not discussed transparently."
+      ],
+      "options": [
+        [
+          "Task and role transition map",
+          "Decompose work into automatable actions, protected decisions and emerging capabilities."
+        ],
+        [
+          "Co-designed adaptation pilot",
+          "Let affected teams test process changes and define useful training."
+        ],
+        [
+          "Transparent decision governance",
+          "Publish authority, evaluation and grievance routes before widening automation."
+        ]
+      ],
+      "questions": [
+        "Which roles gain or lose tasks, responsibility or income?",
+        "What new competence and training capacity are actually funded?",
+        "How can employees question wrong AI recommendations safely?"
+      ],
+      "metrics": [
+        "Time to competence on redesigned tasks",
+        "Exception resolution quality",
+        "Reported role clarity and tool adoption"
+      ],
+      "queries": [
+        "employee resistance to AI adoption",
+        "AI workforce role redesign",
+        "workers afraid of AI replacement enterprise",
+        "human centered AI transformation"
+      ],
+      "buyer": "CHRO · COO · Transformation Lead",
+      "deliverable": "A role-transition architecture with a consented, measurable team pilot."
+    },
+    "ru": {
+      "title": "Сотрудники боятся AI, потому что не понимают будущую роль",
+      "tagline": "Внедрение технологии тормозится, когда траектория человека не определена.",
+      "description": "Как сопоставить изменения задач, новые компетенции, обучение и прозрачное управление при внедрении AI.",
+      "problem": "Компания может внедрить AI технически успешно и одновременно вызвать тревогу из-за неясных ролей, обучения и оценки труда. Работник обоснованно опасается потери статуса, дохода или самостоятельности, если руководство не объясняет изменения задач и возможностей. Требование просто повысить продуктивность усиливает недоверие.",
+      "symptoms": [
+        "Сотрудники избегают утверждённых инструментов или создают теневые процессы.",
+        "AI-задачи добавлены без времени на обучение и изменения роли.",
+        "Руководители не могут объяснить новые правила ответственности и оценки."
+      ],
+      "causes": [
+        "Технологические решения отделены от организационной архитектуры.",
+        "Автоматизируют задачи, не описав остаточные решения и исключения.",
+        "Переобучение, распределение выгод и право оспаривать ошибки не согласованы."
+      ],
+      "options": [
+        [
+          "Карта трансформации ролей",
+          "Разложить работу на автоматизируемые действия, решения человека и новые компетенции."
+        ],
+        [
+          "Пилот совместного изменения",
+          "Вовлечь команды в эксперименты и определить реальное обучение."
+        ],
+        [
+          "Прозрачные правила контроля",
+          "Опубликовать полномочия, критерии оценки и механизм разбора спорных ситуаций."
+        ]
+      ],
+      "questions": [
+        "Какие роли теряют или приобретают задачи, доход и ответственность?",
+        "Какое обучение действительно обеспечено временем и ресурсами?",
+        "Как безопасно оспорить неправильную AI-рекомендацию?"
+      ],
+      "metrics": [
+        "Срок освоения новой деятельности",
+        "Качество разрешения исключений",
+        "Ясность роли и использование инструмента"
+      ],
+      "queries": [
+        "сотрудники сопротивляются внедрению ИИ",
+        "страх сокращений из за искусственного интеллекта",
+        "изменение ролей сотрудников при AI",
+        "как внедрить ИИ без сопротивления команды"
+      ],
+      "buyer": "HR-директор · COO · руководитель трансформации",
+      "deliverable": "Архитектура изменения ролей и измеримый командный пилот."
+    }
+  },
+  {
+    "slug": "multilingual-enterprise-context-loss",
+    "category": "Multilingual / Enterprise",
+    "modules": [
+      "Semantic Presence Engine",
+      "Knowledge Graph",
+      "Multilingual Executive Twin"
+    ],
+    "flags": [
+      9,
+      10,
+      18,
+      27
+    ],
+    "related": [
+      "fragmented-erp-crm-ai-data",
+      "key-person-decision-dependency",
+      "operational-handoffs-lose-decisions"
+    ],
+    "en": {
+      "title": "International teams lose decisions in translation and hand-offs",
+      "tagline": "Fluent translation is not the same as shared organizational meaning.",
+      "description": "Preserve intent, authority, terminology and decisions across multilingual enterprise workflows using traceable semantic context.",
+      "problem": "Cross-border teams may translate calls and messages fluently while losing who promised what, which technical term was intended and who can approve an action. Misinterpretation becomes operational risk when the translation loses conditions, legal nuance or the original evidence. A multilingual system needs explicit terminology and accountable sign-off.",
+      "symptoms": [
+        "Commercial commitments differ between translated versions of the same discussion.",
+        "Industry terminology changes meaning between teams and documents.",
+        "Decisions are repeated because nobody has a canonical agreed record."
+      ],
+      "causes": [
+        "Translation is separated from the process and decision ontology.",
+        "Authority and document versions are not represented in communications.",
+        "No bilingual verification exists for critical obligations and exceptions."
+      ],
+      "options": [
+        [
+          "Domain-specific multilingual terminology",
+          "Create approved terms and context-specific definitions with source provenance."
+        ],
+        [
+          "Decision record with language variants",
+          "Record the decision, evidence, owner and reviewed translations as linked versions."
+        ],
+        [
+          "Human-supervised executive copilot",
+          "Assist live meetings but require explicit approval for legal or financial commitments."
+        ]
+      ],
+      "questions": [
+        "Which translated misunderstandings have already caused rework or disputes?",
+        "Who can approve canonical terminology and contractual meaning?",
+        "What conversations may legally be recorded or analyzed?"
+      ],
+      "metrics": [
+        "Conflicting interpretations per decision cycle",
+        "Time to produce approved bilingual records",
+        "Rate of corrections to high-risk translated terms"
+      ],
+      "queries": [
+        "multilingual team communication lost context",
+        "AI translation business decision risk",
+        "enterprise multilingual knowledge management",
+        "cross border meetings agreement translation"
+      ],
+      "buyer": "International COO · Legal Ops · Head of Partnerships",
+      "deliverable": "A controlled multilingual decision protocol and a measured collaboration pilot."
+    },
+    "ru": {
+      "title": "Международные команды теряют смысл решений при переводе",
+      "tagline": "Беглый перевод не означает общего понимания организационного смысла.",
+      "description": "Сохранение намерений, полномочий, терминологии и решений между многоязычными командами с прослеживаемым контекстом.",
+      "problem": "Международные команды могут свободно переводить встречи и сообщения, но терять, кто что обещал, какой термин подразумевался и кто вправе принять решение. Если исчезают условия и юридические нюансы, перевод превращается в операционный риск. Нужны единые определения и ответственное подтверждение смысла.",
+      "symptoms": [
+        "В разных языковых версиях разговора расходятся коммерческие обязательства.",
+        "Отраслевой термин меняет смысл между документами и командами.",
+        "Одни решения принимаются повторно, потому что нет согласованной записи."
+      ],
+      "causes": [
+        "Перевод отделён от онтологии процесса и решения.",
+        "Полномочия и версии документов не связаны с коммуникацией.",
+        "Для критических условий нет двуязычной независимой проверки."
+      ],
+      "options": [
+        [
+          "Отраслевая многоязычная терминология",
+          "Утвердить контекстные определения терминов и происхождение источников."
+        ],
+        [
+          "Единая запись решения с переводами",
+          "Связать решение, доказательства, владельца и проверенные языковые версии."
+        ],
+        [
+          "Контролируемый Executive Copilot",
+          "Помогать на встречах, но требовать подтверждения юридических и финансовых обязательств."
+        ]
+      ],
+      "questions": [
+        "Какие ошибки перевода уже вызвали переделки или споры?",
+        "Кто утверждает окончательные термины и договорный смысл?",
+        "Какие разговоры законно записывать и анализировать?"
+      ],
+      "metrics": [
+        "Частота противоречивых интерпретаций",
+        "Срок подготовки утверждённой двуязычной записи",
+        "Частота исправления рискованных терминов"
+      ],
+      "queries": [
+        "ИИ перевод теряет контекст переговоров",
+        "ошибки перевода международной команды",
+        "многоязычный корпоративный граф знаний",
+        "фиксирование решений многоязычных встреч"
+      ],
+      "buyer": "Международный COO · юридический отдел · партнёрства",
+      "deliverable": "Проверяемый многоязычный протокол принятия решений и измеримый пилот сотрудничества."
+    }
+  },
+  {
+    "slug": "private-equity-portfolio-invisible-synergies",
+    "category": "Private Equity / Portfolio",
+    "modules": [
+      "Portfolio Digital Twin",
+      "Venture Architecture",
+      "CIDE"
+    ],
+    "flags": [
+      19,
+      20,
+      21,
+      27
+    ],
+    "related": [
+      "post-merger-systems-fragmented",
+      "supplier-delivery-status-blindspots",
+      "unvalidated-investment-thesis"
+    ],
+    "en": {
+      "title": "A private equity portfolio has synergies nobody can quantify",
+      "tagline": "Owning several companies does not automatically produce shared value.",
+      "description": "Find cross-portfolio commercial, operational and technology synergies without forcing every business onto one platform.",
+      "problem": "A holding group can acquire businesses with overlapping customers, skills, suppliers and infrastructure yet lack a consistent way to identify actual joint opportunities. Consolidated financial results show outcomes, not which complementary capability is idle or usable across entities. Centralization without evidence may damage local advantages.",
+      "symptoms": [
+        "Management presents theoretical portfolio synergies without operational baselines.",
+        "Portfolio companies separately buy overlapping services and capabilities.",
+        "Investment committees cannot distinguish attainable coordination gains from speculative savings."
+      ],
+      "causes": [
+        "Cross-company assets and capabilities have no shared taxonomy.",
+        "Financial reporting does not expose process-level dependencies.",
+        "No experimental framework ranks synergies by effort, consent and verified impact."
+      ],
+      "options": [
+        [
+          "Portfolio capability graph",
+          "Model facilities, assets, customers, skills and constraints with appropriate access rights."
+        ],
+        [
+          "Synergy experiment portfolio",
+          "Prioritize narrow cross-company tests before permanent consolidation."
+        ],
+        [
+          "Shared service coordination layer",
+          "Deploy reusable workflows only after local acceptance and measurable benefit."
+        ]
+      ],
+      "questions": [
+        "Which two portfolio companies have a plausible measurable shared opportunity?",
+        "Who may exchange customer, supplier and pricing information under law and contract?",
+        "What experiment proves the gain without mandatory consolidation?"
+      ],
+      "metrics": [
+        "Verified cross-portfolio savings or revenue",
+        "Time to test a new cross-company service",
+        "Local operational performance after coordination"
+      ],
+      "queries": [
+        "private equity portfolio synergies unrealized",
+        "operating partner portfolio visibility",
+        "cross portfolio procurement synergies",
+        "PE value creation operating model"
+      ],
+      "buyer": "PE Operating Partner · Portfolio CFO · Family Office",
+      "deliverable": "A portfolio opportunity graph and prioritized value-creation experiments."
+    },
+    "ru": {
+      "title": "В портфеле компаний есть синергия, но её никто не умеет измерять",
+      "tagline": "Владение несколькими компаниями ещё не создаёт совместную ценность.",
+      "description": "Поиск межкорпоративной синергии активов, поставщиков, компетенций и технологий без обязательной унификации всех предприятий.",
+      "problem": "Холдинг может владеть компаниями с пересечением клиентов, специалистов, поставщиков и инфраструктуры, не умея находить реальные общие возможности. Консолидированная отчётность показывает финансовый итог, но не объясняет, какие ресурсы доступны другим компаниям. Централизация без доказательств способна уничтожить локальные преимущества.",
+      "symptoms": [
+        "Руководство обещает синергию без операционной базы измерений.",
+        "Компании по отдельности покупают одинаковые ресурсы и сервисы.",
+        "Инвесткомитет не отделяет достижимую экономию от теоретической."
+      ],
+      "causes": [
+        "Активы и компетенции компаний не описаны общей таксономией.",
+        "Финансовые отчёты скрывают зависимости реальных процессов.",
+        "Нет экспериментов для сравнения синергий по затратам, правам и эффекту."
+      ],
+      "options": [
+        [
+          "Граф компетенций портфеля",
+          "Сопоставить активы, ресурсы и ограничения с законными правилами доступа."
+        ],
+        [
+          "Портфель экспериментов синергии",
+          "Проверять конкретные межкорпоративные действия до постоянной консолидации."
+        ],
+        [
+          "Контур общих сервисов",
+          "Повторять доказанные процессы после согласования с локальными командами."
+        ]
+      ],
+      "questions": [
+        "У каких двух компаний вероятна измеримая общая выгода?",
+        "Какие данные клиентов, поставщиков и цен законно обменивать?",
+        "Как доказать эффект, не проводя тотальную консолидацию?"
+      ],
+      "metrics": [
+        "Подтверждённая экономия или выручка между компаниями",
+        "Срок испытания общей функции",
+        "Локальные показатели после внедрения"
+      ],
+      "queries": [
+        "неиспользованная синергия компаний холдинга",
+        "эффект объединения портфеля предприятий",
+        "private equity рост стоимости активов",
+        "общие закупки разных компаний"
+      ],
+      "buyer": "Инвестиционный партнёр · CFO холдинга · Family Office",
+      "deliverable": "Граф инвестиционных возможностей портфеля и приоритетные эксперименты создания стоимости."
+    }
+  },
+  {
+    "slug": "cross-company-ai-trust-boundaries",
+    "category": "Multi-Enterprise AI / Security",
+    "modules": [
+      "Twin-to-Twin Commerce",
+      "MATRIX GATE",
+      "Agent Governance"
+    ],
+    "flags": [
+      18,
+      27,
+      28,
+      29,
+      30,
+      38
+    ],
+    "related": [
+      "supplier-delivery-status-blindspots",
+      "ai-agent-governance-gaps",
+      "outsourced-accounting-data-exposure"
+    ],
+    "en": {
+      "title": "AI agents from different companies cannot safely coordinate",
+      "tagline": "Two smart agents do not automatically share the same authority or trust.",
+      "description": "Define contractual permissions, verifiable identities, minimal data disclosure and hand-off protocols between enterprise AI agents.",
+      "problem": "One organization may deploy a purchasing agent while a supplier uses a separate assistant. Exchanging natural-language messages can create unapproved commitments, reveal commercial information and hide responsibility. Agent-to-agent cooperation needs explicit identities, scopes, approvals and records before it can become an operational channel.",
+      "symptoms": [
+        "Agents propose delivery or price commitments without evidence of authority.",
+        "Sensitive customer or supplier data is copied into external agent conversations.",
+        "Participants cannot reconstruct which side approved an automated transaction."
+      ],
+      "causes": [
+        "Agent identity is confused with authority to act for an organization.",
+        "Data-sharing policies are not tied to individual contract tasks.",
+        "The boundary between suggestion, negotiation and binding commitment is undefined."
+      ],
+      "options": [
+        [
+          "Verifiable agent representation",
+          "Bind agent identity to a bounded organizational mandate and expiry."
+        ],
+        [
+          "Policy-mediated exchange",
+          "Share only task-required claims and evidence under agreed policies."
+        ],
+        [
+          "Human-confirmed execution",
+          "Allow automated preparation while people approve obligations at defined thresholds."
+        ]
+      ],
+      "questions": [
+        "Which commitments may an agent propose and which may it execute?",
+        "How are counterpart identities, authority and data rights checked?",
+        "Can each company independently audit the same transaction history?"
+      ],
+      "metrics": [
+        "Actions carrying verified authorization",
+        "Disclosure incidents per exchange",
+        "End-to-end agreed transaction trace coverage"
+      ],
+      "queries": [
+        "AI agents across companies security",
+        "agent to agent business protocol trust",
+        "enterprise AI agents supplier negotiation governance",
+        "cross company AI data sharing controls"
+      ],
+      "buyer": "CISO · Procurement CTO · Platform Partnerships",
+      "deliverable": "A bounded inter-company agent protocol and audited negotiation pilot."
+    },
+    "ru": {
+      "title": "AI-агенты разных компаний не могут безопасно взаимодействовать",
+      "tagline": "Два интеллектуальных агента не означают общих полномочий и доверия.",
+      "description": "Правила представительства, проверяемые полномочия, минимизация раскрытия и протоколы взаимодействия AI-агентов разных предприятий.",
+      "problem": "Компания внедрила AI-агента закупок, а её поставщик — собственного помощника. Свободный обмен сообщениями может создавать неподтверждённые обязательства, раскрывать коммерческие данные и размывать ответственность. Для межкорпоративной работы нужны идентичности, границы прав, согласования и журналы.",
+      "symptoms": [
+        "Агенты обсуждают цену и сроки без доказательств полномочий.",
+        "Данные клиентов и поставщиков попадают во внешние диалоги агентов.",
+        "Стороны не могут восстановить, кто утвердил автоматизированную операцию."
+      ],
+      "causes": [
+        "Идентичность агента принимают за право действовать от лица компании.",
+        "Политики передачи данных не связаны с конкретной договорной задачей.",
+        "Не обозначена граница между советом, переговорами и обязательством."
+      ],
+      "options": [
+        [
+          "Проверяемое представительство агента",
+          "Связать идентичность с ограниченным мандатом компании и сроком действия."
+        ],
+        [
+          "Обмен через политики доступа",
+          "Передавать только необходимые для задачи сведения и доказательства."
+        ],
+        [
+          "Исполнение с подтверждением человека",
+          "Автоматизировать подготовку, но утверждать обязательства по установленным порогам."
+        ]
+      ],
+      "questions": [
+        "Какие договорённости агент может предложить, а какие заключить?",
+        "Как проверить сторону, полномочия и право раскрывать данные?",
+        "Может ли каждая компания независимо проверить историю сделки?"
+      ],
+      "metrics": [
+        "Доля действий с проверенными полномочиями",
+        "Инциденты раскрытия на обмен",
+        "Полнота общей трассы согласованных сделок"
+      ],
+      "queries": [
+        "агенты ИИ между компаниями безопасность",
+        "межкорпоративный обмен AI агентами",
+        "полномочия ИИ на переговорах",
+        "как связать AI агентов поставщика и клиента"
+      ],
+      "buyer": "CISO · CTO закупок · платформенные партнёры",
+      "deliverable": "Ограниченный протокол межкорпоративных агентов и проверенный переговорный пилот."
+    }
+  }
+]

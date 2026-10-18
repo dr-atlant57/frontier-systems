@@ -11,3 +11,6 @@ for(const [name,content] of Object.entries(output)){
   await writeFile(target,content,"utf8");
 }
 console.log("Generated",Object.keys(output).length,"files for",data.issues.length,"issues");
+
+// Update the Audit whitelist with the same editorial seed to avoid stale links.
+await import("./sync-audit-map.mjs");

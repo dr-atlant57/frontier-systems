@@ -1,0 +1,584 @@
+[
+  {
+    "slug": "bank-core-modernization-without-disruption",
+    "category": "Banking Architecture",
+    "modules": [
+      "Banking Architecture R&D Lab",
+      "Architecture Intelligence",
+      "Resilience Architecture"
+    ],
+    "flags": [
+      21,
+      27,
+      31,
+      32,
+      42
+    ],
+    "related": [
+      "legacy-platform-lock-in",
+      "fragmented-resilience-incident-response",
+      "ai-agent-governance-gaps"
+    ],
+    "en": {
+      "title": "Modernizing a bank core without disrupting critical operations",
+      "tagline": "Modernization fails when replacing technology is mistaken for preserving banking capability.",
+      "description": "Compare phased bank-core modernization approaches: interface decoupling, independent validation, continuity and reversible migration.",
+      "problem": "A bank may need faster product launches and AI-ready data, yet core systems encode decades of settlement rules, exceptions and regulatory controls. A big-bang replacement threatens service continuity; indefinite patching creates hidden cost and dependency. The architecture question is which business capabilities can be separated and verified without compromising the system of record.",
+      "symptoms": [
+        "New banking products require repeated changes to tightly coupled core code.",
+        "Teams maintain parallel spreadsheets because integration contracts are unclear.",
+        "A migration plan lists applications, but not the business outcomes that must stay correct."
+      ],
+      "causes": [
+        "Business logic, customer state and product rules are embedded in proprietary code.",
+        "Testing proves individual API responses but not complete business consistency.",
+        "Rollback and dual-run reconciliation have not been designed into the transition."
+      ],
+      "options": [
+        [
+          "Capability-by-capability decoupling",
+          "Expose a narrow domain through stable contracts while keeping the existing system authoritative."
+        ],
+        [
+          "Shadow-mode validation",
+          "Run proposed calculations in parallel and compare them against authorized real cases without posting transactions."
+        ],
+        [
+          "Staged core transition",
+          "Move one bounded product or service after reconciliation and documented recovery rehearsal."
+        ]
+      ],
+      "questions": [
+        "Which banking capability has the highest modernization cost today?",
+        "What evidence proves equivalence for settlement, balances and exceptions?",
+        "Who authorizes fallback when the new component disagrees with the existing core?"
+      ],
+      "metrics": [
+        "Mismatch rate on representative dual-run cases",
+        "Time to ship one compliant product change",
+        "Service disruption and recovery time in controlled tests"
+      ],
+      "queries": [
+        "core banking modernization without downtime",
+        "bank core replacement risk",
+        "legacy banking systems integration AI",
+        "banking platform phased migration"
+      ],
+      "buyer": "Bank CTO · COO · CIO · Risk / Compliance",
+      "deliverable": "A domain boundary map and reversible pilot with acceptance and reconciliation tests."
+    },
+    "ru": {
+      "title": "Модернизация банковского ядра без остановки критических операций",
+      "tagline": "Нельзя подменять сохранение банковских функций простой заменой технологий.",
+      "description": "Поэтапная модернизация банковского ядра: выделение функций, независимая проверка, непрерывность операций и обратимая миграция.",
+      "problem": "Банку нужны новые продукты и AI-готовые данные, но действующее ядро хранит многолетние расчётные правила, исключения и контрольные процедуры. Одномоментная замена угрожает непрерывности, бесконечные доработки увеличивают зависимость. Архитектурный вопрос — какие функции можно выделить и проверить, не нарушая достоверность основного учёта.",
+      "symptoms": [
+        "Новый банковский продукт требует изменений в тесно связанном коде ядра.",
+        "Отделы ведут параллельные таблицы из-за неопределённых правил интеграции.",
+        "План миграции перечисляет приложения, но не обязательные бизнес-инварианты."
+      ],
+      "causes": [
+        "Бизнес-логика, состояния счетов и продуктовые правила закреплены в закрытой реализации.",
+        "Тесты проверяют отдельные API, но не сквозную корректность операций.",
+        "Откат и параллельная сверка не спроектированы как часть перехода."
+      ],
+      "options": [
+        [
+          "Выделение отдельных функций",
+          "Вынести ограниченную предметную область за стабильный интерфейс, сохранив действующий источник учёта."
+        ],
+        [
+          "Независимый теневой расчёт",
+          "Сопоставлять результаты новой модели с разрешёнными реальными примерами без исполнения операций."
+        ],
+        [
+          "Поэтапная миграция ядра",
+          "Переводить ограниченный продукт после сверок и испытаний восстановления."
+        ]
+      ],
+      "questions": [
+        "Какая банковская функция сегодня обходится дороже всего при изменениях?",
+        "Как доказать эквивалентность расчётов, остатков и исключений?",
+        "Кто разрешает откат при расхождении нового и действующего контура?"
+      ],
+      "metrics": [
+        "Частота расхождений на параллельных испытаниях",
+        "Время запуска нормативно корректного изменения",
+        "Перерыв сервиса и восстановление в тестах"
+      ],
+      "queries": [
+        "модернизация банковского ядра без остановки",
+        "риск замены core banking",
+        "интеграция старых банковских систем с ИИ",
+        "поэтапная миграция банковских систем"
+      ],
+      "buyer": "CTO банка · COO · CIO · управление рисков",
+      "deliverable": "Карта границ банковских функций и обратимый пилот с критериями сверки."
+    }
+  },
+  {
+    "slug": "outsourced-accounting-data-exposure",
+    "category": "Accounting / Privacy",
+    "modules": [
+      "MATRIX GATE",
+      "Knowledge Provenance",
+      "Professional Services Exchange"
+    ],
+    "flags": [
+      18,
+      27,
+      29,
+      30,
+      31
+    ],
+    "related": [
+      "fragmented-erp-crm-ai-data",
+      "ai-agent-governance-gaps",
+      "legacy-platform-lock-in"
+    ],
+    "en": {
+      "title": "Outsourced accounting creates unnecessary access to sensitive company data",
+      "tagline": "Delegating work should not mean delegating unrestricted visibility.",
+      "description": "Design lawful, auditable data minimization and task separation for outsourced accounting and professional services.",
+      "problem": "External accountants may require transaction context to complete compliant work, while access to entire client, supplier and commercial datasets creates avoidable confidentiality exposure. Simple redaction often removes information necessary for legal accounting. A controlled architecture should separate work contexts while retaining authorized identity, audit trails and correct regulatory reporting.",
+      "symptoms": [
+        "Outside specialists receive full exports when they only need one task scope.",
+        "Sensitive supplier prices and commercial relationships appear in unnecessary work files.",
+        "Managers cannot reconstruct who handled which records or approved final entries."
+      ],
+      "causes": [
+        "Task boundaries are not reflected in data access policies.",
+        "De-identification is attempted without preservation of accounting validity.",
+        "A single export path merges operational, financial and private information."
+      ],
+      "options": [
+        [
+          "Role-scoped task packages",
+          "Expose only the minimum legally sufficient records required for a defined assignment."
+        ],
+        [
+          "Controlled transformation gateway",
+          "Use reversible mappings under strict control only where lawful and traceable."
+        ],
+        [
+          "Dual verification and provenance",
+          "Separate preparation, validation and statutory reporting with independent audit logs."
+        ]
+      ],
+      "questions": [
+        "Which fields are mandatory for lawful processing and reporting?",
+        "Can the task be partitioned without distorting taxable events or evidence?",
+        "Who holds re-identification rights and verifies the submitted ledger?"
+      ],
+      "metrics": [
+        "Sensitive fields exposed per authorized task",
+        "Errors caught before financial posting",
+        "Audit reconstruction coverage"
+      ],
+      "queries": [
+        "outsourced accounting data privacy",
+        "accounting contractors sensitive company data",
+        "privacy preserving accounting workflow",
+        "audit trail outsourced bookkeeping"
+      ],
+      "buyer": "CFO · Accounting Firm Owner · Data Protection Lead",
+      "deliverable": "A lawful access-and-task architecture with audit and accuracy testing."
+    },
+    "ru": {
+      "title": "Бухгалтерский аутсорсинг раскрывает лишние данные компании",
+      "tagline": "Передать задачу специалисту — не значит открыть всю коммерческую информацию.",
+      "description": "Законное разграничение бухгалтерских задач, минимизация раскрываемых данных и проверяемость учёта при аутсорсинге.",
+      "problem": "Внешним бухгалтерам нужны реальные сведения для корректного учёта, но полный доступ к поставщикам, ценам и коммерческим связям создаёт лишние риски. Простое обезличивание способно нарушить достоверность документов. Требуется архитектура разделения задач с законной идентификацией, аудитом и правильной налоговой отчётностью.",
+      "symptoms": [
+        "Подрядчику отправляют всю бухгалтерскую базу ради одной операции.",
+        "Коммерчески чувствительные условия раскрываются в рабочих выгрузках.",
+        "Невозможно восстановить, кто обработал записи и кто их подтвердил."
+      ],
+      "causes": [
+        "Полномочия не соответствуют границам конкретной задачи.",
+        "Маскирование применяют без проверки правовой и бухгалтерской корректности.",
+        "В одной выгрузке смешаны операционные, финансовые и персональные сведения."
+      ],
+      "options": [
+        [
+          "Задания с минимальными доступами",
+          "Передавать только законодательно достаточные сведения для конкретного поручения."
+        ],
+        [
+          "Контролируемый шлюз преобразования",
+          "Применять обратимое сопоставление данных лишь там, где это законно и прослеживаемо."
+        ],
+        [
+          "Раздельная подготовка и проверка",
+          "Развести обработку, независимую валидацию и обязательную отчётность с журналами."
+        ]
+      ],
+      "questions": [
+        "Какие поля обязательны для корректного учёта и отчётности?",
+        "Можно ли разделить работу без искажения хозяйственной операции?",
+        "Кто контролирует идентификацию и утверждает окончательные проводки?"
+      ],
+      "metrics": [
+        "Объём раскрытых чувствительных данных на задание",
+        "Ошибки, обнаруженные до отражения в учёте",
+        "Полнота восстановления аудиторской истории"
+      ],
+      "queries": [
+        "конфиденциальность бухгалтерского аутсорсинга",
+        "бухгалтер на удалёнке доступ к данным",
+        "защита данных клиентов бухгалтерской компании",
+        "разделение обязанностей бухгалтеров"
+      ],
+      "buyer": "CFO · руководитель бухгалтерского аутсорсинга · DPO",
+      "deliverable": "Законная модель доступа и разделения задач с испытаниями корректности и аудита."
+    }
+  },
+  {
+    "slug": "supplier-delivery-status-blindspots",
+    "category": "Supply Chain / B2B",
+    "modules": [
+      "CIDE",
+      "Twin-to-Twin Delivery",
+      "SUPERAGENT"
+    ],
+    "flags": [
+      20,
+      21,
+      27,
+      30
+    ],
+    "related": [
+      "operational-handoffs-lose-decisions",
+      "fragmented-erp-crm-ai-data",
+      "post-merger-systems-fragmented"
+    ],
+    "en": {
+      "title": "Suppliers are available but delivery capacity remains invisible",
+      "tagline": "Finding a contractor is not the same as managing delivery.",
+      "description": "Map supplier capabilities, real availability, commitments and hand-offs across independent companies.",
+      "problem": "A project coordinator can identify dozens of qualified suppliers yet still struggle to know their current capacity, actual progress and exception paths. Supplier directories capture what providers claim to do, not verified delivery readiness. Each additional company introduces its own task vocabulary and reporting cycle.",
+      "symptoms": [
+        "Teams repeatedly request availability from the same suppliers.",
+        "Procurement commits before a delivery dependency has been verified.",
+        "The customer learns about a missed milestone only after its deadline."
+      ],
+      "causes": [
+        "Capabilities, resources and capacity are stored in disconnected formats.",
+        "Order status is reported manually and does not distinguish evidence from promise.",
+        "Escalation ownership between customer and contractor is not explicit."
+      ],
+      "options": [
+        [
+          "Verified supplier capability passports",
+          "Separate claimed skills, evidence, geography and actual capacity."
+        ],
+        [
+          "Shared delivery-state protocol",
+          "Use agreed milestones, proofs, exception types and permissions between organizations."
+        ],
+        [
+          "Cross-company coordination agents",
+          "Automate permitted status checks while routing changes and disputes to accountable people."
+        ]
+      ],
+      "questions": [
+        "Which missing supplier signal causes the most delays?",
+        "How is capacity verified instead of merely stated?",
+        "Who approves changes to a contractual milestone?"
+      ],
+      "metrics": [
+        "Time from request to verified supplier match",
+        "Milestones supported by evidence",
+        "Delay detection lead time"
+      ],
+      "queries": [
+        "supplier capacity visibility software",
+        "contractor status tracking across companies",
+        "B2B delivery coordination problems",
+        "supplier network capability mapping"
+      ],
+      "buyer": "Procurement Director · COO · General Contractor",
+      "deliverable": "A supplier-state ontology and one traceable cross-company delivery pilot."
+    },
+    "ru": {
+      "title": "Поставщики есть, но реальная готовность исполнителей не видна",
+      "tagline": "Найти подрядчика — не значит обеспечить исполнение.",
+      "description": "Картирование компетенций, доступности, обязательств и статусов подрядчиков между независимыми предприятиями.",
+      "problem": "Координатор способен найти десятки подрядчиков, но не знает их действительную загрузку, прогресс и правила разрешения исключений. Справочники содержат заявления о компетенциях, а не подтверждённую готовность. Каждый новый участник приносит собственные статусы и язык задач.",
+      "symptoms": [
+        "О доступности одних и тех же исполнителей спрашивают многократно.",
+        "Заказ размещён до проверки критического ресурса подрядчика.",
+        "Заказчик узнаёт о срыве этапа после установленного срока."
+      ],
+      "causes": [
+        "Навыки, ресурсы и загрузка описаны в несовместимых форматах.",
+        "Статусы передаются вручную и не отличают обещание от доказательства.",
+        "Не определён ответственный за эскалацию между компаниями."
+      ],
+      "options": [
+        [
+          "Паспорт подтверждённых возможностей",
+          "Разделить заявленные компетенции, доказательства, географию и реальную мощность."
+        ],
+        [
+          "Общий протокол исполнения",
+          "Согласовать этапы, подтверждения, типы исключений и права участников."
+        ],
+        [
+          "Межкорпоративные агенты координации",
+          "Автоматизировать разрешённые запросы статусов с передачей споров человеку."
+        ]
+      ],
+      "questions": [
+        "Какой отсутствующий сигнал подрядчика чаще всего приводит к задержке?",
+        "Как проверяется доступная мощность, а не просто обещание?",
+        "Кто согласует изменение договорного срока?"
+      ],
+      "metrics": [
+        "Время подбора проверенного исполнителя",
+        "Доля подтверждённых этапов",
+        "Время упреждающего обнаружения срыва"
+      ],
+      "queries": [
+        "нет информации о загрузке подрядчиков",
+        "как контролировать исполнение подрядных работ",
+        "сеть проверенных поставщиков и исполнителей",
+        "согласование статусов между компаниями"
+      ],
+      "buyer": "Директор закупок · COO · генеральный подрядчик",
+      "deliverable": "Онтология статусов подрядчика и один прослеживаемый межкорпоративный пилот."
+    }
+  },
+  {
+    "slug": "building-energy-losses-unverified",
+    "category": "Energy / Asset Operations",
+    "modules": [
+      "Energy Loss Intelligence",
+      "Single-Visit Repair & Verification",
+      "Energy & Carbon Efficiency"
+    ],
+    "flags": [
+      19,
+      20,
+      27,
+      47
+    ],
+    "related": [
+      "ai-compute-cost-without-value",
+      "fragmented-resilience-incident-response",
+      "supplier-delivery-status-blindspots"
+    ],
+    "en": {
+      "title": "Energy losses are detected but savings are never verified",
+      "tagline": "A thermal image is not a measured financial result.",
+      "description": "Connect energy diagnostics, repair dispatch, repeatable measurement and verified savings rather than isolated inspections.",
+      "problem": "Operators may have thermographic reports, utility bills and maintenance orders but no reliable way to link observed anomalies to remedial work and measured reduction in loss. A hot component is not automatically proof of a specific defect, and repair claims need qualified inspection, safety controls and controlled comparison.",
+      "symptoms": [
+        "Inspections produce many heat maps with no prioritized repair plan.",
+        "Repair orders close without comparable after-measurements.",
+        "Management sees estimated savings but cannot separate actual improvement from seasonal effects."
+      ],
+      "causes": [
+        "Diagnosis, maintenance and verification use disconnected work orders.",
+        "Readings lack comparable load, weather or operating conditions.",
+        "Work is ranked by visual anomaly rather than verified risk and savings opportunity."
+      ],
+      "options": [
+        [
+          "Measurement-to-action registry",
+          "Tie each finding to asset identity, suspected mechanism and authorized work order."
+        ],
+        [
+          "Qualified repair and reinspection",
+          "Dispatch trained specialists and repeat measurements in comparable conditions."
+        ],
+        [
+          "Savings verification architecture",
+          "Use appropriate baselines and uncertainty ranges to calculate net change."
+        ]
+      ],
+      "questions": [
+        "What operating conditions accompanied the initial anomaly?",
+        "Who can safely qualify and repair the affected asset?",
+        "What baseline separates repair impact from changing demand or weather?"
+      ],
+      "metrics": [
+        "Findings closed with verified measurements",
+        "Net energy reduction against adjusted baseline",
+        "Cost per validated intervention"
+      ],
+      "queries": [
+        "energy loss audit no savings verified",
+        "thermography maintenance repair verification",
+        "industrial electricity loss monitoring",
+        "measuring energy savings after repair"
+      ],
+      "buyer": "Facility Director · Energy Manager · Utilities Operator",
+      "deliverable": "A traceable inspection-to-repair protocol with baseline and verification plan."
+    },
+    "ru": {
+      "title": "Энергопотери выявлены, но экономия после ремонта не подтверждена",
+      "tagline": "Тепловизионный снимок — ещё не измеренный экономический результат.",
+      "description": "Связать энергообследование, квалифицированный ремонт, повторные измерения и проверенную экономию.",
+      "problem": "У организации есть тепловизионные отчёты, счета за энергию и заявки на ремонт, но нет связи между аномалией, выполненной работой и фактическим снижением потерь. Нагретый узел не всегда указывает на конкретный дефект; вмешательства требуют квалификации, соблюдения безопасности и сопоставимых измерений.",
+      "symptoms": [
+        "Проверки создают много тепловых карт без приоритизированного плана исправления.",
+        "Заявки закрываются без контрольного измерения.",
+        "Заявленную экономию нельзя отделить от влияния погоды и изменения нагрузки."
+      ],
+      "causes": [
+        "Диагностика, ремонт и верификация работают в разных системах.",
+        "Измерения проводятся при несопоставимой нагрузке и условиях.",
+        "Приоритет определяется яркостью изображения, а не подтверждённым риском и эффектом."
+      ],
+      "options": [
+        [
+          "Реестр «измерение → действие»",
+          "Связать находку с активом, возможным механизмом потери и разрешённой заявкой."
+        ],
+        [
+          "Квалифицированный ремонт и повторный осмотр",
+          "Направить специалистов и повторить измерения при сопоставимых условиях."
+        ],
+        [
+          "Протокол проверки экономии",
+          "Согласовать исходную линию, погрешность и расчёт чистого изменения."
+        ]
+      ],
+      "questions": [
+        "При каких условиях обнаружена аномалия?",
+        "Кто имеет допуск на обследование и безопасный ремонт?",
+        "Как отделить эффект ремонта от изменения потребления или погоды?"
+      ],
+      "metrics": [
+        "Доля дефектов с подтверждением после вмешательства",
+        "Чистое снижение энергопотребления к нормализованной базе",
+        "Стоимость проверенного исправления"
+      ],
+      "queries": [
+        "тепловизионное обследование экономия не подтверждена",
+        "сокращение потерь электричества на предприятии",
+        "энергоаудит после ремонта проверка",
+        "мониторинг энергопотерь и ремонт"
+      ],
+      "buyer": "Главный энергетик · директор эксплуатации · энергокомпания",
+      "deliverable": "Протокол от диагностики к ремонту с базой измерений и верификацией результата."
+    }
+  },
+  {
+    "slug": "tourism-booking-confirmation-failures",
+    "category": "Travel / Service Networks",
+    "modules": [
+      "Tourism OS",
+      "Host & Tourist Twins",
+      "Service Recovery"
+    ],
+    "flags": [
+      20,
+      21,
+      27,
+      30
+    ],
+    "related": [
+      "supplier-delivery-status-blindspots",
+      "operational-handoffs-lose-decisions",
+      "ai-agent-governance-gaps"
+    ],
+    "en": {
+      "title": "A tourist has a reservation but the service is not actually ready",
+      "tagline": "An accepted booking is not the same as a verified arrival.",
+      "description": "Design reliable tourism coordination across guests, hosts, transport and alternatives when a promised service fails.",
+      "problem": "Travelers may hold valid confirmations while accommodation, transport or local providers cannot fulfill the promise. Guests and small operators often rely on scattered chats and unverifiable status messages. A useful platform should separate booking intention, provider acceptance, real readiness, exception handling and authorized alternatives.",
+      "symptoms": [
+        "Guests discover an unavailable room or transfer after arrival.",
+        "Hosts cannot quickly propose an acceptable substitute with clear terms.",
+        "Refund and complaint histories disappear across chats and providers."
+      ],
+      "causes": [
+        "Confirmation statuses have no shared meaning across participants.",
+        "Changes are not acknowledged by all affected parties.",
+        "Responsibility for replacement, compensation and evidence is unclear."
+      ],
+      "options": [
+        [
+          "Verified service passport",
+          "Track provider identity, service conditions, availability and confirmation evidence."
+        ],
+        [
+          "Two-sided confirmation protocol",
+          "Require clear status changes and time-bound acknowledgements."
+        ],
+        [
+          "Assisted service recovery",
+          "Offer lawful, consented alternatives and escalate unresolved disputes to humans."
+        ]
+      ],
+      "questions": [
+        "What does confirmed mean to each provider and guest?",
+        "Who has authority to accept a substitute or compensation?",
+        "What connectivity and language limitations exist on location?"
+      ],
+      "metrics": [
+        "Bookings fulfilled as explicitly confirmed",
+        "Time to resolve a failed service",
+        "Share of alternatives accepted with informed consent"
+      ],
+      "queries": [
+        "hotel booking confirmed room not available",
+        "tourism service failure replacement process",
+        "travel host confirmation system",
+        "tourist complaint resolution platform"
+      ],
+      "buyer": "Tourism Operator · Destination Manager · Hospitality Network",
+      "deliverable": "A verified booking-state model and one measured multi-party service recovery pilot."
+    },
+    "ru": {
+      "title": "Бронь подтверждена, но услуга для туриста не готова",
+      "tagline": "Подтверждение брони — не доказательство готовности услуги.",
+      "description": "Архитектура надёжных подтверждений, замен и разрешения срывов туристических услуг между гостями и поставщиками.",
+      "problem": "У туриста есть подтверждение, но номер, трансфер или организатор на месте не выполняют обещание. Гости и малые поставщики общаются в разрозненных чатах с непроверенными статусами. Нужны единые значения брони, принятия заказа, готовности, исключений и согласованных замен.",
+      "symptoms": [
+        "По прибытии обнаруживается, что номер или трансфер недоступен.",
+        "Хост не может быстро предложить замену на понятных условиях.",
+        "История возвратов и претензий теряется между чатами."
+      ],
+      "causes": [
+        "Статус «подтверждено» означает разное для разных участников.",
+        "Изменения не подтверждаются всеми затронутыми сторонами.",
+        "Не определены ответственность за замену, компенсацию и доказательства."
+      ],
+      "options": [
+        [
+          "Проверяемый паспорт услуги",
+          "Фиксировать поставщика, условия, доступность и свидетельства подтверждения."
+        ],
+        [
+          "Двусторонний протокол бронирования",
+          "Установить переходы статусов и сроки подтверждений."
+        ],
+        [
+          "Помощь при срыве услуги",
+          "Предлагать законные альтернативы с согласия гостя и передавать споры человеку."
+        ]
+      ],
+      "questions": [
+        "Что означает подтверждение для поставщика и для гостя?",
+        "Кто вправе принять замену или компенсацию?",
+        "Какие ограничения языка и связи существуют на маршруте?"
+      ],
+      "metrics": [
+        "Доля услуг исполненных согласно подтверждению",
+        "Время разрешения срыва",
+        "Доля замен, добровольно принятых гостем"
+      ],
+      "queries": [
+        "забронировано но гостиница не предоставила номер",
+        "срыв туристических услуг компенсация",
+        "система подтверждения брони у хостов",
+        "решение проблем туристов в поездке"
+      ],
+      "buyer": "Туроператор · туристическая сеть · администрация направления",
+      "deliverable": "Модель подтверждения и проверенный пилот согласованной замены услуги."
+    }
+  }
+]
