@@ -1,0 +1,3451 @@
+{
+  "schema": "rfs.architecture-problem-graph.v1",
+  "editorialDate": "2026-10-18",
+  "validation": "hypothesis-graph; not verified enterprise facts or search volumes",
+  "nodeCount": 240,
+  "edgeCount": 271,
+  "nodes": [
+    {
+      "id": "problem:ai-pilots-fail-to-scale",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Enterprise AI",
+      "url": "/problems/en/ai-pilots-fail-to-scale/",
+      "label": {
+        "en": "Why enterprise AI pilots fail to scale",
+        "ru": "Почему AI-пилоты не масштабируются в компаниях"
+      }
+    },
+    {
+      "id": "cause:ai-pilots-fail-to-scale:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "The pilot optimizes a conversation instead of the complete process.",
+        "ru": "Оптимизируется диалог с моделью вместо сквозного процесса."
+      }
+    },
+    {
+      "id": "cause:ai-pilots-fail-to-scale:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Tests omit operational exceptions, permissions and production data.",
+        "ru": "Тесты не охватывают исключения, ограничения и реальные данные."
+      }
+    },
+    {
+      "id": "cause:ai-pilots-fail-to-scale:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Accountability ends when the prototype is handed off.",
+        "ru": "После демонстрации никто не отвечает за результат."
+      }
+    },
+    {
+      "id": "symptom:ai-pilots-fail-to-scale:0",
+      "type": "symptom",
+      "label": {
+        "en": "Pilots repeatedly succeed in demos but do not become approved workflows.",
+        "ru": "Пилоты впечатляют, но не становятся утверждёнными процессами."
+      }
+    },
+    {
+      "id": "symptom:ai-pilots-fail-to-scale:1",
+      "type": "symptom",
+      "label": {
+        "en": "Departments maintain incompatible assistants with duplicated costs.",
+        "ru": "Отделы создают несовместимых AI-помощников и дублируют расходы."
+      }
+    },
+    {
+      "id": "symptom:ai-pilots-fail-to-scale:2",
+      "type": "symptom",
+      "label": {
+        "en": "No owner can link AI output to a verified business metric.",
+        "ru": "Нельзя показать, какой показатель бизнеса изменился."
+      }
+    },
+    {
+      "id": "solution-option:ai-pilots-fail-to-scale:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Narrow workflow integration",
+        "ru": "Интеграция одного процесса"
+      },
+      "explanation": {
+        "en": "Connect one bounded task to approved systems; log decisions and exceptions.",
+        "ru": "Подключить ограниченную задачу к разрешённым системам с журналом решений."
+      }
+    },
+    {
+      "id": "solution-option:ai-pilots-fail-to-scale:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Shared agent coordination",
+        "ru": "Единый контур AI-агентов"
+      },
+      "explanation": {
+        "en": "Align permissions, data contracts, traceability and escalation between agents.",
+        "ru": "Согласовать права, данные, трассировку и передачу исключений человеку."
+      }
+    },
+    {
+      "id": "solution-option:ai-pilots-fail-to-scale:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Operating model redesign",
+        "ru": "Перепроектирование работы"
+      },
+      "explanation": {
+        "en": "Rework roles, hand-offs and process ownership before expanding AI.",
+        "ru": "Уточнить роли, передачу задач и ответственность до расширения AI."
+      }
+    },
+    {
+      "id": "metric:ai-pilots-fail-to-scale:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to verified business action",
+        "ru": "Время до проверенного действия"
+      }
+    },
+    {
+      "id": "metric:ai-pilots-fail-to-scale:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Exception and escalation rate",
+        "ru": "Доля исключений и эскалаций"
+      }
+    },
+    {
+      "id": "metric:ai-pilots-fail-to-scale:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Cost per accepted outcome including human review",
+        "ru": "Стоимость принятого результата с учётом проверки"
+      }
+    },
+    {
+      "id": "module:superagent",
+      "type": "capability",
+      "name": "SUPERAGENT"
+    },
+    {
+      "id": "module:architecture-discovery",
+      "type": "capability",
+      "name": "Architecture Discovery"
+    },
+    {
+      "id": "module:revenue-engine",
+      "type": "capability",
+      "name": "Revenue Engine"
+    },
+    {
+      "id": "outcome:ai-pilots-fail-to-scale",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A bounded pilot architecture with owners, acceptance tests and a scale-or-stop decision.",
+        "ru": "Архитектура одного ограниченного пилота с ответственными, тестами и решением о масштабировании."
+      }
+    },
+    {
+      "id": "intent:ai-pilots-fail-to-scale:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI pilots not scaling",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-pilots-fail-to-scale:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "enterprise AI proof of concept fails",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-pilots-fail-to-scale:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "move AI pilot to production",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-pilots-fail-to-scale:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI adoption bottlenecks",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-pilots-fail-to-scale:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "пилоты ИИ не масштабируются",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-pilots-fail-to-scale:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "как вывести AI пилот в продакшен",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-pilots-fail-to-scale:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "проблемы внедрения искусственного интеллекта",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-pilots-fail-to-scale:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "почему ИИ не дает бизнес результат",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:post-merger-systems-fragmented",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "M&A / Private Equity",
+      "url": "/problems/en/post-merger-systems-fragmented/",
+      "label": {
+        "en": "Post-merger systems are fragmented: where synergies disappear",
+        "ru": "Разрозненные системы после слияния: куда исчезает синергия"
+      }
+    },
+    {
+      "id": "cause:post-merger-systems-fragmented:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Master data definitions and process boundaries disagree.",
+        "ru": "Расходятся значения справочников и границы процессов."
+      }
+    },
+    {
+      "id": "cause:post-merger-systems-fragmented:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "There is no common model of authority or performance.",
+        "ru": "Нет общей модели полномочий и показателей."
+      }
+    },
+    {
+      "id": "cause:post-merger-systems-fragmented:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Synergy assumptions were never translated into testable operating changes.",
+        "ru": "План синергии не превращён в проверяемые операционные изменения."
+      }
+    },
+    {
+      "id": "symptom:post-merger-systems-fragmented:0",
+      "type": "symptom",
+      "label": {
+        "en": "Group reporting requires spreadsheet reconciliation and arrives late.",
+        "ru": "Групповая отчётность запаздывает и сводится вручную."
+      }
+    },
+    {
+      "id": "symptom:post-merger-systems-fragmented:1",
+      "type": "symptom",
+      "label": {
+        "en": "Shared customers, suppliers and idle resources stay invisible.",
+        "ru": "Общие поставщики и свободные мощности не видны между компаниями."
+      }
+    },
+    {
+      "id": "symptom:post-merger-systems-fragmented:2",
+      "type": "symptom",
+      "label": {
+        "en": "Cross-company meetings multiply without a clear process owner.",
+        "ru": "Совещаний больше, но межкорпоративные процессы без владельца."
+      }
+    },
+    {
+      "id": "solution-option:post-merger-systems-fragmented:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Federated integration",
+        "ru": "Федеративная интеграция"
+      },
+      "explanation": {
+        "en": "Connect existing systems through governed interfaces and common entities.",
+        "ru": "Соединить действующие системы управляемыми интерфейсами и общей семантикой."
+      }
+    },
+    {
+      "id": "solution-option:post-merger-systems-fragmented:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Selective consolidation",
+        "ru": "Выборочная консолидация"
+      },
+      "explanation": {
+        "en": "Unify only processes with measurable benefit and feasible migration.",
+        "ru": "Объединять только процессы с доказуемой выгодой и допустимыми затратами."
+      }
+    },
+    {
+      "id": "solution-option:post-merger-systems-fragmented:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Portfolio coordination twin",
+        "ru": "Координационный цифровой двойник"
+      },
+      "explanation": {
+        "en": "Map dependencies, resources and decisions across portfolio companies.",
+        "ru": "Отобразить зависимости, ресурсы и решения между компаниями."
+      }
+    },
+    {
+      "id": "metric:post-merger-systems-fragmented:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to consolidated reporting",
+        "ru": "Время формирования сводной отчётности"
+      }
+    },
+    {
+      "id": "metric:post-merger-systems-fragmented:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Verified cost or cycle-time reduction",
+        "ru": "Подтверждённая экономия или сокращение цикла"
+      }
+    },
+    {
+      "id": "metric:post-merger-systems-fragmented:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Unresolved integration exceptions",
+        "ru": "Неразрешённые ошибки интеграции"
+      }
+    },
+    {
+      "id": "module:enterprise-digital-twin",
+      "type": "capability",
+      "name": "Enterprise Digital Twin"
+    },
+    {
+      "id": "module:twin-to-twin-delivery",
+      "type": "capability",
+      "name": "Twin-to-Twin Delivery"
+    },
+    {
+      "id": "module:architecture-intelligence",
+      "type": "capability",
+      "name": "Architecture Intelligence"
+    },
+    {
+      "id": "outcome:post-merger-systems-fragmented",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A comparative integration blueprint and a small validated synergy experiment.",
+        "ru": "Сравнительная архитектура интеграции и проверяемый пилот одной синергии."
+      }
+    },
+    {
+      "id": "intent:post-merger-systems-fragmented:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "post merger integration problems",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:post-merger-systems-fragmented:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "unrealized M&A synergies",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:post-merger-systems-fragmented:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "integrate ERP after acquisition",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:post-merger-systems-fragmented:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "private equity portfolio operating model",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:post-merger-systems-fragmented:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "интеграция после слияния компаний",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:post-merger-systems-fragmented:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "почему не достигнута синергия M&A",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:post-merger-systems-fragmented:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "объединение ERP компаний холдинга",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:post-merger-systems-fragmented:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "разрозненные процессы после поглощения",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:key-person-decision-dependency",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Decision Continuity",
+      "url": "/problems/en/key-person-decision-dependency/",
+      "label": {
+        "en": "What if the business depends on one person's decisions?",
+        "ru": "Бизнес зависит от одного человека: как сохранить решения"
+      }
+    },
+    {
+      "id": "cause:key-person-decision-dependency:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Tacit reasoning was never elicited or independently validated.",
+        "ru": "Неявные правила не извлекались и не проходили независимую проверку."
+      }
+    },
+    {
+      "id": "cause:key-person-decision-dependency:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Delegated authority and risk limits are undefined.",
+        "ru": "Пределы делегирования не определены."
+      }
+    },
+    {
+      "id": "cause:key-person-decision-dependency:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Knowledge transfer is measured by files collected, not decisions reproduced.",
+        "ru": "Передачу знаний оценивают количеством файлов, а не качеством решений."
+      }
+    },
+    {
+      "id": "symptom:key-person-decision-dependency:0",
+      "type": "symptom",
+      "label": {
+        "en": "Decisions stop when the founder or senior specialist is absent.",
+        "ru": "Без собственника или ведущего специалиста решения останавливаются."
+      }
+    },
+    {
+      "id": "symptom:key-person-decision-dependency:1",
+      "type": "symptom",
+      "label": {
+        "en": "New employees can follow instructions but fail on exceptions.",
+        "ru": "Сотрудники знают инструкции, но не справляются с исключениями."
+      }
+    },
+    {
+      "id": "symptom:key-person-decision-dependency:2",
+      "type": "symptom",
+      "label": {
+        "en": "Knowledge repositories capture documents but not decision criteria.",
+        "ru": "База знаний хранит документы, но не критерии решений."
+      }
+    },
+    {
+      "id": "solution-option:key-person-decision-dependency:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Decision-case library",
+        "ru": "Библиотека управленческих кейсов"
+      },
+      "explanation": {
+        "en": "Interview experts and document decisions, rejected options and exceptions.",
+        "ru": "Зафиксировать решения, отклонённые варианты и исключения при участии экспертов."
+      }
+    },
+    {
+      "id": "solution-option:key-person-decision-dependency:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Validated Decision DNA",
+        "ru": "Проверяемая Decision DNA"
+      },
+      "explanation": {
+        "en": "Test decision rules on held-out cases and track uncertainty and drift.",
+        "ru": "Тестировать правила на независимых случаях и отслеживать неопределённость."
+      }
+    },
+    {
+      "id": "solution-option:key-person-decision-dependency:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Supervised executive twin",
+        "ru": "Управленческий двойник под контролем"
+      },
+      "explanation": {
+        "en": "Recommend permitted actions and refer ambiguous cases to people.",
+        "ru": "Предлагать разрешённые действия, а спорные передавать человеку."
+      }
+    },
+    {
+      "id": "metric:key-person-decision-dependency:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Agreement on held-out decision cases",
+        "ru": "Совпадение оценок на отложенных кейсах"
+      }
+    },
+    {
+      "id": "metric:key-person-decision-dependency:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to resolve exceptional cases",
+        "ru": "Время разрешения исключений"
+      }
+    },
+    {
+      "id": "metric:key-person-decision-dependency:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Rate of human escalation",
+        "ru": "Доля эскалаций человеку"
+      }
+    },
+    {
+      "id": "module:decision-dna",
+      "type": "capability",
+      "name": "Decision DNA"
+    },
+    {
+      "id": "module:knowledge-transfer",
+      "type": "capability",
+      "name": "Knowledge Transfer"
+    },
+    {
+      "id": "module:twinmind",
+      "type": "capability",
+      "name": "TWINMIND"
+    },
+    {
+      "id": "outcome:key-person-decision-dependency",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A verified decision-case library and supervised continuity pilot.",
+        "ru": "Проверенная библиотека решений и ограниченный пилот преемственности."
+      }
+    },
+    {
+      "id": "intent:key-person-decision-dependency:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "business depends on founder",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:key-person-decision-dependency:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "knowledge transfer retiring employees",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:key-person-decision-dependency:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "key person dependency risk",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:key-person-decision-dependency:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "capture executive decision knowledge",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:key-person-decision-dependency:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "бизнес зависит от владельца",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:key-person-decision-dependency:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "как сохранить знания ключевого сотрудника",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:key-person-decision-dependency:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "передача управленческих решений",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:key-person-decision-dependency:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "риски ухода главного эксперта",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:fragmented-erp-crm-ai-data",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Data / Semantics",
+      "url": "/problems/en/fragmented-erp-crm-ai-data/",
+      "label": {
+        "en": "Disconnected ERP, CRM and documents prevent reliable AI",
+        "ru": "Разрозненные ERP, CRM и документы мешают корпоративному AI"
+      }
+    },
+    {
+      "id": "cause:fragmented-erp-crm-ai-data:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "No governed semantic model or source provenance.",
+        "ru": "Нет общей семантической модели и прослеживаемости происхождения данных."
+      }
+    },
+    {
+      "id": "cause:fragmented-erp-crm-ai-data:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Interfaces expose fields without explaining business meaning.",
+        "ru": "Интерфейсы описывают поля, но не бизнес-смысл."
+      }
+    },
+    {
+      "id": "cause:fragmented-erp-crm-ai-data:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Permissions were designed per application rather than end-to-end decision.",
+        "ru": "Права заданы для приложений, а не для принятия решений."
+      }
+    },
+    {
+      "id": "symptom:fragmented-erp-crm-ai-data:0",
+      "type": "symptom",
+      "label": {
+        "en": "The same customer or contract appears under incompatible identifiers.",
+        "ru": "Один клиент или договор существует под несовместимыми идентификаторами."
+      }
+    },
+    {
+      "id": "symptom:fragmented-erp-crm-ai-data:1",
+      "type": "symptom",
+      "label": {
+        "en": "Teams reconcile conflicting figures by hand.",
+        "ru": "Отделы вручную сверяют противоречащие цифры."
+      }
+    },
+    {
+      "id": "symptom:fragmented-erp-crm-ai-data:2",
+      "type": "symptom",
+      "label": {
+        "en": "AI answers change with the department's selected data source.",
+        "ru": "Ответ AI зависит от выбранного источника."
+      }
+    },
+    {
+      "id": "solution-option:fragmented-erp-crm-ai-data:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Semantic knowledge graph",
+        "ru": "Семантический граф знаний"
+      },
+      "explanation": {
+        "en": "Model identities, relationships, origins and known conflicts.",
+        "ru": "Описать сущности, связи, источники и известные противоречия."
+      }
+    },
+    {
+      "id": "solution-option:fragmented-erp-crm-ai-data:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Federated access",
+        "ru": "Федеративный доступ"
+      },
+      "explanation": {
+        "en": "Query authorized sources without copying everything to one central store.",
+        "ru": "Обращаться к разрешённым данным без обязательного общего хранилища."
+      }
+    },
+    {
+      "id": "solution-option:fragmented-erp-crm-ai-data:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Decision-centered data contracts",
+        "ru": "Контракты данных под решения"
+      },
+      "explanation": {
+        "en": "Specify required evidence, responsible owners and conflict resolution.",
+        "ru": "Определить доказательства, владельцев и правила разрешения конфликтов."
+      }
+    },
+    {
+      "id": "metric:fragmented-erp-crm-ai-data:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to a reconciled answer",
+        "ru": "Время получения согласованного ответа"
+      }
+    },
+    {
+      "id": "metric:fragmented-erp-crm-ai-data:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Identifier conflicts per cycle",
+        "ru": "Число конфликтов идентификаторов"
+      }
+    },
+    {
+      "id": "metric:fragmented-erp-crm-ai-data:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Answers with verifiable provenance",
+        "ru": "Доля ответов с проверяемым источником"
+      }
+    },
+    {
+      "id": "module:knowledge-graph",
+      "type": "capability",
+      "name": "Knowledge Graph"
+    },
+    {
+      "id": "module:matrix-gate",
+      "type": "capability",
+      "name": "MATRIX GATE"
+    },
+    {
+      "id": "outcome:fragmented-erp-crm-ai-data",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A source-to-decision map and tested cross-system architecture.",
+        "ru": "Карта от источника к решению и проверенная межсистемная архитектура."
+      }
+    },
+    {
+      "id": "intent:fragmented-erp-crm-ai-data:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "ERP CRM data silos AI",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-erp-crm-ai-data:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "enterprise AI data integration",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-erp-crm-ai-data:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "knowledge graph enterprise data problems",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-erp-crm-ai-data:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "LLM answers inconsistent company data",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-erp-crm-ai-data:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "разрозненные данные ERP и CRM",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-erp-crm-ai-data:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "интеграция корпоративных данных для ИИ",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-erp-crm-ai-data:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "семантический граф знаний компании",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-erp-crm-ai-data:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "ИИ выдаёт противоречивые ответы",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:ai-agent-governance-gaps",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Agentic AI / Risk",
+      "url": "/problems/en/ai-agent-governance-gaps/",
+      "label": {
+        "en": "Who controls autonomous AI agents in the enterprise?",
+        "ru": "Кто контролирует автономных AI-агентов в компании?"
+      }
+    },
+    {
+      "id": "cause:ai-agent-governance-gaps:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Tools were connected before authority and threats were modeled.",
+        "ru": "Инструменты подключены раньше модели полномочий и угроз."
+      }
+    },
+    {
+      "id": "cause:ai-agent-governance-gaps:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Monitoring measures tokens but not harmful actions or accepted outcomes.",
+        "ru": "Мониторинг считает токены, но не последствия действий."
+      }
+    },
+    {
+      "id": "cause:ai-agent-governance-gaps:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Rollback, uncertainty and human escalation have no defined owner.",
+        "ru": "Нет владельца процедуры отката и эскалации."
+      }
+    },
+    {
+      "id": "symptom:ai-agent-governance-gaps:0",
+      "type": "symptom",
+      "label": {
+        "en": "Agents act on business systems without consistent approval rules.",
+        "ru": "Агенты изменяют рабочие системы без единых правил подтверждения."
+      }
+    },
+    {
+      "id": "symptom:ai-agent-governance-gaps:1",
+      "type": "symptom",
+      "label": {
+        "en": "Teams cannot reconstruct why an action occurred.",
+        "ru": "Невозможно восстановить основание конкретного действия."
+      }
+    },
+    {
+      "id": "symptom:ai-agent-governance-gaps:2",
+      "type": "symptom",
+      "label": {
+        "en": "Errors repeat across linked agent workflows without escalation.",
+        "ru": "Ошибки повторяются между агентами без передачи человеку."
+      }
+    },
+    {
+      "id": "solution-option:ai-agent-governance-gaps:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Risk-tiered permissions",
+        "ru": "Права по классу риска"
+      },
+      "explanation": {
+        "en": "Categorize actions by reversibility, impact and approval requirement.",
+        "ru": "Разделить действия по обратимости, последствиям и обязательным согласованиям."
+      }
+    },
+    {
+      "id": "solution-option:ai-agent-governance-gaps:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Agent control plane",
+        "ru": "Контур управления агентами"
+      },
+      "explanation": {
+        "en": "Unify identity, policy enforcement, audit trails and independent tests.",
+        "ru": "Объединить идентичности, политики, аудит и независимые испытания."
+      }
+    },
+    {
+      "id": "solution-option:ai-agent-governance-gaps:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Staged bounded autonomy",
+        "ru": "Поэтапная ограниченная автономность"
+      },
+      "explanation": {
+        "en": "Begin read-only, then supervised recommendations, then approved actions.",
+        "ru": "Начать с чтения, затем рекомендаций и только потом разрешённых действий."
+      }
+    },
+    {
+      "id": "metric:ai-agent-governance-gaps:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Auditable actions as share of total",
+        "ru": "Доля действий с аудиторским следом"
+      }
+    },
+    {
+      "id": "metric:ai-agent-governance-gaps:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Blocked unauthorized actions",
+        "ru": "Предотвращённые запрещённые действия"
+      }
+    },
+    {
+      "id": "metric:ai-agent-governance-gaps:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time to detect and resolve incidents",
+        "ru": "Срок обнаружения и устранения ошибок"
+      }
+    },
+    {
+      "id": "module:decision-validation",
+      "type": "capability",
+      "name": "Decision Validation"
+    },
+    {
+      "id": "outcome:ai-agent-governance-gaps",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A risk-tiered agent architecture with testable controls and escalation.",
+        "ru": "Архитектура контролируемых полномочий с проверяемой эскалацией."
+      }
+    },
+    {
+      "id": "intent:ai-agent-governance-gaps:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI agent governance risks",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-agent-governance-gaps:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "control autonomous AI agents",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-agent-governance-gaps:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI approval audit trail",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-agent-governance-gaps:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "accountability agentic AI enterprise",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-agent-governance-gaps:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "управление автономными ИИ агентами",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-agent-governance-gaps:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "безопасность агентного ИИ",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-agent-governance-gaps:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "аудит действий AI агентов",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-agent-governance-gaps:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "ответственность за ошибки ИИ",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:unvalidated-investment-thesis",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Venture Architecture",
+      "url": "/problems/en/unvalidated-investment-thesis/",
+      "label": {
+        "en": "Capital is available, but the venture thesis has no tested architecture",
+        "ru": "Есть инвестиционная гипотеза, но нет проверенной архитектуры решения"
+      }
+    },
+    {
+      "id": "cause:unvalidated-investment-thesis:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Market demand, technical feasibility and unit economics are conflated.",
+        "ru": "Спрос, техническая реализуемость и экономика смешаны в одну гипотезу."
+      }
+    },
+    {
+      "id": "cause:unvalidated-investment-thesis:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Alternative routes to the outcome have not been compared on common criteria.",
+        "ru": "Альтернативы не сопоставлены по единым критериям."
+      }
+    },
+    {
+      "id": "cause:unvalidated-investment-thesis:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "An incentive to begin development dominates the incentive to invalidate the thesis.",
+        "ru": "Стремление начать разработку перевешивает необходимость проверить ошибочность идеи."
+      }
+    },
+    {
+      "id": "symptom:unvalidated-investment-thesis:0",
+      "type": "symptom",
+      "label": {
+        "en": "The opportunity sounds attractive but assumptions about customers remain implicit.",
+        "ru": "Возможность выглядит привлекательной, но допущения о покупателях не зафиксированы."
+      }
+    },
+    {
+      "id": "symptom:unvalidated-investment-thesis:1",
+      "type": "symptom",
+      "label": {
+        "en": "Technical plans start from a preferred product rather than observed failure mechanisms.",
+        "ru": "Технический план начинается с любимого продукта, а не с механизма проблемы."
+      }
+    },
+    {
+      "id": "symptom:unvalidated-investment-thesis:2",
+      "type": "symptom",
+      "label": {
+        "en": "The team cannot name which experimental result would stop the investment.",
+        "ru": "Команда не может назвать результат эксперимента, после которого инвестицию следует остановить."
+      }
+    },
+    {
+      "id": "solution-option:unvalidated-investment-thesis:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Architecture tournament",
+        "ru": "Конкурс архитектур"
+      },
+      "explanation": {
+        "en": "Develop competing architectures and score them against measurable constraints.",
+        "ru": "Создать конкурирующие архитектуры и оценить их по измеримым ограничениям."
+      }
+    },
+    {
+      "id": "solution-option:unvalidated-investment-thesis:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Stage-gated validation",
+        "ru": "Поэтапная экспериментальная проверка"
+      },
+      "explanation": {
+        "en": "Fund the highest-risk assumption first and release further capital only after evidence.",
+        "ru": "Сначала финансировать проверку наиболее рискованного допущения."
+      }
+    },
+    {
+      "id": "solution-option:unvalidated-investment-thesis:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Asset recombination venture",
+        "ru": "Новая комбинация существующих активов"
+      },
+      "explanation": {
+        "en": "Check whether existing infrastructure and capabilities can be combined instead of built anew.",
+        "ru": "Проверить, можно ли использовать уже имеющиеся ресурсы вместо разработки с нуля."
+      }
+    },
+    {
+      "id": "metric:unvalidated-investment-thesis:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Cost and time per decisive test",
+        "ru": "Стоимость и длительность решающего эксперимента"
+      }
+    },
+    {
+      "id": "metric:unvalidated-investment-thesis:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Evidence of willingness to pay",
+        "ru": "Подтверждённая готовность платить"
+      }
+    },
+    {
+      "id": "metric:unvalidated-investment-thesis:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Variance between forecast and measured unit economics",
+        "ru": "Расхождение прогнозной и измеренной экономики"
+      }
+    },
+    {
+      "id": "module:venture-studio",
+      "type": "capability",
+      "name": "Venture Studio"
+    },
+    {
+      "id": "module:validation-engine",
+      "type": "capability",
+      "name": "Validation Engine"
+    },
+    {
+      "id": "outcome:unvalidated-investment-thesis",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A comparative architecture dossier and staged experimental investment plan.",
+        "ru": "Сравнительное архитектурное досье и поэтапный план экспериментального финансирования."
+      }
+    },
+    {
+      "id": "intent:unvalidated-investment-thesis:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "venture studio validate investment thesis",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:unvalidated-investment-thesis:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "alternative architectures before MVP investment",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:unvalidated-investment-thesis:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "how to test startup thesis before funding",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:unvalidated-investment-thesis:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "venture architecture lab investor",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:unvalidated-investment-thesis:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "проверка инвестиционной гипотезы",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:unvalidated-investment-thesis:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "венчурная студия разработка архитектуры",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:unvalidated-investment-thesis:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "архитектура решения до MVP",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:unvalidated-investment-thesis:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "как проверить стартап до крупных инвестиций",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:operational-handoffs-lose-decisions",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Organizational Intelligence",
+      "url": "/problems/en/operational-handoffs-lose-decisions/",
+      "label": {
+        "en": "Decisions vanish between teams even when every department is busy",
+        "ru": "Решения теряются между отделами: почему занятость не даёт результата"
+      }
+    },
+    {
+      "id": "cause:operational-handoffs-lose-decisions:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Responsibilities are defined by departments instead of end-to-end outcomes.",
+        "ru": "Ответственность закреплена по отделам, а не за сквозной результат."
+      }
+    },
+    {
+      "id": "cause:operational-handoffs-lose-decisions:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "No shared record of decision state, evidence and accountable owner.",
+        "ru": "Нет единого состояния задачи, основания решения и владельца."
+      }
+    },
+    {
+      "id": "cause:operational-handoffs-lose-decisions:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Escalation and exception pathways differ between teams and tools.",
+        "ru": "Маршруты нестандартных случаев не согласованы между командами."
+      }
+    },
+    {
+      "id": "symptom:operational-handoffs-lose-decisions:0",
+      "type": "symptom",
+      "label": {
+        "en": "The same request is repeatedly re-entered or reapproved between departments.",
+        "ru": "Одну заявку несколько раз повторно вводят или согласовывают разные отделы."
+      }
+    },
+    {
+      "id": "symptom:operational-handoffs-lose-decisions:1",
+      "type": "symptom",
+      "label": {
+        "en": "Teams disagree about who owns stalled decisions.",
+        "ru": "Никто не отвечает за зависшее межфункциональное решение."
+      }
+    },
+    {
+      "id": "symptom:operational-handoffs-lose-decisions:2",
+      "type": "symptom",
+      "label": {
+        "en": "More automated messages generate more coordination work, not faster delivery.",
+        "ru": "Автоматических сообщений становится больше, а срок исполнения не сокращается."
+      }
+    },
+    {
+      "id": "solution-option:operational-handoffs-lose-decisions:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Decision-state ledger",
+        "ru": "Журнал состояния решений"
+      },
+      "explanation": {
+        "en": "Provide a traceable state, owner and next action for every cross-team case.",
+        "ru": "Фиксировать состояние, владельца и следующий шаг каждого межотдельного случая."
+      }
+    },
+    {
+      "id": "solution-option:operational-handoffs-lose-decisions:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Role-aware coordination",
+        "ru": "Координация по ролям"
+      },
+      "explanation": {
+        "en": "Route tasks across functions according to verified authority and availability.",
+        "ru": "Направлять задачи по проверенным полномочиям и доступности."
+      }
+    },
+    {
+      "id": "solution-option:operational-handoffs-lose-decisions:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Process digital twin",
+        "ru": "Цифровой двойник процесса"
+      },
+      "explanation": {
+        "en": "Model queues, delays and dependencies before changing work distribution.",
+        "ru": "Моделировать очереди и зависимости до изменения распределения работы."
+      }
+    },
+    {
+      "id": "metric:operational-handoffs-lose-decisions:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "End-to-end cycle time",
+        "ru": "Сквозная длительность процесса"
+      }
+    },
+    {
+      "id": "metric:operational-handoffs-lose-decisions:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Handoffs per accepted outcome",
+        "ru": "Число передач на принятый результат"
+      }
+    },
+    {
+      "id": "metric:operational-handoffs-lose-decisions:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Age of unresolved exceptions",
+        "ru": "Возраст неразрешённых исключений"
+      }
+    },
+    {
+      "id": "module:role-navigation",
+      "type": "capability",
+      "name": "Role Navigation"
+    },
+    {
+      "id": "outcome:operational-handoffs-lose-decisions",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A measured hand-off map and one tested coordination change.",
+        "ru": "Карта реальных передач и проверенный эксперимент по координации."
+      }
+    },
+    {
+      "id": "intent:operational-handoffs-lose-decisions:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "cross functional handoff problems",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:operational-handoffs-lose-decisions:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "enterprise workflow coordination bottlenecks",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:operational-handoffs-lose-decisions:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI creates more work between departments",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:operational-handoffs-lose-decisions:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "decision ownership across teams",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:operational-handoffs-lose-decisions:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "задачи теряются между отделами",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:operational-handoffs-lose-decisions:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "несинхронность бизнес процессов компании",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:operational-handoffs-lose-decisions:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "узкие места межфункционального взаимодействия",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:operational-handoffs-lose-decisions:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "ИИ ускоряет хаос в организации",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:ai-compute-cost-without-value",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "AI Economics / Infrastructure",
+      "url": "/problems/en/ai-compute-cost-without-value/",
+      "label": {
+        "en": "AI infrastructure costs keep rising while business value stays unclear",
+        "ru": "Расходы на AI и Compute растут, а экономический результат непонятен"
+      }
+    },
+    {
+      "id": "cause:ai-compute-cost-without-value:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Decisions are optimized for benchmarks or cost per token, not total outcome cost.",
+        "ru": "Оптимизируется цена токена, а не стоимость результата с ошибками и проверкой."
+      }
+    },
+    {
+      "id": "cause:ai-compute-cost-without-value:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Workload routing and measurement are fragmented.",
+        "ru": "Маршрутизация задач и учёт расходов фрагментированы."
+      }
+    },
+    {
+      "id": "cause:ai-compute-cost-without-value:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Energy use and idle hardware capacity are invisible in project economics.",
+        "ru": "Энергопотребление и простой оборудования не учитываются в экономике."
+      }
+    },
+    {
+      "id": "symptom:ai-compute-cost-without-value:0",
+      "type": "symptom",
+      "label": {
+        "en": "Token and infrastructure spending increases without a corresponding benefit metric.",
+        "ru": "Затраты на модели и инфраструктуру растут без связанного показателя выгоды."
+      }
+    },
+    {
+      "id": "symptom:ai-compute-cost-without-value:1",
+      "type": "symptom",
+      "label": {
+        "en": "Different teams provision overlapping model services and monitoring.",
+        "ru": "Отделы независимо закупают похожие сервисы и мониторинг."
+      }
+    },
+    {
+      "id": "symptom:ai-compute-cost-without-value:2",
+      "type": "symptom",
+      "label": {
+        "en": "Fallbacks and human rework make cheap inference unexpectedly expensive.",
+        "ru": "Повторные проверки и ручная переделка уничтожают экономию на инференсе."
+      }
+    },
+    {
+      "id": "solution-option:ai-compute-cost-without-value:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Task-based routing",
+        "ru": "Маршрутизация по сложности"
+      },
+      "explanation": {
+        "en": "Match model capability to risk and difficulty of each task.",
+        "ru": "Подбирать модель по риску и сложности задачи."
+      }
+    },
+    {
+      "id": "solution-option:ai-compute-cost-without-value:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "End-to-end outcome accounting",
+        "ru": "Сквозной учёт стоимости результата"
+      },
+      "explanation": {
+        "en": "Measure inference, orchestration, review and exception costs together.",
+        "ru": "Измерять вычисления, оркестрацию, проверку и исключения вместе."
+      }
+    },
+    {
+      "id": "solution-option:ai-compute-cost-without-value:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Heterogeneous deployment",
+        "ru": "Гетерогенная инфраструктура"
+      },
+      "explanation": {
+        "en": "Compare cloud, edge and private compute against utilization, security and lifecycle cost.",
+        "ru": "Сравнивать облако, edge и частные мощности по загрузке, рискам и стоимости владения."
+      }
+    },
+    {
+      "id": "metric:ai-compute-cost-without-value:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Total cost per accepted outcome",
+        "ru": "Полная стоимость принятого результата"
+      }
+    },
+    {
+      "id": "metric:ai-compute-cost-without-value:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Human rework time",
+        "ru": "Время ручной переделки"
+      }
+    },
+    {
+      "id": "metric:ai-compute-cost-without-value:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Compute utilization and energy per successful task",
+        "ru": "Загрузка Compute и энергия на успешную операцию"
+      }
+    },
+    {
+      "id": "module:archi-compute",
+      "type": "capability",
+      "name": "ARCHI Compute"
+    },
+    {
+      "id": "module:energy-carbon-efficiency",
+      "type": "capability",
+      "name": "Energy & Carbon Efficiency"
+    },
+    {
+      "id": "outcome:ai-compute-cost-without-value",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A measured workload-cost model and controlled optimization experiment.",
+        "ru": "Измеренная модель стоимости процессов и эксперимент по оптимизации."
+      }
+    },
+    {
+      "id": "intent:ai-compute-cost-without-value:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI cost per business outcome",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-compute-cost-without-value:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "LLM inference costs out of control",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-compute-cost-without-value:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "GPU infrastructure ROI enterprise AI",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-compute-cost-without-value:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI token cost optimization architecture",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-compute-cost-without-value:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "расходы токенов ИИ в компании",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-compute-cost-without-value:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "стоимость AI на бизнес результат",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-compute-cost-without-value:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "окупаемость GPU сервера для бизнеса",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:ai-compute-cost-without-value:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "энергоэффективная инфраструктура AI",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:legacy-platform-lock-in",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Technology Strategy",
+      "url": "/problems/en/legacy-platform-lock-in/",
+      "label": {
+        "en": "Vendor lock-in stops enterprise transformation before it starts",
+        "ru": "Зависимость от одного вендора тормозит развитие компании"
+      }
+    },
+    {
+      "id": "cause:legacy-platform-lock-in:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Business rules are embedded in a proprietary implementation.",
+        "ru": "Бизнес-правила зашиты в закрытую реализацию поставщика."
+      }
+    },
+    {
+      "id": "cause:legacy-platform-lock-in:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Data and process contracts are undocumented.",
+        "ru": "Контракты данных и процессов не описаны независимо."
+      }
+    },
+    {
+      "id": "cause:legacy-platform-lock-in:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Migration success is defined as cutover, not sustained correctness.",
+        "ru": "Успех миграции считают датой переключения, а не доказанной корректностью."
+      }
+    },
+    {
+      "id": "symptom:legacy-platform-lock-in:0",
+      "type": "symptom",
+      "label": {
+        "en": "A new workflow requires long supplier change requests and expensive customization.",
+        "ru": "Новый процесс требует долгих заявок вендору и дорогих изменений."
+      }
+    },
+    {
+      "id": "symptom:legacy-platform-lock-in:1",
+      "type": "symptom",
+      "label": {
+        "en": "Exports exist but business meanings and rules are not portable.",
+        "ru": "Данные можно выгрузить, но правила и смысл полей непереносимы."
+      }
+    },
+    {
+      "id": "symptom:legacy-platform-lock-in:2",
+      "type": "symptom",
+      "label": {
+        "en": "Management delays innovation because a core migration feels all-or-nothing.",
+        "ru": "Руководство откладывает инновации из-за риска тотального перехода."
+      }
+    },
+    {
+      "id": "solution-option:legacy-platform-lock-in:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Strangler migration",
+        "ru": "Постепенное выделение функций"
+      },
+      "explanation": {
+        "en": "Gradually replace selected features behind stable interfaces.",
+        "ru": "Поэтапно заменять отдельные возможности за стабильными интерфейсами."
+      }
+    },
+    {
+      "id": "solution-option:legacy-platform-lock-in:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Semantic adapter layer",
+        "ru": "Семантические адаптеры"
+      },
+      "explanation": {
+        "en": "Separate business entities and permission rules from proprietary formats.",
+        "ru": "Отделить бизнес-сущности и права от проприетарных форматов."
+      }
+    },
+    {
+      "id": "solution-option:legacy-platform-lock-in:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Dual-run verification",
+        "ru": "Параллельная проверка"
+      },
+      "explanation": {
+        "en": "Compare legacy and new outcomes on the same authorized cases before cutover.",
+        "ru": "Сравнивать результаты старой и новой систем до переключения."
+      }
+    },
+    {
+      "id": "metric:legacy-platform-lock-in:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Time and cost to introduce a new workflow",
+        "ru": "Время и цена новой функции"
+      }
+    },
+    {
+      "id": "metric:legacy-platform-lock-in:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Share of rules documented independently",
+        "ru": "Доля независимо описанных правил"
+      }
+    },
+    {
+      "id": "metric:legacy-platform-lock-in:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Mismatch rate during parallel runs",
+        "ru": "Частота расхождений при параллельной работе"
+      }
+    },
+    {
+      "id": "module:integration-fabric",
+      "type": "capability",
+      "name": "Integration Fabric"
+    },
+    {
+      "id": "outcome:legacy-platform-lock-in",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A staged decoupling architecture and reversible migration experiment.",
+        "ru": "Поэтапная архитектура снижения зависимости и обратимый миграционный эксперимент."
+      }
+    },
+    {
+      "id": "intent:legacy-platform-lock-in:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "enterprise vendor lock in migration strategy",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:legacy-platform-lock-in:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "legacy ERP modernization without replacement",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:legacy-platform-lock-in:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "AI integration with legacy systems",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:legacy-platform-lock-in:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "gradual migration critical systems",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:legacy-platform-lock-in:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "зависимость от вендора ERP",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:legacy-platform-lock-in:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "модернизация старых систем без замены",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:legacy-platform-lock-in:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "как интегрировать AI в старое ПО",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:legacy-platform-lock-in:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "постепенная миграция корпоративных систем",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "problem:fragmented-resilience-incident-response",
+      "type": "problem",
+      "status": "editorial-hypothesis",
+      "category": "Resilience / Continuity",
+      "url": "/problems/en/fragmented-resilience-incident-response/",
+      "label": {
+        "en": "A company has backups but cannot demonstrate business recovery",
+        "ru": "Резервные копии есть, но восстановление бизнеса не проверено"
+      }
+    },
+    {
+      "id": "cause:fragmented-resilience-incident-response:0",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Recovery objectives exist at system level, not business-service level.",
+        "ru": "Цели восстановления определены для серверов, а не для бизнес-услуг."
+      }
+    },
+    {
+      "id": "cause:fragmented-resilience-incident-response:1",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Dependencies and third-party obligations are not mapped.",
+        "ru": "Зависимости и обязательства внешних подрядчиков не сопоставлены."
+      }
+    },
+    {
+      "id": "cause:fragmented-resilience-incident-response:2",
+      "type": "hypothesized-cause",
+      "label": {
+        "en": "Exercises test isolated restores without business acceptance checks.",
+        "ru": "Учения проверяют отдельный restore, но не приёмку бизнесом."
+      }
+    },
+    {
+      "id": "symptom:fragmented-resilience-incident-response:0",
+      "type": "symptom",
+      "label": {
+        "en": "Technical teams report successful backups but end-to-end recovery has not been rehearsed.",
+        "ru": "Резервное копирование успешно, но сквозное восстановление ни разу не репетировали."
+      }
+    },
+    {
+      "id": "symptom:fragmented-resilience-incident-response:1",
+      "type": "symptom",
+      "label": {
+        "en": "Critical service dependencies are distributed across undocumented systems.",
+        "ru": "Критические зависимости распределены по плохо описанным системам."
+      }
+    },
+    {
+      "id": "symptom:fragmented-resilience-incident-response:2",
+      "type": "symptom",
+      "label": {
+        "en": "During incidents, authority for customer communication and recovery priorities is unclear.",
+        "ru": "Во время инцидента непонятно, кто выбирает приоритеты и общается с клиентами."
+      }
+    },
+    {
+      "id": "solution-option:fragmented-resilience-incident-response:0",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Business-service dependency map",
+        "ru": "Граф зависимостей бизнес-сервиса"
+      },
+      "explanation": {
+        "en": "Trace critical outcomes through systems, people and providers.",
+        "ru": "Связать важные результаты с системами, людьми и поставщиками."
+      }
+    },
+    {
+      "id": "solution-option:fragmented-resilience-incident-response:1",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Recovery choreography",
+        "ru": "Сценарий последовательного восстановления"
+      },
+      "explanation": {
+        "en": "Define ordered technical and organizational recovery with clear decision rights.",
+        "ru": "Определить порядок технологических и организационных действий с полномочиями."
+      }
+    },
+    {
+      "id": "solution-option:fragmented-resilience-incident-response:2",
+      "type": "architecture-alternative",
+      "label": {
+        "en": "Controlled failure experiments",
+        "ru": "Контролируемые испытания сбоев"
+      },
+      "explanation": {
+        "en": "Test realistic scenarios and measure restored service acceptance.",
+        "ru": "Проверить реалистичные сценарии и приёмку восстановленной услуги."
+      }
+    },
+    {
+      "id": "metric:fragmented-resilience-incident-response:0",
+      "type": "validation-metric",
+      "label": {
+        "en": "Verified end-to-end recovery time",
+        "ru": "Подтверждённое время восстановления сервиса"
+      }
+    },
+    {
+      "id": "metric:fragmented-resilience-incident-response:1",
+      "type": "validation-metric",
+      "label": {
+        "en": "Share of critical dependencies exercised",
+        "ru": "Доля проверенных критических зависимостей"
+      }
+    },
+    {
+      "id": "metric:fragmented-resilience-incident-response:2",
+      "type": "validation-metric",
+      "label": {
+        "en": "Business acceptance failures after restore",
+        "ru": "Ошибки приёмки после восстановления"
+      }
+    },
+    {
+      "id": "module:resilience-architecture",
+      "type": "capability",
+      "name": "Resilience Architecture"
+    },
+    {
+      "id": "module:operational-twin",
+      "type": "capability",
+      "name": "Operational Twin"
+    },
+    {
+      "id": "outcome:fragmented-resilience-incident-response",
+      "type": "proposed-discovery-deliverable",
+      "label": {
+        "en": "A business-service recovery dependency model and one measured exercise.",
+        "ru": "Граф зависимостей бизнес-услуги и одно измеренное испытание восстановления."
+      }
+    },
+    {
+      "id": "intent:fragmented-resilience-incident-response:en:0",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "backup works but disaster recovery fails",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-resilience-incident-response:en:1",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "business continuity IT dependencies",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-resilience-incident-response:en:2",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "ransomware recovery readiness architecture",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-resilience-incident-response:en:3",
+      "type": "unvalidated-search-intent",
+      "lang": "en",
+      "text": "enterprise resilience operational recovery",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-resilience-incident-response:ru:0",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "бэкап есть но бизнес не восстанавливается",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-resilience-incident-response:ru:1",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "проверка аварийного восстановления компании",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-resilience-incident-response:ru:2",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "устойчивость ИТ инфраструктуры предприятия",
+      "validation": "not-volume-verified"
+    },
+    {
+      "id": "intent:fragmented-resilience-incident-response:ru:3",
+      "type": "unvalidated-search-intent",
+      "lang": "ru",
+      "text": "согласование резервных систем и процессов",
+      "validation": "not-volume-verified"
+    }
+  ],
+  "edges": [
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "cause:ai-pilots-fail-to-scale:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "cause:ai-pilots-fail-to-scale:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "cause:ai-pilots-fail-to-scale:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "symptom:ai-pilots-fail-to-scale:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "symptom:ai-pilots-fail-to-scale:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "symptom:ai-pilots-fail-to-scale:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "solution-option:ai-pilots-fail-to-scale:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "solution-option:ai-pilots-fail-to-scale:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "solution-option:ai-pilots-fail-to-scale:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "metric:ai-pilots-fail-to-scale:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "metric:ai-pilots-fail-to-scale:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "metric:ai-pilots-fail-to-scale:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "module:superagent",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "module:architecture-discovery",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "module:revenue-engine",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "outcome:ai-pilots-fail-to-scale",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:ai-pilots-fail-to-scale:en:0",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-pilots-fail-to-scale:en:1",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-pilots-fail-to-scale:en:2",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-pilots-fail-to-scale:en:3",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-pilots-fail-to-scale:ru:0",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-pilots-fail-to-scale:ru:1",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-pilots-fail-to-scale:ru:2",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-pilots-fail-to-scale:ru:3",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-data-coherence",
+      "rationale": {
+        "en": "Reliable AI workflows depend on consistent enterprise context.",
+        "ru": "Надёжные AI-процессы требуют согласованных корпоративных данных."
+      }
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-control",
+      "rationale": {
+        "en": "Moving to production requires explicit agent authority.",
+        "ru": "Эксплуатация требует определённых полномочий агентов."
+      }
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-process-redesign",
+      "rationale": {
+        "en": "Scaling a pilot may expose broken organizational hand-offs.",
+        "ru": "Масштабирование пилота может выявить разрывы между отделами."
+      }
+    },
+    {
+      "from": "problem:ai-pilots-fail-to-scale",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "SEMANTIC_RELATION",
+      "relation": "affects-unit-economics",
+      "rationale": {
+        "en": "Accepted business outcomes must be measured against full inference and review cost.",
+        "ru": "Результат необходимо сопоставлять с полной стоимостью моделей и проверки."
+      }
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "cause:post-merger-systems-fragmented:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "cause:post-merger-systems-fragmented:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "cause:post-merger-systems-fragmented:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "symptom:post-merger-systems-fragmented:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "symptom:post-merger-systems-fragmented:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "symptom:post-merger-systems-fragmented:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "solution-option:post-merger-systems-fragmented:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "solution-option:post-merger-systems-fragmented:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "solution-option:post-merger-systems-fragmented:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "metric:post-merger-systems-fragmented:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "metric:post-merger-systems-fragmented:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "metric:post-merger-systems-fragmented:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "module:enterprise-digital-twin",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "module:twin-to-twin-delivery",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "module:architecture-intelligence",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "outcome:post-merger-systems-fragmented",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:post-merger-systems-fragmented:en:0",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:post-merger-systems-fragmented:en:1",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:post-merger-systems-fragmented:en:2",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:post-merger-systems-fragmented:en:3",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:post-merger-systems-fragmented:ru:0",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:post-merger-systems-fragmented:ru:1",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:post-merger-systems-fragmented:ru:2",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:post-merger-systems-fragmented:ru:3",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-data-fragmentation",
+      "rationale": {
+        "en": "Group integration depends on common entity meanings.",
+        "ru": "Интеграция компаний требует общих значений сущностей."
+      }
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-process-boundaries",
+      "rationale": {
+        "en": "Acquired companies often lack shared process ownership.",
+        "ru": "После поглощений часто отсутствуют владельцы сквозных процессов."
+      }
+    },
+    {
+      "from": "problem:post-merger-systems-fragmented",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "SEMANTIC_RELATION",
+      "relation": "affected-by-legacy-dependency",
+      "rationale": {
+        "en": "Legacy platforms constrain post-merger unification choices.",
+        "ru": "Зависимость от наследуемых платформ ограничивает выбор интеграции."
+      }
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "cause:key-person-decision-dependency:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "cause:key-person-decision-dependency:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "cause:key-person-decision-dependency:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "symptom:key-person-decision-dependency:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "symptom:key-person-decision-dependency:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "symptom:key-person-decision-dependency:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "solution-option:key-person-decision-dependency:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "solution-option:key-person-decision-dependency:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "solution-option:key-person-decision-dependency:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "metric:key-person-decision-dependency:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "metric:key-person-decision-dependency:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "metric:key-person-decision-dependency:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "module:decision-dna",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "module:knowledge-transfer",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "module:twinmind",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "outcome:key-person-decision-dependency",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:key-person-decision-dependency:en:0",
+      "to": "problem:key-person-decision-dependency",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:key-person-decision-dependency:en:1",
+      "to": "problem:key-person-decision-dependency",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:key-person-decision-dependency:en:2",
+      "to": "problem:key-person-decision-dependency",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:key-person-decision-dependency:en:3",
+      "to": "problem:key-person-decision-dependency",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:key-person-decision-dependency:ru:0",
+      "to": "problem:key-person-decision-dependency",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:key-person-decision-dependency:ru:1",
+      "to": "problem:key-person-decision-dependency",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:key-person-decision-dependency:ru:2",
+      "to": "problem:key-person-decision-dependency",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:key-person-decision-dependency:ru:3",
+      "to": "problem:key-person-decision-dependency",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-decision-ownership",
+      "rationale": {
+        "en": "Tacit expertise often masks unclear decision ownership.",
+        "ru": "Неявная экспертиза может маскировать отсутствие ясных полномочий."
+      }
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-evidence-provenance",
+      "rationale": {
+        "en": "Verified decision transfer depends on traceable permitted records.",
+        "ru": "Проверяемая передача решений требует прослеживаемых разрешённых источников."
+      }
+    },
+    {
+      "from": "problem:key-person-decision-dependency",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-bounded-autonomy",
+      "rationale": {
+        "en": "Delegation requires permission limits and human review.",
+        "ru": "Передача задач AI требует ограничений и контроля человека."
+      }
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "cause:fragmented-erp-crm-ai-data:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "cause:fragmented-erp-crm-ai-data:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "cause:fragmented-erp-crm-ai-data:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "symptom:fragmented-erp-crm-ai-data:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "symptom:fragmented-erp-crm-ai-data:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "symptom:fragmented-erp-crm-ai-data:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "solution-option:fragmented-erp-crm-ai-data:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "solution-option:fragmented-erp-crm-ai-data:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "solution-option:fragmented-erp-crm-ai-data:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "metric:fragmented-erp-crm-ai-data:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "metric:fragmented-erp-crm-ai-data:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "metric:fragmented-erp-crm-ai-data:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "module:knowledge-graph",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "module:matrix-gate",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "module:superagent",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "outcome:fragmented-erp-crm-ai-data",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:fragmented-erp-crm-ai-data:en:0",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-erp-crm-ai-data:en:1",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-erp-crm-ai-data:en:2",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-erp-crm-ai-data:en:3",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-erp-crm-ai-data:ru:0",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-erp-crm-ai-data:ru:1",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-erp-crm-ai-data:ru:2",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-erp-crm-ai-data:ru:3",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-semantic-constraints",
+      "rationale": {
+        "en": "Proprietary data representations can block common meaning.",
+        "ru": "Закрытые форматы данных могут мешать формированию общей семантики."
+      }
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "SEMANTIC_RELATION",
+      "relation": "enables-integration",
+      "rationale": {
+        "en": "An entity graph can support cross-company interoperability.",
+        "ru": "Граф сущностей может поддерживать межкорпоративную совместимость."
+      }
+    },
+    {
+      "from": "problem:fragmented-erp-crm-ai-data",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "SEMANTIC_RELATION",
+      "relation": "blocks-production-ai",
+      "rationale": {
+        "en": "Fragmented records can undermine production AI reliability.",
+        "ru": "Разрозненные записи снижают надёжность промышленного AI."
+      }
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "cause:ai-agent-governance-gaps:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "cause:ai-agent-governance-gaps:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "cause:ai-agent-governance-gaps:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "symptom:ai-agent-governance-gaps:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "symptom:ai-agent-governance-gaps:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "symptom:ai-agent-governance-gaps:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "solution-option:ai-agent-governance-gaps:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "solution-option:ai-agent-governance-gaps:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "solution-option:ai-agent-governance-gaps:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "metric:ai-agent-governance-gaps:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "metric:ai-agent-governance-gaps:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "metric:ai-agent-governance-gaps:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "module:superagent",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "module:matrix-gate",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "module:decision-validation",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "outcome:ai-agent-governance-gaps",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:ai-agent-governance-gaps:en:0",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-agent-governance-gaps:en:1",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-agent-governance-gaps:en:2",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-agent-governance-gaps:en:3",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-agent-governance-gaps:ru:0",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-agent-governance-gaps:ru:1",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-agent-governance-gaps:ru:2",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-agent-governance-gaps:ru:3",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-recovery-path",
+      "rationale": {
+        "en": "Agent actions need detection, rollback and recovery procedures.",
+        "ru": "Действия агентов требуют обнаружения ошибок, отката и восстановления."
+      }
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "SEMANTIC_RELATION",
+      "relation": "affects-scale-readiness",
+      "rationale": {
+        "en": "Undefined agent authority blocks responsible scale-up.",
+        "ru": "Неопределённые полномочия мешают ответственному масштабированию."
+      }
+    },
+    {
+      "from": "problem:ai-agent-governance-gaps",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "SEMANTIC_RELATION",
+      "relation": "introduces-control-cost",
+      "rationale": {
+        "en": "Audit and verification contribute to the full cost of accepted outcomes.",
+        "ru": "Аудит и проверка входят в полную стоимость принятого результата."
+      }
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "cause:unvalidated-investment-thesis:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "cause:unvalidated-investment-thesis:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "cause:unvalidated-investment-thesis:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "symptom:unvalidated-investment-thesis:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "symptom:unvalidated-investment-thesis:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "symptom:unvalidated-investment-thesis:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "solution-option:unvalidated-investment-thesis:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "solution-option:unvalidated-investment-thesis:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "solution-option:unvalidated-investment-thesis:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "metric:unvalidated-investment-thesis:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "metric:unvalidated-investment-thesis:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "metric:unvalidated-investment-thesis:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "module:architecture-discovery",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "module:venture-studio",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "module:validation-engine",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "outcome:unvalidated-investment-thesis",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:unvalidated-investment-thesis:en:0",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:unvalidated-investment-thesis:en:1",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:unvalidated-investment-thesis:en:2",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:unvalidated-investment-thesis:en:3",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:unvalidated-investment-thesis:ru:0",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:unvalidated-investment-thesis:ru:1",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:unvalidated-investment-thesis:ru:2",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:unvalidated-investment-thesis:ru:3",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-stage-gates",
+      "rationale": {
+        "en": "Early product evidence does not prove a scalable operating process.",
+        "ru": "Ранняя демонстрация не доказывает масштабируемость процесса."
+      }
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-unit-economics",
+      "rationale": {
+        "en": "Investment decisions should include full delivery cost.",
+        "ru": "Инвестиционное решение требует расчёта полной стоимости исполнения."
+      }
+    },
+    {
+      "from": "problem:unvalidated-investment-thesis",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "SEMANTIC_RELATION",
+      "relation": "may-recombine-assets",
+      "rationale": {
+        "en": "Existing portfolio assets can form alternative venture configurations.",
+        "ru": "Существующие активы портфеля могут стать основой новой компании."
+      }
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "cause:operational-handoffs-lose-decisions:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "cause:operational-handoffs-lose-decisions:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "cause:operational-handoffs-lose-decisions:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "symptom:operational-handoffs-lose-decisions:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "symptom:operational-handoffs-lose-decisions:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "symptom:operational-handoffs-lose-decisions:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "solution-option:operational-handoffs-lose-decisions:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "solution-option:operational-handoffs-lose-decisions:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "solution-option:operational-handoffs-lose-decisions:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "metric:operational-handoffs-lose-decisions:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "metric:operational-handoffs-lose-decisions:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "metric:operational-handoffs-lose-decisions:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "module:role-navigation",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "module:enterprise-digital-twin",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "module:superagent",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "outcome:operational-handoffs-lose-decisions",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:operational-handoffs-lose-decisions:en:0",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:operational-handoffs-lose-decisions:en:1",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:operational-handoffs-lose-decisions:en:2",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:operational-handoffs-lose-decisions:en:3",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:operational-handoffs-lose-decisions:ru:0",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:operational-handoffs-lose-decisions:ru:1",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:operational-handoffs-lose-decisions:ru:2",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:operational-handoffs-lose-decisions:ru:3",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "SEMANTIC_RELATION",
+      "relation": "amplified-by-merger",
+      "rationale": {
+        "en": "M&A integration creates new boundaries for task hand-offs.",
+        "ru": "Слияния создают новые границы передачи задач."
+      }
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "problem:key-person-decision-dependency",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-human-knowledge-risk",
+      "rationale": {
+        "en": "Undocumented expert rules can cause cross-team delays.",
+        "ru": "Неформализованные правила экспертов задерживают межотдельные решения."
+      }
+    },
+    {
+      "from": "problem:operational-handoffs-lose-decisions",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "SEMANTIC_RELATION",
+      "relation": "affects-adoption",
+      "rationale": {
+        "en": "Automating local tasks cannot fix an incoherent end-to-end process.",
+        "ru": "Автоматизация отдельных задач не исправляет несогласованный сквозной процесс."
+      }
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "cause:ai-compute-cost-without-value:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "cause:ai-compute-cost-without-value:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "cause:ai-compute-cost-without-value:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "symptom:ai-compute-cost-without-value:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "symptom:ai-compute-cost-without-value:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "symptom:ai-compute-cost-without-value:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "solution-option:ai-compute-cost-without-value:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "solution-option:ai-compute-cost-without-value:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "solution-option:ai-compute-cost-without-value:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "metric:ai-compute-cost-without-value:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "metric:ai-compute-cost-without-value:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "metric:ai-compute-cost-without-value:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "module:archi-compute",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "module:energy-carbon-efficiency",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "module:superagent",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "outcome:ai-compute-cost-without-value",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:ai-compute-cost-without-value:en:0",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-compute-cost-without-value:en:1",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-compute-cost-without-value:en:2",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-compute-cost-without-value:en:3",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-compute-cost-without-value:ru:0",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-compute-cost-without-value:ru:1",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-compute-cost-without-value:ru:2",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:ai-compute-cost-without-value:ru:3",
+      "to": "problem:ai-compute-cost-without-value",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "problem:ai-pilots-fail-to-scale",
+      "type": "SEMANTIC_RELATION",
+      "relation": "affects-commercial-viability",
+      "rationale": {
+        "en": "Production scale requires accepted-outcome economics.",
+        "ru": "Масштабирование требует экономики проверенного результата."
+      }
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-governed-efficiency",
+      "rationale": {
+        "en": "Reducing cost must not bypass required controls.",
+        "ru": "Оптимизация затрат не должна обходить необходимые ограничения."
+      }
+    },
+    {
+      "from": "problem:ai-compute-cost-without-value",
+      "to": "problem:unvalidated-investment-thesis",
+      "type": "SEMANTIC_RELATION",
+      "relation": "affects-investment-case",
+      "rationale": {
+        "en": "Compute operating expenses change the venture feasibility case.",
+        "ru": "Эксплуатационные расходы Compute влияют на инвестиционную реализуемость."
+      }
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "cause:legacy-platform-lock-in:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "cause:legacy-platform-lock-in:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "cause:legacy-platform-lock-in:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "symptom:legacy-platform-lock-in:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "symptom:legacy-platform-lock-in:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "symptom:legacy-platform-lock-in:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "solution-option:legacy-platform-lock-in:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "solution-option:legacy-platform-lock-in:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "solution-option:legacy-platform-lock-in:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "metric:legacy-platform-lock-in:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "metric:legacy-platform-lock-in:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "metric:legacy-platform-lock-in:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "module:architecture-intelligence",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "module:matrix-gate",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "module:integration-fabric",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "outcome:legacy-platform-lock-in",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:legacy-platform-lock-in:en:0",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:legacy-platform-lock-in:en:1",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:legacy-platform-lock-in:en:2",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:legacy-platform-lock-in:en:3",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:legacy-platform-lock-in:ru:0",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:legacy-platform-lock-in:ru:1",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:legacy-platform-lock-in:ru:2",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:legacy-platform-lock-in:ru:3",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "problem:fragmented-erp-crm-ai-data",
+      "type": "SEMANTIC_RELATION",
+      "relation": "causes-integration-friction",
+      "rationale": {
+        "en": "Proprietary interfaces can prevent reusable data contracts.",
+        "ru": "Закрытые интерфейсы мешают универсальным контрактам данных."
+      }
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "problem:post-merger-systems-fragmented",
+      "type": "SEMANTIC_RELATION",
+      "relation": "slows-merger-integration",
+      "rationale": {
+        "en": "Dependence on inherited systems delays cross-company integration.",
+        "ru": "Зависимость от наследуемых систем тормозит объединение компаний."
+      }
+    },
+    {
+      "from": "problem:legacy-platform-lock-in",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "SEMANTIC_RELATION",
+      "relation": "affects-recovery",
+      "rationale": {
+        "en": "Opaque dependencies complicate safe restoration.",
+        "ru": "Непрозрачные зависимости осложняют безопасное восстановление."
+      }
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "cause:fragmented-resilience-incident-response:0",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "cause:fragmented-resilience-incident-response:1",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "cause:fragmented-resilience-incident-response:2",
+      "type": "MAY_HAVE_CAUSE"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "symptom:fragmented-resilience-incident-response:0",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "symptom:fragmented-resilience-incident-response:1",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "symptom:fragmented-resilience-incident-response:2",
+      "type": "MAY_SHOW_SYMPTOM"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "solution-option:fragmented-resilience-incident-response:0",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "solution-option:fragmented-resilience-incident-response:1",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "solution-option:fragmented-resilience-incident-response:2",
+      "type": "MAY_BE_ADDRESSED_BY"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "metric:fragmented-resilience-incident-response:0",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "metric:fragmented-resilience-incident-response:1",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "metric:fragmented-resilience-incident-response:2",
+      "type": "SHOULD_BE_TESTED_USING"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "module:resilience-architecture",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "module:operational-twin",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "module:superagent",
+      "type": "MAY_USE_CAPABILITY"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "outcome:fragmented-resilience-incident-response",
+      "type": "PROPOSES_DISCOVERY_OUTPUT"
+    },
+    {
+      "from": "intent:fragmented-resilience-incident-response:en:0",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-resilience-incident-response:en:1",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-resilience-incident-response:en:2",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-resilience-incident-response:en:3",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-resilience-incident-response:ru:0",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-resilience-incident-response:ru:1",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-resilience-incident-response:ru:2",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "intent:fragmented-resilience-incident-response:ru:3",
+      "to": "problem:fragmented-resilience-incident-response",
+      "type": "DESCRIBES_POSSIBLE_NEED"
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "problem:legacy-platform-lock-in",
+      "type": "SEMANTIC_RELATION",
+      "relation": "shares-operational-dependency",
+      "rationale": {
+        "en": "Recovery plans must account for inherited vendor and service limitations.",
+        "ru": "Планы восстановления должны учитывать ограничения унаследованных систем."
+      }
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "problem:ai-agent-governance-gaps",
+      "type": "SEMANTIC_RELATION",
+      "relation": "needs-safe-shutdown",
+      "rationale": {
+        "en": "Autonomous tools require traceable stop and recovery paths.",
+        "ru": "Автономные инструменты требуют проверяемой остановки и восстановления."
+      }
+    },
+    {
+      "from": "problem:fragmented-resilience-incident-response",
+      "to": "problem:operational-handoffs-lose-decisions",
+      "type": "SEMANTIC_RELATION",
+      "relation": "requires-coordination",
+      "rationale": {
+        "en": "Restoring business services requires coordinated roles, not only backups.",
+        "ru": "Восстановление услуг требует координации ролей, а не только резервных копий."
+      }
+    }
+  ]
+}
