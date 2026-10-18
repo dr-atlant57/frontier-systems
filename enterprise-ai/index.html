@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080d15">
+<meta name="description" content="Разработка индивидуальной AI-архитектуры для бизнеса: аудит, техническое задание, интеграции, корпоративные AI-агенты и пилот с измеримыми критериями. ROOT FRONTIER SYSTEMS.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Enterprise AI Architecture — ROOT FRONTIER SYSTEMS">
+<meta property="og:description" content="От бизнес-проблемы до проверяемой AI-архитектуры, технического задания и плана внедрения.">
+<meta property="og:url" content="https://rootfrontier.systems/enterprise-ai/">
+<link rel="canonical" href="https://rootfrontier.systems/enterprise-ai/">
+<title>Разработка корпоративной AI-архитектуры — ROOT FRONTIER SYSTEMS</title>
+<style>
+:root{color-scheme:dark;--bg:#080d15;--panel:#111b27;--panel2:#162434;--line:#2b3d51;--text:#f0f6fc;--muted:#adbed0;--a:#a7dcff;--mint:#9ce6c5;--container:1180px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:none}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.wrap{width:min(var(--container),calc(100% - 40px));margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.skip{position:absolute;left:10px;top:-100px;padding:10px 18px;background:#fff;color:#000;z-index:100}
+.skip:focus{top:10px}
+header{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(165,195,220,.16);background:rgba(8,13,21,.94);backdrop-filter:blur(16px)}
+.nav{min-height:72px;display:flex;align-items:center;gap:22px}
+.brand{font-weight:840;font-size:.83rem;letter-spacing:.105em;white-space:nowrap}
+.brand span{color:var(--a)}
+.navlinks{display:flex;align-items:center;gap:20px;margin-left:auto;font-size:.81rem;color:var(--muted)}
+.navlinks a:hover{color:var(--text)}
+.lang{display:flex;gap:5px;border:1px solid var(--line);padding:4px;border-radius:7px}
+.lang button{background:none;color:var(--muted);border:0;padding:5px 9px;font-size:.72rem;font-weight:800;border-radius:4px}
+.lang button[aria-pressed=true]{background:var(--panel2);color:#fff}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid #84c8fa;background:var(--a);color:#06121c;font-weight:760;font-size:.91rem;border-radius:7px;text-align:center;transition:background .15s,transform .15s}
+.button:hover{background:#d4edff;transform:translateY(-1px)}
+.button.ghost{background:transparent;border-color:#55718d;color:var(--text)}
+.button.ghost:hover{background:#193045}
+.button.mini{min-height:39px;padding:7px 13px;font-size:.79rem}
+.kicker{color:var(--a);font-size:.72rem;font-weight:750;letter-spacing:.16em;text-transform:uppercase}
+.hero{position:relative;padding:clamp(64px,9vw,128px) 0 95px;overflow:hidden;background:radial-gradient(ellipse 700px 430px at 82% 18%,rgba(61,132,180,.19),transparent 80%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.72fr);gap:clamp(25px,6vw,75px);align-items:center}
+h1,h2,h3,p{overflow-wrap:break-word}
+h1{font-size:clamp(3rem,6.5vw,6.3rem);line-height:.99;letter-spacing:-.07em;font-weight:820;margin:21px 0 24px}
+h1 em{font-style:normal;color:var(--a)}
+.lead{font-size:clamp(1.06rem,1.55vw,1.27rem);color:#c7d6e5;line-height:1.65;max-width:720px}
+.actions{display:flex;flex-wrap:wrap;gap:11px;margin:29px 0}
+.trust{display:flex;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:.78rem;margin-top:29px}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust span:before{content:"✓";color:var(--mint);font-weight:900}
+.hero-aside{background:linear-gradient(145deg,#1b3042,#0e1824);padding:clamp(24px,4vw,36px);border:1px solid #42617b;border-radius:15px;box-shadow:0 28px 90px rgba(0,0,0,.2)}
+.aside-label{font-size:.69rem;letter-spacing:.15em;color:var(--mint);font-weight:780;text-transform:uppercase}
+.hero-aside h2{font-size:clamp(1.4rem,2.5vw,2.15rem);line-height:1.13;margin:13px 0 25px;letter-spacing:-.04em}
+.deliver{padding:15px 0;border-top:1px solid #304556}
+.deliver strong{display:block;font-size:.93rem}
+.deliver small{display:block;color:var(--muted);font-size:.79rem;margin-top:5px;line-height:1.5}
+.section{padding:clamp(67px,8vw,100px) 0;border-top:1px solid #1d2c3b}
+.section h2{font-size:clamp(2.05rem,4.5vw,4rem);line-height:1.06;letter-spacing:-.055em;margin:14px 0 17px;max-width:850px}
+.intro{color:var(--muted);max-width:810px;font-size:1.04rem}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:30px}
+.card{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:11px;min-width:0}
+.card .num{color:var(--a);font-size:.73rem;font-weight:850;letter-spacing:.11em}
+.card h3{font-size:1.25rem;line-height:1.26;letter-spacing:-.025em;margin:17px 0 12px}
+.card p{color:var(--muted);font-size:.91rem;margin:0}
+.card ul{padding-left:19px;color:#cfdae6;font-size:.88rem;line-height:1.7;margin:15px 0 0}
+.price{display:inline-block;border-top:1px solid var(--line);margin-top:20px;padding-top:16px;font-size:.79rem;color:var(--mint)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:35px}
+.step{border-top:2px solid #6fb7e5;padding-top:18px}
+.step b{display:block;color:var(--a);font-size:.8rem;margin-bottom:8px}
+.step h3{font-size:1.09rem;margin:0 0 9px}
+.step p{color:var(--muted);font-size:.86rem;line-height:1.6}
+.demo{background:linear-gradient(120deg,rgba(77,150,198,.12),rgba(35,71,93,.09));border:1px solid #355065;border-radius:13px;padding:clamp(20px,4vw,38px);display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;margin-top:28px}
+.demo strong{font-size:1.18rem}
+.demo p{color:var(--muted);font-size:.91rem;margin:8px 0}
+.metric{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px}
+.metric span{font-size:.83rem;color:var(--muted)}
+.metric b{font-size:1.43rem;color:var(--text)}
+.note{font-size:.79rem;color:var(--muted);line-height:1.6}
+.form-section{background:radial-gradient(ellipse at 13% 18%,rgba(72,143,188,.12),transparent 50%)}
+.form-layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(25px,6vw,80px);align-items:start}
+.form-copy h2{margin-bottom:25px}
+.form-copy p{color:var(--muted);font-size:1.02rem}
+.contact-line{display:block;margin-top:24px;font-size:.92rem;color:var(--a);text-decoration:underline;text-underline-offset:4px}
+.form-card{background:#142230;border:1px solid #43627b;border-radius:14px;padding:clamp(18px,3vw,31px)}
+.form-card h3{margin:0 0 20px;font-size:1.42rem}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.field{min-width:0}
+.field.wide{grid-column:1/-1}
+.field label{display:block;margin-bottom:7px;font-size:.81rem;font-weight:720;color:#d8e6f4}
+.field input,.field select,.field textarea{display:block;width:100%;min-height:46px;background:#0b1521;border:1px solid #4b6075;border-radius:6px;color:#fff;padding:12px 13px;outline-offset:2px}
+.field textarea{min-height:96px;resize:vertical;line-height:1.45}
+.field input::placeholder,.field textarea::placeholder{color:#8ba1b6}
+.field select{appearance:auto}
+.form-action{width:100%;margin-top:20px}
+.form-footnote{font-size:.76rem;color:#b7c9d8;line-height:1.55;margin:13px 0 0}
+.handoff{margin-top:17px;border:1px solid #4b8976;background:#183c37;border-radius:9px;padding:15px;color:#e4fff1}
+.handoff p{margin:0 0 11px;font-size:.83rem}
+.handoff a{display:inline-flex;color:#fff;text-decoration:underline;font-weight:750;min-height:32px;align-items:center}
+.faq{margin-top:22px;max-width:920px}
+.faq details{border-bottom:1px solid var(--line);padding:15px 4px}
+.faq summary{cursor:pointer;font-weight:650;font-size:1rem}
+.faq p{color:var(--muted);font-size:.92rem}
+footer{border-top:1px solid var(--line);padding:28px 0 35px;font-size:.79rem;color:var(--muted)}
+.footerline{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.footerline a{text-decoration:underline;text-underline-offset:3px;color:#c7ddec}
+.mobile-cta{display:none}
+@media(max-width:920px){.hero-grid,.form-layout{grid-template-columns:1fr}.hero-aside{max-width:720px}.steps{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}}
+@media(max-width:700px){.cards,.steps{grid-template-columns:1fr}.hero{padding-top:54px;padding-bottom:57px}.brand{font-size:.74rem}.nav{gap:10px}.nav .button.mini{display:none}.lang{margin-left:auto}.wrap{width:calc(100% - 28px)}h1{font-size:clamp(2.6rem,11vw,4.6rem)}.demo{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.form-card{padding:20px 15px}.mobile-cta{display:block;position:sticky;bottom:0;padding:8px 14px calc(8px + env(safe-area-inset-bottom));background:rgba(8,13,21,.96);border-top:1px solid var(--line);z-index:22}.mobile-cta .button{width:100%;min-height:44px}.section{padding:62px 0}.footerline{display:block}.footerline>*{display:block;margin:8px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header><div class="wrap nav">
+<a class="brand" href="../">ROOT <span>FRONTIER</span> SYSTEMS</a>
+<nav class="navlinks" aria-label="Навигация"><a href="#solutions" data-en="Services">Услуги</a><a href="#approach" data-en="Approach">Подход</a><a href="../audit/" data-en="AI audit">AI-аудит</a></nav>
+<div class="lang" role="group" aria-label="Язык / Language"><button type="button" id="ru" aria-pressed="true">RU</button><button type="button" id="en" aria-pressed="false">EN</button></div>
+<a class="button mini" href="#contact" data-en="Discuss a project">Обсудить проект</a>
+</div></header>
+<main id="main">
+<section class="hero"><div class="wrap hero-grid">
+<div>
+<div class="kicker">ROOT FRONTIER SYSTEMS · ENTERPRISE AI ARCHITECTURE</div>
+<h1 data-en="AI is in your company.<br>Where is the <em>measurable return?</em>">AI уже в компании.<br>А где <em>измеримый результат?</em></h1>
+<p class="lead" data-en="We design enterprise AI architecture around your actual business processes: find bottlenecks, define data and agent permissions, prepare a technical blueprint and plan a controlled pilot. Not another one-size-fits-all chatbot.">Проектируем корпоративную AI-архитектуру под реальные бизнес-процессы: выявляем ограничения, определяем данные и полномочия агентов, готовим техническое задание и маршрут контролируемого пилота. Не ещё один универсальный чат-бот.</p>
+<div class="actions"><a class="button" href="#contact" data-en="Discuss my project →">Обсудить мой проект →</a><a class="button ghost" href="../audit/" data-en="Explore the AI audit →">Посмотреть AI-аудит →</a></div>
+<div class="trust"><span data-en="Architecture before integration">Архитектура до интеграции</span><span data-en="Measurable pilot criteria">Измеримые критерии пилота</span><span data-en="Human approval for critical actions">Контроль критичных действий</span></div>
+</div>
+<aside class="hero-aside" aria-label="Результат работы">
+<div class="aside-label" data-en="WHAT YOU RECEIVE">ЧТО ПОЛУЧАЕТ ЗАКАЗЧИК</div>
+<h2 data-en="A blueprint your team can build and verify.">Архитектура, которую можно реализовать и проверить.</h2>
+<div class="deliver"><strong data-en="01 / Map of actual constraints">01 / Карта реальных ограничений</strong><small data-en="Processes, systems, dependencies, risks, baseline.">Процессы, системы, зависимости, риски и исходные показатели.</small></div>
+<div class="deliver"><strong data-en="02 / Target design and specification">02 / Целевая схема и ТЗ</strong><small data-en="Data, integrations, AI agents, access rights, approval points.">Данные, интеграции, AI-агенты, доступы и точки согласования.</small></div>
+<div class="deliver"><strong data-en="03 / Pilot and economics">03 / Пилот и экономика</strong><small data-en="Phased roadmap, acceptance criteria, cost assumptions and decision gates.">Поэтапный план, критерии приёмки, предпосылки бюджета и контрольные решения.</small></div>
+</aside>
+</div></section>
+<section class="section" id="problems"><div class="wrap">
+<div class="kicker" data-en="01 / BUSINESS SYMPTOMS">01 / ПРИЗНАКИ ПРОБЛЕМЫ</div>
+<h2 data-en="AI tools multiply.<br>Operational capacity does not.">AI-инструментов больше.<br>Управляемости — не всегда.</h2>
+<p class="intro" data-en="The real issue is often not the model. It is the architecture connecting people, information, decisions and execution.">Проблема часто не в модели, а в архитектуре связей между людьми, знаниями, решениями и исполнением.</p>
+<div class="cards">
+<article class="card"><span class="num">01</span><h3 data-en="Pilots do not scale">AI-пилоты не масштабируются</h3><p data-en="A chatbot works in a demo but fails across real processes, permissions or teams.">Демонстрация впечатляет, но в реальных процессах, интеграциях и правах доступа система буксует.</p></article>
+<article class="card"><span class="num">02</span><h3 data-en="Knowledge stays fragmented">Знания остаются разрозненными</h3><p data-en="Decisions are scattered across chats, documents and employees. The organization repeatedly rediscovers the same answers.">Решения теряются в чатах, документах и головах сотрудников. Компания повторно решает уже решённые задачи.</p></article>
+<article class="card"><span class="num">03</span><h3 data-en="Costs grow without proof">Расходы растут без доказанного эффекта</h3><p data-en="More subscriptions and automations, but no baseline, ownership, testing or accountable business result.">Сервисов и автоматизаций всё больше, а базовых метрик, критериев приёмки и ответственности за результат нет.</p></article>
+</div>
+</div></section>
+<section class="section" id="solutions"><div class="wrap">
+<div class="kicker" data-en="02 / COMMERCIAL SERVICES">02 / КОММЕРЧЕСКИЕ УСЛУГИ</div>
+<h2 data-en="One clear starting point.<br>Three levels of engagement.">Один понятный вход.<br>Три формата работы.</h2>
+<p class="intro" data-en="Choose the depth that fits your situation. Scope, fee and schedule are agreed after the first review.">Объём работ, стоимость и сроки согласовываем после первичного разбора задачи. Не навязываем дорогое внедрение до проверки необходимости.</p>
+<div class="cards">
+<article class="card"><span class="num" data-en="LEVEL 01 / DISCOVER">ЭТАП 01 / ОБСЛЕДОВАНИЕ</span><h3 data-en="Architecture Discovery">Архитектурный аудит</h3><p data-en="Understand what is actually limiting the business and which improvements deserve investment first.">Находим архитектурные ограничения, приоритетные потери и процессы с потенциалом улучшения.</p><ul><li data-en="Problem and dependency map">Карта проблем и зависимостей</li><li data-en="Current-state systems review">Обзор действующих систем</li><li data-en="Prioritized intervention plan">Приоритеты изменений</li></ul><span class="price" data-en="Fee: quoted after scoping">Цена: после оценки объёма</span></article>
+<article class="card"><span class="num" data-en="LEVEL 02 / DESIGN">ЭТАП 02 / ПРОЕКТИРОВАНИЕ</span><h3 data-en="AI Architecture Blueprint">Архитектура и ТЗ</h3><p data-en="Design a coherent target architecture instead of collecting disconnected AI tools.">Проектируем целевую систему, границы ответственности и проверяемые требования.</p><ul><li data-en="Target architecture and integrations">Целевая архитектура и интеграции</li><li data-en="Knowledge, security and agent control">Знания, безопасность и контроль агентов</li><li data-en="Specification and acceptance criteria">ТЗ и критерии приёмки</li></ul><span class="price" data-en="Fee: quoted after scoping">Цена: после оценки объёма</span></article>
+<article class="card"><span class="num" data-en="LEVEL 03 / VERIFY">ЭТАП 03 / ПРОВЕРКА</span><h3 data-en="Pilot &amp; Delivery Oversight">Пилот и сопровождение</h3><p data-en="Test the architecture in one bounded workflow before committing to a large-scale rollout.">Проверяем архитектурные решения на ограниченном процессе до масштабного развёртывания.</p><ul><li data-en="Bounded proof of concept">Контролируемый пилот</li><li data-en="Performance, cost and risk tests">Проверка результатов, затрат и рисков</li><li data-en="Implementation supervision">Архитектурный надзор</li></ul><span class="price" data-en="Fee: quoted after scoping">Цена: после оценки объёма</span></article>
+</div>
+<div class="actions"><a href="#contact" class="button" data-en="Request an architecture review →">Запросить разбор задачи →</a></div>
+</div></section>
+<section class="section" id="approach"><div class="wrap">
+<div class="kicker" data-en="03 / DELIVERY METHOD">03 / КАК МЫ РАБОТАЕМ</div>
+<h2 data-en="From a business constraint<br>to a testable solution.">От бизнес-ограничения<br>к проверяемому решению.</h2>
+<div class="steps">
+<div class="step"><b>01 / REALITY</b><h3 data-en="Understand the business">Разбираем реальность</h3><p data-en="Goals, losses, operating model, available data and constraints.">Цели, потери, процессы, данные и ограничения.</p></div>
+<div class="step"><b>02 / ARCHITECT</b><h3 data-en="Design the target state">Проектируем систему</h3><p data-en="Architecture options, responsibilities, interfaces and priority.">Варианты архитектуры, полномочия, интерфейсы и приоритеты.</p></div>
+<div class="step"><b>03 / EXPERIMENT</b><h3 data-en="Run a limited pilot">Проверяем в пилоте</h3><p data-en="Measure business outcomes, operational risk and cost.">Измеряем результат, операционные риски и стоимость.</p></div>
+<div class="step"><b>04 / SCALE</b><h3 data-en="Scale only what works">Масштабируем проверенное</h3><p data-en="Iterate and replicate only after acceptance criteria are met.">Развиваем решение после подтверждения критериев приёмки.</p></div>
+</div>
+<div class="demo">
+<div>
+<strong data-en="See the architecture tooling already built">Посмотрите действующий инструмент архитектурного обследования</strong>
+<p data-en="Our interactive AI Architecture Audit helps structure enterprise risks and generate a preliminary specification. It is a working diagnostic tool, not a claim of completed client deployments.">Наш интерактивный AI Architecture Audit структурирует риски предприятия и помогает составить предварительное ТЗ. Это работающий инструмент обследования, а не заявление о завершённых клиентских внедрениях.</p>
+<div class="metric"><span><b>48</b> <span data-en="risk signals">признаков риска</span></span><span><b>12</b> <span data-en="readiness questions">вопросов готовности</span></span><span data-en="Draft AI architecture specification">Черновик архитектурного ТЗ</span></div>
+</div><a class="button ghost" href="../audit/" data-en="Open interactive audit →">Открыть AI-аудит →</a>
+</div>
+</div></section>
+<section class="section form-section" id="contact"><div class="wrap form-layout">
+<div class="form-copy">
+<div class="kicker" data-en="04 / START THE CONVERSATION">04 / НАЧАТЬ СОТРУДНИЧЕСТВО</div>
+<h2 data-en="Tell us what needs to change.">Расскажите, что нужно изменить.</h2>
+<p data-en="No lengthy questionnaire to get started. Describe one important business problem; we will discuss whether architecture work makes sense and what to examine first.">Не нужно заполнять 48 пунктов, чтобы связаться с нами. Достаточно одной важной задачи предприятия. Обсудим, где требуется архитектурное вмешательство и с чего начать.</p>
+<p class="note" data-en="Do not send passwords, confidential documents, personal datasets or private AI chat archives through this public form.">Не отправляйте через эту публичную форму пароли, закрытые документы, персональные данные третьих лиц или архивы конфиденциальных AI-чатов.</p>
+<a id="directWA" class="contact-line" href="https://wa.me/996998066098?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20AI-%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D1%83%20%D0%BD%D0%B0%D1%88%D0%B5%D0%B9%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8." target="_blank" rel="noopener noreferrer" data-en="Or write directly in WhatsApp: +996 998 066 098 ↗">Или напишите напрямую в WhatsApp: +996 998 066 098 ↗</a>
+</div>
+<div class="form-card">
+<h3 data-en="Initial project request">Краткая заявка на проект</h3>
+<form id="leadForm">
+<div class="fields">
+<div class="field"><label for="person" data-en="Your name *">Ваше имя *</label><input name="person" id="person" type="text" autocomplete="name" maxlength="80" required placeholder="Как к вам обращаться" data-en-placeholder="How should we address you?"></div>
+<div class="field"><label for="reply" data-en="Phone or email *">Телефон или email *</label><input name="reply" id="reply" type="text" maxlength="160" required placeholder="Контакт для ответа" data-en-placeholder="How can we reach you?"></div>
+<div class="field wide"><label for="company" data-en="Company (optional)">Компания (необязательно)</label><input name="company" id="company" type="text" maxlength="120" autocomplete="organization" placeholder="Название и отрасль" data-en-placeholder="Name and industry"></div>
+<div class="field wide"><label for="need" data-en="What do you need? *">Что требуется? *</label><select name="need" id="need" required>
+<option value="" data-en="Select one">Выберите направление</option>
+<option value="Audit" data-en="Audit existing systems">Аудит существующей системы</option>
+<option value="Architecture" data-en="Target AI architecture and specification">Архитектура AI и ТЗ</option>
+<option value="Pilot" data-en="Pilot and implementation">Пилот и внедрение</option>
+<option value="Unsure" data-en="Not sure; need advice">Пока не знаю — нужна консультация</option>
+</select></div>
+<div class="field wide"><label for="problem" data-en="Main task *">Главная задача *</label><textarea name="problem" id="problem" minlength="10" maxlength="900" required placeholder="Что не работает сейчас и какого результата вы хотите добиться?" data-en-placeholder="What is not working and what result would matter?"></textarea></div>
+</div>
+<button class="button form-action" type="submit" data-en="Continue to WhatsApp →">Продолжить в WhatsApp →</button>
+<p class="form-footnote" data-en="Pressing Continue opens WhatsApp with your text: WhatsApp may receive the text when the link opens, while the recipient receives it only after you press Send. This website does not store the form.">Нажатие кнопки откроет WhatsApp с текстом заявки: сервис WhatsApp может получить текст уже при открытии ссылки, а адресат — после вашего нажатия «Отправить». Наш сайт не сохраняет ответы.</p>
+<div class="handoff" id="handoff" hidden aria-live="polite"><p data-en="WhatsApp should open with your request. Please press Send there. If it did not open, use this link.">WhatsApp должен открыться с вашей заявкой. Нажмите «Отправить» в самом WhatsApp. Если окно не открылось, воспользуйтесь ссылкой:</p><a id="openWhatsApp" href="#" target="_blank" rel="noopener noreferrer" data-en="Open the prepared message ↗">Открыть подготовленное сообщение ↗</a></div>
+</form>
+</div>
+</div></section>
+<section class="section" id="faq"><div class="wrap">
+<div class="kicker" data-en="05 / PRACTICAL QUESTIONS">05 / ЧАСТЫЕ ВОПРОСЫ</div>
+<h2 data-en="Before you get in touch">Перед обращением</h2>
+<div class="faq">
+<details><summary data-en="Do we need an existing AI solution?">Нужно ли иметь внедрённый AI?</summary><p data-en="No. We work with existing pilots and with companies planning their first use case. The first step is to establish the business goal, constraints and reasonable scope.">Нет. Можно обратиться как с существующим AI-пилотом, так и с задачей первого внедрения. Начинаем с бизнес-цели, ограничений и разумного масштаба.</p></details>
+<details><summary data-en="Can the architecture work with our systems and vendors?">Можно ли использовать наши системы и подрядчиков?</summary><p data-en="Yes. We design around verified interfaces, security requirements and the existing technology landscape. Vendor independence is a design objective; feasibility is assessed during discovery.">Да. Проектируем с учётом проверенных интерфейсов, безопасности и существующих технологий. Независимость от поставщиков — цель архитектуры, а возможность интеграции проверяем при обследовании.</p></details>
+<details><summary data-en="How much will it cost and how long will it take?">Сколько стоит и сколько занимает проект?</summary><p data-en="A responsible estimate depends on the systems involved, access boundaries, pilot scope and expected outcomes. We define deliverables, milestones and a commercial proposal after initial scoping.">Оценка зависит от числа систем, границ доступа, объёма пилота и ожидаемого результата. После первичного разбора согласуем состав работ, этапы и коммерческое предложение.</p></details>
+<details><summary data-en="Will AI get unrestricted access to company data?">Получит ли AI полный доступ к нашим данным?</summary><p data-en="Not by default. Access, approvals, audit trails and stop mechanisms are explicit architectural requirements. Sensitive materials should be exchanged only through an agreed secure channel.">Нет, по умолчанию не получит. Доступы, подтверждения, журналы действий и возможность остановки задаём явно. Чувствительные материалы передаём только через согласованный защищённый канал.</p></details>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap footerline"><span>© 2026 ROOT FRONTIER SYSTEMS · Working at the roots of complexity.</span><span><a href="../" data-en="Main website">Главная</a> · <a href="../audit/" data-en="AI Architecture Audit">AI-аудит</a> · <a href="../why-architecture/" data-en="Why architecture">Почему архитектура</a></span></div></footer>
+<div class="mobile-cta"><a class="button" href="#contact" data-en="Discuss a project →">Обсудить проект →</a></div>
+<script>
+(function(){
+"use strict";
+var buttons={ru:document.getElementById("ru"),en:document.getElementById("en")};
+function setLanguage(lang){
+lang=lang==="en"?"en":"ru";
+document.documentElement.lang=lang;
+document.querySelectorAll("[data-en]").forEach(function(el){
+if(!el.hasAttribute("data-ru-original"))el.setAttribute("data-ru-original",el.innerHTML);
+el.innerHTML=lang==="en"?el.getAttribute("data-en"):el.getAttribute("data-ru-original");
+});
+document.querySelectorAll("[data-en-placeholder]").forEach(function(el){
+if(!el.hasAttribute("data-ru-placeholder"))el.setAttribute("data-ru-placeholder",el.getAttribute("placeholder"));
+el.setAttribute("placeholder",lang==="en"?el.getAttribute("data-en-placeholder"):el.getAttribute("data-ru-placeholder"));
+});
+buttons.ru.setAttribute("aria-pressed",String(lang==="ru"));
+buttons.en.setAttribute("aria-pressed",String(lang==="en"));
+document.title=lang==="en"?"Enterprise AI Architecture — ROOT FRONTIER SYSTEMS":"Разработка корпоративной AI-архитектуры — ROOT FRONTIER SYSTEMS";
+}
+buttons.ru.addEventListener("click",function(){setLanguage("ru")});
+buttons.en.addEventListener("click",function(){setLanguage("en")});
+var query=new URLSearchParams(location.search);
+var storedLanguage="";try{storedLanguage=localStorage.getItem("frontier-language")||""}catch(e){};
+var initial=query.get("lang")==="en"||(!query.has("lang")&&((storedLanguage||navigator.language||"ru").toLowerCase().startsWith("en")))?"en":"ru";
+setLanguage(initial);
+var form=document.getElementById("leadForm");
+form.addEventListener("submit",function(event){
+event.preventDefault();
+if(!form.reportValidity())return;
+function val(id){return document.getElementById(id).value.trim().replace(/[\u0000-\u001f\u007f]/g," ").slice(0,900)}
+var source=["utm_source","utm_medium","utm_campaign"].map(function(k){
+return query.get(k)?k+"="+query.get(k).replace(/[^a-zA-Z0-9_.\-]/g,"").slice(0,70):""
+}).filter(Boolean).join(", ");
+var message=[
+"Здравствуйте! Заявка на архитектурный проект ROOT FRONTIER SYSTEMS / Enterprise AI.",
+"Имя: "+val("person"),
+"Связь: "+val("reply"),
+"Компания: "+(val("company")||"не указана"),
+"Направление: "+val("need"),
+"Задача: "+val("problem"),
+source?"Источник: "+source:"",
+"Прошу связаться для обсуждения задачи и определения следующего шага."
+].filter(Boolean).join("\n");
+var url="https://wa.me/996998066098?text="+encodeURIComponent(message);
+document.getElementById("openWhatsApp").href=url;
+document.getElementById("handoff").hidden=false;
+if(Array.isArray(window.dataLayer))window.dataLayer.push({event:"rfs_lead_handoff",lead_channel:"whatsapp",lead_offer:"enterprise_ai"});
+window.open(url,"_blank","noopener,noreferrer");
+document.getElementById("openWhatsApp").focus();
+});
+})();
+</script>
+</body>
+</html>
