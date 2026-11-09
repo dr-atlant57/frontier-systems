@@ -1,0 +1,22 @@
+name: RFS static site architecture QA
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Use Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify pages, internal links, canonical, languages, scripts, and sitemap
+        run: node scripts/audit-site.mjs
