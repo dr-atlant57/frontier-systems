@@ -3,7 +3,7 @@
    Single shared source: do not edit individual section navs to mimic a global menu.
 */
 (()=>{"use strict";
-const ROOT="/",path=decodeURI(location.pathname),isRu=/^\/visionaries\/ru\/|^\/problems\/ru\//.test(path)||document.documentElement.lang==="ru";
+const path=decodeURI(location.pathname);let isRu=/^\/visionaries\/ru\/|^\/problems\/ru\//.test(path)||document.documentElement.lang==="ru";
 const sections=[
 {key:"home",en:"Home",ru:"Главная",url:"/"},
 {key:"ideas",en:"Ideas on Demand",ru:"Идеи на заказ",url:"/ideas/"},
@@ -14,9 +14,9 @@ const sections=[
 {key:"contact",en:"Contact",ru:"Контакт",url:"/contact/"}];
 const catalog=[
 ["COMMERCIAL ARCHITECTURE","КОММЕРЧЕСКАЯ АРХИТЕКТУРА",[
-["Ideas on Demand","Идеи на заказ","/ideas/"],["Solutions","Решения","/solutions/"],["System Programs","Системные программы","/system-programs/"],["Frontier Programs","Фронтирные программы","/frontier-programs/"],["Enterprise AI","Корпоративный AI","/enterprise-ai/"],["Architecture Value","Ценность архитектуры","/why-architecture/"],["AI Architecture Audit","AI-аудит","/audit/"],["Discover","Диагностика","/discover/"]]],
+["Ideas on Demand","Идеи на заказ","/ideas/"],["Problem Diagnostic","Диагностика запроса",isRu?"/diagnostic/ru/":"/diagnostic/"],["Solutions","Решения","/solutions/"],["System Programs","Системные программы","/system-programs/"],["Frontier Programs","Фронтирные программы","/frontier-programs/"],["Enterprise AI","Корпоративный AI","/enterprise-ai/"],["Architecture Value","Ценность архитектуры","/why-architecture/"],["AI Architecture Audit","AI-аудит","/audit/"],["Discover","Диагностика","/discover/"]]],
 ["DISCOVER & RESEARCH","ПОИСК И ИССЛЕДОВАНИЯ",[
-["Problem Atlas","Атлас проблем",isRu?"/problems/ru/":"/problems/en/"],["Research","Исследования","/research/"],["Cases","Кейсы","/cases/"],["Project Lab","Лаборатория проектов","/project-lab/"],["Registry","Реестр","/registry/"],["NEMT AI Dispatch Demo","Демо NEMT AI Dispatch","/nemt-ai-dispatch/"]]],
+["Problem Atlas","Атлас проблем",isRu?"/problems/ru/":"/problems/en/"],["Research","Исследования","/research/"],["Evidence & Method","Результаты и метод","/evidence/"],["Cases","Кейсы","/cases/"],["Project Lab","Лаборатория проектов","/project-lab/"],["Registry","Реестр","/registry/"],["NEMT AI Dispatch Demo","Демо NEMT AI Dispatch","/nemt-ai-dispatch/"]]],
 ["FOR VISIONARIES","ВИЗИОНЕРАМ",[
 ["For Visionaries","Для визионеров",isRu?"/visionaries/ru/":"/visionaries/"],["Our Perspective","Наша оптика",isRu?"/visionaries/ru/perspective/":"/visionaries/perspective/"],["Possibility Atlas","Атлас возможностей",isRu?"/visionaries/ru/possibilities/":"/visionaries/possibilities/"],["Frontier Research","Фронтирные исследования",isRu?"/visionaries/ru/research/":"/visionaries/research/"],["Human Potential","Потенциал человека",isRu?"/visionaries/ru/human-potential/":"/visionaries/human-potential/"],["Emerging Societies","Новые общества",isRu?"/visionaries/ru/emerging-societies/":"/visionaries/emerging-societies/"],["Civilization Architecture","Цивилизационная архитектура",isRu?"/visionaries/ru/civilization-architecture/":"/visionaries/civilization-architecture/"],["Build With Us","Сотрудничество",isRu?"/visionaries/ru/partners/":"/visionaries/partners/"]]],
 ["SYSTEM ARCHITECTURES","СИСТЕМНЫЕ АРХИТЕКТУРЫ",[
@@ -30,6 +30,8 @@ const base=[
 [/^\/visionaries\//,"visionaries",isRu?"Архитектура возможностей":"Architecture of Possibility"],
 [/^\/problems\//,"research",isRu?"Атлас проблем":"Problem Atlas"],
 [/^\/ideas\//,"ideas",isRu?"Идеи на заказ":"Ideas on Demand"],
+[/^\/diagnostic\//,"ideas",isRu?"Диагностика запроса":"Problem Diagnostic"],
+[/^\/evidence\//,"research",isRu?"Результаты и метод":"Evidence & Method"],
 [/^\/solutions\//,"solutions",isRu?"Карта решений":"Solutions"],
 [/^\/system-programs\//,"solutions","System Programs"],
 [/^\/frontier-programs\//,"solutions","Frontier Programs"],
@@ -52,7 +54,7 @@ if(p==="/"||p==="/index.html")return {key:"home",name:isRu?"Главная":"Hom
 for(const [re,key,name]of base)if(re.test(p))return {key,name};
 return {key:"home",name:isRu?"Проект RFS":"RFS Project"};
 }
-const info=locationInfo();
+let info=locationInfo();
 function init(){
  if(document.getElementById("rfs-global-header")||!document.body)return;
  const header=document.createElement("div");header.id="rfs-global-header";header.setAttribute("role","banner");header.setAttribute("data-rfs-shell","navigation");
@@ -66,11 +68,30 @@ function init(){
  const toggle=header.querySelector("#rfs-global-toggle"),mega=header.querySelector("#rfs-global-mega"),close=header.querySelector("#rfs-global-close");
  const setOpen=open=>{mega.hidden=!open;toggle.setAttribute("aria-expanded",String(open));document.body.classList.toggle("rfs-mega-open",open);if(open)close.focus();else toggle.focus()};
  toggle.addEventListener("click",()=>setOpen(mega.hidden));close.addEventListener("click",()=>setOpen(false));
- document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!mega.hidden)setOpen(false)});
- document.addEventListener("click",e=>{if(!mega.hidden&&!header.contains(e.target))setOpen(false)});
+ 
  mega.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mega.hidden=true;toggle.setAttribute("aria-expanded","false")}));
  // Native headers contain local section menus and locale controls; keep them intact.
  // The common header is a separate, persistent global orientation layer.
 }
+function changeLanguage(next){
+ const ru=next==="ru";if(ru===isRu)return;
+ isRu=ru;
+ for(const section of sections)if(section.key==="visionaries")section.url=isRu?"/visionaries/ru/":"/visionaries/";
+ for(const [, , list] of catalog)for(const link of list){
+  let url=link[2];if(/^\/visionaries\//.test(url)){url=url.replace(/^\/visionaries\/(ru\/)?/,"/visionaries/");link[2]=isRu?url.replace("/visionaries/","/visionaries/ru/"):url}
+  else if(/^\/diagnostic\//.test(url))link[2]=isRu?"/diagnostic/ru/":"/diagnostic/";
+  else if(/^\/problems\/(en|ru)\//.test(url))link[2]=isRu?"/problems/ru/":"/problems/en/";
+ }
+ info=locationInfo();
+ document.getElementById("rfs-global-header")?.remove();
+ document.getElementById("rfs-global-footer")?.remove();
+ document.body?.classList.remove("rfs-mega-open");
+ init();
+}
+document.addEventListener("frontier:language",e=>{if(e.detail?.lang)changeLanguage(e.detail.lang)});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){const h=document.getElementById("rfs-global-header");const mega=h?.querySelector("#rfs-global-mega");if(mega&&!mega.hidden)h.querySelector("#rfs-global-close")?.click()}});
+document.addEventListener("click",e=>{const h=document.getElementById("rfs-global-header");const mega=h?.querySelector("#rfs-global-mega");if(h&&mega&&!mega.hidden&&!h.contains(e.target))h.querySelector("#rfs-global-close")?.click()});
+const obs=new MutationObserver(()=>changeLanguage(document.documentElement.lang));
+obs.observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
