@@ -27,6 +27,15 @@ section{padding:125px 0;border-top:1px solid var(--line)}.sectionHead{display:fl
 .siteFooter{border-top:1px solid var(--line);padding:60px 0 35px}.footGrid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px}.footGrid h3{font-size:.6rem;letter-spacing:.14em;color:var(--muted);margin:0 0 17px}.footGrid a{display:block;color:#b9c2cb;font-size:.72rem;margin:9px 0}.footBrand{font-size:.7rem;letter-spacing:.16em;font-weight:800}.bottom{border-top:1px solid var(--line);margin-top:42px;padding-top:20px;color:#69747f;font-size:.6rem;display:flex;justify-content:space-between}@media(max-width:850px){.footGrid{grid-template-columns:1fr 1fr}.siteFooter{padding-bottom:30px}}@media(max-width:520px){.footGrid{grid-template-columns:1fr}.bottom{display:block}.bottom span{display:block;margin:8px 0}}
 .value-ru{display:none}html[lang="ru"] .value-en{display:none}html[lang="ru"] .value-ru{display:inline}
 
+
+/* The existing language switch uses inline spans; new translated navigation uses whole links. */
+.footGrid a.value-ru{display:none}
+html[lang="ru"] .footGrid a.value-ru{display:block}
+html[lang="ru"] .footGrid a.value-en{display:none}
+a.cta.value-ru{display:none}
+html[lang="ru"] a.cta.value-ru{display:inline-flex}
+html[lang="ru"] a.cta.value-en{display:none}
+
 /* For Visionaries: add a second entry without altering commercial product pages. */
 .nav{gap:12px;font-size:.59rem;letter-spacing:.045em}
 .visionarySection{background:radial-gradient(circle at 12% 35%,rgba(143,211,255,.065),transparent 42%),#080c11}
