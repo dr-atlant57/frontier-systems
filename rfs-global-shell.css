@@ -51,3 +51,8 @@ body.rfs-global-shell section[id],body.rfs-global-shell [id][data-anchor]{scroll
 @media(max-width:700px){#rfs-global-header .rfs-global-location{display:none!important}#rfs-global-header .rfs-mega-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#rfs-global-footer .rfs-footer-main{grid-template-columns:repeat(2,minmax(0,1fr))}#rfs-global-footer .rfs-footer-bottom{display:block}#rfs-global-footer .rfs-footer-bottom span,#rfs-global-footer .rfs-footer-bottom a{display:block!important;margin:10px 0!important}}
 @media(max-width:420px){#rfs-global-header .rfs-global-brand b{font-size:9px}#rfs-global-header .rfs-global-brand small{font-size:7px}#rfs-global-header #rfs-global-toggle{font-size:9px!important}#rfs-global-header .rfs-mega-grid{grid-template-columns:1fr;gap:15px}}
 @media(prefers-reduced-motion:reduce){#rfs-global-header *{scroll-behavior:auto!important}}
+
+/* Existing full-site navigation footers are replaced by the single common sitemap.
+   Division-specific and editorial footers remain as local content. */
+body.rfs-global-shell > footer.siteFooter,
+body.rfs-global-shell > footer.v-footer{display:none!important}

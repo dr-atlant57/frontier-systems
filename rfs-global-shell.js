@@ -16,11 +16,11 @@ const catalog=[
 ["COMMERCIAL ARCHITECTURE","КОММЕРЧЕСКАЯ АРХИТЕКТУРА",[
 ["Ideas on Demand","Идеи на заказ","/ideas/"],["Problem Diagnostic","Диагностика запроса",isRu?"/diagnostic/ru/":"/diagnostic/"],["Solutions","Решения","/solutions/"],["System Programs","Системные программы","/system-programs/"],["Frontier Programs","Фронтирные программы","/frontier-programs/"],["Enterprise AI","Корпоративный AI","/enterprise-ai/"],["Architecture Value","Ценность архитектуры","/why-architecture/"],["AI Architecture Audit","AI-аудит","/audit/"],["Discover","Диагностика","/discover/"]]],
 ["DISCOVER & RESEARCH","ПОИСК И ИССЛЕДОВАНИЯ",[
-["Problem Atlas","Атлас проблем",isRu?"/problems/ru/":"/problems/en/"],["Research","Исследования","/research/"],["Evidence & Method","Результаты и метод","/evidence/"],["Cases","Кейсы","/cases/"],["Project Lab","Лаборатория проектов","/project-lab/"],["Registry","Реестр","/registry/"],["NEMT AI Dispatch Demo","Демо NEMT AI Dispatch","/nemt-ai-dispatch/"]]],
+["Problem Atlas","Атлас проблем",isRu?"/problems/ru/":"/problems/en/"],["Research","Исследования","/research/"],["Evidence & Method","Результаты и метод",isRu?"/evidence/ru/":"/evidence/"],["Cases","Кейсы","/cases/"],["Project Lab","Лаборатория проектов","/project-lab/"],["Registry","Реестр","/registry/"],["NEMT AI Dispatch Demo","Демо NEMT AI Dispatch","/nemt-ai-dispatch/"]]],
 ["FOR VISIONARIES","ВИЗИОНЕРАМ",[
 ["For Visionaries","Для визионеров",isRu?"/visionaries/ru/":"/visionaries/"],["Our Perspective","Наша оптика",isRu?"/visionaries/ru/perspective/":"/visionaries/perspective/"],["Possibility Atlas","Атлас возможностей",isRu?"/visionaries/ru/possibilities/":"/visionaries/possibilities/"],["Frontier Research","Фронтирные исследования",isRu?"/visionaries/ru/research/":"/visionaries/research/"],["Human Potential","Потенциал человека",isRu?"/visionaries/ru/human-potential/":"/visionaries/human-potential/"],["Emerging Societies","Новые общества",isRu?"/visionaries/ru/emerging-societies/":"/visionaries/emerging-societies/"],["Civilization Architecture","Цивилизационная архитектура",isRu?"/visionaries/ru/civilization-architecture/":"/visionaries/civilization-architecture/"],["Build With Us","Сотрудничество",isRu?"/visionaries/ru/partners/":"/visionaries/partners/"]]],
 ["SYSTEM ARCHITECTURES","СИСТЕМНЫЕ АРХИТЕКТУРЫ",[
-["Business","Бизнес","/systems/business/"],["AI Architecture","Архитектура AI","/systems/ai/"],["Automation","Автоматизация","/systems/automation/"],["Organization","Организация","/systems/organizational/"],["Transformation","Трансформация","/systems/transformation/"],["Human Systems","Человеческие системы","/human-systems/"],["CRANIO","CRANIO","/human-systems/cranium/"]]]
+["Business","Бизнес","/systems/business/"],["AI Architecture","Архитектура AI","/systems/ai/"],["Automation","Автоматизация","/systems/automation/"],["Organization","Организация","/systems/organizational/"],["Transformation","Трансформация","/systems/transformation/"],["Human Systems","Человеческие системы","/human-systems/"],["CRANIO","CRANIO","/human-systems/cranium/"],["CRANIO CORE","CRANIO CORE","/human-systems/cranium/core.html"],["Head & Neck Optimization","Оптимизация головы и шеи","/human-systems/cranium/optimization.html"],["For Men","Для мужчин","/human-systems/cranium/men.html"],["For Women","Для женщин","/human-systems/cranium/women.html"]]]
 ];
 const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 const label=(x)=>isRu?x.ru:x.en;
@@ -80,6 +80,7 @@ function changeLanguage(next){
  for(const [, , list] of catalog)for(const link of list){
   let url=link[2];if(/^\/visionaries\//.test(url)){url=url.replace(/^\/visionaries\/(ru\/)?/,"/visionaries/");link[2]=isRu?url.replace("/visionaries/","/visionaries/ru/"):url}
   else if(/^\/diagnostic\//.test(url))link[2]=isRu?"/diagnostic/ru/":"/diagnostic/";
+  else if(/^\/evidence\//.test(url))link[2]=isRu?"/evidence/ru/":"/evidence/";
   else if(/^\/problems\/(en|ru)\//.test(url))link[2]=isRu?"/problems/ru/":"/problems/en/";
  }
  info=locationInfo();
@@ -89,6 +90,13 @@ function changeLanguage(next){
  init();
 }
 document.addEventListener("frontier:language",e=>{if(e.detail?.lang)changeLanguage(e.detail.lang)});
+document.addEventListener("click",e=>{
+ const target=e.target?.closest?.("button");
+ if(!target)return;
+ if(target.matches(".langs #ru,.lang #ru"))changeLanguage("ru");
+ else if(target.matches(".langs #en,.lang #en"))changeLanguage("en");
+ else if(target.id==="language"&&/^\\/(001|002|003)\\//.test(path))changeLanguage(isRu?"en":"ru");
+});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){const h=document.getElementById("rfs-global-header");const mega=h?.querySelector("#rfs-global-mega");if(mega&&!mega.hidden)h.querySelector("#rfs-global-close")?.click()}});
 document.addEventListener("click",e=>{const h=document.getElementById("rfs-global-header");const mega=h?.querySelector("#rfs-global-mega");if(h&&mega&&!mega.hidden&&!h.contains(e.target))h.querySelector("#rfs-global-close")?.click()});
 const obs=new MutationObserver(()=>changeLanguage(document.documentElement.lang));
