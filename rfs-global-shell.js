@@ -95,7 +95,7 @@ document.addEventListener("click",e=>{
  if(!target)return;
  if(target.matches(".langs #ru,.lang #ru"))changeLanguage("ru");
  else if(target.matches(".langs #en,.lang #en"))changeLanguage("en");
- else if(target.id==="language"&&/^\\/(001|002|003)\\//.test(path))changeLanguage(isRu?"en":"ru");
+ else if(target.id==="language"&&["/001/","/002/","/003/"].some(p=>path.startsWith(p)))changeLanguage(isRu?"en":"ru");
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){const h=document.getElementById("rfs-global-header");const mega=h?.querySelector("#rfs-global-mega");if(mega&&!mega.hidden)h.querySelector("#rfs-global-close")?.click()}});
 document.addEventListener("click",e=>{const h=document.getElementById("rfs-global-header");const mega=h?.querySelector("#rfs-global-mega");if(h&&mega&&!mega.hidden&&!h.contains(e.target))h.querySelector("#rfs-global-close")?.click()});
