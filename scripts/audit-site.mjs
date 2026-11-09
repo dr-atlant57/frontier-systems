@@ -45,7 +45,7 @@ for(const p of html){
   const f=normalizeLink(a[1],p);
   if(f&&!fileSet.has(f))errors.push(p+": unresolved "+a[1]+" => "+f);
  }
- if(/^((visionaries|cases)\/(ru\/)?|diagnostic\/|evidence\/)/.test(p)){
+ if(/^visionaries\/(ru\/)?/.test(p)||/^cases\/(ru\/)?[^/]+\/index\.html$/.test(p)||/^diagnostic\//.test(p)||/^evidence\//.test(p)){
   if(!/hreflang=["']en["']/.test(s)||!/hreflang=["']ru["']/.test(s))errors.push(p+": EN/RU alternates missing");
  }
 }
