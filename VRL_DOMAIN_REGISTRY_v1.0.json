@@ -1,0 +1,134 @@
+{
+  "schema": "VRL_DOMAIN_REGISTRY_v1.0",
+  "canonical_standard": "VRL_CANONICAL_v1.0_2026-11-16.html",
+  "canonical_date": "2026-11-16",
+  "last_inventory_date": "2026-11-16",
+  "domains": [
+    {
+      "domain": "cranio.systems",
+      "brand": "CRANIO SYSTEMS",
+      "VRL_policy": "REQUIRED",
+      "repository": "dr-atlant57/cranium",
+      "repository_mapping": "verified_via_GitHub_CNAME",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "fiohpr.com",
+      "brand": null,
+      "VRL_policy": "REQUIRED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "fiohpr.org",
+      "brand": null,
+      "VRL_policy": "REQUIRED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "primordis.org",
+      "brand": "PRIMORDIS",
+      "VRL_policy": "REQUIRED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "primordocciput.com",
+      "brand": null,
+      "VRL_policy": "REQUIRED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "primordocciput.org",
+      "brand": "Primordocciput",
+      "VRL_policy": "REQUIRED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "resymmetria.org",
+      "brand": null,
+      "VRL_policy": "REQUIRED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "resymmetry.org",
+      "brand": null,
+      "VRL_policy": "REQUIRED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "rivelazione.org",
+      "brand": null,
+      "VRL_policy": "REQUIRED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "rootfrontier.systems",
+      "brand": "ROOT FRONTIER SYSTEMS",
+      "VRL_policy": "REQUIRED",
+      "repository": "dr-atlant57/frontier-systems",
+      "repository_mapping": "verified_via_GitHub_CNAME",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "rustfreefleet.com",
+      "brand": null,
+      "VRL_policy": "EXCLUDED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "excluded",
+      "notes": "Explicit owner exclusion: no VRL rollout."
+    },
+    {
+      "domain": "somaparadiso.com",
+      "brand": "SOMA PARADISO",
+      "VRL_policy": "REQUIRED",
+      "repository": null,
+      "repository_mapping": "not_yet_verified",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "symmetrology.org",
+      "brand": "SYMMETROLOGY",
+      "VRL_policy": "REQUIRED",
+      "repository": "dr-atlant57/SYMMETROLOGY",
+      "repository_mapping": "verified_via_GitHub_CNAME",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    },
+    {
+      "domain": "symmetror.com",
+      "brand": "SYMMETROR",
+      "VRL_policy": "REQUIRED",
+      "repository": "dr-atlant57/symmetror",
+      "repository_mapping": "verified_via_GitHub_CNAME",
+      "implementation_status": "not_yet_implemented",
+      "notes": null
+    }
+  ]
+}
